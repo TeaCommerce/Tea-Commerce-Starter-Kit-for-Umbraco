@@ -77,6 +77,20 @@
     <Folder Include="Css\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CartStep1.cshtml" />
+    <Content Include="Views\CartStep2.cshtml" />
+    <Content Include="Views\CartStep3.cshtml" />
+    <Content Include="Views\CartStep4.cshtml" />
+    <Content Include="Views\CartStep6.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\Product.cshtml" />
+    <Content Include="Views\ProductList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CartStepMaster.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
