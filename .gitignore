@@ -200,3 +200,4 @@ FakesAssemblies/
 
 !**/Source/Website/[Bb]in/
 **/Source/Website/[Bb]in/Website.Extensions.dll
+!**/Source/Website/App_Data/Umbraco.sdf
