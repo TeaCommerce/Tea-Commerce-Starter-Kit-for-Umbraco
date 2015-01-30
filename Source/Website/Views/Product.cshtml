@@ -1,5 +1,23 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using umbraco.MacroEngines
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "Master.cshtml";
+  Layout = "Master.cshtml";
+
+  IPublishedContent currentPage = Model.Content;
+
+  string name = currentPage.GetPropertyValue<string>( "name" );
+  string sku = currentPage.GetPropertyValue<string>( "SKU" );
+  HtmlString description = new HtmlString( currentPage.GetPropertyValue<string>( "description" ) );
 }
-<h2>Product</h2>
+
+<div class="product">
+  <h1>@name</h1>
+
+  <form method="post" action="/base/TC/FormPost.aspx">
+    <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+    <input name="storeId" value="1" type="hidden" />
+    <input name="productIdentifier" value="@sku" type="hidden" />
+    <input name="quantity" value="1" type="text" />
+    <input value="Add order line" type="submit" />
+  </form>
+</div>
