@@ -30,7 +30,7 @@
 }
 <div class="container">
   <div class="row">
-    <div class="col-xs-8">
+    <div class="col-xs-12 col-sm-8">
       <div class="productImages">
         @if ( hasVariants ) {
           int variantCounter = 0;
@@ -40,20 +40,20 @@
             IPublishedContent image = imageId != 0 ? Umbraco.TypedMedia( imageId ) : mainProductImage;
 
             if ( image != null ) {
-          <img data-variantid="@variant.Id" class="@(variantCounter == 0 ? "" : "hidden")" src="@image.Url?width=750"/>
+          <img data-variantid="@variant.Id" class="img-responsive @(variantCounter == 0 ? "" : "hidden")" src="@image.Url?width=750"/>
             }
 
             variantCounter++;
           }
         } else {
           if ( mainProductImage != null ) {
-          <img src="@mainProductImage.Url?width=750"/>
+          <img class="img-responsive" src="@mainProductImage.Url?width=750"/>
           }
         }
       </div>
     </div>
 
-    <div class="col-xs-4 product">
+    <div class="col-xs-12 col-sm-4 product">
 
       <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
         <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
@@ -71,27 +71,36 @@
 
             <div data-variantid="@id" class="@(variantCounter == 0 ? "" : "hidden")">
               <h1 class="page-header">@name</h1>
-              <span class="price">@price</span>
-              @Html.Raw( description )
+              <p class="h3">@price</p>
+
+              @if ( !string.IsNullOrEmpty( description.ToString() ) ) {
+                <div class="alert alert-info">
+                  @Html.Raw( description )
+                </div>
+              }
             </div>
 
               variantCounter++;
             }
-            <label for="variants">Variant:</label>
-            <select class="form-control" name="productIdentifier" id="variants">
-              @foreach ( IPublishedContent variant in variants ) {
-                <option value="@variant.Id" >@variant.Name</option>
-              }
-            </select>
+            <p>
+              <label for="variants">Variant:</label>
+              <select class="form-control" name="productIdentifier" id="variants">
+                @foreach ( IPublishedContent variant in variants ) {
+                  <option value="@variant.Id" >@variant.Name</option>
+                }
+              </select>
+            </p>
+
           } else {
             <h1 class="page-header">@mainProductName</h1>
             <span class="price">@mainProductPrice</span>
             @Html.Raw( mainProductDescription )
             <input name="productIdentifier" value="@mainProductId" type="hidden" />
           }
-          <label for="quantity">Quantity:</label>
-          <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
-
+          <p>
+            <label for="quantity">Quantity:</label>
+            <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
+          </p>
           <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
         </div>
       </form>
