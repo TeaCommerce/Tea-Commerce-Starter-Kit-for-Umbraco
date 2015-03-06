@@ -8,6 +8,7 @@
   string name = currentPage.GetPropertyValue<string>( "name" );
   string sku = currentPage.GetPropertyValue<string>( "SKU" );
   HtmlString description = new HtmlString( currentPage.GetPropertyValue<string>( "description" ) );
+  List<IPublishedContent> variants = currentPage.Children.ToList();
 
   int imageId = currentPage.GetPropertyValue<int>( "image" );
 
@@ -18,26 +19,36 @@
   }
   
 }
-<div class="row">
-  <div class="col-xs-6">
-  </div>
-  <div class="col-xs-6 product">
-    <h1>@name</h1>
-    @if ( image != null ) {
-      <div class="image">
-        <img src="@image.Url?width=200"/>
-      </div>
-    }
-
-    <div class="description">
-      @Html.Raw( description )
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      @if ( image != null ) {
+        <div class="image">
+          <img src="@image.Url?width=200"/>
+        </div>
+      }
     </div>
-    <form method="post" action="/base/TC/FormPost.aspx">
-      <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-      <input name="storeId" value="1" type="hidden" />
-      <input name="productIdentifier" value="@sku" type="hidden" />
-      <input name="quantity" value="1" type="text" />
-      <input value="Add to basket" type="submit" />
-    </form>
+    <div class="col-xs-6 product">
+      <h1>@name</h1>
+      <div class="description">
+        @Html.Raw( description )
+      </div>
+      <form method="post" action="/base/TC/FormPost.aspx">
+        <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+        <input name="storeId" value="1" type="hidden" />
+        <input name="quantity" value="1" type="text" />
+        <input value="Add to basket" type="submit" />
+        @if ( variants.Any() ) {
+          <select>
+            @foreach ( IPublishedContent variant in variants ) {
+              <option>@variant.Name</option>
+            }
+          </select>
+        } else {
+          <input name="productIdentifier" value="@sku" type="hidden" />
+        }
+        
+      </form>
+    </div>
   </div>
 </div>
