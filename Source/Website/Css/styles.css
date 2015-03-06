@@ -1,15 +1,44 @@
 ﻿/**********************************
   * CART
 ***********************************/
-.cartTop .input-group .input-group-addon { color: #909090;line-height: 30px; }
+.cartTop .input-group .input-group-addon { color: #909090; line-height: 30px; }
 .cartTop .input-group .input-group-addon.active { font-weight: bold; color: #555; }
 .cartTop .input-group .input-group-addon.inpath { color: #555; }
+.cartContainer .navbar .collapse { display: block; visibility: visible; }
+.cartContainer .navbar .collapse .navbar-right { float: right!important; margin-right: -15px; }
+.cartContainer .navbar .navbar-header { float: left; }
+
+@media (max-width: 767px ) {
+  .cartTop .input-group { display: block; overflow: hidden; }
+  .cartTop .input-group .input-group-addon { float: left; width: 50%; line-height: 20px; border-radius: 0; }
+}
 
 /**********************************
   * CART STEP 1
 ***********************************/
-.cartContainer .orderline .quantity input[type=text] { width: 54px;text-align: center; }
-.cartContainer .orderline .quantity .btn { font-size: 12px; line-height: 20px; }
+.cartContainer .orderContent .row .col { padding: 10px 15px; }
+.cartContainer .orderContent .row.orderline { border-bottom: 1px solid #cccccc; }
+.cartContainer .orderContent .row.orderline:first-child { border-top: 1px solid #cccccc; }
+.cartContainer .orderContent .row.orderline .col.quantity { padding: 3px 15px; }
+.cartContainer .orderContent .row.orderline .col.quantity input[type=text] { width: 54px; text-align: center; }
+.cartContainer .orderContent .row.orderline .col.quantity .btn { font-size: 12px; line-height: 20px; }
+
+@media (max-width: 1199px ) {
+}
+
+@media (max-width: 991px ) {
+}
+
+@media (max-width: 767px ) {
+  .cartContainer .orderContent .row { padding: 10px 0; }
+  .cartContainer .orderContent .row .col { padding: 0px 15px; }
+  .cartContainer .orderContent .row.orderline .col { text-align: left; overflow: hidden; }
+  .cartContainer .orderContent .row.orderline .col.quantity > span { float: left; line-height: 34px; margin-right: 5px; }
+}
+
+@media (max-width: 479px ) {
+}
+
 
 /**********************************
   * SPECIAL INPUT GROUPS WITH FORMS
