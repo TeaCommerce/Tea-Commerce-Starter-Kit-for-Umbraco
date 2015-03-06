@@ -197,7 +197,7 @@ FakesAssemblies/
 # Make sure to include details from VisualStudio.gitignore BEFORE this
 !**/Source/Website/App_Data/[Pp]ackages/
 !**/Source/Website/[Uu]mbraco/[Dd]eveloper/[Pp]ackages
-
+!**/Source/Website/[Bb]in/x86/
 !**/Source/Website/[Bb]in/
 **/Source/Website/[Bb]in/Website.Extensions.dll
 !**/Source/Website/App_Data/Umbraco.sdf
