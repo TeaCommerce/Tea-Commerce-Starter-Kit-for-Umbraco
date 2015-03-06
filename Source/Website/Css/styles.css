@@ -1,0 +1,25 @@
+﻿/**********************************
+  * CART
+***********************************/
+.cartTop .input-group .input-group-addon { color: #909090;line-height: 30px; }
+.cartTop .input-group .input-group-addon.active { font-weight: bold; color: #555; }
+.cartTop .input-group .input-group-addon.inpath { color: #555; }
+
+/**********************************
+  * CART STEP 1
+***********************************/
+.cartContainer .orderline .quantity input[type=text] { width: 40px;text-align: center; }
+.cartContainer .orderline .quantity .btn { font-size: 12px; line-height: 20px; }
+
+/**********************************
+  * SPECIAL INPUT GROUPS WITH FORMS
+***********************************/
+.input-group form { display: inline-block; }
+.input-group form .form-control,
+.input-group form .btn { float: none; border-left: 0; vertical-align: top; }
+.input-group form:first-child .btn,
+.input-group form:first-child .form-control { border-top-right-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-left: 1px solid #ccc; }
+.input-group form:last-child .btn,
+.input-group form:last-child .form-control { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.input-group form:not(:first-child):not(:last-child) .btn,
+.input-group form:not(:first-child):not(:last-child) .form-control { border-radius: 0; }

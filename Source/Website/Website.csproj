@@ -57,7 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\TeaCommerce\Assets\Scripts\tea-commerce.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
