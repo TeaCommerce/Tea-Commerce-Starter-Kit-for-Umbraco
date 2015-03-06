@@ -1,43 +1,103 @@
-﻿@using umbraco.MacroEngines
+﻿@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using umbraco.MacroEngines
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
 
   IPublishedContent currentPage = Model.Content;
 
-  string name = currentPage.GetPropertyValue<string>( "name" );
-  string sku = currentPage.GetPropertyValue<string>( "SKU" );
-  HtmlString description = new HtmlString( currentPage.GetPropertyValue<string>( "description" ) );
+  IPublishedContent mainProduct = currentPage.AncestorOrSelf( "Product" );
 
-  int imageId = currentPage.GetPropertyValue<int>( "image" );
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
-  IPublishedContent image = null;
+  //Variants
+  List<IPublishedContent> variants = currentPage.Children.ToList();
+  bool hasVariants = variants.Any();
 
-  if ( imageId != 0 ) {
-    image = Umbraco.TypedMedia( currentPage.GetPropertyValue<int>( "image" ) );
-  }
+  //Product to show
+  IPublishedContent product = hasVariants ? variants.First() : mainProduct;
+
+  //Main product data
+  int mainProductId = product.Id;
+  string mainProductName = product.GetPropertyValue<string>( "name" );
+  string sku = product.GetPropertyValue<string>( "SKU" );
+  Price mainProductPrice = TC.GetPrice( storeId, mainProductId.ToString() );
+  HtmlString mainProductDescription = new HtmlString( product.GetPropertyValue<string>( "description" ) );
+
+  IPublishedContent mainProductImage = null;
+
+  int mainProductimageId = mainProduct.GetPropertyValue<int>( "image" );
+  if ( mainProductimageId != 0 ) {
+    mainProductImage = Umbraco.TypedMedia( mainProductimageId );
+  } 
   
 }
-<div class="row">
-  <div class="col-xs-6">
-  </div>
-  <div class="col-xs-6 product">
-    <h1>@name</h1>
-    @if ( image != null ) {
-      <div class="image">
-        <img src="@image.Url?width=200"/>
-      </div>
-    }
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="productImages">
+        @if ( hasVariants ) {
+          foreach ( IPublishedContent variant in variants ) {
+            int imageId = variant.GetPropertyValue<int>( "image" );
+            IPublishedContent image = imageId != 0 ? Umbraco.TypedMedia( imageId ) : mainProductImage;
 
-    <div class="description">
-      @Html.Raw( description )
+            if ( image != null ) {
+          <img data-variantid="@variant.Id" src="@image.Url?width=750"/>
+            }
+          }
+        } else {
+          if ( mainProductImage != null ) {
+          <img src="@mainProductImage.Url?width=750"/>
+          }
+        }
+      </div>
     </div>
-    <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
-      <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-      <input name="storeId" value="1" type="hidden" />
-      <input name="productIdentifier" value="@currentPage.Id" type="hidden" />
-      <input name="quantity" value="1" type="text" />
-      <input value="Add to basket" type="submit" />
-    </form>
+
+    <div class="col-xs-4 product">
+
+      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
+        <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+        <input name="storeId" value="@storeId" type="hidden" />
+
+        <div class="well">
+          @if ( hasVariants ) {
+            foreach ( IPublishedContent variant in variants ) {
+              int id = variant.Id;
+              string name = variant.GetPropertyValue<string>( "name", true );
+              Price price = TC.GetPrice( storeId, id.ToString() );
+              HtmlString description = variant.GetPropertyValue<HtmlString>( "description", true );
+
+              <div data-variantid="@id">
+                <h1 class="page-header">@name</h1>
+                <span class="price">@price</span>
+                @Html.Raw( description )
+              </div>
+            }
+
+            <select class="form-control" name="productIdentifier">
+              @foreach ( IPublishedContent variant in variants ) {
+                <option value="@variant.Id" >@variant.Name</option>
+              }
+            </select>
+          } else {
+            <input name="productIdentifier" value="@currentPage.Id" type="hidden" />
+          }
+          <div class="form-inline">
+            <div class="form-group">
+              
+            </div>
+            
+
+            <div class="col-xs-3"><input class="form-control" name="quantity" value="1" type="text" /></div>
+            <div class="col-xs-9"><input class="btn btn-primary" value="Add to basket" type="submit" /></div>           
+          </div>
+
+          
+          
+        </div>     
+      </form>
+    </div>
   </div>
 </div>
