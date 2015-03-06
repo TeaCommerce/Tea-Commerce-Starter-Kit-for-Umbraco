@@ -1,5 +1,41 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using System.Drawing
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "Master.cshtml";
+  Layout = "Master.cshtml";
+  IPublishedContent currentPage = Model.Content;
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  string headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
+
+  List<IPublishedContent> products = currentPage.Children.ToList();
 }
-<h2>ProductList</h2>
+<div class="container">
+  <h1 class="page-header">@headline</h1>
+  <div class="row">
+    @foreach ( IPublishedContent product in products ) {
+      string name = product.GetPropertyValue<string>( "name", true );
+      Price price = TC.GetPrice( storeId, product.Id.ToString() );
+      IPublishedContent image = null;
+
+      int imageId = product.GetPropertyValue<int>( "image" );
+      if ( imageId != 0 ) {
+        image = Umbraco.TypedMedia( imageId );
+      }
+        
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75"/>
+          }
+          <p class="h3">@name</p>
+          <p>@price.Formatted</p>
+          <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
+        </div>       
+      </div>    
+    } 
+  </div>
+</div>
