@@ -1,13 +1,10 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@using umbraco.MacroEngines
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
 
   IPublishedContent currentPage = Model.Content;
-
-  IPublishedContent mainProduct = currentPage.AncestorOrSelf( "Product" );
 
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
@@ -16,22 +13,19 @@
   List<IPublishedContent> variants = currentPage.Children.ToList();
   bool hasVariants = variants.Any();
 
-  //Product to show
-  IPublishedContent product = hasVariants ? variants.First() : mainProduct;
-
   //Main product data
-  int mainProductId = product.Id;
-  string mainProductName = product.GetPropertyValue<string>( "name" );
-  string sku = product.GetPropertyValue<string>( "SKU" );
+  IPublishedContent mainProduct = currentPage.AncestorOrSelf( "Product" );
+  int mainProductId = mainProduct.Id;
+  string mainProductName = mainProduct.GetPropertyValue<string>( "name" );
   Price mainProductPrice = TC.GetPrice( storeId, mainProductId.ToString() );
-  HtmlString mainProductDescription = new HtmlString( product.GetPropertyValue<string>( "description" ) );
+  HtmlString mainProductDescription = new HtmlString( mainProduct.GetPropertyValue<string>( "description" ) );
 
   IPublishedContent mainProductImage = null;
 
   int mainProductimageId = mainProduct.GetPropertyValue<int>( "image" );
   if ( mainProductimageId != 0 ) {
     mainProductImage = Umbraco.TypedMedia( mainProductimageId );
-  } 
+  }
   
 }
 <div class="container">
@@ -39,13 +33,17 @@
     <div class="col-xs-8">
       <div class="productImages">
         @if ( hasVariants ) {
+          int variantCounter = 0;
+
           foreach ( IPublishedContent variant in variants ) {
             int imageId = variant.GetPropertyValue<int>( "image" );
             IPublishedContent image = imageId != 0 ? Umbraco.TypedMedia( imageId ) : mainProductImage;
 
             if ( image != null ) {
-          <img data-variantid="@variant.Id" src="@image.Url?width=750"/>
+          <img data-variantid="@variant.Id" class="@(variantCounter == 0 ? "" : "hidden")" src="@image.Url?width=750"/>
             }
+
+            variantCounter++;
           }
         } else {
           if ( mainProductImage != null ) {
@@ -63,40 +61,39 @@
 
         <div class="well">
           @if ( hasVariants ) {
+            int variantCounter = 0;
+
             foreach ( IPublishedContent variant in variants ) {
               int id = variant.Id;
               string name = variant.GetPropertyValue<string>( "name", true );
               Price price = TC.GetPrice( storeId, id.ToString() );
               HtmlString description = variant.GetPropertyValue<HtmlString>( "description", true );
 
-              <div data-variantid="@id">
-                <h1 class="page-header">@name</h1>
-                <span class="price">@price</span>
-                @Html.Raw( description )
-              </div>
-            }
+            <div data-variantid="@id" class="@(variantCounter == 0 ? "" : "hidden")">
+              <h1 class="page-header">@name</h1>
+              <span class="price">@price</span>
+              @Html.Raw( description )
+            </div>
 
-            <select class="form-control" name="productIdentifier">
+              variantCounter++;
+            }
+            <label for="variants">Variant:</label>
+            <select class="form-control" name="productIdentifier" id="variants">
               @foreach ( IPublishedContent variant in variants ) {
                 <option value="@variant.Id" >@variant.Name</option>
               }
             </select>
           } else {
-            <input name="productIdentifier" value="@currentPage.Id" type="hidden" />
+            <h1 class="page-header">@mainProductName</h1>
+            <span class="price">@mainProductPrice</span>
+            @Html.Raw( mainProductDescription )
+            <input name="productIdentifier" value="@mainProductId" type="hidden" />
           }
-          <div class="form-inline">
-            <div class="form-group">
-              
-            </div>
-            
+          <label for="quantity">Quantity:</label>
+          <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
 
-            <div class="col-xs-3"><input class="form-control" name="quantity" value="1" type="text" /></div>
-            <div class="col-xs-9"><input class="btn btn-primary" value="Add to basket" type="submit" /></div>           
-          </div>
-
-          
-          
-        </div>     
+          <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+        </div>
       </form>
     </div>
   </div>
