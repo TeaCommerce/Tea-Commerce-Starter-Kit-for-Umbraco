@@ -19,13 +19,13 @@
     <h1>Your cart</h1>
     <div class="row">
 
-      <div class="col-xs-5">
+      <div class="col-xs-6">
         Product
       </div>
       <div class="col-xs-2">
         Unit price
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-2 text-center">
         Quantity
       </div>
       <div class="col-xs-2 text-right">
@@ -35,7 +35,7 @@
     @foreach ( OrderLine orderLine in order.OrderLines ) {
       IPublishedContent productContent = Umbraco.TypedContent( orderLine.ProductIdentifier );
       <div class="row orderline">
-        <div class="col-xs-5">
+        <div class="col-xs-6">
           @orderLine.Name
         </div>
         <div class="col-xs-2">
@@ -46,7 +46,7 @@
           }
           @orderLine.UnitPrice.Value.Formatted
         </div>
-        <div class="col-xs-3 quantity">
+        <div class="col-xs-2 quantity text-center">
           <div class="input-group">
             <form action="/base/TC/FormPost.aspx" method="post">
               <input name="storeId" type="hidden" value="@storeId"/>

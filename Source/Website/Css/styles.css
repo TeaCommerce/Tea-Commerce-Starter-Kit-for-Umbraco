@@ -8,7 +8,7 @@
 /**********************************
   * CART STEP 1
 ***********************************/
-.cartContainer .orderline .quantity input[type=text] { width: 40px;text-align: center; }
+.cartContainer .orderline .quantity input[type=text] { width: 54px;text-align: center; }
 .cartContainer .orderline .quantity .btn { font-size: 12px; line-height: 20px; }
 
 /**********************************
