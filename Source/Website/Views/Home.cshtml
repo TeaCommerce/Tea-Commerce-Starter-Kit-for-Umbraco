@@ -8,7 +8,7 @@
   IPublishedContent currentPage = Model.Content;
 
   IReadOnlyList<IPublishedContent> carouselImages = currentPage.GetPropertyValue<string>( "slider" )
-    .Split( new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
+    .Split( new [] { ',' }, StringSplitOptions.RemoveEmptyEntries )
     .Select( int.Parse )
     .Select( id => Umbraco.TypedMedia( id ) )
     .ToList();
@@ -20,7 +20,7 @@
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
   List<IPublishedContent> products = currentPage.GetPropertyValue<string>( "featuredProducts" )
-    .Split( new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
+    .Split( new [] { ',' }, StringSplitOptions.RemoveEmptyEntries )
     .Select( int.Parse )
     .Select( id => Umbraco.TypedContent( id ) )
     .ToList();
