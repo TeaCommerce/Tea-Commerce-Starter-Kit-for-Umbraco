@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\styles.css" />
+    <Content Include="Scripts\product.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,8 +76,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Css\" />
-    <Folder Include="Scripts\" />
+    <Content Include="Views\Partials\Cart\Minicart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CartStep1.cshtml" />

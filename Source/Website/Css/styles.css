@@ -23,3 +23,8 @@
 .input-group form:last-child .form-control { border-top-left-radius: 0; border-bottom-left-radius: 0; }
 .input-group form:not(:first-child):not(:last-child) .btn,
 .input-group form:not(:first-child):not(:last-child) .form-control { border-radius: 0; }
+
+/**********************************
+  * Minicart
+***********************************/
+#minicart{ margin-top: 8px;}

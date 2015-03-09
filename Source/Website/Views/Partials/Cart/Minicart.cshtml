@@ -1,0 +1,27 @@
+﻿@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+  IPublishedContent currentPage = Model.Content;
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  Order cart = TC.GetCurrentOrder( storeId, false );
+
+  bool cartEmpty = false;
+
+  string className = "pull-right";
+  if ( cart == null || cart.OrderLines.Count == 0 ) {
+    className += " empty";
+    cartEmpty = true;
+  }
+}
+
+<div id="minicart" class="@className">
+  <span>Quantity: <span class="badge">@( cartEmpty ? cart.TotalQuantity : 0)</span></span>
+  <span>Total: <span class="badge">@( cartEmpty ? cart.TotalPrice.Value.Formatted : TC.FormatPrice( storeId, 0 ).Formatted)</span></span>
+  <a class="btn btn-primary" href="#">Go to cart</a>
+</div>

@@ -8,7 +8,7 @@
   IReadOnlyList<IPublishedContent> menuItems = home.Children.ToList();
 
   string homeName = home.Name,
-         homeCssClass = home.Id == currentContent.Id ? "active": "";
+         homeCssClass = home.Id == currentContent.Id ? "active" : "";
   
 }
 
@@ -33,7 +33,9 @@
           <li class="@liCssClass"><a href="@menuItem.Url">@menuItem.Name</a></li>
         }
       </ul>
+      @Html.Partial( "Cart/Minicart" )
     </div>
+
     <!--/.nav-collapse -->
   </div>
 </nav>
