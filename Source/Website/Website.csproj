@@ -78,6 +78,9 @@
   <ItemGroup>
     <Content Include="Views\Partials\Cart\Minicart.cshtml" />
   </ItemGroup>
+    <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CartStep1.cshtml" />
     <Content Include="Views\CartStep2.cshtml" />
