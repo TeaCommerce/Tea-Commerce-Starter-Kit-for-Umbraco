@@ -15,7 +15,7 @@
 }
 @if ( order != null ) {
 
-  <div class="container cartContainer">
+  <div class="container cartContainer content">
     <h1>Your cart</h1>
     <div class="orderContent">
       <div class="row hidden-xs">
@@ -41,13 +41,15 @@
               <span class="hidden-sm hidden-md hidden-lg">Product: </span>@orderLine.Name
             </div>
             <div class="col col-sm-2">
-              <span class="hidden-sm hidden-md hidden-lg">Unit price: </span>
-              @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
-                <text>(</text>
-                <s>@orderLine.UnitPrice.WithoutDiscounts.Formatted</s>
-                <text>)</text>
-              }
-              @orderLine.UnitPrice.Value.Formatted
+              <span class="xs-right">
+                @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts.Formatted</s>
+                  <text>)</text>
+                }
+                @orderLine.UnitPrice.Value.Formatted
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
             </div>
             <div class="col col-lg-2 col-md-3 col-sm-4 quantity text-center">
               <span class="hidden-sm hidden-md hidden-lg">Quantity: </span>
@@ -83,13 +85,15 @@
               </div>
             </div>
             <div class="col col-sm-2 text-right">
-              <span class="hidden-sm hidden-md hidden-lg">Total price: </span>
-              @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
-                <text>(</text>
-                <s>@orderLine.TotalPrice.WithPreviousDiscounts.Formatted</s>
-                <text>)</text>
-              }
-              @orderLine.TotalPrice.Value.Formatted
+              <span class="xs-right">
+                @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts.Formatted</s>
+                  <text>)</text>
+                }
+                @orderLine.TotalPrice.Value.Formatted
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
             </div>
           </div>
         }
@@ -107,6 +111,38 @@
           @order.SubtotalPrice.Value.Formatted
         </div>
       </div>
+      @if ( order.ShipmentInformation.ShippingMethodId != null ) {
+        ShippingMethod shippingMethod = TC.GetShippingMethod( storeId, order.ShipmentInformation.ShippingMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Shipping (@shippingMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <text>)</text>
+            }
+            @order.ShipmentInformation.TotalPrice.Value.Formatted
+          </div>
+        </div>
+      }
+      @if ( order.PaymentInformation.PaymentMethodId != null ) {
+        PaymentMethod paymentMethod = TC.GetPaymentMethod( storeId, order.PaymentInformation.PaymentMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Payment (@paymentMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <text>)</text>
+            }
+            @order.PaymentInformation.TotalPrice.Value.Formatted
+          </div>
+        </div>
+      }
       <div class="row">
         <div class="col col-sm-10 col-xs-8 text-right">
           VAT
@@ -162,14 +198,8 @@
       </form>
     </div>
     <nav class="navbar">
-      <div class="navbar-header">
-        <a disabled="disabled" class="btn btn-default">Back</a>
-      </div>
-      <div class="collapse navbar-collapse">
-        <div class="navbar-right">
-          <a href="@nextStep.Url" class="btn btn-success ">Continue</a>
-        </div>
-      </div>
+      <a href="@nextStep.Url" class="btn btn-success">Continue</a>
+      <a disabled="disabled" class="btn btn-default">Back</a>
     </nav>
   </div>
       
