@@ -1,9 +1,13 @@
 ﻿@using System.Activities.Statements
+@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
 @inherits UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
+  IPublishedContent currentPage = Model.Content;
 
-  IReadOnlyList<IPublishedContent> carouselImages = Model.Content.GetPropertyValue<string>( "slider" )
+  IReadOnlyList<IPublishedContent> carouselImages = currentPage.GetPropertyValue<string>( "slider" )
     .Split( new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
     .Select( int.Parse )
     .Select( id => Umbraco.TypedMedia( id ) )
@@ -11,6 +15,15 @@
 
   int count = 0;
   string carouselId = "homeCarousel";
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  List<IPublishedContent> products = currentPage.GetPropertyValue<string>( "featuredProducts" )
+    .Split( new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
+    .Select( int.Parse )
+    .Select( id => Umbraco.TypedContent( id ) )
+    .ToList();
 }
 @if ( carouselImages.Any() ) {
   <div id="@carouselId" class="carousel slide" data-ride="carousel">
@@ -49,22 +62,30 @@
 }
 
 <div class="container">
-  <!-- Example row of columns -->
   <div class="row">
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-    </div>
+    @foreach ( IPublishedContent product in products ) {
+      var name = product.GetPropertyValue<string>( "name", true );
+      IPublishedContent firstVariant = product.Children.FirstOrDefault();
+      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
+      IPublishedContent image = null;
+
+      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : product.GetPropertyValue<int>( "image" );
+      if ( imageId != 0 ) {
+        image = Umbraco.TypedMedia( imageId );
+      }
+
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <a href="@product.Url">
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75"/>
+            </a>
+          }
+          <h3>@name</h3>
+          <p>@price.Formatted</p>
+          <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
+        </div>
+      </div>
+    }
   </div>
 </div>
