@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\styles.css" />
+    <Content Include="Scripts\cart.js" />
+    <Content Include="Scripts\validation.js" />
     <Content Include="Scripts\product.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -75,12 +77,7 @@
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Partials\Cart\Minicart.cshtml" />
-  </ItemGroup>
-    <ItemGroup>
-    <Folder Include="Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Views\CartStep1.cshtml" />
     <Content Include="Views\CartStep2.cshtml" />

@@ -1,6 +1,6 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
@@ -13,7 +13,6 @@
   Order order = TC.GetCurrentFinalizedOrder( storeId );
 }
 @if ( order != null ) {
-
   <div class="container cartContainer accept">
     <h1>Thank you for your order</h1>
     <div class="alert alert-success">
@@ -285,5 +284,4 @@
       </div>
     }
   </div>
-      
 }

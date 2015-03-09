@@ -1,6 +1,6 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
@@ -15,7 +15,6 @@
   Order order = TC.GetCurrentOrder( storeId );
 }
 @if ( order != null ) {
-
   <div class="container cartContainer">
     <h1>Choose shipping and payment</h1>
     <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
@@ -49,9 +48,9 @@
               <div class="radio">
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
-                  @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
-                    @Html.Raw( "checked" )
-                  }>
+                    @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
+                      @Html.Raw( "checked" )
+                    }>
                   @method.Name
                 </label>
               </div>
@@ -66,5 +65,4 @@
       </nav>
     </form>
   </div>
-      
 }

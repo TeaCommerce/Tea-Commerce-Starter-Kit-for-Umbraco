@@ -1,6 +1,6 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
 
@@ -16,17 +16,16 @@
   //Main product data
   IPublishedContent mainProduct = currentPage.AncestorOrSelf( "Product" );
   int mainProductId = mainProduct.Id;
-  string mainProductName = mainProduct.GetPropertyValue<string>( "name" );
+  var mainProductName = mainProduct.GetPropertyValue<string>( "name" );
   Price mainProductPrice = TC.GetPrice( storeId, mainProductId.ToString() );
-  HtmlString mainProductDescription = new HtmlString( mainProduct.GetPropertyValue<string>( "description" ) );
+  var mainProductDescription = new HtmlString( mainProduct.GetPropertyValue<string>( "description" ) );
 
   IPublishedContent mainProductImage = null;
 
-  int mainProductimageId = mainProduct.GetPropertyValue<int>( "image" );
+  var mainProductimageId = mainProduct.GetPropertyValue<int>( "image" );
   if ( mainProductimageId != 0 ) {
     mainProductImage = Umbraco.TypedMedia( mainProductimageId );
   }
-  
 }
 <div class="container">
   <div class="row">
@@ -36,18 +35,18 @@
           int variantCounter = 0;
 
           foreach ( IPublishedContent variant in variants ) {
-            int imageId = variant.GetPropertyValue<int>( "image" );
+            var imageId = variant.GetPropertyValue<int>( "image" );
             IPublishedContent image = imageId != 0 ? Umbraco.TypedMedia( imageId ) : mainProductImage;
 
             if ( image != null ) {
-          <img data-variantid="@variant.Id" class="img-responsive @(variantCounter == 0 ? "" : "hidden")" src="@image.Url?width=750"/>
+              <img data-variantid="@variant.Id" class="img-responsive @(variantCounter == 0 ? "" : "hidden")" src="@image.Url?width=750"/>
             }
 
             variantCounter++;
           }
         } else {
           if ( mainProductImage != null ) {
-          <img class="img-responsive" src="@mainProductImage.Url?width=750"/>
+            <img class="img-responsive" src="@mainProductImage.Url?width=750"/>
           }
         }
       </div>
@@ -65,20 +64,20 @@
 
             foreach ( IPublishedContent variant in variants ) {
               int id = variant.Id;
-              string name = variant.GetPropertyValue<string>( "name", true );
+              var name = variant.GetPropertyValue<string>( "name", true );
               Price price = TC.GetPrice( storeId, id.ToString() );
-              HtmlString description = variant.GetPropertyValue<HtmlString>( "description", true );
+              var description = variant.GetPropertyValue<HtmlString>( "description", true );
 
-            <div data-variantid="@id" class="@(variantCounter == 0 ? "" : "hidden")">
-              <h1 class="page-header">@name</h1>
-              <p class="h3">@price</p>
+              <div data-variantid="@id" class="@(variantCounter == 0 ? "" : "hidden")">
+                <h1 class="page-header">@name</h1>
+                <p class="h3">@price</p>
 
-              @if ( !string.IsNullOrEmpty( description.ToString() ) ) {
-                <div class="alert alert-info">
-                  @Html.Raw( description )
-                </div>
-              }
-            </div>
+                @if ( !string.IsNullOrEmpty( description.ToString() ) ) {
+                  <div class="alert alert-info">
+                    @Html.Raw( description )
+                  </div>
+                }
+              </div>
 
               variantCounter++;
             }
@@ -90,7 +89,6 @@
                 }
               </select>
             </p>
-
           } else {
             <h1 class="page-header">@mainProductName</h1>
             <span class="price">@mainProductPrice</span>

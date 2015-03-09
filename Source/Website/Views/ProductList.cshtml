@@ -9,7 +9,7 @@
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
-  string headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
+  var headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
 
   List<IPublishedContent> products = currentPage.Children.ToList();
 }
@@ -17,7 +17,7 @@
   <h1 class="page-header">@headline</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      string name = product.GetPropertyValue<string>( "name", true );
+      var name = product.GetPropertyValue<string>( "name", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;
@@ -26,7 +26,7 @@
       if ( imageId != 0 ) {
         image = Umbraco.TypedMedia( imageId );
       }
-        
+
       <div class="col-xs-6 col-sm-4 col-md-3">
         <div class="product well well-sm text-center">
           @if ( image != null ) {
@@ -38,7 +38,7 @@
           <p>@price.Formatted</p>
           <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
         </div>
-      </div>    
+      </div>
     }
   </div>
 </div>
