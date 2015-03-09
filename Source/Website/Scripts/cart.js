@@ -32,4 +32,11 @@
 
     cartContainerInformation.find('.countrySelect').change();
   }
+
+  jQuery('body').on('click', '.cartContainer.accept button[type=submit]', function() {
+    if (!jQuery('#acceptConditions').is(':checked')) {
+      alert('Please accept our terms and conditions');
+      return false;
+    }
+  });
 });

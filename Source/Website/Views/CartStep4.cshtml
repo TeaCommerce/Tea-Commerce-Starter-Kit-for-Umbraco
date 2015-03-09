@@ -1,6 +1,6 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
@@ -13,7 +13,6 @@
   Order order = TC.GetCurrentOrder( storeId );
 }
 @if ( order != null ) {
-
   <div class="container cartContainer accept">
     <h1>Accept your order</h1>
     <div class="form-horizontal">
@@ -304,11 +303,15 @@
         <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
       </div>
     }
-
+    <div class="">
+      <label class="">
+        <input type="checkbox" name="options" id="acceptConditions" autocomplete="off">
+        Please accept our terms and conditions
+      </label>
+    </div>
     <nav class="navbar">
       @Html.Raw( TC.GeneratePaymentForm( storeId, "<button type=\"submit\" class=\"btn btn-success\">Accept and pay</button>" ) )
       <a href="@prevStep.Url" class="btn btn-default">Back</a>
     </nav>
   </div>
-      
 }

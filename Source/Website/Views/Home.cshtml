@@ -1,16 +1,52 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using System.Activities.Statements
+@inherits UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-}
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container">
-    <h1>Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-  </div>
-</div>
 
+  IReadOnlyList<IPublishedContent> carouselImages = Model.Content.GetPropertyValue<string>( "slider" )
+    .Split( new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
+    .Select( int.Parse )
+    .Select( id => Umbraco.TypedMedia( id ) )
+    .ToList();
+
+  int count = 0;
+  string carouselId = "homeCarousel";
+}
+@if ( carouselImages.Any() ) {
+  <div id="@carouselId" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      @foreach ( IPublishedContent image in carouselImages ) {
+        <li data-target="#@carouselId" data-slide-to="@count" class="@(count == 0 ? "active" : "")"></li>
+        count++;
+      }
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      @{
+      count = 0;
+      foreach ( IPublishedContent image in carouselImages ) {
+        <div class="item @(count == 0 ? "active" : "")">
+          <img src="@image.Url?width=2000&heightratio=0.5&mode=crop" alt="@image.Name">
+        </div>
+        count++;
+      }
+      }
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#@carouselId" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#@carouselId" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+}
 
 <div class="container">
   <!-- Example row of columns -->
