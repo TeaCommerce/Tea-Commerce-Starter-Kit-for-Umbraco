@@ -24,6 +24,9 @@
       </button>
       <a class="navbar-brand" href="/">Tea Commerce Starter Kit</a>
     </div>
+    <div class="navbar-right">
+      @Html.Partial( "Cart/Minicart" )
+    </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="@homeCssClass"><a href="/">@homeName</a></li>
@@ -33,9 +36,7 @@
           <li class="@liCssClass"><a href="@menuItem.Url">@menuItem.Name</a></li>
         }
       </ul>
-      @Html.Partial( "Cart/Minicart" )
-    </div>
 
-    <!--/.nav-collapse -->
+    </div>
   </div>
 </nav>

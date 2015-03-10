@@ -4,24 +4,36 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
 @{
-  IPublishedContent currentPage = Model.Content;
-
+  IPublishedContent currentPage = Model.Content,
+    cartPage = currentPage.AncestorOrSelf( 1 ).Children.FirstOrDefault( c => c.DocumentTypeAlias == "Cart" );
+}
+@if ( cartPage != null ) {
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
   Order cart = TC.GetCurrentOrder( storeId, false );
 
-  bool cartEmpty = false;
+  bool cartEmpty = cart == null || cart.OrderLines.Count == 0;
 
-  string className = "pull-right";
-  if ( cart == null || cart.OrderLines.Count == 0 ) {
-    className += " empty";
-    cartEmpty = true;
+  string minicartCssClass = "pull-right",
+         goToCartCssClass = "btn btn-primary" + ( cartEmpty ? " disabled" : "" ),
+         totalPrice = !cartEmpty ? cart.SubtotalPrice.Value.WithVatFormatted : TC.FormatPrice( storeId, 0 ).Formatted,
+         quantity = !cartEmpty ? cart.TotalQuantity.ToString( "####" ) : "0";
+
+  if ( cartEmpty ) {
+    minicartCssClass += " empty";
+  } else {
+    if ( cart.OrderLines.Count == 1 ) {
+      minicartCssClass += " oneItem";
+    }
+
   }
-}
 
-<div id="minicart" class="@className">
-  <span>Quantity: <span class="badge">@( cartEmpty ? cart.TotalQuantity : 0)</span></span>
-  <span>Total: <span class="badge">@( cartEmpty ? cart.TotalPrice.Value.Formatted : TC.FormatPrice( storeId, 0 ).Formatted)</span></span>
-  <a class="btn btn-primary" href="#">Go to cart</a>
-</div>
+
+
+  <div id="minicart" class="@minicartCssClass">
+    <a class="@goToCartCssClass" href="@cartPage.Url">Go to cart</a>
+    <span>Quantity: <span class="badge quantity">@quantity</span></span>
+    <span>Total: <span class="badge totalPrice">@totalPrice</span></span>
+  </div>
+}
