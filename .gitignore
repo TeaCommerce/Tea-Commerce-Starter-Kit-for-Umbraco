@@ -190,7 +190,7 @@ FakesAssemblies/
 **/Source/Website/App_Data/[Pp]review/
 **/Source/Website/App_Data/TEMP/
 **/Source/Website/App_Data/umbraco.config
-**/Source/Website/[Mm]edia/
+**/Source/Website/[Mm]edia/.sync/
 **/Source/Website/Cached/
 
 # Don't ignore Umbraco packages (VisualStudio.gitignore mistakes this for a NuGet packages folder)
@@ -201,3 +201,4 @@ FakesAssemblies/
 !**/Source/Website/[Bb]in/
 **/Source/Website/[Bb]in/Website.Extensions.dll
 !**/Source/Website/App_Data/Umbraco.sdf
+*.zip
