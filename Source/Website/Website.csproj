@@ -39,10 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Css\styles.css" />
-    <Content Include="installMedia\productImage1.jpg" />
-    <Content Include="installMedia\productImage2.jpg" />
-    <Content Include="installMedia\productImage3.jpg" />
-    <Content Include="installMedia\productImage4.jpg" />
+    <Content Include="installMedia\productImage01.jpg" />
+    <Content Include="installMedia\productImage02.jpg" />
+    <Content Include="installMedia\productImage03.jpg" />
+    <Content Include="installMedia\productImage04.jpg" />
     <Content Include="Scripts\cart.js" />
     <Content Include="Scripts\teaCommerceEvents.js" />
     <Content Include="Scripts\validation.js" />

@@ -28,23 +28,33 @@ namespace TeaCommerce.StarterKit.Install {
       //Create image files
       const string productImagesFolderName = "Product images";
       List<int> productImageIds = new List<int>();
+      string[] mediaInstallImages = Directory.GetFiles( HttpContext.Current.Server.MapPath( "~/installMedia" ) );
       IMedia productImagesFolder = mediaService.GetByLevel( 1 ).FirstOrDefault( m => m.Name == productImagesFolderName );
       if ( productImagesFolder == null ) {
         productImagesFolder = mediaService.CreateMedia( productImagesFolderName, -1, "Folder" );
         mediaService.Save( productImagesFolder );
-        string[] mediaInstallImages = Directory.GetFiles( HttpContext.Current.Server.MapPath( "~/installMedia" ) );
+      }
+
+      if ( !productImagesFolder.Children().Any() ) {
         foreach ( string mediaInstallImage in mediaInstallImages ) {
           string fileName = Path.GetFileName( mediaInstallImage );
           IMedia productImage = mediaService.CreateMedia( fileName, productImagesFolder.Id, "Image" );
           byte[] buffer = File.ReadAllBytes( Path.GetFullPath( mediaInstallImage ) );
-          MemoryStream strm = new MemoryStream( buffer );
-          productImage.SetValue( "umbracoFile", fileName, strm );
-          mediaService.Save( productImage );
-          productImageIds.Add( productImage.Id );
+          using ( MemoryStream strm = new MemoryStream( buffer ) ) {
+
+            productImage.SetValue( "umbracoFile", fileName, strm );
+            mediaService.Save( productImage );
+            productImageIds.Add( productImage.Id );
+
+          }
         }
       } else {
         productImageIds = productImagesFolder.Children().Select( c => c.Id ).ToList();
       }
+      foreach ( string mediaInstallImage in mediaInstallImages ) {
+        File.Delete( mediaInstallImage );
+      }
+      Directory.Delete( HttpContext.Current.Server.MapPath( "~/installMedia" ) );
 
       //Get store
       IReadOnlyList<Store> stores = StoreService.Instance.GetAll().ToList();
@@ -64,10 +74,12 @@ namespace TeaCommerce.StarterKit.Install {
           langContent.SetValue( "store", store.Id );
           contentService.Save( langContent );
 
+          int count = 0;
           foreach ( IContent productContent in products ) {
-            int mediaId = ContentExtensions.RandomOrder( productImageIds ).First();
+            int mediaId = productImageIds[ count ];
             productContent.SetValue( "image", mediaId );
             contentService.Save( productContent );
+            count++;
           }
         }
       }
