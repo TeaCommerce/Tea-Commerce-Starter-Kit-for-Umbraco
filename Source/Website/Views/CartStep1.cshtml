@@ -177,7 +177,7 @@
 
     <div class="discountCodes">
       @if ( order.DiscountCodes.Any() ) {
-        <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
+        <p>Your discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
       }
 
       <h3>Have a discount code?</h3>
