@@ -147,11 +147,6 @@
           VAT
         </div>
         <div class="col col-sm-2 col-xs-4 text-right">
-          @if ( order.TotalPrice.WithPreviousDiscounts.Vat != order.TotalPrice.Value.Vat ) {
-            <text>(</text>
-            <s>@order.TotalPrice.WithPreviousDiscounts.VatFormatted</s>
-            <text>)</text>
-          }
           @order.TotalPrice.Value.VatFormatted
         </div>
       </div>
@@ -161,7 +156,7 @@
             @(order.GiftCards.Count > 1 ? "Gift cards" : "Gift card")
           </div>
           <div class="col col-sm-2 col-xs-4 text-right">
-            @order.TotalPrice.GiftCardsAmount
+            -@order.TotalPrice.GiftCardsAmount
           </div>
         </div>
       }
@@ -189,6 +184,7 @@
 
       <form method="post" action="/base/TC/FormPost.aspx" class="form-inline form-autoValidate">
         <input name="AddDiscountCode" value="code" type="hidden" />
+        <input name="AddGiftCard" value="code" type="hidden" />
         <input name="storeId" value="1" type="hidden" />
         <div class="form-group">
           <input name="code" value="" type="text" placeholder="Enter your discount code" class="form-control" required="" />
