@@ -31,7 +31,7 @@
         <div class="product well well-sm text-center">
           @if ( image != null ) {
             <a href="@product.Url">
-              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75"/>
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
             </a>
           }
           <h3>@name</h3>

@@ -38,27 +38,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Css\styles.css" />
+    <Content Include="installMedia\productImage1.jpg" />
+    <Content Include="installMedia\productImage2.jpg" />
+    <Content Include="installMedia\productImage3.jpg" />
+    <Content Include="installMedia\productImage4.jpg" />
     <Content Include="Scripts\cart.js" />
+    <Content Include="Scripts\teaCommerceEvents.js" />
     <Content Include="Scripts\validation.js" />
     <Content Include="Scripts\product.js" />
     <Content Include="Web.config" />
@@ -96,6 +82,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Partials\Navigation\TopMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeaCommerce.StarterKit.Install\TeaCommerce.StarterKit.Install.csproj">
+      <Project>{217fc184-713c-4207-ac8c-c6f618fd9b67}</Project>
+      <Name>TeaCommerce.StarterKit.Install</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
