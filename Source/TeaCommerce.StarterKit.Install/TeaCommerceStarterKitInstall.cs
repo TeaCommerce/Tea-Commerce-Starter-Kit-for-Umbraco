@@ -24,6 +24,7 @@ namespace TeaCommerce.StarterKit.Install {
     public bool Execute( string packageName, XmlNode xmlData ) {
       IMediaService mediaService = ApplicationContext.Current.Services.MediaService;
       IContentService contentService = UmbracoContext.Current.Application.Services.ContentService;
+      IContentTypeService contentTypeService = ApplicationContext.Current.Services.ContentTypeService;
 
       //Create image files
       const string productImagesFolderName = "Product images";
@@ -81,8 +82,28 @@ namespace TeaCommerce.StarterKit.Install {
             contentService.Save( productContent );
             count++;
           }
+
+          //Fix Cart step templates
+          IReadOnlyList<IContent> cartSteps = langContent.Descendants().Where( c => c.ContentType.Alias == "CartStep" ).OrderBy( c => c.SortOrder ).ToList();
+          if ( cartSteps.Any() ) {
+
+            IContentType contentType = contentTypeService.GetContentType( cartSteps.First().ContentTypeId );
+            IEnumerable<ITemplate> templates = contentType.AllowedTemplates;
+            count = 2;
+            foreach ( IContent cartStep in cartSteps ) {
+              string templateAlias = "CartStep" + count;
+              ITemplate template = templates.FirstOrDefault( t => t.Alias == templateAlias );
+              if ( template != null ) {
+                cartStep.Template = template;
+                contentService.Save( cartStep );
+              }
+              count++;
+            }
+          }
         }
       }
+
+
 
       return true;
 
