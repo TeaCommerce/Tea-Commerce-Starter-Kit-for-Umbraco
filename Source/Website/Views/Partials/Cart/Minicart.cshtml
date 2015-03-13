@@ -5,21 +5,24 @@
 
 @{
   IPublishedContent currentPage = Model.Content,
-    cartPage = currentPage.AncestorOrSelf( 1 ).Children.FirstOrDefault( c => c.DocumentTypeAlias == "Cart" );
+                    cartPage = currentPage.AncestorOrSelf( 1 ).Children.FirstOrDefault( c => c.DocumentTypeAlias == "Cart" );
 }
 @if ( cartPage != null ) {
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
+  //Current order if there is one
   Order cart = TC.GetCurrentOrder( storeId, false );
 
+  //Is the cart empty
   bool cartEmpty = cart == null || cart.OrderLines.Count == 0;
 
-  string minicartCssClass = "pull-right",
-         goToCartCssClass = "btn btn-primary" + ( cartEmpty ? " disabled" : "" ),
-         totalPrice = !cartEmpty ? cart.SubtotalPrice.Value.WithVatFormatted : TC.FormatPrice( storeId, 0 ).Formatted,
-         quantity = !cartEmpty ? cart.TotalQuantity.ToString( "####" ) : "0";
+  string minicartCssClass = "pull-right", //Standard twitter bootstrap css class
+         goToCartCssClass = "btn btn-primary" + ( cartEmpty ? " disabled" : "" ), //Standard twitter bootstrap css classes
+         totalPrice = !cartEmpty ? cart.SubtotalPrice.Value.WithVatFormatted : TC.FormatPrice( storeId, 0 ).Formatted, //Get total price
+         quantity = !cartEmpty ? cart.TotalQuantity.ToString( "####" ) : "0"; //Get Quantity
 
+  //Set special minicart css classes
   if ( cartEmpty ) {
     minicartCssClass += " empty";
   } else {
@@ -28,8 +31,6 @@
     }
 
   }
-
-
 
   <div id="minicart" class="@minicartCssClass">
     <a class="@goToCartCssClass" href="@cartPage.Url">Go to cart</a>
