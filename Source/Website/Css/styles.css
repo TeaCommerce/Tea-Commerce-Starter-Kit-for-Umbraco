@@ -51,6 +51,13 @@
 .carousel { margin-bottom: 50px; }
 
 /**********************************
+  * FOOTER
+***********************************/
+footer p { text-align: center; }
+footer a,
+footer span { display: inline-block;padding: 0 3px; }
+
+/**********************************
   * MINICART
 ***********************************/
 #minicart { line-height: 50px; overflow: hidden; }
