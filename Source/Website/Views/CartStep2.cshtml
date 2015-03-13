@@ -27,7 +27,7 @@
       <input name="SetCurrentShippingCountry" value="countryId : countryIdShipping" type="hidden" />
       <input name="SetCurrentPaymentCountryRegion" type="hidden" value="countryRegionId : countryRegionId" />
       <input name="SetCurrentShippingCountryRegion" type="hidden" value="countryRegionId : countryRegionIdShipping" />
-      <input name="properties" type="hidden" value="company : company, firstName : firstName, lastName : lastName, streetAddress : streetAddress, zipCode : zipCode, city : city, phone : phone, email : email, companyShipping : companyShipping, attentionShipping : attentionShipping, streetAddressShipping : streetAddressShipping, zipCodeShipping : zipCodeShipping, cityShipping : cityShipping, comments : comments" />
+      <input name="properties" type="hidden" value="company : company, firstName : firstName, lastName : lastName, streetAddress : streetAddress, zipCode : zipCode, city : city, phone : phone, email : email, shipping_company : shipping_company, shipping_firstName : shipping_lastName, shipping_lastName : shipping_firstName, shipping_streetAddress : shipping_streetAddress, shipping_zipCode : shipping_zipCode, shipping_city : shipping_city, comments : comments" />
       <div class="row">
 
         <div class="col-sm-6">
@@ -120,33 +120,39 @@
           <div class="well">
             <h3>Shipping information</h3>
             <div class="form-group">
-              <label for="inputCompanyShipping" class="col-sm-4 col-md-3 control-label">Company</label>
+              <label for="inputshipping_company" class="col-sm-4 col-md-3 control-label">Company</label>
               <div class="col-sm-8 col-md-9">
-                <input type="text" class="form-control" id="inputCompanyShipping" name="companyShipping" placeholder="Company" value="@order.Properties[ "companyShipping" ]" />
+                <input type="text" class="form-control" id="inputshipping_company" name="shipping_company" placeholder="Company" value="@order.Properties[ "shipping_company" ]" />
               </div>
             </div>
             <div class="form-group">
-              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">Attention</label>
+              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">First name</label>
               <div class="col-sm-8 col-md-9">
-                <input type="text" class="form-control" id="inputAttention" name="attentionShipping" placeholder="Attention" value="@order.Properties[ "attentionShipping" ]" />
+                <input type="text" class="form-control" id="inputAttention" name="shipping_firstName" placeholder="Attention" value="@order.Properties[ "shipping_firstName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">Last name</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAttention" name="shipping_lastName" placeholder="Attention" value="@order.Properties[ "shipping_lastName" ]" />
               </div>
             </div>
             <div class="form-group">
               <label for="inputAddressShipping" class="col-sm-4 col-md-3 control-label">Address</label>
               <div class="col-sm-8 col-md-9">
-                <input type="text" class="form-control" id="inputAddressShipping" name="streetAddressShipping" placeholder="Address" value="@order.Properties[ "streetAddressShipping" ]" />
+                <input type="text" class="form-control" id="inputAddressShipping" name="shipping_streetAddress" placeholder="Address" value="@order.Properties[ "shipping_streetAddress" ]" />
               </div>
             </div>
             <div class="form-group">
-              <label for="inputZipCodeShipping" class="col-sm-4 col-md-3 control-label">Zip code</label>
+              <label for="inputshipping_zipCode" class="col-sm-4 col-md-3 control-label">Zip code</label>
               <div class="col-sm-8 col-md-9">
-                <input type="text" class="form-control" id="inputZipCodeShipping" name="zipCodeShipping" placeholder="Zip code" value="@order.Properties[ "zipCodeShipping" ]" />
+                <input type="text" class="form-control" id="inputshipping_zipCode" name="shipping_zipCode" placeholder="Zip code" value="@order.Properties[ "shipping_zipCode" ]" />
               </div>
             </div>
             <div class="form-group">
-              <label for="inputCityShipping" class="col-sm-4 col-md-3 control-label">City</label>
+              <label for="inputshipping_city" class="col-sm-4 col-md-3 control-label">City</label>
               <div class="col-sm-8 col-md-9">
-                <input type="text" class="form-control" id="inputCityShipping" name="cityShipping" placeholder="City" value="@order.Properties[ "cityShipping" ]" />
+                <input type="text" class="form-control" id="inputshipping_city" name="shipping_city" placeholder="City" value="@order.Properties[ "shipping_city" ]" />
               </div>
             </div>
 
