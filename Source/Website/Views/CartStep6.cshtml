@@ -83,49 +83,55 @@
           </div>
         </div>
         <div class="col-sm-6">
-          
-          <div class="well">
-            <h3>Shipping information</h3>
-            <div class="form-group">
-              <label class="col-sm-4 col-md-3 control-label">Company</label>
-              <div class="col-sm-8 col-md-9">
-                <p class="form-control-static">@order.Properties[ "companyShipping" ]</p>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-4 col-md-3 control-label">Attention</label>
-              <div class="col-sm-8 col-md-9">
-                <p class="form-control-static">@order.Properties[ "attentionShipping" ]</p>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-4 col-md-3 control-label">Address</label>
-              <div class="col-sm-8 col-md-9">
-                <p class="form-control-static">@order.Properties[ "streetAddressShipping" ]</p>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-4 col-md-3 control-label">Zip code</label>
-              <div class="col-sm-8 col-md-9">
-                <p class="form-control-static">@order.Properties[ "zipCodeShipping" ]</p>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-4 col-md-3 control-label">City</label>
-              <div class="col-sm-8 col-md-9">
-                <p class="form-control-static">@order.Properties[ "cityShipping" ]</p>
-              </div>
-            </div>
+          @if ( !string.IsNullOrEmpty( order.Properties[ "companyShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "attentionShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "streetAddressShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "zipCodeShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "cityShipping" ] ) ) {
 
-            @if ( order.ShipmentInformation.CountryId != null ) {
+            <div class="well">
+              <h3>Shipping information</h3>
               <div class="form-group">
-                <label class="col-sm-4 col-md-3 control-label">Country</label>
+                <label class="col-sm-4 col-md-3 control-label">Company</label>
                 <div class="col-sm-8 col-md-9">
-                  <p class="form-control-static">@TC.GetCountry( storeId, order.ShipmentInformation.CountryId.Value ).Name</p>
+                  <p class="form-control-static">@order.Properties[ "companyShipping" ]</p>
                 </div>
               </div>
-            }
-          </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Attention</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "attentionShipping" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Address</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "streetAddressShipping" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "zipCodeShipping" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">City</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "cityShipping" ]</p>
+                </div>
+              </div>
+
+              @if ( order.ShipmentInformation.CountryId != null ) {
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 control-label">Country</label>
+                  <div class="col-sm-8 col-md-9">
+                    <p class="form-control-static">@TC.GetCountry( storeId, order.ShipmentInformation.CountryId.Value ).Name</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
         </div>
 
       </div>
