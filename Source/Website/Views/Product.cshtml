@@ -1,0 +1,59 @@
+﻿@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+
+  IPublishedContent productPage = Model.Content;
+
+  //store id
+  long storeId = long.Parse( productPage.GetPropertyValue<string>( "store", true ) );
+
+  //Main product data
+  var productName = productPage.GetPropertyValue<string>( "name" );
+  Price productPrice = TC.GetPrice( storeId, productPage.Id.ToString( CultureInfo.InvariantCulture ) );
+  var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
+
+  IPublishedContent productImage = null;
+
+  var productimageId = productPage.GetPropertyValue<int>( "image" );
+  if ( productimageId != 0 ) {
+    productImage = Umbraco.TypedMedia( productimageId );
+  }
+}
+<div class="container productView">
+  <div class="row">
+    <div class="col-sm-6 col-md-7 col-lg-8">
+      <div class="productImages">
+
+        @if ( productImage != null ) {
+          <img class="img-responsive" src="@productImage.Url?width=750"/>
+        }
+
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-5 col-lg-4">
+
+      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
+        <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+        <input name="storeId" value="@storeId" type="hidden" />
+
+        <div class="well">
+
+          <h1 class="page-header">@productName</h1>
+          <span class="price">@productPrice</span>
+          @Html.Raw( productDescription )
+          <input name="productIdentifier" value="@productPage.Id" type="hidden" />
+
+          <p>
+            <label for="quantity">Quantity:</label>
+            <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
+          </p>
+          <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

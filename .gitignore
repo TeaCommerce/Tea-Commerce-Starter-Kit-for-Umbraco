@@ -11,11 +11,10 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
-build/
+x64/*
+x86/*
 bld/
-[Bb]in/
+[Bb]in/*
 [Oo]bj/
 
 # Roslyn cache directories
@@ -133,7 +132,7 @@ publish/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
-**/packages/*
+#**/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # If using the old MSBuild-Integrated Package Restore, uncomment this:
@@ -181,3 +180,22 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# Ignore files/folders by Umbraco
+/Source/Website/App_Data/App_Browsers/
+/Source/Website/App_Data/Cache/
+/Source/Website/App_Data/ClientDependency/
+/Source/Website/App_Data/ExamineIndexes/
+/Source/Website/App_Data/Logs/
+/Source/Website/App_Data/[Pp]review/
+/Source/Website/App_Data/TEMP/
+/Source/Website/App_Data/umbraco.config
+/Source/Website/Cached/
+
+# Don't ignore Umbraco packages (VisualStudio.gitignore mistakes this for a NuGet packages folder)
+# Make sure to include details from VisualStudio.gitignore BEFORE this
+!/Source/Website/App_Data/[Pp]ackages/**
+!/Source/Website/[Uu]mbraco/[Dd]eveloper/[Pp]ackages/**
+!/Source/Website/[Bb]in/**
+!**/Source/Website/App_Data/Umbraco.sdf
+*.zip
