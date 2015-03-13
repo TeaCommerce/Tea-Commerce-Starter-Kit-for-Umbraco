@@ -11,7 +11,7 @@
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
 
-  Order order = TC.GetCurrentOrder( storeId );
+  Order order = TC.GetCurrentOrder( storeId, false );
 }
 @if ( order != null ) {
   <div class="container cartContainer content">

@@ -13,7 +13,7 @@
 
   IEnumerable<Country> countries = TC.GetCountries( storeId );
 
-  Order order = TC.GetCurrentOrder( storeId );
+  Order order = TC.GetCurrentOrder( storeId, false );
 }
 @if ( order != null ) {
   <div class="container cartContainer information">
