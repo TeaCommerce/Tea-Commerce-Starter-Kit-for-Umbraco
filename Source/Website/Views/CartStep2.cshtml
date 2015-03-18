@@ -22,12 +22,12 @@
     <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
       <input name="storeId" type="hidden" value="@storeId"/>
       <input name="returnUrl" type="hidden" value="@nextStep.Url"/>
-      <input name="AddOrUpdateOrderProperties" type="hidden" value="properties : properties" />
+      <input name="AddOrUpdateOrderProperties" type="hidden" value="properties" />
       <input name="SetCurrentPaymentCountry" value="countryId" type="hidden" />
       <input name="SetCurrentShippingCountry" value="countryId : countryIdShipping" type="hidden" />
       <input name="SetCurrentPaymentCountryRegion" type="hidden" value="countryRegionId : countryRegionId" />
       <input name="SetCurrentShippingCountryRegion" type="hidden" value="countryRegionId : countryRegionIdShipping" />
-      <input name="properties" type="hidden" value="company : company, firstName : firstName, lastName : lastName, streetAddress : streetAddress, zipCode : zipCode, city : city, phone : phone, email : email, shipping_company : shipping_company, shipping_firstName : shipping_lastName, shipping_lastName : shipping_firstName, shipping_streetAddress : shipping_streetAddress, shipping_zipCode : shipping_zipCode, shipping_city : shipping_city, comments : comments" />
+      <input name="properties" type="hidden" value="company, firstName, lastName, streetAddress, zipCode, city, phone, email, shipping_company, shipping_firstName, shipping_lastName, shipping_streetAddress, shipping_zipCode, shipping_city, comments" />
       <div class="row">
 
         <div class="col-sm-6">

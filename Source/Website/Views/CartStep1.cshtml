@@ -43,10 +43,10 @@
               <span class="xs-right">
                 @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.UnitPrice.WithoutDiscounts.Formatted</s>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.UnitPrice.Value.Formatted
+                @orderLine.UnitPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
             </div>
@@ -87,10 +87,10 @@
               <span class="xs-right">
                 @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.TotalPrice.WithPreviousDiscounts.Formatted</s>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.TotalPrice.Value.Formatted
+                @orderLine.TotalPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
             </div>
@@ -104,10 +104,10 @@
         <div class="col col-sm-2 col-xs-4 text-right">
           @if ( order.SubtotalPrice.Discount.Value > 0M ) {
             <text>(</text>
-            <s>@order.SubtotalPrice.WithPreviousDiscounts.Formatted</s>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
             <text>)</text>
           }
-          @order.SubtotalPrice.Value.Formatted
+          @order.SubtotalPrice.Value
         </div>
       </div>
       @if ( order.ShipmentInformation.ShippingMethodId != null ) {
@@ -119,10 +119,10 @@
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.ShipmentInformation.TotalPrice.Value.Formatted
+            @order.ShipmentInformation.TotalPrice.Value
           </div>
         </div>
       }
@@ -135,21 +135,13 @@
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.PaymentInformation.TotalPrice.Value.Formatted
+            @order.PaymentInformation.TotalPrice.Value
           </div>
         </div>
       }
-      <div class="row">
-        <div class="col col-sm-10 col-xs-8 text-right">
-          VAT
-        </div>
-        <div class="col col-sm-2 col-xs-4 text-right">
-          @order.TotalPrice.Value.VatFormatted
-        </div>
-      </div>
       @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
         <div class="row">
           <div class="col col-sm-10 col-xs-8 text-right">
@@ -171,6 +163,14 @@
             <text>)</text>
           }
           @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
         </div>
       </div>
     </div>
