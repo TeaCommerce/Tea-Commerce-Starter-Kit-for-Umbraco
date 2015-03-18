@@ -61,7 +61,6 @@
     <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
-    <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Partials\Cart\Minicart.cshtml" />
@@ -91,6 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MacroScripts\tea-commerce\edit-order.cshtml" />
+    <Content Include="MacroScripts\tea-commerce\email-template-confirmation.cshtml" />
+    <Content Include="MacroScripts\tea-commerce\email-template-payment-inconsistency.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
