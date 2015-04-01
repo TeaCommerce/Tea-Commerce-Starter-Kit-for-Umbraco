@@ -1,11 +1,12 @@
-﻿@using System.Activities.Statements
-@using System.Globalization
+﻿@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  IPublishedContent currentPage = Model.Content;
+  IPublishedContent currentPage = CurrentPage;
 
   IReadOnlyList<IPublishedContent> carouselImages = currentPage.GetPropertyValue<string>( "slider" )
     .Split( new[] { ',' }, StringSplitOptions.RemoveEmptyEntries )

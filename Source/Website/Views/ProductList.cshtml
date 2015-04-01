@@ -1,15 +1,18 @@
 ﻿@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  IPublishedContent currentPage = Model.Content;
+  
+  IPublishedContent currentPage = CurrentPage;
 
   //store id
-  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
-  var headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
+  var headline = CurrentPage.GetPropertyValue<string>( "umbHeadline" );
 
   List<IPublishedContent> products = currentPage.Children.ToList();
 }

@@ -1,23 +1,23 @@
 ﻿@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-
-  IPublishedContent productPage = Model.Content;
-
+  
   //store id
-  long storeId = long.Parse( productPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
   //Main product data
-  var productName = productPage.GetPropertyValue<string>( "name" );
-  Price productPrice = TC.GetPrice( storeId, productPage.Id.ToString( CultureInfo.InvariantCulture ) );
-  var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
+  var productName = CurrentPage.GetPropertyValue<string>( "name" );
+  Price productPrice = TC.GetPrice( storeId, CurrentPage.Id.ToString( CultureInfo.InvariantCulture ) );
+  var productDescription = new HtmlString( CurrentPage.GetPropertyValue<string>( "description" ) );
 
   IPublishedContent productImage = null;
 
-  var productimageId = productPage.GetPropertyValue<int>( "image" );
+  var productimageId = CurrentPage.GetPropertyValue<int>( "image" );
   if ( productimageId != 0 ) {
     productImage = Umbraco.TypedMedia( productimageId );
   }
@@ -45,7 +45,7 @@
           <h1 class="page-header">@productName</h1>
           <span class="price">@productPrice</span>
           @Html.Raw( productDescription )
-          <input name="productIdentifier" value="@productPage.Id" type="hidden" />
+          <input name="productIdentifier" value="@CurrentPage.Id" type="hidden" />
 
           <p>
             <label for="quantity">Quantity:</label>
