@@ -30,31 +30,38 @@
 
         <div class="col-sm-6">
           <div class="well">
-            <h3>Select payment method</h3>
-            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
-              <div class="radio">
-                <label>
-                  <input type="radio" name="paymentMethodId" value="@method.Id"
-                    @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
-                      @Html.Raw( "checked" )
-                    }>
-                  @method.Name
-                </label>
-              </div>
-            }
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="well">
             <h3>Select shipping method</h3>
             @foreach ( ShippingMethod method in TC.GetShippingMethods( storeId ) ) {
               <div class="radio">
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
-                    @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
-                      @Html.Raw( "checked" )
-                    }>
+                         @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
+                           @Html.Raw( "checked" )
+                         }>
                   @method.Name
+                </label>
+                <label>
+                  @TC.GetPriceForShippingMethod( storeId, method.Id )
+                </label>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Select payment method</h3>
+            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
+              <div class="radio">
+                <label>
+                  <input type="radio" name="paymentMethodId" value="@method.Id"
+                         @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
+                           @Html.Raw( "checked" )
+                         }>
+                  @method.Name
+                </label>
+                <label>
+                  @TC.GetPriceForPaymentMethod( storeId, method.Id )
                 </label>
               </div>
             }
