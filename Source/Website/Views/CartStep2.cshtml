@@ -164,10 +164,10 @@
               <div class="col-sm-8 col-md-9">
                 <select class="form-control countrySelect" id="inputCountryShipping" name="countryIdShipping">
                   @foreach ( Country country in countries ) {
-                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionShipping" + country.Id)" label="@country.Name"
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionShipping" + country.Id)" @*label="@country.Name"*@
                       @if ( country.Id == order.ShipmentInformation.CountryId ) {
                         @Html.Raw( "selected=true" )
-                      }></option>
+                      }>@country.Name</option>
                   }
                 </select>
               </div>
