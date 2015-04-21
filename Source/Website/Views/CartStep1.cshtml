@@ -59,7 +59,7 @@
                   <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity, overwriteQuantity : overwriteQuantity" />
                   <input name="overwriteQuantity" type="hidden" value="true" />
                   <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
-                  <input type="text" name="quantity" class="form-control" value="@orderLine.Quantity.ToString( "0.####" )" readonly="" />
+                  <input type="number" name="quantity" class="form-control" value="@orderLine.Quantity.ToString( "0.####" )" pattern="[0-9]*" min="1" readonly="" />
                 </form>
                 <form action="/base/TC/FormPost.aspx" method="post">
                   <input name="storeId" type="hidden" value="@storeId"/>
@@ -81,7 +81,6 @@
                   <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
                   <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
                 </form>
-
               </div>
             </div>
             <div class="col col-sm-2 text-right">
