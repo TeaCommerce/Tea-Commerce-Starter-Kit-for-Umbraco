@@ -53,7 +53,7 @@
           @if ( stock > 0 || stock == null ) {
             <p>
               <label for="quantity">Quantity:</label>
-              <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
+            <input type="number" name="quantity" id="quantity" class="form-control" value="1" pattern="[0-9]*" min="1" />
             </p>
             <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
           } else {
