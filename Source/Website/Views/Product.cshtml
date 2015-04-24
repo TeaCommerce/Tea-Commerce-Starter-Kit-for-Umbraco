@@ -6,7 +6,7 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  
+
   //store id
   long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
@@ -21,6 +21,9 @@
   if ( productimageId != 0 ) {
     productImage = Umbraco.TypedMedia( productimageId );
   }
+  
+  //stock
+  var stock = TC.GetStock( storeId, CurrentPage.Id.ToString() );
 }
 <div class="container productView">
   <div class="row">
@@ -47,11 +50,15 @@
           @Html.Raw( productDescription )
           <input name="productIdentifier" value="@CurrentPage.Id" type="hidden" />
 
-          <p>
-            <label for="quantity">Quantity:</label>
-            <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
-          </p>
-          <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+          @if ( stock > 0 || stock == null ) {
+            <p>
+              <label for="quantity">Quantity:</label>
+              <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
+            </p>
+            <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+          } else {
+            <label>Out of stock</label>
+          }
         </div>
       </form>
     </div>
