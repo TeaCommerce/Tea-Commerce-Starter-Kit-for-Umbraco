@@ -39,10 +39,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Css\styles.css" />
-    <Content Include="installMedia\productImage01.jpg" />
-    <Content Include="installMedia\productImage02.jpg" />
-    <Content Include="installMedia\productImage03.jpg" />
-    <Content Include="installMedia\productImage04.jpg" />
     <Content Include="Scripts\cart.js" />
     <Content Include="Scripts\teaCommerceEvents.js" />
     <Content Include="Scripts\validation.js" />
@@ -83,18 +79,18 @@
     <Content Include="Views\Partials\Navigation\TopMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TeaCommerce.StarterKit.Install\TeaCommerce.StarterKit.Install.csproj">
-      <Project>{217fc184-713c-4207-ac8c-c6f618fd9b67}</Project>
-      <Name>TeaCommerce.StarterKit.Install</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="App_Code\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MacroScripts\tea-commerce\edit-order.cshtml" />
     <Content Include="MacroScripts\tea-commerce\email-template-confirmation.cshtml" />
     <Content Include="MacroScripts\tea-commerce\email-template-payment-inconsistency.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="TeaCommerce.StarterKit.Install, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Build\TeaCommerce.StarterKit.Install\bin\Release\TeaCommerce.StarterKit.Install.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,56 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="JavaScriptMinify">
+
+  <!-- IMPORTS -->
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuild community tasks</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.targets" />
+  
+  <!-- PROPERTIES -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<BuildDir>..\Build</BuildDir>
+	<BuildProjectDir>..\Build\Source\TeaCommerce.StarterKit.Install</BuildProjectDir>
+	<WebDir>..\Source\Website</WebDir>
+	<PublishDir>Publish</PublishDir>
+  </PropertyGroup>
+  
+  <!-- COMPILE -->
+  <Target Name="Compile">
+    <ItemGroup>
+      <ProjectsToBuild Include="$(WebDir)\*proj" />
+    </ItemGroup>
+    <MSBuild Targets="Rebuild" Projects="@(ProjectsToBuild)" Properties="Configuration=$(Configuration);" />
+  </Target>
+  
+  <!-- CLEAN -->
+  <Target Name="Clean" DependsOnTargets="Compile">
+    <ItemGroup>
+      <FilesToRemove Include="$(PublishDir)\**\*.*" />
+	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views" />
+    </ItemGroup>
+    <RemoveDir Directories="@(DirectoriesToRemove)" />
+	<Delete Files="@(FilesToRemove)" />
+  </Target>
+  
+  <Target Name="CopyFiles" DependsOnTargets="Clean">
+    <ItemGroup>
+	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\TeaCommerce.StarterKit.Install.dll" />	  
+	  <Scripts Include="$(WebDir)\Scripts\**" />
+	  <Minicart Include="$(WebDir)\Views\**\Minicart.cshtml" />
+	  <TopMenu Include="$(WebDir)\Views\**\TopMenu.cshtml" />
+	  <Package Include="$(BuildDir)\package.xml" />
+    </ItemGroup>
+	
+	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\%(RecursiveDir)" />
+	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)\Scripts" />
+	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views" />
+	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views" />
+	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
+  </Target>
+  
+  <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">
+  </Target>
+  
+</Project>

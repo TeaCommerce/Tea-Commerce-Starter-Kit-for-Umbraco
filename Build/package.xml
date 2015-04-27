@@ -1,0 +1,1908 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>cart.js</guid>
+      <orgPath>/Scripts</orgPath>
+      <orgName>cart.js</orgName>
+    </file>
+    <file>
+      <guid>product.js</guid>
+      <orgPath>/Scripts</orgPath>
+      <orgName>product.js</orgName>
+    </file>
+    <file>
+      <guid>teaCommerceEvents.js</guid>
+      <orgPath>/Scripts</orgPath>
+      <orgName>teaCommerceEvents.js</orgName>
+    </file>
+    <file>
+      <guid>Minicart.cshtml</guid>
+      <orgPath>/Views/Partials/Cart</orgPath>
+      <orgName>Minicart.cshtml</orgName>
+    </file>
+    <file>
+      <guid>validation.js</guid>
+      <orgPath>/Scripts</orgPath>
+      <orgName>validation.js</orgName>
+    </file>
+    <file>
+      <guid>TopMenu.cshtml</guid>
+      <orgPath>/Views/Partials/Navigation</orgPath>
+      <orgName>TopMenu.cshtml</orgName>
+    </file>
+    <file>
+      <guid>TeaCommerce.StarterKit.Install.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>TeaCommerce.StarterKit.Install.dll</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>Tea Commerce Starter Kit</name>
+      <version>4.0</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>http://teacommerce.net/</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Tea Commerce</name>
+      <website>http://teacommerce.net/</website>
+    </author>
+    <readme><![CDATA[Thanks for installing the Tea Commerce starter kit.
+
+We hope you will be pleased with our product and use it to create a fantastic e-commerce solution.
+
+SUPPORT
+The Tea Commerce team is always ready to help you!
+http://teacommerce.net/ressources/support/
+
+Tea Commerce
+info@teacommerce.net
++45 82 307 306]]></readme>
+  </info>
+  <Documents>
+    <DocumentSet importMode="root">
+      <Lang id="1068" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2015-03-12T08:16:19" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Lang">
+        <slider><![CDATA[1119,1117,1116,1118]]></slider>
+        <store>1</store>
+        <featuredProducts><![CDATA[1071,1073,1072,1074]]></featuredProducts>
+        <Cart id="1081" parentID="1068" level="2" creatorID="0" sortOrder="0" createDate="2015-01-16T11:33:34" updateDate="2015-03-06T11:43:57" nodeName="Cart content" urlName="cart-content" path="-1,1068,1081" isDoc="" nodeType="1080" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="Cart">
+          <CartStep id="1083" parentID="1081" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:35:03" updateDate="2015-03-06T11:44:02" nodeName="Information" urlName="information" path="-1,1068,1081,1083" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1058" nodeTypeAlias="CartStep" />
+          <CartStep id="1084" parentID="1081" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:38:02" updateDate="2015-03-06T11:44:12" nodeName="Shipping/Payment" urlName="shippingpayment" path="-1,1068,1081,1084" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1060" nodeTypeAlias="CartStep" />
+          <CartStep id="1085" parentID="1081" level="3" creatorID="0" sortOrder="2" createDate="2015-01-16T11:38:14" updateDate="2015-03-06T11:44:18" nodeName="Accept" urlName="accept" path="-1,1068,1081,1085" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="CartStep" />
+          <CartStep id="1106" parentID="1081" level="3" creatorID="0" sortOrder="3" createDate="2015-03-06T11:43:19" updateDate="2015-03-06T11:43:31" nodeName="Payment" urlName="payment" path="-1,1068,1081,1106" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="CartStep" />
+          <CartStep id="1086" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2015-03-06T11:44:24" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
+        </Cart>
+        <ProductList id="1069" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2015-03-13T11:28:45" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
+          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2015-04-24T12:01:20" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <name><![CDATA[Summer Yacht]]></name>
+            <sku><![CDATA[p0001]]></sku>
+            <image>1116</image>
+            <description><![CDATA[<p>This is the product description.</p>]]></description>
+            <priceJMD><![CDATA[500]]></priceJMD>
+          </Product>
+          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2015-04-24T12:01:38" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <name><![CDATA[Yacht with sails]]></name>
+            <sku><![CDATA[p0002]]></sku>
+            <image>1117</image>
+            <description><![CDATA[<p>This is the product description.</p>]]></description>
+            <priceJMD><![CDATA[60]]></priceJMD>
+          </Product>
+        </ProductList>
+        <ProductList id="1070" parentID="1068" level="2" creatorID="0" sortOrder="2" createDate="2015-01-16T11:16:17" updateDate="2015-03-13T11:28:55" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1068,1070" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
+          <Product id="1073" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2015-03-13T11:30:21" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <name><![CDATA[Motor driven Yacht]]></name>
+            <sku><![CDATA[p0003]]></sku>
+            <image>1118</image>
+            <description><![CDATA[<p>This is the product description.</p>]]></description>
+            <priceJMD><![CDATA[80]]></priceJMD>
+          </Product>
+          <Product id="1074" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2015-03-13T11:30:40" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <name><![CDATA[One masted yacht]]></name>
+            <sku><![CDATA[p0004]]></sku>
+            <image>1119</image>
+            <description><![CDATA[<p>This is the product description.</p>]]></description>
+            <priceJMD><![CDATA[2342.2]]></priceJMD>
+          </Product>
+        </ProductList>
+      </Lang>
+    </DocumentSet>
+  </Documents>
+  <DocumentTypes>
+    <DocumentType>
+      <Info>
+        <Name>Cart</Name>
+        <Alias>Cart</Alias>
+        <Icon>icon-shopping-basket-alt-2</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates>
+          <Template>CartStep1</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>CartStep1</DefaultTemplate>
+      </Info>
+      <Structure>
+        <DocumentType>CartStep</DocumentType>
+      </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Cart step</Name>
+        <Alias>CartStep</Alias>
+        <Icon>icon-shopping-basket-alt-2 color-orange</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates>
+          <Template>CartStep1</Template>
+          <Template>CartStep2</Template>
+          <Template>CartStep3</Template>
+          <Template>CartStep4</Template>
+          <Template>CartStep6</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>CartStep1</DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Home</Name>
+        <Alias>Lang</Alias>
+        <Icon>icon-home</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates>
+          <Template>Home</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>Home</DefaultTemplate>
+      </Info>
+      <Structure>
+        <DocumentType>ProductList</DocumentType>
+        <DocumentType>Cart</DocumentType>
+      </Structure>
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Slider</Name>
+          <Alias>slider</Alias>
+          <Type>Umbraco.MultipleMediaPicker</Type>
+          <Definition>7e3962cc-ce20-4ffc-b661-5897a894ba7e</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Store</Name>
+          <Alias>store</Alias>
+          <Type>TeaCommerce.StorePicker</Type>
+          <Definition>93137cb1-4e25-442c-84ee-329121f4310e</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>True</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Featured products</Name>
+          <Alias>featuredProducts</Alias>
+          <Type>Umbraco.MultiNodeTreePicker</Type>
+          <Definition>122843b8-b613-4322-9dc4-05a707a629b1</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>14</Id>
+          <Caption>Content</Caption>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Product</Name>
+        <Alias>Product</Alias>
+        <Icon>icon-tag</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates>
+          <Template>Product</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>Product</DefaultTemplate>
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Name</Name>
+          <Alias>name</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>SKU</Name>
+          <Alias>sku</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Image</Name>
+          <Alias>image</Alias>
+          <Type>Umbraco.MediaPicker</Type>
+          <Definition>93929b9a-93a2-4e2a-b239-d99334440a59</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Description</Name>
+          <Alias>description</Alias>
+          <Type>Umbraco.TinyMCEv3</Type>
+          <Definition>ca90c950-0aff-4e72-b976-a30b1ac57dad</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Price</Name>
+          <Alias>priceJMD</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Stock</Name>
+          <Alias>stock</Alias>
+          <Type>TeaCommerce.StockManagement</Type>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>12</Id>
+          <Caption>Information</Caption>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Product list</Name>
+        <Alias>ProductList</Alias>
+        <Icon>icon-tags</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates>
+          <Template>ProductList</Template>
+        </AllowedTemplates>
+        <DefaultTemplate>ProductList</DefaultTemplate>
+      </Info>
+      <Structure>
+        <DocumentType>Product</DocumentType>
+      </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+  </DocumentTypes>
+  <Templates>
+    <Template>
+      <Name>Cart step 1</Name>
+      <Alias>CartStep1</Alias>
+      <Master>CartStepMaster</Master>
+      <Design><![CDATA[@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent nextStep = CurrentPage.Children.FirstOrDefault();
+
+  //store id
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer content">
+    <h1>Your cart</h1>
+    <div class="orderContent">
+      <div class="row hidden-xs">
+
+        <div class="col col-lg-6 col-md-5 col-sm-4">
+          Product
+        </div>
+        <div class="col col-sm-2">
+          Unit price
+        </div>
+        <div class="col col-lg-2 col-md-3 col-sm-4 text-center">
+          Quantity
+        </div>
+        <div class="col col-sm-2 text-right">
+          Total
+        </div>
+      </div>
+      <div class="orderlines">
+        @foreach ( OrderLine orderLine in order.OrderLines ) {
+          IPublishedContent productContent = Umbraco.TypedContent( orderLine.ProductIdentifier );
+          <div class="row orderline">
+            <div class="col col-lg-6 col-md-5 col-sm-4">
+              <span class="hidden-sm hidden-md hidden-lg">Product: </span>@orderLine.Name
+            </div>
+            <div class="col col-sm-2">
+              <span class="xs-right">
+                @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.UnitPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
+            </div>
+            <div class="col col-lg-2 col-md-3 col-sm-4 quantity text-center">
+              <span class="hidden-sm hidden-md hidden-lg">Quantity: </span>
+              <div class="input-group">
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity, overwriteQuantity : overwriteQuantity" />
+                  <input name="overwriteQuantity" type="hidden" value="true" />
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <input type="number" name="quantity" class="form-control" value="@orderLine.Quantity.ToString( "0.####" )" pattern="[0-9]*" min="1" readonly="" />
+                </form>
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity" />
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <input name="quantity" type="hidden" value="-1" />
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>
+                </form>
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity" />
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <input name="quantity" type="hidden" value="1" />
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+                </form>
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="RemoveOrderLine" type="hidden" value="orderLineId : orderLineId" />
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
+                </form>
+              </div>
+            </div>
+            <div class="col col-sm-2 text-right">
+              <span class="xs-right">
+                @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.TotalPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Subtotal
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.SubtotalPrice.Discount.Value > 0M ) {
+            <text>(</text>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.SubtotalPrice.Value
+        </div>
+      </div>
+      @if ( order.ShipmentInformation.ShippingMethodId != null ) {
+        ShippingMethod shippingMethod = TC.GetShippingMethod( storeId, order.ShipmentInformation.ShippingMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Shipping (@shippingMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.ShipmentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.PaymentInformation.PaymentMethodId != null ) {
+        PaymentMethod paymentMethod = TC.GetPaymentMethod( storeId, order.PaymentInformation.PaymentMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Payment (@paymentMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.PaymentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            @(order.GiftCards.Count > 1 ? "Gift cards" : "Gift card")
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            -@order.TotalPrice.GiftCardsAmount
+          </div>
+        </div>
+      }
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Total incl. VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.TotalPrice.WithPreviousDiscounts.Value != order.TotalPrice.Value.Value ) {
+            <text>(</text>
+            <s>@order.TotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
+    </div>
+
+    <div class="discountCodes">
+      @if ( order.DiscountCodes.Any() ) {
+        <p>Your discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
+      }
+
+      <h3>Have a discount code?</h3>
+
+      <form method="post" action="/base/TC/FormPost.aspx" class="form-inline form-autoValidate">
+        <input name="AddDiscountCode" value="code" type="hidden" />
+        <input name="AddGiftCard" value="code" type="hidden" />
+        <input name="storeId" value="1" type="hidden" />
+        <div class="form-group">
+          <input name="code" value="" type="text" placeholder="Enter your discount code" class="form-control" required="" />
+        </div>
+        <input value="Add discount code" class="btn btn-default" type="submit" />
+      </form>
+    </div>
+    <nav class="navbar">
+      <a href="@nextStep.Url" class="btn btn-success">Continue</a>
+      <a disabled="disabled" class="btn btn-default">Back</a>
+    </nav>
+  </div>
+}]]></Design>
+    </Template>
+    <Template>
+      <Name>Cart step 2</Name>
+      <Alias>CartStep2</Alias>
+      <Master>CartStepMaster</Master>
+      <Design><![CDATA[@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = CurrentPage;
+
+  IPublishedContent nextStep = currentPage.FollowingSibling();
+  IPublishedContent prevStep = currentPage.Parent;
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  IEnumerable<Country> countries = TC.GetCountries( storeId );
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer information">
+    <h1>Your information</h1>
+
+    <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
+      <input name="storeId" type="hidden" value="@storeId"/>
+      <input name="returnUrl" type="hidden" value="@nextStep.Url"/>
+      <input name="AddOrUpdateOrderProperties" type="hidden" value="properties" />
+      <input name="SetCurrentPaymentCountry" value="countryId" type="hidden" />
+      <input name="SetCurrentShippingCountry" value="countryId : countryIdShipping" type="hidden" />
+      <input name="SetCurrentPaymentCountryRegion" type="hidden" value="countryRegionId : countryRegionId" />
+      <input name="SetCurrentShippingCountryRegion" type="hidden" value="countryRegionId : countryRegionIdShipping" />
+      <input name="properties" type="hidden" value="company, firstName, lastName, streetAddress, zipCode, city, phone, email, shipping_company, shipping_firstName, shipping_lastName, shipping_streetAddress, shipping_zipCode, shipping_city, comments" />
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Payment information</h3>
+            <div class="form-group">
+              <label for="inputCompany" class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" value="@order.Properties[ "company" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputFirstName" class="col-sm-4 col-md-3 control-label">First name *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputFirstName" name="firstName" placeholder="First name" required="" value="@order.Properties[ "firstName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="col-sm-4 col-md-3 control-label">Last name *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Last name" required="" value="@order.Properties[ "lastName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress" class="col-sm-4 col-md-3 control-label">Address *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAddress" name="streetAddress" placeholder="Address" required="" value="@order.Properties[ "streetAddress" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputZipCode" class="col-sm-4 col-md-3 control-label">Zip code *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputZipCode" name="zipCode" placeholder="Zip code" required="" value="@order.Properties[ "zipCode" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputCity" class="col-sm-4 col-md-3 control-label">City *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputCity" name="city" placeholder="City" required="" value="@order.Properties[ "city" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-4 col-md-3 control-label">E-mail *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail" required="" value="@order.Properties[ "email" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputTelephone" class="col-sm-4 col-md-3 control-label">Telephone *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputTelephone" name="phone" placeholder="Telephone" required="" value="@order.Properties[ "phone" ]" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputCountry" class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <select class="form-control countrySelect" id="inputCountry" name="countryId">
+                  @foreach ( Country country in countries ) {
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionPayment" + country.Id)" @*label="@country.Name"*@
+                      @if ( country.Id == order.PaymentInformation.CountryId ) {
+                        @Html.Raw( "selected=true" )
+                      }>@country.Name</option>
+                  }
+                </select>
+              </div>
+            </div>
+            @foreach ( Country country in countries ) {
+              IEnumerable<CountryRegion> countryRegions = TC.GetCountryRegions( storeId, country.Id );
+              if ( countryRegions.Any() ) {
+                string regionCssId = "countryRegionPayment" + country.Id;
+                <div class="form-group countryRegionWrapper">
+                  <label for="@regionCssId" class="col-sm-4 col-md-3 control-label">Region</label>
+                  <div class="col-sm-8 col-md-9">
+                    <select class="form-control" id="@regionCssId" name="countryRegionId">
+                      @foreach ( CountryRegion countryRegion in countryRegions ) {
+                        <option class="countryOption" value="@countryRegion.Id" data-regioncode="@countryRegion.RegionCode" label="@countryRegion.Name"
+                          @if ( countryRegion.Id == order.PaymentInformation.CountryRegionId ) {
+                            @Html.Raw( "selected=true" )
+                          }></option>
+                      }
+                    </select>
+                  </div>
+                </div>
+              }
+            }
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Shipping information</h3>
+            <div class="form-group">
+              <label for="inputshipping_company" class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputshipping_company" name="shipping_company" placeholder="Company" value="@order.Properties[ "shipping_company" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">First name</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAttention" name="shipping_firstName" placeholder="Attention" value="@order.Properties[ "shipping_firstName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">Last name</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAttention" name="shipping_lastName" placeholder="Attention" value="@order.Properties[ "shipping_lastName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddressShipping" class="col-sm-4 col-md-3 control-label">Address</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAddressShipping" name="shipping_streetAddress" placeholder="Address" value="@order.Properties[ "shipping_streetAddress" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputshipping_zipCode" class="col-sm-4 col-md-3 control-label">Zip code</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputshipping_zipCode" name="shipping_zipCode" placeholder="Zip code" value="@order.Properties[ "shipping_zipCode" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputshipping_city" class="col-sm-4 col-md-3 control-label">City</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputshipping_city" name="shipping_city" placeholder="City" value="@order.Properties[ "shipping_city" ]" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputCountryShipping" class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <select class="form-control countrySelect" id="inputCountryShipping" name="countryIdShipping">
+                  @foreach ( Country country in countries ) {
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionShipping" + country.Id)" @*label="@country.Name"*@
+                      @if ( country.Id == order.ShipmentInformation.CountryId ) {
+                        @Html.Raw( "selected=true" )
+                      }>@country.Name</option>
+                  }
+                </select>
+              </div>
+            </div>
+            @foreach ( Country country in countries ) {
+              IEnumerable<CountryRegion> countryRegions = TC.GetCountryRegions( storeId, country.Id );
+              if ( countryRegions.Any() ) {
+                string regionCssId = "countryRegionShipping" + country.Id;
+                <div class="form-group countryRegionWrapper">
+                  <label for="@regionCssId" class="col-sm-4 col-md-3 control-label">Region</label>
+                  <div class="col-sm-8 col-md-9">
+                    <select class="form-control" id="@regionCssId" name="countryRegionIdShipping">
+                      @foreach ( CountryRegion countryRegion in countryRegions ) {
+                        <option class="countryOption" value="@countryRegion.Id" data-regioncode="@countryRegion.RegionCode" label="@countryRegion.Name"
+                          @if ( countryRegion.Id == order.ShipmentInformation.CountryRegionId ) {
+                            @Html.Raw( "selected=true" )
+                          }></option>
+                      }
+                    </select>
+                  </div>
+                </div>
+              }
+            }
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="inputComments" class="col-xs-12">Comments</label>
+            <div class="col-sm-12">
+              <textarea class="form-control" id="inputComments" name="comments" placeholder="Comments">@order.Properties[ "comments" ]</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <button type="submit" class="btn btn-success">Continue</button>
+        <a href="@prevStep.Url" class="btn btn-default">Back</a>
+      </nav>
+    </form>
+  </div>
+}]]></Design>
+    </Template>
+    <Template>
+      <Name>Cart step 3</Name>
+      <Alias>CartStep3</Alias>
+      <Master>CartStepMaster</Master>
+      <Design><![CDATA[@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = CurrentPage;
+
+  IPublishedContent nextStep = currentPage.FollowingSibling();
+  IPublishedContent prevStep = currentPage.Parent;
+
+  //store id
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer">
+    <h1>Choose shipping and payment</h1>
+    <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
+      <input name="SetCurrentPaymentMethod" value="paymentMethodId" type="hidden" />
+      <input name="SetCurrentShippingMethod" value="shippingMethodId" type="hidden" />
+      <input name="returnUrl" type="hidden" value="@nextStep.Url"/>
+      <input name="storeId" value="@storeId" type="hidden" />
+
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Select shipping method</h3>
+            @foreach ( ShippingMethod method in TC.GetShippingMethods( storeId ) ) {
+              <div class="radio">
+                <label>
+                  <input type="radio" name="shippingMethodId" value="@method.Id"
+                         @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
+                           @Html.Raw( "checked" )
+                         }>
+                  @method.Name
+                </label>
+                <label>
+                  @TC.GetPriceForShippingMethod( storeId, method.Id )
+                </label>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Select payment method</h3>
+            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
+              <div class="radio">
+                <label>
+                  <input type="radio" name="paymentMethodId" value="@method.Id"
+                         @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
+                           @Html.Raw( "checked" )
+                         }>
+                  @method.Name
+                </label>
+                <label>
+                  @TC.GetPriceForPaymentMethod( storeId, method.Id )
+                </label>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <button type="submit" class="btn btn-success">Continue</button>
+        <a href="@prevStep.Url" class="btn btn-default">Back</a>
+      </nav>
+    </form>
+  </div>
+}]]></Design>
+    </Template>
+    <Template>
+      <Name>Cart step 4</Name>
+      <Alias>CartStep4</Alias>
+      <Master>CartStepMaster</Master>
+      <Design><![CDATA[@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = CurrentPage;
+
+  IPublishedContent prevStep = currentPage.Parent;
+
+  //store id
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer accept">
+    <h1>Accept your order</h1>
+    <div class="form-horizontal">
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Payment information</h3>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "company" ]</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">First name</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "firstName" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Last name</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "lastName" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Address</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "streetAddress" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "zipCode" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">City</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "city" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">E-mail</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "email" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Telephone</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "phone" ]</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@TC.GetCountry( storeId, order.PaymentInformation.CountryId ).Name</p>
+              </div>
+            </div>
+
+            @if ( order.PaymentInformation.CountryRegionId != null ) {
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Region</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@TC.GetCountryRegion( storeId, order.PaymentInformation.CountryRegionId.Value ).Name</p>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="col-sm-6">
+          @if ( !string.IsNullOrEmpty( order.Properties[ "shipping_company" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "attentionShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_streetAddress" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_zipCode" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_city" ] ) ) {
+            <div class="well">
+              <h3>Shipping information</h3>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Company</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_company" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">First name</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_firstName" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Last name</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_lastName" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Address</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_streetAddress" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_zipCode" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">City</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_city" ]</p>
+                </div>
+              </div>
+
+              @if ( order.ShipmentInformation.CountryId != null ) {
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 control-label">Country</label>
+                  <div class="col-sm-8 col-md-9">
+                    <p class="form-control-static">@TC.GetCountry( storeId, order.ShipmentInformation.CountryId.Value ).Name</p>
+                  </div>
+                </div>
+              }
+
+              @if ( order.ShipmentInformation.CountryRegionId != null ) {
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 control-label">Region</label>
+                  <div class="col-sm-8 col-md-9">
+                    <p class="form-control-static">@TC.GetCountryRegion( storeId, order.ShipmentInformation.CountryRegionId.Value ).Name</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="col-xs-12">Comments</label>
+            <div class="col-xs-12">
+              <p class="form-control-static">@order.Properties[ "comments" ]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orderContent">
+      <div class="row hidden-xs">
+
+        <div class="col col-lg-6 col-md-5 col-sm-4">
+          Product
+        </div>
+        <div class="col col-sm-2">
+          Unit price
+        </div>
+        <div class="col col-lg-2 col-md-3 col-sm-4 text-center">
+          Quantity
+        </div>
+        <div class="col col-sm-2 text-right">
+          Total
+        </div>
+      </div>
+      <div class="orderlines">
+        @foreach ( OrderLine orderLine in order.OrderLines ) {
+          IPublishedContent productContent = Umbraco.TypedContent( orderLine.ProductIdentifier );
+          <div class="row orderline">
+            <div class="col col-lg-6 col-md-5 col-sm-4">
+              <span class="hidden-sm hidden-md hidden-lg">Product: </span>@orderLine.Name
+            </div>
+            <div class="col col-sm-2">
+              <span class="xs-right">
+                @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.UnitPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
+            </div>
+            <div class="col col-lg-2 col-md-3 col-sm-4 quantity text-center">
+              <span class="xs-right">
+                @orderLine.Quantity.ToString( "0.####" )
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Quantity: </span>
+            </div>
+            <div class="col col-sm-2 text-right">
+              <span class="xs-right">
+                @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.TotalPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Subtotal
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.SubtotalPrice.Discount.Value > 0M ) {
+            <text>(</text>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.SubtotalPrice.Value
+        </div>
+      </div>
+      @if ( order.ShipmentInformation.ShippingMethodId != null ) {
+        ShippingMethod shippingMethod = TC.GetShippingMethod( storeId, order.ShipmentInformation.ShippingMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Shipping (@shippingMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.ShipmentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.PaymentInformation.PaymentMethodId != null ) {
+        PaymentMethod paymentMethod = TC.GetPaymentMethod( storeId, order.PaymentInformation.PaymentMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Payment (@paymentMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.PaymentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            @(order.GiftCards.Count > 1 ? "Gift cards" : "Gift card")
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @order.TotalPrice.GiftCardsAmount
+          </div>
+        </div>
+      }
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Total incl. VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.TotalPrice.WithPreviousDiscounts.Value != order.TotalPrice.Value.Value ) {
+            <text>(</text>
+            <s>@order.TotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
+    </div>
+
+    @if ( order.DiscountCodes.Any() ) {
+      <div class="discountCodes">
+        <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
+      </div>
+    }
+    <div class="">
+      <label class="">
+        <input type="checkbox" name="options" id="acceptConditions" autocomplete="off">
+        Please accept our terms and conditions
+      </label>
+    </div>
+    <nav class="navbar">
+      @Html.Raw( TC.GeneratePaymentForm( storeId, "<button type=\"submit\" class=\"btn btn-success\">Accept and pay</button>" ) )
+      <a href="@prevStep.Url" class="btn btn-default">Back</a>
+    </nav>
+  </div>
+}]]></Design>
+    </Template>
+    <Template>
+      <Name>Cart step 6</Name>
+      <Alias>CartStep6</Alias>
+      <Master>CartStepMaster</Master>
+      <Design><![CDATA[@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = Model.Content;
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  Order order = TC.GetCurrentFinalizedOrder( storeId );
+}
+@if ( order != null ) {
+  <div class="container cartContainer accept">
+    <h1>Thank you for your order</h1>
+    <div class="alert alert-success">
+      We have recieved your order. You should recieve an e-mail within a few minutes with your confirmation.
+    </div>
+    <div class="form-horizontal">
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Payment information</h3>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "company" ]</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">First name</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "firstName" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Last name</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "lastName" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Address</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "streetAddress" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "zipCode" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">City</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "city" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">E-mail</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "email" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Telephone</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "phone" ]</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@TC.GetCountry( storeId, order.PaymentInformation.CountryId ).Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          @if ( !string.IsNullOrEmpty( order.Properties[ "shipping_company" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "attentionShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_streetAddress" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_zipCode" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_city" ] ) ) {
+
+            <div class="well">
+              <h3>Shipping information</h3>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Company</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_company" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">First name</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_firstName" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Last name</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_lastName" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Address</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_streetAddress" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_zipCode" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">City</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_city" ]</p>
+                </div>
+              </div>
+
+              @if ( order.ShipmentInformation.CountryId != null ) {
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 control-label">Country</label>
+                  <div class="col-sm-8 col-md-9">
+                    <p class="form-control-static">@TC.GetCountry( storeId, order.ShipmentInformation.CountryId.Value ).Name</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="col-xs-12">Comments</label>
+            <div class="col-xs-12">
+              <p class="form-control-static">@order.Properties[ "comments" ]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orderContent">
+      <div class="row hidden-xs">
+
+        <div class="col col-lg-6 col-md-5 col-sm-4">
+          Product
+        </div>
+        <div class="col col-sm-2">
+          Unit price
+        </div>
+        <div class="col col-lg-2 col-md-3 col-sm-4 text-center">
+          Quantity
+        </div>
+        <div class="col col-sm-2 text-right">
+          Total
+        </div>
+      </div>
+      <div class="orderlines">
+        @foreach ( OrderLine orderLine in order.OrderLines ) {
+          IPublishedContent productContent = Umbraco.TypedContent( orderLine.ProductIdentifier );
+          <div class="row orderline">
+            <div class="col col-lg-6 col-md-5 col-sm-4">
+              <span class="hidden-sm hidden-md hidden-lg">Product: </span>@orderLine.Name
+            </div>
+            <div class="col col-sm-2">
+              <span class="xs-right">
+                @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.UnitPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
+            </div>
+            <div class="col col-lg-2 col-md-3 col-sm-4 quantity text-center">
+              <span class="xs-right">
+                @orderLine.Quantity.ToString( "0.####" )
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Quantity: </span>
+            </div>
+            <div class="col col-sm-2 text-right">
+              <span class="xs-right">
+                @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.TotalPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Subtotal
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.SubtotalPrice.Discount.Value > 0M ) {
+            <text>(</text>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.SubtotalPrice.Value
+        </div>
+      </div>
+      @if ( order.ShipmentInformation.ShippingMethodId != null ) {
+        ShippingMethod shippingMethod = TC.GetShippingMethod( storeId, order.ShipmentInformation.ShippingMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Shipping (@shippingMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.ShipmentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.PaymentInformation.PaymentMethodId != null ) {
+        PaymentMethod paymentMethod = TC.GetPaymentMethod( storeId, order.PaymentInformation.PaymentMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Payment (@paymentMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.PaymentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            @(order.GiftCards.Count > 1 ? "Gift cards" : "Gift card")
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @order.TotalPrice.GiftCardsAmount
+          </div>
+        </div>
+      }
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Total incl. VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.TotalPrice.WithPreviousDiscounts.Value != order.TotalPrice.Value.Value ) {
+            <text>(</text>
+            <s>@order.TotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
+    </div>
+
+    @if ( order.DiscountCodes.Any() ) {
+      <div class="discountCodes">
+        <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
+      </div>
+    }
+  </div>
+}]]></Design>
+    </Template>
+    <Template>
+      <Name>Cart step master</Name>
+      <Alias>CartStepMaster</Alias>
+      <Master>Master</Master>
+      <Design><![CDATA[@using Umbraco.Core
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+  IPublishedContent currenPage = CurrentPage,
+                    cart = currenPage.AncestorOrSelf( "Cart" );
+
+  IReadOnlyList<IPublishedContent> cartSteps = cart.Children.Where( c => c.DocumentTypeAlias == "CartStep" ).ToList();
+  int activeStep = cart.Id == currenPage.Id ? 1 : cart.Children.IndexOf( cartSteps.First( c => c.Id == currenPage.Id ) ) + 2;
+}
+
+<div class="container cartTop">
+  <div class="input-group">
+    @if ( activeStep > 1 ) {
+      <a href="@cart.Url" class="input-group-addon">@cart.Name</a>
+    } else {
+      <span class="input-group-addon">@cart.Name</span>
+    }
+    @{
+      int cartStepCount = 2;
+      foreach ( IPublishedContent cartStep in cartSteps ) {
+        string cartStepCssClass = "input-group-addon";
+        cartStepCssClass += cartStepCount < activeStep ? " inpath" : "";
+        cartStepCssClass += cartStepCount == activeStep ? " active" : "";
+        if ( cartStepCount < activeStep ) {
+      <a href="@cartStep.Url" class="@cartStepCssClass">@cartStep.Name</a>
+        } else {
+      <span class="@cartStepCssClass">@cartStep.Name</span>
+        }
+        cartStepCount++;
+      }
+    }
+  </div>
+
+</div>
+
+@RenderBody()]]></Design>
+    </Template>
+    <Template>
+      <Name>Home</Name>
+      <Alias>Home</Alias>
+      <Master>Master</Master>
+      <Design><![CDATA[@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+  IPublishedContent currentPage = CurrentPage;
+
+  IReadOnlyList<IPublishedContent> carouselImages = currentPage.GetPropertyValue<string>( "slider" )
+    .Split( new[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
+    .Select( int.Parse )
+    .Select( id => Umbraco.TypedMedia( id ) )
+    .Where( m => m != null )
+    .ToList();
+
+  int count = 0;
+  string carouselId = "homeCarousel";
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  List<IPublishedContent> products = currentPage.GetPropertyValue<string>( "featuredProducts" )
+    .Split( new[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
+    .Select( int.Parse )
+    .Select( id => Umbraco.TypedContent( id ) )
+    .Where( c => c != null )
+    .ToList();
+}
+@if ( carouselImages.Any() ) {
+  <div id="@carouselId" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      @foreach ( IPublishedContent image in carouselImages ) {
+        <li data-target="#@carouselId" data-slide-to="@count" class="@(count == 0 ? "active" : "")"></li>
+        count++;
+      }
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      @{
+      count = 0;
+      foreach ( IPublishedContent image in carouselImages ) {
+        <div class="item @(count == 0 ? "active" : "")">
+          <img src="@image.Url?width=2000&heightratio=0.5&mode=crop" alt="@image.Name">
+        </div>
+        count++;
+      }
+      }
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#@carouselId" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#@carouselId" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+}
+
+<div class="container">
+  <div class="row">
+    @foreach ( IPublishedContent product in products ) {
+      var name = product.GetPropertyValue<string>( "name", true );
+      IPublishedContent firstVariant = product.Children.FirstOrDefault();
+      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
+      IPublishedContent image = null;
+
+      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : product.GetPropertyValue<int>( "image" );
+      if ( imageId != 0 ) {
+        image = Umbraco.TypedMedia( imageId );
+      }
+
+      <div class="col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <a href="@product.Url">
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
+            </a>
+          }
+          <h3>@name</h3>
+          <p>@price.Formatted</p>
+          <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+]]></Design>
+    </Template>
+    <Template>
+      <Name>Master</Name>
+      <Alias>Master</Alias>
+      <Design><![CDATA[@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>@CurrentPage.Name | Tea Commerce Starter Kit</title>
+
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/Css/styles.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    var _storeId = @CurrentPage.GetPropertyValue( "store", true );
+  </script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+  @Html.Partial( "Navigation/TopMenu" )
+
+
+  @RenderBody()
+
+
+  <div class="container">
+    <hr>
+
+    <footer>
+      <p>
+        <a href="http://teacommerce.net/" target="_blank">Tea Commerce Aps</a>
+        <span>R&#248;mersvej 19c</span>
+        <span>DK-7430 / Ikast</span>
+        <span>Denmark</span>
+        <a href="tel:+45 82 307 306">+45 82 307 306</a>
+        <a href="mailto:info@teacommerce.net">info@teacommerce.net</a>
+      </p>
+    </footer>
+  </div>
+  <!-- /container -->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+  <script src="/App_Plugins/TeaCommerce/Assets/Scripts/tea-commerce.min.js"></script>
+  <script src="/Scripts/product.js"></script>
+  <script src="/Scripts/validation.js"></script>
+  <script src="/Scripts/cart.js"></script>
+  <script src="/Scripts/teaCommerceEvents.js"></script>
+
+</body>
+</html>
+]]></Design>
+    </Template>
+    <Template>
+      <Name>Product</Name>
+      <Alias>Product</Alias>
+      <Master>Master</Master>
+      <Design><![CDATA[@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+
+  //store id
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+
+  //Main product data
+  var productName = CurrentPage.GetPropertyValue<string>( "name" );
+  Price productPrice = TC.GetPrice( storeId, CurrentPage.Id.ToString( CultureInfo.InvariantCulture ) );
+  var productDescription = new HtmlString( CurrentPage.GetPropertyValue<string>( "description" ) );
+
+  IPublishedContent productImage = null;
+
+  var productimageId = CurrentPage.GetPropertyValue<int>( "image" );
+  if ( productimageId != 0 ) {
+    productImage = Umbraco.TypedMedia( productimageId );
+  }
+  
+  //stock
+  var stock = TC.GetStock( storeId, CurrentPage.Id.ToString() );
+}
+<div class="container productView">
+  <div class="row">
+    <div class="col-sm-6 col-md-7 col-lg-8">
+      <div class="productImages">
+
+        @if ( productImage != null ) {
+          <img class="img-responsive" src="@productImage.Url?width=750"/>
+        }
+
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-5 col-lg-4">
+
+      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
+        <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+        <input name="storeId" value="@storeId" type="hidden" />
+
+        <div class="well">
+
+          <h1 class="page-header">@productName</h1>
+          <span class="price">@productPrice</span>
+          @Html.Raw( productDescription )
+          <input name="productIdentifier" value="@CurrentPage.Id" type="hidden" />
+
+          @if ( stock > 0 || stock == null ) {
+            <p>
+              <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" class="form-control" value="1" pattern="[0-9]*" min="1" />
+            </p>
+            <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+          } else {
+            <label>Out of stock</label>
+          }
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+]]></Design>
+    </Template>
+    <Template>
+      <Name>Product list</Name>
+      <Alias>ProductList</Alias>
+      <Master>Master</Master>
+      <Design><![CDATA[@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+  
+  IPublishedContent currentPage = CurrentPage;
+
+  //store id
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+
+  var headline = CurrentPage.GetPropertyValue<string>( "umbHeadline" );
+
+  List<IPublishedContent> products = currentPage.Children.ToList();
+}
+<div class="container">
+  <h1 class="page-header">@headline</h1>
+  <div class="row">
+    @foreach ( IPublishedContent product in products ) {
+      var name = product.GetPropertyValue<string>( "name", true );
+      IPublishedContent firstVariant = product.Children.FirstOrDefault();
+      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
+      IPublishedContent image = null;
+
+      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : product.GetPropertyValue<int>( "image" );
+      if ( imageId != 0 ) {
+        image = Umbraco.TypedMedia( imageId );
+      }
+
+      <div class="col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <a href="@product.Url">
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
+            </a>
+          }
+          <h3>@name</h3>
+          <p>@price.Formatted</p>
+          <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
+        </div>
+      </div>
+    }
+  </div>
+</div>]]></Design>
+    </Template>
+  </Templates>
+  <Stylesheets>
+    <Stylesheet>
+      <Name>styles</Name>
+      <FileName>styles</FileName>
+      <Content><![CDATA[/**********************************
+  * CART
+***********************************/
+.cartTop .input-group .input-group-addon { color: #909090; line-height: 30px; }
+.cartTop .input-group .input-group-addon.active { font-weight: bold; color: #555; }
+.cartTop .input-group .input-group-addon.inpath { color: #555; }
+.cartContainer .navbar { margin-top: 40px; }
+.cartContainer .navbar .btn { float: right; }
+.cartContainer .navbar > .btn:last-child { float: left; }
+
+@media (max-width: 767px ) {
+  .cartTop .input-group { display: block; overflow: hidden; }
+  .cartTop .input-group .input-group-addon { float: left; width: 50%; line-height: 20px; border-radius: 0; }
+}
+
+/**********************************
+  * CART STEP 1
+***********************************/
+.cartContainer .orderContent .row .col { padding: 10px 15px; }
+.cartContainer .orderContent .row.orderline { border-bottom: 1px solid #cccccc; }
+.cartContainer .orderContent .row.orderline:first-child { border-top: 1px solid #cccccc; }
+.cartContainer.content .orderContent .row.orderline .col.quantity { padding: 3px 15px; }
+.cartContainer.content .orderContent .row.orderline .col.quantity input[type=text] { width: 54px; text-align: center; }
+.cartContainer.content .orderContent .row.orderline .col.quantity .btn { font-size: 12px; line-height: 20px; }
+.cartContainer.content .orderContent .row.orderline .input-group{width: 180px;}
+
+@media (max-width: 767px ) {
+  .cartContainer .orderContent .row { padding: 10px 0; }
+  .cartContainer .orderContent .row .col { padding: 0px 15px; }
+  .cartContainer .orderContent .row.orderline .col { text-align: left; overflow: hidden; }
+  .cartContainer .orderContent .row.orderline .col .xs-right { float: right; }
+  .cartContainer .orderContent .row.orderline .col .xs-left { float: left; }
+  .cartContainer.content .orderContent .row.orderline .col.quantity > span { float: left; line-height: 34px; margin-right: 5px; }
+}
+
+/**********************************
+  * SPECIAL INPUT GROUPS WITH FORMS
+***********************************/
+.input-group form { display: inline-block; }
+.input-group form .form-control,
+.input-group form .btn { float: none; border-left: 0; vertical-align: top; }
+.input-group form:first-child .btn,
+.input-group form:first-child .form-control { border-top-right-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-left: 1px solid #ccc; }
+.input-group form:last-child .btn,
+.input-group form:last-child .form-control { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.input-group form:not(:first-child):not(:last-child) .btn,
+.input-group form:not(:first-child):not(:last-child) .form-control { border-radius: 0; }
+
+/**********************************
+  * FRONTPAGE
+***********************************/
+.carousel { margin-bottom: 50px; }
+
+/**********************************
+  * FOOTER
+***********************************/
+footer p { text-align: center; }
+footer a,
+footer span { display: inline-block; padding: 0 3px; white-space: nowrap; }
+
+/**********************************
+  * MINICART
+***********************************/
+#minicart { line-height: 50px; overflow: hidden; }
+#minicart a { float: right; margin-top: 8px; margin-left: 10px; }
+#minicart.loading > span { opacity: .65; }
+
+@media (max-width: 767px ) {
+  #minicart { float: none!important; line-height: 25px; }
+  #minicart > span { display: block; }
+}
+
+/**********************************
+  * PRODUCT
+***********************************/
+.productView form.loading input[type=submit] { background-color: #428bca; border-color: #357ebd; pointer-events: none; cursor: not-allowed; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none; opacity: .65; }
+.productView form .page-header { margin-top: 0px; }
+]]></Content>
+    </Stylesheet>
+  </Stylesheets>
+  <Macros />
+  <DictionaryItems />
+  <Languages>
+    <Language Id="1" CultureAlias="en-US" FriendlyName="English (United States)" />
+  </Languages>
+  <DataTypes>
+    <DataType Name="Product picker (Multiple, Language)" Id="Umbraco.MultiNodeTreePicker" Definition="122843b8-b613-4322-9dc4-05a707a629b1" DatabaseType="Nvarchar">
+      <PreValues>
+        <PreValue Id="6" Value="{&#xD;&#xA;  &quot;type&quot;: &quot;content&quot;,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang&quot;&#xD;&#xA;}" Alias="startNode" />
+        <PreValue Id="7" Value="Product" Alias="filter" />
+        <PreValue Id="8" Value="" Alias="minNumber" />
+        <PreValue Id="9" Value="" Alias="maxNumber" />
+        <PreValue Id="10" Value="0" Alias="showEditButton" />
+      </PreValues>
+    </DataType>
+  </DataTypes>
+  <Actions>
+    <Action runat="install" alias="TeaCommerceStarterKitInstaller" />
+  </Actions>
+</umbPackage>
