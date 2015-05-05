@@ -28,7 +28,7 @@
   <Target Name="Clean" DependsOnTargets="Compile">
     <ItemGroup>
       <FilesToRemove Include="$(PublishDir)\**\*.*" />
-	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views" />
+	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views;$(PublishDir)\Media" />
     </ItemGroup>
     <RemoveDir Directories="@(DirectoriesToRemove)" />
 	<Delete Files="@(FilesToRemove)" />
@@ -38,6 +38,7 @@
     <ItemGroup>
 	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\TeaCommerce.StarterKit.Install.dll" />	  
 	  <Scripts Include="$(WebDir)\Scripts\**" />
+	  <Media Include="$(BuildDir)\Media\**" />
 	  <Minicart Include="$(WebDir)\Views\**\Minicart.cshtml" />
 	  <TopMenu Include="$(WebDir)\Views\**\TopMenu.cshtml" />
 	  <Package Include="$(BuildDir)\package.xml" />
@@ -48,6 +49,7 @@
 	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views" />
 	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views" />
 	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\Media" />
   </Target>
   
   <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">
