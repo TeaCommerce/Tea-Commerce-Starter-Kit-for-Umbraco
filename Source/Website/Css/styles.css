@@ -22,7 +22,8 @@
 .cartContainer.content .orderContent .row.orderline .col.quantity { padding: 3px 15px; }
 .cartContainer.content .orderContent .row.orderline .col.quantity input[type=text] { width: 54px; text-align: center; }
 .cartContainer.content .orderContent .row.orderline .col.quantity .btn { font-size: 12px; line-height: 20px; }
-.cartContainer.content .orderContent .row.orderline .input-group{width: 180px;}
+.cartContainer.content .orderContent .row.orderline .input-group{ white-space: nowrap;}
+.cartContainer.content .orderContent .row.orderline .input-group input.form-control{ width: 54px;}
 
 @media (max-width: 767px ) {
   .cartContainer .orderContent .row { padding: 10px 0; }
