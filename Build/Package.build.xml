@@ -47,10 +47,10 @@
     </ItemGroup>
   
     <Copy SourceFiles="$(PublishDir)\package.xml" DestinationFolder="$(PublishDir)" />
-    <XmlFile TaskAction="AddElement" File="$(PublishDir)\package.xml" Element="file" InnerXml="&lt;guid&gt;%(ResourcesDaInput.FileName)-da%(ResourcesDaInput.Extension)&lt;/guid&gt;&lt;orgPath&gt;@(ResourcesDaInput->'\bin\da\')&lt;/orgPath&gt;&lt;orgName&gt;%(ResourcesDaInput.FileName)%(ResourcesDaInput.Extension)&lt;/orgName&gt;" XPath="/umbPackage/files"/>
+<!--     <XmlFile TaskAction="AddElement" File="$(PublishDir)\package.xml" Element="file" InnerXml="&lt;guid&gt;%(ResourcesDaInput.FileName)-da%(ResourcesDaInput.Extension)&lt;/guid&gt;&lt;orgPath&gt;@(ResourcesDaInput->'\bin\da\')&lt;/orgPath&gt;&lt;orgName&gt;%(ResourcesDaInput.FileName)%(ResourcesDaInput.Extension)&lt;/orgName&gt;" XPath="/umbPackage/files"/>
 	<XmlFile TaskAction="AddElement" File="$(PublishDir)\package.xml" Element="file" InnerXml="&lt;guid&gt;%(ResourcesSvInput.FileName)-sv%(ResourcesSvInput.Extension)&lt;/guid&gt;&lt;orgPath&gt;@(ResourcesSvInput->'\bin\sv\')&lt;/orgPath&gt;&lt;orgName&gt;%(ResourcesSvInput.FileName)%(ResourcesSvInput.Extension)&lt;/orgName&gt;" XPath="/umbPackage/files"/>
 	<XmlFile TaskAction="AddElement" File="$(PublishDir)\package.xml" Element="file" InnerXml="&lt;guid&gt;%(FilesToXml.FileName)%(FilesToXml.Extension)&lt;/guid&gt;&lt;orgPath&gt;@(FilesToXml->'\%(RecursiveDir)')&lt;/orgPath&gt;&lt;orgName&gt;%(FilesToXml.FileName)%(FilesToXml.Extension)&lt;/orgName&gt;" XPath="/umbPackage/files"/>
-  </Target>
+ -->  </Target>
   
   <!-- ZIP -->
   <Target Name="Zip" DependsOnTargets="UpdatePackageXml">

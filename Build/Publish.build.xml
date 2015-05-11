@@ -44,12 +44,21 @@
 	  <Package Include="$(BuildDir)\package.xml" />
     </ItemGroup>
 	
-	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\%(RecursiveDir)" />
+ 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\da\%(RecursiveDir)" />
 	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)\Scripts" />
-	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views" />
-	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views" />
+	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views\Partials\Cart" />
+	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views\Partials\Navigation" />
 	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\Media" />
+	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\Media" /> 
+	
+<!-- 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
+	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)" /> -->
+	
+	
   </Target>
   
   <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">
