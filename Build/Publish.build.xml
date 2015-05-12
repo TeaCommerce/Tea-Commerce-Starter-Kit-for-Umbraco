@@ -19,7 +19,7 @@
   <!-- COMPILE -->
   <Target Name="Compile">
     <ItemGroup>
-      <ProjectsToBuild Include="$(WebDir)\*proj" />
+      <ProjectsToBuild Include="$(BuildProjectDir)\*proj" />
     </ItemGroup>
     <MSBuild Targets="Rebuild" Projects="@(ProjectsToBuild)" Properties="Configuration=$(Configuration);" />
   </Target>
