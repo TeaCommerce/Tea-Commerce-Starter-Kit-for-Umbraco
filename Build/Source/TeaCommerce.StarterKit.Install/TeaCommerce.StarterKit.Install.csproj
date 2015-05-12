@@ -35,10 +35,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="cms">
-      <HintPath>..\..\Source\Website\bin\cms.dll</HintPath>
+      <HintPath>..\..\..\Source\Website\bin\cms.dll</HintPath>
     </Reference>
     <Reference Include="interfaces">
-      <HintPath>..\..\Source\Website\bin\interfaces.dll</HintPath>
+      <HintPath>..\..\..\Source\Website\bin\interfaces.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -46,23 +46,20 @@
     <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="TeaCommerce.Api">
-      <HintPath>..\..\Source\Website\bin\TeaCommerce.Api.dll</HintPath>
+      <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="TeaCommerce.Api.Web">
+      <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Api.Web.dll</HintPath>
     </Reference>
     <Reference Include="TeaCommerce.Umbraco.Web">
-      <HintPath>..\..\Source\Website\bin\TeaCommerce.Umbraco.Web.dll</HintPath>
+      <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Umbraco.Web.dll</HintPath>
     </Reference>
     <Reference Include="umbraco">
-      <HintPath>..\..\Source\Website\bin\umbraco.dll</HintPath>
+      <HintPath>..\..\..\Source\Website\bin\umbraco.dll</HintPath>
     </Reference>
     <Reference Include="Umbraco.Core">
-      <HintPath>..\..\Source\Website\bin\Umbraco.Core.dll</HintPath>
+      <HintPath>..\..\..\Source\Website\bin\Umbraco.Core.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="installMedia\productImage01.jpg" />
-    <Content Include="installMedia\productImage02.jpg" />
-    <Content Include="installMedia\productImage03.jpg" />
-    <Content Include="installMedia\productImage04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
