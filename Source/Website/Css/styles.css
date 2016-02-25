@@ -1,4 +1,4 @@
-﻿/**********************************
+/**********************************
   * CART
 ***********************************/
 .cartTop .input-group .input-group-addon { color: #909090; line-height: 30px; }
@@ -76,3 +76,4 @@ footer span { display: inline-block; padding: 0 3px; white-space: nowrap; }
 ***********************************/
 .productView form.loading input[type=submit] { background-color: #428bca; border-color: #357ebd; pointer-events: none; cursor: not-allowed; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none; opacity: .65; }
 .productView form .page-header { margin-top: 0px; }
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

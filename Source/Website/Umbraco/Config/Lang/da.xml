@@ -37,6 +37,7 @@
     <key alias="translate">Oversæt</key>
     <key alias="update">Opdatér</key>
     <key alias="teaCommerceSort">Sortér</key>
+    <key alias="teaCommerceCreateAll">Opret alle</key>
   </area>
   <area alias="assignDomain">
     <key alias="addNew">Tilføj nyt domæne</key>

@@ -60,7 +60,7 @@
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
-      <version>4.0.1</version>
+      <version>4.1</version>
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
       <requirements>
@@ -84,7 +84,7 @@ http://teacommerce.net/ressources/support/
 Tea Commerce
 info@teacommerce.net
 +45 82 307 306]]></readme>
-  </info>
+  </info>  
   <Documents>
     <DocumentSet importMode="root">
       <Lang id="1068" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2015-03-12T08:16:19" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Lang">
@@ -99,14 +99,113 @@ info@teacommerce.net
           <CartStep id="1086" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2015-03-06T11:44:24" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
         </Cart>
         <ProductList id="1069" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2015-03-13T11:28:45" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2015-03-13T11:29:34" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2016-02-25T15:27:37" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <name><![CDATA[Summer Yacht]]></name>
             <sku><![CDATA[p0001]]></sku>
             <image>1116</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[500]]></priceJMD>
+            <variants><![CDATA[{
+  "variants": [
+    {
+      "id": "aa8d3843-1683-d0fb-4010-85f5a7b37760",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "Black and small",
+        "sku": "BAS",
+        "priceJMD": "550"
+      },
+      "combination": [
+        {
+          "name": "Black",
+          "id": 1128,
+          "groupName": "Color",
+          "groupId": 1126
+        },
+        {
+          "name": "Small",
+          "id": 1131,
+          "groupName": "Size",
+          "groupId": 1127
+        }
+      ]
+    },
+    {
+      "id": "762cbe24-f191-7dcf-c299-30c4f5bc2105",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "Black and Medium",
+        "sku": "BAM",
+        "priceJMD": "500"
+      },
+      "combination": [
+        {
+          "name": "Black",
+          "id": 1128,
+          "groupName": "Color",
+          "groupId": 1126
+        },
+        {
+          "name": "Medium",
+          "id": 1132,
+          "groupName": "Size",
+          "groupId": 1127
+        }
+      ]
+    },
+    {
+      "id": "d421cc75-92a2-79d7-1b1d-f064a4d7e2e4",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "Black and Large",
+        "sku": "BAL",
+        "priceJMD": "450"
+      },
+      "combination": [
+        {
+          "name": "Black",
+          "id": 1128,
+          "groupName": "Color",
+          "groupId": 1126
+        },
+        {
+          "name": "Large",
+          "id": 1133,
+          "groupName": "Size",
+          "groupId": 1127
+        }
+      ]
+    }
+  ],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
           </Product>
-          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2015-03-13T11:29:50" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2015-04-24T12:01:38" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <name><![CDATA[Yacht with sails]]></name>
             <sku><![CDATA[p0002]]></sku>
             <image>1117</image>
@@ -130,6 +229,18 @@ info@teacommerce.net
             <priceJMD><![CDATA[2342.2]]></priceJMD>
           </Product>
         </ProductList>
+        <VariantGroups id="1125" parentID="1068" level="2" creatorID="0" sortOrder="3" createDate="2016-02-25T15:25:26" updateDate="2016-02-25T15:25:26" nodeName="Variant groups" urlName="variant-groups" path="-1,1068,1125" isDoc="" nodeType="1122" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantGroups">
+          <VariantGroup id="1126" parentID="1125" level="3" creatorID="0" sortOrder="0" createDate="2016-02-25T15:25:36" updateDate="2016-02-25T15:25:36" nodeName="Color" urlName="color" path="-1,1068,1125,1126" isDoc="" nodeType="1121" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantGroup">
+            <VariantType id="1128" parentID="1126" level="4" creatorID="0" sortOrder="0" createDate="2016-02-25T15:25:50" updateDate="2016-02-25T15:25:50" nodeName="Black" urlName="black" path="-1,1068,1125,1126,1128" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1129" parentID="1126" level="4" creatorID="0" sortOrder="1" createDate="2016-02-25T15:25:56" updateDate="2016-02-25T15:25:56" nodeName="White" urlName="white" path="-1,1068,1125,1126,1129" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1130" parentID="1126" level="4" creatorID="0" sortOrder="2" createDate="2016-02-25T15:26:03" updateDate="2016-02-25T15:26:03" nodeName="Green" urlName="green" path="-1,1068,1125,1126,1130" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+          </VariantGroup>
+          <VariantGroup id="1127" parentID="1125" level="3" creatorID="0" sortOrder="1" createDate="2016-02-25T15:25:43" updateDate="2016-02-25T15:25:43" nodeName="Size" urlName="size" path="-1,1068,1125,1127" isDoc="" nodeType="1121" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantGroup">
+            <VariantType id="1131" parentID="1127" level="4" creatorID="0" sortOrder="0" createDate="2016-02-25T15:26:11" updateDate="2016-02-25T15:26:11" nodeName="Small" urlName="small" path="-1,1068,1125,1127,1131" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1132" parentID="1127" level="4" creatorID="0" sortOrder="1" createDate="2016-02-25T15:26:19" updateDate="2016-02-25T15:26:19" nodeName="Medium" urlName="medium" path="-1,1068,1125,1127,1132" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1133" parentID="1127" level="4" creatorID="0" sortOrder="2" createDate="2016-02-25T15:26:26" updateDate="2016-02-25T15:26:26" nodeName="Large" urlName="large" path="-1,1068,1125,1127,1133" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+          </VariantGroup>
+        </VariantGroups>
       </Lang>
     </DocumentSet>
   </Documents>
@@ -196,6 +307,7 @@ info@teacommerce.net
       <Structure>
         <DocumentType>ProductList</DocumentType>
         <DocumentType>Cart</DocumentType>
+        <DocumentType>VariantGroups</DocumentType>
       </Structure>
       <GenericProperties>
         <GenericProperty>
@@ -304,12 +416,37 @@ info@teacommerce.net
           <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
           <Description><![CDATA[]]></Description>
         </GenericProperty>
+        <GenericProperty>
+          <Name>Stock</Name>
+          <Alias>stock</Alias>
+          <Type>TeaCommerce.StockManagement</Type>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Variants</Name>
+          <Alias>variants</Alias>
+          <Type>TeaCommerce.VariantEditor</Type>
+          <Definition>688144c0-2bfa-434e-9b75-0ee63316d39d</Definition>
+          <Tab>Variants</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
       </GenericProperties>
       <Tabs>
         <Tab>
           <Id>12</Id>
           <Caption>Information</Caption>
-          <SortOrder>0</SortOrder>
+          <SortOrder>2</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>16</Id>
+          <Caption>Variants</Caption>
+          <SortOrder>1</SortOrder>
         </Tab>
       </Tabs>
     </DocumentType>
@@ -331,6 +468,125 @@ info@teacommerce.net
       <Structure>
         <DocumentType>Product</DocumentType>
       </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant</Name>
+        <Alias>Variant</Alias>
+        <Icon>.sprTreeFolder</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Stock</Name>
+          <Alias>stock</Alias>
+          <Type>TeaCommerce.StockManagement</Type>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[Remember to add a sku for the product. Without a sku the variant cannot have it's own stock.]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Name</Name>
+          <Alias>productName</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Sku</Name>
+          <Alias>sku</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Price</Name>
+          <Alias>priceJMD</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>15</Id>
+          <Caption>Content</Caption>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant group</Name>
+        <Alias>VariantGroup</Alias>
+        <Icon>icon-t-shirt color-orange</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure>
+        <DocumentType>VariantType</DocumentType>
+      </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant groups</Name>
+        <Alias>VariantGroups</Alias>
+        <Icon>icon-t-shirt color-blue</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure>
+        <DocumentType>VariantGroup</DocumentType>
+      </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant type</Name>
+        <Alias>VariantType</Alias>
+        <Icon>icon-t-shirt</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure />
       <GenericProperties />
       <Tabs />
     </DocumentType>
@@ -1888,6 +2144,17 @@ footer span { display: inline-block; padding: 0 3px; white-space: nowrap; }
         <PreValue Id="8" Value="" Alias="minNumber" />
         <PreValue Id="9" Value="" Alias="maxNumber" />
         <PreValue Id="10" Value="0" Alias="showEditButton" />
+      </PreValues>
+    </DataType>
+    <DataType Name="Tea Commerce: Variant Editor" Id="TeaCommerce.VariantEditor" Definition="688144c0-2bfa-434e-9b75-0ee63316d39d" DatabaseType="Ntext">
+      <PreValues>
+        <PreValue Id="11" Value="{&#xD;&#xA;  &quot;showXPath&quot;: true,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang/VariantGroups&quot;&#xD;&#xA;}" Alias="xpathOrNode" />
+        <PreValue Id="12" Value="Variant" Alias="variantDocumentType" />
+        <PreValue Id="13" Value="sku,priceJMD" Alias="extraListInformation" />
+        <PreValue Id="14" Value="" Alias="variantGroupDocumentTypes" />
+        <PreValue Id="15" Value="" Alias="variantGroupNodeName" />
+        <PreValue Id="16" Value="" Alias="forceEditorToChooseAllVariantGroups" />
+        <PreValue Id="17" Value="1" Alias="hideLabel" />
       </PreValues>
     </DataType>
   </DataTypes>
