@@ -1,27 +1,31 @@
 ﻿@using System.Globalization
 @using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Configuration.Variant
+@using TeaCommerce.Umbraco.Configuration.Variant.Product
 @using TeaCommerce.Umbraco.Web
-@using Umbraco.Core.Models
-@using Umbraco.Web
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
 
+  IPublishedContent productPage = Model.Content;
+
   //store id
-  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( productPage.GetPropertyValue<string>( "store", true ) );
 
   //Main product data
-  var productName = CurrentPage.GetPropertyValue<string>( "name" );
-  Price productPrice = TC.GetPrice( storeId, CurrentPage.Id.ToString( CultureInfo.InvariantCulture ) );
-  var productDescription = new HtmlString( CurrentPage.GetPropertyValue<string>( "description" ) );
+  var productName = productPage.GetPropertyValue<string>( "productName" );
+  Price productPrice = TC.GetPrice( storeId, productPage.Id.ToString( CultureInfo.InvariantCulture ) );
+  var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
 
   IPublishedContent productImage = null;
 
-  var productimageId = CurrentPage.GetPropertyValue<int>( "image" );
+  var productimageId = productPage.GetPropertyValue<int>( "image" );
   if ( productimageId != 0 ) {
     productImage = Umbraco.TypedMedia( productimageId );
   }
-  
+
+  List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, true ).ToList();
+
   //stock
   var stock = TC.GetStock( storeId, CurrentPage.Id.ToString() );
 }
@@ -38,28 +42,73 @@
     </div>
 
     <div class="col-sm-6 col-md-5 col-lg-4">
+      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm" data-product-id="@productPage.Id">
+        @if ( variants != null && variants.Count > 0 ) {
+        @* The product have variants *@
+          
+          List<VariantGroup> attributeGroups = TC.GetVariantGroups( variants ).ToList();
 
-      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
-        <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-        <input name="storeId" value="@storeId" type="hidden" />
+          string variantJson = TC.GetVariantJson( storeId, productPage, true );
+          <script type="text/javascript">
+            var _products = @Html.Raw( variantJson );
+          </script>
+          
+          <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+          <input name="productIdentifier" value="" type="hidden" />
 
-        <div class="well">
+          <input name="storeId" value="@storeId" type="hidden" />
 
-          <h1 class="page-header">@productName</h1>
-          <span class="price">@productPrice</span>
-          @Html.Raw( productDescription )
-          <input name="productIdentifier" value="@CurrentPage.Id" type="hidden" />
+          <div class="well">
+            <h1 class="page-header">@productName</h1>
 
-          @if ( stock > 0 || stock == null ) {
-            <p>
-              <label for="quantity">Quantity:</label>
-            <input type="number" name="quantity" id="quantity" class="form-control" value="1" pattern="[0-9]*" min="1" />
-            </p>
-            <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
-          } else {
-            <label>Out of stock</label>
-          }
-        </div>
+            @Html.Raw( productDescription )
+
+            <div class="form-horizontal">
+              @foreach ( VariantGroup variantGroup in attributeGroups ) {
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">@variantGroup.Name</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" data-attribute-group="@variantGroup.Id">
+                      <option value="">Select @variantGroup.Name</option>
+                      @foreach ( VariantType variantType in variantGroup.Attributes ) {
+                        <option value="@variantType.Id">@variantType.Name</option>
+                      }
+                    </select>
+                  </div>
+                </div>   
+              }
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Quantity</label>
+                <div class="col-sm-9">
+                  <input class="form-control" name="quantity" value="1" type="text" />
+                </div>
+              </div>
+            </div>
+            <input class="btn btn-primary btn-block disabled" value="Add to basket" type="submit" />
+          </div>
+        } else {
+@* The product does not have variants *@
+          <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+          <input name="storeId" value="@storeId" type="hidden" />
+
+          <div class="well">
+
+            <h1 class="page-header">@productName</h1>
+            <span class="price">@productPrice</span>
+            @Html.Raw( productDescription )
+            <input name="productIdentifier" value="@productPage.Id" type="hidden" />
+
+            @if ( stock > 0 || stock == null ) {
+              <p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" id="quantity" class="form-control" value="1" pattern="[0-9]*" min="1" />
+              </p>
+              <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+            } else {
+              <label>Out of stock</label>
+            }
+          </div>
+        }
       </form>
     </div>
   </div>
