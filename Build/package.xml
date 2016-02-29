@@ -60,7 +60,7 @@
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
-      <version>4.0.1</version>
+      <version>4.1</version>
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
       <requirements>
@@ -84,7 +84,7 @@ http://teacommerce.net/ressources/support/
 Tea Commerce
 info@teacommerce.net
 +45 82 307 306]]></readme>
-  </info>
+  </info>  
   <Documents>
     <DocumentSet importMode="root">
       <Lang id="1068" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2015-03-12T08:16:19" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Lang">
@@ -99,37 +99,190 @@ info@teacommerce.net
           <CartStep id="1086" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2015-03-06T11:44:24" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
         </Cart>
         <ProductList id="1069" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2015-03-13T11:28:45" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2015-03-13T11:29:34" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <name><![CDATA[Summer Yacht]]></name>
+          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2016-02-29T11:41:59" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <productName><![CDATA[Summer Yacht]]></productName>
             <sku><![CDATA[p0001]]></sku>
             <image>1116</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[500]]></priceJMD>
+            <variants><![CDATA[{
+  "variants": [
+    {
+      "id": "280cdf44-3b0a-9481-6015-e7135f66c166",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "Black and Small",
+        "sku": "BAS",
+        "priceJMD": "550"
+      },
+      "combination": [
+        {
+          "name": "Black",
+          "id": 1128,
+          "groupName": "Color",
+          "groupId": 1126
+        },
+        {
+          "name": "Small",
+          "id": 1131,
+          "groupName": "Size",
+          "groupId": 1127
+        }
+      ]
+    },
+    {
+      "id": "a9aee92b-cf8d-47e9-439c-48d0df30dddf",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "Black and Medium",
+        "sku": "BAM",
+        "priceJMD": "500"
+      },
+      "combination": [
+        {
+          "name": "Black",
+          "id": 1128,
+          "groupName": "Color",
+          "groupId": 1126
+        },
+        {
+          "name": "Medium",
+          "id": 1132,
+          "groupName": "Size",
+          "groupId": 1127
+        }
+      ]
+    },
+    {
+      "id": "0a02e9e1-f373-1c26-cdb2-c23f4f400e1e",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "Black and Large",
+        "sku": "BAL",
+        "priceJMD": "450"
+      },
+      "combination": [
+        {
+          "name": "Black",
+          "id": 1128,
+          "groupName": "Color",
+          "groupId": 1126
+        },
+        {
+          "name": "Large",
+          "id": 1133,
+          "groupName": "Size",
+          "groupId": 1127
+        }
+      ]
+    }
+  ],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
           </Product>
-          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2015-03-13T11:29:50" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <name><![CDATA[Yacht with sails]]></name>
+          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2016-02-29T11:42:09" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <productName><![CDATA[Yacht with sails]]></productName>
             <sku><![CDATA[p0002]]></sku>
             <image>1117</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[60]]></priceJMD>
+            <variants><![CDATA[{
+  "variants": [],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
           </Product>
         </ProductList>
         <ProductList id="1070" parentID="1068" level="2" creatorID="0" sortOrder="2" createDate="2015-01-16T11:16:17" updateDate="2015-03-13T11:28:55" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1068,1070" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1073" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2015-03-13T11:30:21" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <name><![CDATA[Motor driven Yacht]]></name>
+          <Product id="1073" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2016-02-29T11:42:16" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <productName><![CDATA[Motor driven Yacht]]></productName>
             <sku><![CDATA[p0003]]></sku>
             <image>1118</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[80]]></priceJMD>
+            <variants><![CDATA[{
+  "variants": [],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
           </Product>
-          <Product id="1074" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2015-03-13T11:30:40" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <name><![CDATA[One masted yacht]]></name>
+          <Product id="1074" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2016-02-29T11:42:21" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <productName><![CDATA[One masted yacht]]></productName>
             <sku><![CDATA[p0004]]></sku>
             <image>1119</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[2342.2]]></priceJMD>
+            <variants><![CDATA[{
+  "variants": [],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
           </Product>
         </ProductList>
+        <VariantGroups id="1125" parentID="1068" level="2" creatorID="0" sortOrder="3" createDate="2016-02-25T15:25:26" updateDate="2016-02-25T15:25:26" nodeName="Variant groups" urlName="variant-groups" path="-1,1068,1125" isDoc="" nodeType="1122" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantGroups">
+          <VariantGroup id="1126" parentID="1125" level="3" creatorID="0" sortOrder="0" createDate="2016-02-25T15:25:36" updateDate="2016-02-25T15:25:36" nodeName="Color" urlName="color" path="-1,1068,1125,1126" isDoc="" nodeType="1121" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantGroup">
+            <VariantType id="1128" parentID="1126" level="4" creatorID="0" sortOrder="0" createDate="2016-02-25T15:25:50" updateDate="2016-02-25T15:25:50" nodeName="Black" urlName="black" path="-1,1068,1125,1126,1128" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1129" parentID="1126" level="4" creatorID="0" sortOrder="1" createDate="2016-02-25T15:25:56" updateDate="2016-02-25T15:25:56" nodeName="White" urlName="white" path="-1,1068,1125,1126,1129" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1130" parentID="1126" level="4" creatorID="0" sortOrder="2" createDate="2016-02-25T15:26:03" updateDate="2016-02-25T15:26:03" nodeName="Green" urlName="green" path="-1,1068,1125,1126,1130" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+          </VariantGroup>
+          <VariantGroup id="1127" parentID="1125" level="3" creatorID="0" sortOrder="1" createDate="2016-02-25T15:25:43" updateDate="2016-02-25T15:25:43" nodeName="Size" urlName="size" path="-1,1068,1125,1127" isDoc="" nodeType="1121" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantGroup">
+            <VariantType id="1131" parentID="1127" level="4" creatorID="0" sortOrder="0" createDate="2016-02-25T15:26:11" updateDate="2016-02-25T15:26:11" nodeName="Small" urlName="small" path="-1,1068,1125,1127,1131" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1132" parentID="1127" level="4" creatorID="0" sortOrder="1" createDate="2016-02-25T15:26:19" updateDate="2016-02-25T15:26:19" nodeName="Medium" urlName="medium" path="-1,1068,1125,1127,1132" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+            <VariantType id="1133" parentID="1127" level="4" creatorID="0" sortOrder="2" createDate="2016-02-25T15:26:26" updateDate="2016-02-25T15:26:26" nodeName="Large" urlName="large" path="-1,1068,1125,1127,1133" isDoc="" nodeType="1123" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="VariantType" />
+          </VariantGroup>
+        </VariantGroups>
       </Lang>
     </DocumentSet>
   </Documents>
@@ -196,6 +349,7 @@ info@teacommerce.net
       <Structure>
         <DocumentType>ProductList</DocumentType>
         <DocumentType>Cart</DocumentType>
+        <DocumentType>VariantGroups</DocumentType>
       </Structure>
       <GenericProperties>
         <GenericProperty>
@@ -256,7 +410,7 @@ info@teacommerce.net
       <GenericProperties>
         <GenericProperty>
           <Name>Name</Name>
-          <Alias>name</Alias>
+          <Alias>productName</Alias>
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Information</Tab>
@@ -304,12 +458,37 @@ info@teacommerce.net
           <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
           <Description><![CDATA[]]></Description>
         </GenericProperty>
+        <GenericProperty>
+          <Name>Stock</Name>
+          <Alias>stock</Alias>
+          <Type>TeaCommerce.StockManagement</Type>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
+          <Tab>Information</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Variants</Name>
+          <Alias>variants</Alias>
+          <Type>TeaCommerce.VariantEditor</Type>
+          <Definition>688144c0-2bfa-434e-9b75-0ee63316d39d</Definition>
+          <Tab>Variants</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
       </GenericProperties>
       <Tabs>
         <Tab>
           <Id>12</Id>
           <Caption>Information</Caption>
-          <SortOrder>0</SortOrder>
+          <SortOrder>2</SortOrder>
+        </Tab>
+        <Tab>
+          <Id>16</Id>
+          <Caption>Variants</Caption>
+          <SortOrder>1</SortOrder>
         </Tab>
       </Tabs>
     </DocumentType>
@@ -334,6 +513,125 @@ info@teacommerce.net
       <GenericProperties />
       <Tabs />
     </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant</Name>
+        <Alias>Variant</Alias>
+        <Icon>.sprTreeFolder</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure />
+      <GenericProperties>
+        <GenericProperty>
+          <Name>Stock</Name>
+          <Alias>stock</Alias>
+          <Type>TeaCommerce.StockManagement</Type>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[Remember to add a sku for the product. Without a sku the variant cannot have it's own stock.]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Name</Name>
+          <Alias>productName</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Sku</Name>
+          <Alias>sku</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation />
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+        <GenericProperty>
+          <Name>Price</Name>
+          <Alias>priceJMD</Alias>
+          <Type>Umbraco.Textbox</Type>
+          <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
+          <Tab>Content</Tab>
+          <Mandatory>False</Mandatory>
+          <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
+          <Description><![CDATA[]]></Description>
+        </GenericProperty>
+      </GenericProperties>
+      <Tabs>
+        <Tab>
+          <Id>15</Id>
+          <Caption>Content</Caption>
+          <SortOrder>0</SortOrder>
+        </Tab>
+      </Tabs>
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant group</Name>
+        <Alias>VariantGroup</Alias>
+        <Icon>icon-t-shirt color-orange</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure>
+        <DocumentType>VariantType</DocumentType>
+      </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant groups</Name>
+        <Alias>VariantGroups</Alias>
+        <Icon>icon-t-shirt color-blue</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure>
+        <DocumentType>VariantGroup</DocumentType>
+      </Structure>
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
+    <DocumentType>
+      <Info>
+        <Name>Variant type</Name>
+        <Alias>VariantType</Alias>
+        <Icon>icon-t-shirt</Icon>
+        <Thumbnail>folder.png</Thumbnail>
+        <Description />
+        <AllowAtRoot>False</AllowAtRoot>
+        <IsListView>False</IsListView>
+        <Compositions />
+        <AllowedTemplates />
+        <DefaultTemplate />
+      </Info>
+      <Structure />
+      <GenericProperties />
+      <Tabs />
+    </DocumentType>
   </DocumentTypes>
   <Templates>
     <Template>
@@ -342,15 +640,16 @@ info@teacommerce.net
       <Master>CartStepMaster</Master>
       <Design><![CDATA[@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent currentPage = Model.Content;
-  IPublishedContent nextStep = currentPage.Children.FirstOrDefault();
+  IPublishedContent nextStep = CurrentPage.Children.FirstOrDefault();
 
   //store id
-  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
 
   Order order = TC.GetCurrentOrder( storeId, false );
@@ -385,10 +684,10 @@ info@teacommerce.net
               <span class="xs-right">
                 @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.UnitPrice.WithoutDiscounts.Formatted</s>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.UnitPrice.Value.Formatted
+                @orderLine.UnitPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
             </div>
@@ -400,7 +699,7 @@ info@teacommerce.net
                   <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity, overwriteQuantity : overwriteQuantity" />
                   <input name="overwriteQuantity" type="hidden" value="true" />
                   <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
-                  <input type="text" name="quantity" class="form-control" value="@orderLine.Quantity.ToString( "0.####" )" readonly="" />
+                  <input type="number" name="quantity" class="form-control" value="@orderLine.Quantity.ToString( "0.####" )" pattern="[0-9]*" min="1" />
                 </form>
                 <form action="/base/TC/FormPost.aspx" method="post">
                   <input name="storeId" type="hidden" value="@storeId"/>
@@ -422,17 +721,16 @@ info@teacommerce.net
                   <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
                   <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
                 </form>
-
               </div>
             </div>
             <div class="col col-sm-2 text-right">
               <span class="xs-right">
                 @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.TotalPrice.WithPreviousDiscounts.Formatted</s>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.TotalPrice.Value.Formatted
+                @orderLine.TotalPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
             </div>
@@ -446,10 +744,10 @@ info@teacommerce.net
         <div class="col col-sm-2 col-xs-4 text-right">
           @if ( order.SubtotalPrice.Discount.Value > 0M ) {
             <text>(</text>
-            <s>@order.SubtotalPrice.WithPreviousDiscounts.Formatted</s>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
             <text>)</text>
           }
-          @order.SubtotalPrice.Value.Formatted
+          @order.SubtotalPrice.Value
         </div>
       </div>
       @if ( order.ShipmentInformation.ShippingMethodId != null ) {
@@ -461,10 +759,10 @@ info@teacommerce.net
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.ShipmentInformation.TotalPrice.Value.Formatted
+            @order.ShipmentInformation.TotalPrice.Value
           </div>
         </div>
       }
@@ -477,21 +775,13 @@ info@teacommerce.net
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.PaymentInformation.TotalPrice.Value.Formatted
+            @order.PaymentInformation.TotalPrice.Value
           </div>
         </div>
       }
-      <div class="row">
-        <div class="col col-sm-10 col-xs-8 text-right">
-          VAT
-        </div>
-        <div class="col col-sm-2 col-xs-4 text-right">
-          @order.TotalPrice.Value.VatFormatted
-        </div>
-      </div>
       @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
         <div class="row">
           <div class="col col-sm-10 col-xs-8 text-right">
@@ -513,6 +803,14 @@ info@teacommerce.net
             <text>)</text>
           }
           @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
         </div>
       </div>
     </div>
@@ -547,11 +845,14 @@ info@teacommerce.net
       <Master>CartStepMaster</Master>
       <Design><![CDATA[@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent currentPage = Model.Content;
+  IPublishedContent currentPage = CurrentPage;
+
   IPublishedContent nextStep = currentPage.FollowingSibling();
   IPublishedContent prevStep = currentPage.Parent;
 
@@ -569,12 +870,12 @@ info@teacommerce.net
     <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
       <input name="storeId" type="hidden" value="@storeId"/>
       <input name="returnUrl" type="hidden" value="@nextStep.Url"/>
-      <input name="AddOrUpdateOrderProperties" type="hidden" value="properties : properties" />
+      <input name="AddOrUpdateOrderProperties" type="hidden" value="properties" />
       <input name="SetCurrentPaymentCountry" value="countryId" type="hidden" />
       <input name="SetCurrentShippingCountry" value="countryId : countryIdShipping" type="hidden" />
       <input name="SetCurrentPaymentCountryRegion" type="hidden" value="countryRegionId : countryRegionId" />
       <input name="SetCurrentShippingCountryRegion" type="hidden" value="countryRegionId : countryRegionIdShipping" />
-      <input name="properties" type="hidden" value="company : company, firstName : firstName, lastName : lastName, streetAddress : streetAddress, zipCode : zipCode, city : city, phone : phone, email : email, shipping_company : shipping_company, shipping_firstName : shipping_lastName, shipping_lastName : shipping_firstName, shipping_streetAddress : shipping_streetAddress, shipping_zipCode : shipping_zipCode, shipping_city : shipping_city, comments : comments" />
+      <input name="properties" type="hidden" value="company, firstName, lastName, streetAddress, zipCode, city, phone, email, shipping_company, shipping_firstName, shipping_lastName, shipping_streetAddress, shipping_zipCode, shipping_city, comments" />
       <div class="row">
 
         <div class="col-sm-6">
@@ -634,10 +935,10 @@ info@teacommerce.net
               <div class="col-sm-8 col-md-9">
                 <select class="form-control countrySelect" id="inputCountry" name="countryId">
                   @foreach ( Country country in countries ) {
-                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionPayment" + country.Id)" label="@country.Name"
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionPayment" + country.Id)" @*label="@country.Name"*@
                       @if ( country.Id == order.PaymentInformation.CountryId ) {
                         @Html.Raw( "selected=true" )
-                      }></option>
+                      }>@country.Name</option>
                   }
                 </select>
               </div>
@@ -708,10 +1009,10 @@ info@teacommerce.net
               <div class="col-sm-8 col-md-9">
                 <select class="form-control countrySelect" id="inputCountryShipping" name="countryIdShipping">
                   @foreach ( Country country in countries ) {
-                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionShipping" + country.Id)" label="@country.Name"
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionShipping" + country.Id)" @*label="@country.Name"*@
                       @if ( country.Id == order.ShipmentInformation.CountryId ) {
                         @Html.Raw( "selected=true" )
-                      }></option>
+                      }>@country.Name</option>
                   }
                 </select>
               </div>
@@ -764,16 +1065,19 @@ info@teacommerce.net
       <Master>CartStepMaster</Master>
       <Design><![CDATA[@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent currentPage = Model.Content;
+  IPublishedContent currentPage = CurrentPage;
+
   IPublishedContent nextStep = currentPage.FollowingSibling();
-  IPublishedContent prevStep = currentPage.PrecedingSibling();
+  IPublishedContent prevStep = currentPage.Parent;
 
   //store id
-  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
 
   Order order = TC.GetCurrentOrder( storeId, false );
@@ -791,31 +1095,38 @@ info@teacommerce.net
 
         <div class="col-sm-6">
           <div class="well">
-            <h3>Select payment method</h3>
-            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
-              <div class="radio">
-                <label>
-                  <input type="radio" name="paymentMethodId" value="@method.Id"
-                    @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
-                      @Html.Raw( "checked" )
-                    }>
-                  @method.Name
-                </label>
-              </div>
-            }
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="well">
             <h3>Select shipping method</h3>
             @foreach ( ShippingMethod method in TC.GetShippingMethods( storeId ) ) {
               <div class="radio">
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
-                    @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
-                      @Html.Raw( "checked" )
-                    }>
+                         @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
+                           @Html.Raw( "checked" )
+                         }>
                   @method.Name
+                </label>
+                <label>
+                  @TC.GetPriceForShippingMethod( storeId, method.Id )
+                </label>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Select payment method</h3>
+            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
+              <div class="radio">
+                <label>
+                  <input type="radio" name="paymentMethodId" value="@method.Id"
+                         @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
+                           @Html.Raw( "checked" )
+                         }>
+                  @method.Name
+                </label>
+                <label>
+                  @TC.GetPriceForPaymentMethod( storeId, method.Id )
                 </label>
               </div>
             }
@@ -837,15 +1148,18 @@ info@teacommerce.net
       <Master>CartStepMaster</Master>
       <Design><![CDATA[@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent currentPage = Model.Content;
-  IPublishedContent prevStep = currentPage.PrecedingSibling();
+  IPublishedContent currentPage = CurrentPage;
+
+  IPublishedContent prevStep = currentPage.Parent;
 
   //store id
-  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
   Order order = TC.GetCurrentOrder( storeId, false );
 }
@@ -1031,10 +1345,10 @@ info@teacommerce.net
               <span class="xs-right">
                 @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.UnitPrice.WithoutDiscounts.Formatted</s>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.UnitPrice.Value.Formatted
+                @orderLine.UnitPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
             </div>
@@ -1048,10 +1362,10 @@ info@teacommerce.net
               <span class="xs-right">
                 @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.TotalPrice.WithPreviousDiscounts.Formatted</s>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.TotalPrice.Value.Formatted
+                @orderLine.TotalPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
             </div>
@@ -1065,10 +1379,10 @@ info@teacommerce.net
         <div class="col col-sm-2 col-xs-4 text-right">
           @if ( order.SubtotalPrice.Discount.Value > 0M ) {
             <text>(</text>
-            <s>@order.SubtotalPrice.WithPreviousDiscounts.Formatted</s>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
             <text>)</text>
           }
-          @order.SubtotalPrice.Value.Formatted
+          @order.SubtotalPrice.Value
         </div>
       </div>
       @if ( order.ShipmentInformation.ShippingMethodId != null ) {
@@ -1080,10 +1394,10 @@ info@teacommerce.net
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.ShipmentInformation.TotalPrice.Value.Formatted
+            @order.ShipmentInformation.TotalPrice.Value
           </div>
         </div>
       }
@@ -1096,26 +1410,13 @@ info@teacommerce.net
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.PaymentInformation.TotalPrice.Value.Formatted
+            @order.PaymentInformation.TotalPrice.Value
           </div>
         </div>
       }
-      <div class="row">
-        <div class="col col-sm-10 col-xs-8 text-right">
-          VAT
-        </div>
-        <div class="col col-sm-2 col-xs-4 text-right">
-          @if ( order.TotalPrice.WithPreviousDiscounts.Vat != order.TotalPrice.Value.Vat ) {
-            <text>(</text>
-            <s>@order.TotalPrice.WithPreviousDiscounts.VatFormatted</s>
-            <text>)</text>
-          }
-          @order.TotalPrice.Value.VatFormatted
-        </div>
-      </div>
       @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
         <div class="row">
           <div class="col col-sm-10 col-xs-8 text-right">
@@ -1139,9 +1440,17 @@ info@teacommerce.net
           @order.TotalPrice
         </div>
       </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
     </div>
 
-    @if ( order.DiscountCodes != null && order.DiscountCodes.Any() ) {
+    @if ( order.DiscountCodes.Any() ) {
       <div class="discountCodes">
         <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
       </div>
@@ -1165,12 +1474,13 @@ info@teacommerce.net
       <Master>CartStepMaster</Master>
       <Design><![CDATA[@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
   IPublishedContent currentPage = Model.Content;
-  IPublishedContent prevStep = currentPage.PrecedingSibling();
 
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
@@ -1345,10 +1655,10 @@ info@teacommerce.net
               <span class="xs-right">
                 @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.UnitPrice.WithoutDiscounts.Formatted</s>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.UnitPrice.Value.Formatted
+                @orderLine.UnitPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
             </div>
@@ -1362,10 +1672,10 @@ info@teacommerce.net
               <span class="xs-right">
                 @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
                   <text>(</text>
-                  <s>@orderLine.TotalPrice.WithPreviousDiscounts.Formatted</s>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
                   <text>)</text>
                 }
-                @orderLine.TotalPrice.Value.Formatted
+                @orderLine.TotalPrice.Value
               </span>
               <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
             </div>
@@ -1379,10 +1689,10 @@ info@teacommerce.net
         <div class="col col-sm-2 col-xs-4 text-right">
           @if ( order.SubtotalPrice.Discount.Value > 0M ) {
             <text>(</text>
-            <s>@order.SubtotalPrice.WithPreviousDiscounts.Formatted</s>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
             <text>)</text>
           }
-          @order.SubtotalPrice.Value.Formatted
+          @order.SubtotalPrice.Value
         </div>
       </div>
       @if ( order.ShipmentInformation.ShippingMethodId != null ) {
@@ -1394,10 +1704,10 @@ info@teacommerce.net
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.ShipmentInformation.TotalPrice.Value.Formatted
+            @order.ShipmentInformation.TotalPrice.Value
           </div>
         </div>
       }
@@ -1410,26 +1720,13 @@ info@teacommerce.net
           <div class="col col-sm-2 col-xs-4 text-right">
             @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
               <text>(</text>
-              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts.Formatted</s>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
               <text>)</text>
             }
-            @order.PaymentInformation.TotalPrice.Value.Formatted
+            @order.PaymentInformation.TotalPrice.Value
           </div>
         </div>
       }
-      <div class="row">
-        <div class="col col-sm-10 col-xs-8 text-right">
-          VAT
-        </div>
-        <div class="col col-sm-2 col-xs-4 text-right">
-          @if ( order.TotalPrice.WithPreviousDiscounts.Vat != order.TotalPrice.Value.Vat ) {
-            <text>(</text>
-            <s>@order.TotalPrice.WithPreviousDiscounts.VatFormatted</s>
-            <text>)</text>
-          }
-          @order.TotalPrice.Value.VatFormatted
-        </div>
-      </div>
       @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
         <div class="row">
           <div class="col col-sm-10 col-xs-8 text-right">
@@ -1453,9 +1750,17 @@ info@teacommerce.net
           @order.TotalPrice
         </div>
       </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
     </div>
 
-    @if ( order.DiscountCodes != null && order.DiscountCodes.Any() ) {
+    @if ( order.DiscountCodes.Any() ) {
       <div class="discountCodes">
         <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
       </div>
@@ -1467,15 +1772,17 @@ info@teacommerce.net
       <Name>Cart step master</Name>
       <Alias>CartStepMaster</Alias>
       <Master>Master</Master>
-      <Design><![CDATA[@inherits UmbracoTemplatePage
+      <Design><![CDATA[@using Umbraco.Core
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-
-  IPublishedContent currenContent = Model.Content,
-    cart = currenContent.AncestorOrSelf( "Cart" );
+  IPublishedContent currenPage = CurrentPage,
+                    cart = currenPage.AncestorOrSelf( "Cart" );
 
   IReadOnlyList<IPublishedContent> cartSteps = cart.Children.Where( c => c.DocumentTypeAlias == "CartStep" ).ToList();
-  int activeStep = cart.Id == currenContent.Id ? 1 : cart.Children.IndexOf( cartSteps.First( c => c.Id == currenContent.Id ) ) + 2;
+  int activeStep = cart.Id == currenPage.Id ? 1 : cart.Children.IndexOf( cartSteps.First( c => c.Id == currenPage.Id ) ) + 2;
 }
 
 <div class="container cartTop">
@@ -1492,9 +1799,9 @@ info@teacommerce.net
         cartStepCssClass += cartStepCount < activeStep ? " inpath" : "";
         cartStepCssClass += cartStepCount == activeStep ? " active" : "";
         if ( cartStepCount < activeStep ) {
-          <a href="@cartStep.Url" class="@cartStepCssClass">@cartStep.Name</a>
+      <a href="@cartStep.Url" class="@cartStepCssClass">@cartStep.Name</a>
         } else {
-          <span class="@cartStepCssClass">@cartStep.Name</span>
+      <span class="@cartStepCssClass">@cartStep.Name</span>
         }
         cartStepCount++;
       }
@@ -1509,14 +1816,15 @@ info@teacommerce.net
       <Name>Home</Name>
       <Alias>Home</Alias>
       <Master>Master</Master>
-      <Design><![CDATA[@using System.Activities.Statements
-@using System.Globalization
+      <Design><![CDATA[@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  IPublishedContent currentPage = Model.Content;
+  IPublishedContent currentPage = CurrentPage;
 
   IReadOnlyList<IPublishedContent> carouselImages = currentPage.GetPropertyValue<string>( "slider" )
     .Split( new[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
@@ -1577,7 +1885,7 @@ info@teacommerce.net
 <div class="container">
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "name", true );
+      var name = product.GetPropertyValue<string>( "productName", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;
@@ -1607,7 +1915,7 @@ info@teacommerce.net
     <Template>
       <Name>Master</Name>
       <Alias>Master</Alias>
-      <Design><![CDATA[@inherits UmbracoTemplatePage
+      <Design><![CDATA[@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = null;
 }
@@ -1619,14 +1927,14 @@ info@teacommerce.net
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tea Commerce Starter Kit</title>
+  <title>@CurrentPage.Name | Tea Commerce Starter Kit</title>
 
   <!-- Bootstrap -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/Css/styles.css" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript">
-    var _storeId = @Model.Content.GetPropertyValue( "store", true );
+    var _storeId = @CurrentPage.GetPropertyValue( "store", true );
   </script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -1683,8 +1991,10 @@ info@teacommerce.net
       <Master>Master</Master>
       <Design><![CDATA[@using System.Globalization
 @using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Configuration.Variant
+@using TeaCommerce.Umbraco.Configuration.Variant.Product
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
 
@@ -1694,7 +2004,7 @@ info@teacommerce.net
   long storeId = long.Parse( productPage.GetPropertyValue<string>( "store", true ) );
 
   //Main product data
-  var productName = productPage.GetPropertyValue<string>( "name" );
+  var productName = productPage.GetPropertyValue<string>( "productName" );
   Price productPrice = TC.GetPrice( storeId, productPage.Id.ToString( CultureInfo.InvariantCulture ) );
   var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
 
@@ -1704,6 +2014,11 @@ info@teacommerce.net
   if ( productimageId != 0 ) {
     productImage = Umbraco.TypedMedia( productimageId );
   }
+
+  List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, true ).ToList();
+
+  //stock
+  var stock = TC.GetStock( storeId, CurrentPage.Id.ToString() );
 }
 <div class="container productView">
   <div class="row">
@@ -1718,24 +2033,73 @@ info@teacommerce.net
     </div>
 
     <div class="col-sm-6 col-md-5 col-lg-4">
+      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm" data-product-id="@productPage.Id">
+        @if ( variants != null && variants.Count > 0 ) {
+        @* The product have variants *@
+          
+          List<VariantGroup> attributeGroups = TC.GetVariantGroups( variants ).ToList();
 
-      <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm">
-        <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-        <input name="storeId" value="@storeId" type="hidden" />
+          string variantJson = TC.GetVariantJson( storeId, productPage, true );
+          <script type="text/javascript">
+            var _products = @Html.Raw( variantJson );
+          </script>
+          
+          <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+          <input name="productIdentifier" value="" type="hidden" />
 
-        <div class="well">
+          <input name="storeId" value="@storeId" type="hidden" />
 
-          <h1 class="page-header">@productName</h1>
-          <span class="price">@productPrice</span>
-          @Html.Raw( productDescription )
-          <input name="productIdentifier" value="@productPage.Id" type="hidden" />
+          <div class="well">
+            <h1 class="page-header">@productName</h1>
 
-          <p>
-            <label for="quantity">Quantity:</label>
-            <input class="form-control" id="quantity" name="quantity" value="1" type="text" />
-          </p>
-          <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
-        </div>
+            @Html.Raw( productDescription )
+
+            <div class="form-horizontal">
+              @foreach ( VariantGroup variantGroup in attributeGroups ) {
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">@variantGroup.Name</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" data-attribute-group="@variantGroup.Id">
+                      <option value="">Select @variantGroup.Name</option>
+                      @foreach ( VariantType variantType in variantGroup.Attributes ) {
+                        <option value="@variantType.Id">@variantType.Name</option>
+                      }
+                    </select>
+                  </div>
+                </div>   
+              }
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Quantity</label>
+                <div class="col-sm-9">
+                  <input class="form-control" name="quantity" value="1" type="text" />
+                </div>
+              </div>
+            </div>
+            <input class="btn btn-primary btn-block disabled" value="Add to basket" type="submit" />
+          </div>
+        } else {
+@* The product does not have variants *@
+          <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
+          <input name="storeId" value="@storeId" type="hidden" />
+
+          <div class="well">
+
+            <h1 class="page-header">@productName</h1>
+            <span class="price">@productPrice</span>
+            @Html.Raw( productDescription )
+            <input name="productIdentifier" value="@productPage.Id" type="hidden" />
+
+            @if ( stock > 0 || stock == null ) {
+              <p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" id="quantity" class="form-control" value="1" pattern="[0-9]*" min="1" />
+              </p>
+              <input class="btn btn-primary btn-block" value="Add to basket" type="submit" />
+            } else {
+              <label>Out of stock</label>
+            }
+          </div>
+        }
       </form>
     </div>
   </div>
@@ -1749,15 +2113,18 @@ info@teacommerce.net
       <Design><![CDATA[@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@inherits UmbracoTemplatePage
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  IPublishedContent currentPage = Model.Content;
+  
+  IPublishedContent currentPage = CurrentPage;
 
   //store id
-  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
 
-  var headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
+  var headline = CurrentPage.GetPropertyValue<string>( "umbHeadline" );
 
   List<IPublishedContent> products = currentPage.Children.ToList();
 }
@@ -1765,7 +2132,7 @@ info@teacommerce.net
   <h1 class="page-header">@headline</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "name", true );
+      var name = product.GetPropertyValue<string>( "productName", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;
@@ -1820,6 +2187,8 @@ info@teacommerce.net
 .cartContainer.content .orderContent .row.orderline .col.quantity { padding: 3px 15px; }
 .cartContainer.content .orderContent .row.orderline .col.quantity input[type=text] { width: 54px; text-align: center; }
 .cartContainer.content .orderContent .row.orderline .col.quantity .btn { font-size: 12px; line-height: 20px; }
+.cartContainer.content .orderContent .row.orderline .input-group{ white-space: nowrap;}
+.cartContainer.content .orderContent .row.orderline .input-group input.form-control{ width: 54px;}
 
 @media (max-width: 767px ) {
   .cartContainer .orderContent .row { padding: 10px 0; }
@@ -1875,6 +2244,7 @@ footer span { display: inline-block; padding: 0 3px; white-space: nowrap; }
 ]]></Content>
     </Stylesheet>
   </Stylesheets>
+  
   <Macros />
   <DictionaryItems />
   <Languages>
@@ -1888,6 +2258,17 @@ footer span { display: inline-block; padding: 0 3px; white-space: nowrap; }
         <PreValue Id="8" Value="" Alias="minNumber" />
         <PreValue Id="9" Value="" Alias="maxNumber" />
         <PreValue Id="10" Value="0" Alias="showEditButton" />
+      </PreValues>
+    </DataType>
+    <DataType Name="Tea Commerce: Variant Editor" Id="TeaCommerce.VariantEditor" Definition="688144c0-2bfa-434e-9b75-0ee63316d39d" DatabaseType="Ntext">
+      <PreValues>
+        <PreValue Id="11" Value="{&#xD;&#xA;  &quot;showXPath&quot;: true,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang/VariantGroups&quot;&#xD;&#xA;}" Alias="xpathOrNode" />
+        <PreValue Id="12" Value="Variant" Alias="variantDocumentType" />
+        <PreValue Id="13" Value="sku,priceJMD" Alias="extraListInformation" />
+        <PreValue Id="14" Value="" Alias="variantGroupDocumentTypes" />
+        <PreValue Id="15" Value="" Alias="variantGroupNodeName" />
+        <PreValue Id="16" Value="" Alias="forceEditorToChooseAllVariantGroups" />
+        <PreValue Id="17" Value="1" Alias="hideLabel" />
       </PreValues>
     </DataType>
   </DataTypes>

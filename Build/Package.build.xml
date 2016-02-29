@@ -60,7 +60,7 @@
 	<XmlRead XPath="umbPackage/info/package/version" XmlFileName="$(PublishDir)\package.xml">
 	  <Output TaskParameter="Value" PropertyName="Version" />
 	</XmlRead>
-	<Zip Files="@(Files)" ZipFileName="$(PublishDir)\Tea Commerce $(Version).zip" WorkingDirectory="$(PublishDir)" />
+	<Zip Files="@(Files)" ZipFileName="$(PublishDir)\Tea Commerce - Starter kit $(Version).zip" WorkingDirectory="$(PublishDir)" />
   </Target>
   
 </Project>

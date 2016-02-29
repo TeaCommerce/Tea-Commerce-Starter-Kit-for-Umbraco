@@ -67,7 +67,7 @@
 <div class="container">
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "name", true );
+      var name = product.GetPropertyValue<string>( "productName", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;

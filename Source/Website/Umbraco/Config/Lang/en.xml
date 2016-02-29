@@ -37,6 +37,7 @@
     <key alias="update">Update</key>
     <key alias="defaultValue">Default value</key>
     <key alias="teaCommerceSort">Sort</key>
+    <key alias="teaCommerceCreateAll">Create all</key>
   </area>
   <area alias="assignDomain">
     <key alias="permissionDenied">Permission denied.</key>
