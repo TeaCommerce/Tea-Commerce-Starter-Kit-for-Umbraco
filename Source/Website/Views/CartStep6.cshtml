@@ -1,12 +1,11 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@using Umbraco.Core.Models
-@using Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
   IPublishedContent currentPage = Model.Content;
+  IPublishedContent prevStep = currentPage.PrecedingSibling();
 
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );

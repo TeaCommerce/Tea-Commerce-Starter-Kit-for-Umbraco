@@ -1,21 +1,27 @@
-﻿@using TeaCommerce.Api.Models
+﻿@using System.Linq
+@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
 @using Umbraco.Core.Models
 @using Umbraco.Web
+@using ZeroCostPayment.Models.Settings
+@using ZeroCostPayment.Services
+
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent currentPage = CurrentPage;
-
+  IPublishedContent currentPage = Model.Content;
   IPublishedContent nextStep = currentPage.FollowingSibling();
-  IPublishedContent prevStep = currentPage.Parent;
-
+  IPublishedContent prevStep = currentPage.PrecedingSibling();
+  
   //store id
-  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
-
-
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
   Order order = TC.GetCurrentOrder( storeId, false );
+
+  ZeroCostPaymentConfig config = ConfigReaderService.Instance.GenericDeSerialize<ZeroCostPaymentConfig>( "~/Config/ZeroCostPayment.config" );
+  ZeroCostPaymentSetting storeSetting = config.Settings.FirstOrDefault( setting => setting.StoreId == storeId );
+
+  long zeroCostPaymentId = storeSetting != null ? storeSetting.PaymentMethodId : 0;
 }
 @if ( order != null ) {
   <div class="container cartContainer">
@@ -27,7 +33,26 @@
       <input name="storeId" value="@storeId" type="hidden" />
 
       <div class="row">
-
+        @if ( order.PaymentInformation.PaymentMethodId != zeroCostPaymentId ) {
+          <div class="col-sm-6">
+            <div class="well">
+              <h3>Select payment method</h3>
+              @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ).Where( method => method.Id != zeroCostPaymentId ) ) {
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="paymentMethodId" value="@method.Id"
+                      @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
+                        @Html.Raw( "checked" )
+                      }>
+                    @method.Name
+                  </label>
+                </div>
+              }
+            </div>
+          </div>
+        } else {
+          <input type="hidden" name="paymentMethodId" value="@zeroCostPaymentId" />
+        }
         <div class="col-sm-6">
           <div class="well">
             <h3>Select shipping method</h3>
@@ -35,33 +60,10 @@
               <div class="radio">
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
-                         @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
-                           @Html.Raw( "checked" )
-                         }>
+                    @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
+                      @Html.Raw( "checked" )
+                    }>
                   @method.Name
-                </label>
-                <label>
-                  @TC.GetPriceForShippingMethod( storeId, method.Id )
-                </label>
-              </div>
-            }
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="well">
-            <h3>Select payment method</h3>
-            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
-              <div class="radio">
-                <label>
-                  <input type="radio" name="paymentMethodId" value="@method.Id"
-                         @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
-                           @Html.Raw( "checked" )
-                         }>
-                  @method.Name
-                </label>
-                <label>
-                  @TC.GetPriceForPaymentMethod( storeId, method.Id )
                 </label>
               </div>
             }

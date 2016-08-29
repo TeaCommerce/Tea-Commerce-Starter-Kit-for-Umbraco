@@ -21,7 +21,7 @@ jQuery(function () {
         var filteredVariants = jQuery.extend({}, _products[productId]); //Avoid keeping a reference to the original variants object
 
         //Reset select status
-        attributeGroups.each(function () {
+        attributeGroups.each(function() {
           var attributeGroup = jQuery(this);
 
           if (reachedInitiator) {
@@ -50,7 +50,7 @@ jQuery(function () {
         });
 
         //Find all potential variants with the given filters
-        jQuery.each(filteredVariants, function (id, variant) {
+        jQuery.each(filteredVariants, function(id, variant) {
           for (var i = 0; i < filters.length; i++) {
             var filter = parseInt(filters[i]);
 
@@ -61,18 +61,18 @@ jQuery(function () {
         });
 
         //Disable options with no variants
-        attributeGroups.each(function () {
+        attributeGroups.each(function() {
           var attributeGroup = jQuery(this),
-              options = attributeGroup.find('option');
+            options = attributeGroup.find('option');
 
-          if (!attributeGroup.val()) {
-            options.each(function () {
+          if (attributeGroup.val() == '') {
+            options.each(function() {
               var option = jQuery(this);
 
               if (option.val()) {
                 option.prop('disabled', true);
 
-                jQuery.each(filteredVariants, function (id, variant) {
+                jQuery.each(filteredVariants, function(id, variant) {
                   if (jQuery.inArray(parseInt(option.val()), variant.combinations) > -1) {
 
                     option.prop('disabled', false);
@@ -82,13 +82,7 @@ jQuery(function () {
                 });
               }
             });
-            var optionsLeft = options.filter('[value!=""]:not(:disabled)');
-            if (optionsLeft.length == 1) {
-              attributeGroup.val(optionsLeft.val());
-              attributeGroup.trigger('change');
-            }
           }
-
         });
 
         if (filteredVariants && Object.keys(filteredVariants).length === 1) {
@@ -108,14 +102,13 @@ jQuery(function () {
     }
 
     function initVariants() {
-      jQuery('form[action="/base/TC/FormPost.aspx"]').each(function () {
+      jQuery('form[action="/base/TC/FormPost.aspx"]').each(function() {
         var form = jQuery(this),
             attributeGroups = form.find('select[data-attribute-group]');
         if (attributeGroups[0]) {
           attributeGroups.not(':first').prop('disabled', true);
 
           attributeGroups.on('change', variantChange);
-          attributeGroups.first().trigger('change');
         }
       });
 

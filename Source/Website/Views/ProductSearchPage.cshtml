@@ -1,0 +1,75 @@
+@using System
+@using System.Collections.Generic
+@using System.Globalization
+@using System.Linq
+@using System.Web
+@using Examine
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@using umbraco.MacroEngines
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+
+  IPublishedContent currentPage = Model.Content;
+
+  //store id
+  long storeId = 1;
+
+  //Product
+  string ProductTypeName = "Product";
+
+  string searchUrl = currentPage.AncestorOrSelf( "Lang" ).Descendants( "ProductSearchPage" ).First().Url;
+
+  string searchString = HttpContext.Current.Request.QueryString[ "q" ] ?? "";
+
+  IEnumerable<SearchResult> searchResults = ExamineManager.Instance.SearchProviderCollection[ "ProductSearcher" ].Search( searchString, true ).OrderByDescending( s => s.Score );
+
+  UmbracoHelper helper = new UmbracoHelper( UmbracoContext.Current );
+}
+
+<div class="container">
+  <form action="@searchUrl" method="get" class="form-horizontal">
+    <div class="form-group">
+      <div class="col-sm-3">
+        <input class="form-control" name="q" type="text" value="@Request.QueryString[ "q" ]"/>
+      </div>
+      <div class="col-sm-1">
+        <input class="form-control" type="submit" value="Search" />
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    @foreach ( SearchResult product in searchResults ) {
+      var name = product[ "name" ];
+      var thisProduct = helper.TypedContent( product.Id );
+      IPublishedContent firstVariant = thisProduct.Children.FirstOrDefault();
+      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
+      IPublishedContent image = null;
+
+      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : thisProduct.GetPropertyValue<int>( "image" );
+      if ( imageId != 0 ) {
+        image = Umbraco.TypedMedia( imageId );
+      }
+
+      <div class="col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <a href="@thisProduct.Url">
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
+            </a>
+          }
+          <h3>@name</h3>
+          <p>@price.Formatted</p>
+          <a href="@thisProduct.Url" class="btn btn-primary btn-block">View more</a>
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,18 +1,15 @@
 ﻿@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@using Umbraco.Core.Models
-@using Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  
-  IPublishedContent currentPage = CurrentPage;
+  IPublishedContent currentPage = Model.Content;
 
   //store id
-  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
-  var headline = CurrentPage.GetPropertyValue<string>( "umbHeadline" );
+  var headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
 
   List<IPublishedContent> products = currentPage.Children.ToList();
 }
@@ -20,7 +17,7 @@
   <h1 class="page-header">@headline</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "productName", true );
+      var name = product.GetPropertyValue<string>( "name", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;

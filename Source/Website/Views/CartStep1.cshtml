@@ -1,15 +1,14 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@using Umbraco.Core.Models
-@using Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent nextStep = CurrentPage.Children.FirstOrDefault();
+  IPublishedContent currentPage = Model.Content;
+  IPublishedContent nextStep = currentPage.Children.FirstOrDefault();
 
   //store id
-  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
 
   Order order = TC.GetCurrentOrder( storeId, false );
@@ -81,6 +80,7 @@
                   <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
                   <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
                 </form>
+
               </div>
             </div>
             <div class="col col-sm-2 text-right">

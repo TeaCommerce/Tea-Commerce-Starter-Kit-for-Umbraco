@@ -1,13 +1,10 @@
 ﻿@using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@using Umbraco.Core.Models
-@using Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "CartStepMaster.cshtml";
 
-  IPublishedContent currentPage = CurrentPage;
-
+  IPublishedContent currentPage = Model.Content;
   IPublishedContent nextStep = currentPage.FollowingSibling();
   IPublishedContent prevStep = currentPage.Parent;
 
