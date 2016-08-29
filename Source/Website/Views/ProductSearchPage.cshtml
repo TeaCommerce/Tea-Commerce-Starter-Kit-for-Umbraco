@@ -21,7 +21,7 @@
   //Product
   string ProductTypeName = "Product";
 
-  string searchUrl = currentPage.AncestorOrSelf( "Lang" ).Descendants( "ProductSearchPage" ).First().Url;
+  string searchUrl = currentPage.AncestorOrSelf( "Lang" ).Descendants( "productSearchPage" ).First().Url;
 
   string searchString = HttpContext.Current.Request.QueryString[ "q" ] ?? "";
 
