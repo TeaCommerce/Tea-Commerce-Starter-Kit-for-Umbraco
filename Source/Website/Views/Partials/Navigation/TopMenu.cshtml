@@ -6,7 +6,7 @@
                     home = currentContent.AncestorOrSelf( 1 );
 
   //Get all child items of home, except for the Cart page
-  IReadOnlyList<IPublishedContent> menuItems = home.Children.Where( c => c.DocumentTypeAlias != "Cart" ).ToList();
+  IReadOnlyList<IPublishedContent> menuItems = home.Children.Where( c => c.DocumentTypeAlias != "Cart" && c.DocumentTypeAlias != "productSearchPage" ).ToList();
 
   string homeName = home.Name,
          homeCssClass = home.Id == currentContent.Id ? "active" : "";
