@@ -109,6 +109,8 @@ jQuery(function () {
           attributeGroups.not(':first').prop('disabled', true);
 
           attributeGroups.on('change', variantChange);
+        } else {
+          form.find('input.btn').removeClass('disabled');
         }
       });
 

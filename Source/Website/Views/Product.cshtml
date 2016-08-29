@@ -42,14 +42,14 @@
     <div class="col-sm-8">
       <div class="productImages">
         @if ( productImage != null ) {
-          <img class="img-responsive" src="@productImage.Url?width=750"/>
+          <img class="img-responsive" src="@productImage.Url?width=750" />
         }
       </div>
     </div>
     <div class="col-sm-4">
       <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm" data-product-id="@productPage.Id">
         <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-        <input name="productIdentifier" value="" type="hidden" />
+        
 
         <input name="storeId" value="@storeId" type="hidden" />
 
@@ -59,18 +59,22 @@
           @Html.Raw( productDescription )
 
           <div class="form-horizontal">
-            @foreach ( VariantGroup variantGroup in attributeGroups ) {
-              <div class="form-group">
-                <label class="col-sm-3 control-label">@variantGroup.Name</label>
-                <div class="col-sm-9">
-                  <select class="form-control" data-attribute-group="@variantGroup.Id">
-                    <option value="">Select @variantGroup.Name</option>
-                    @foreach ( VariantType variantType in variantGroup.Attributes ) {
-                      <option value="@variantType.Id">@variantType.Name</option>
-                    }
-                  </select>
+            @if ( attributeGroups.Any() ) {
+              foreach ( VariantGroup variantGroup in attributeGroups ) {
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">@variantGroup.Name</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" data-attribute-group="@variantGroup.Id">
+                      <option value="">Select @variantGroup.Name</option>
+                      @foreach ( VariantType variantType in variantGroup.Attributes ) {
+                        <option value="@variantType.Id">@variantType.Name</option>
+                      }
+                    </select>
+                  </div>
                 </div>
-              </div>   
+              }
+            } else {
+              <input name="productIdentifier" value="@productPage.Id" type="hidden" />
             }
             <div class="form-group">
               <label class="col-sm-3 control-label">Quantity</label>
