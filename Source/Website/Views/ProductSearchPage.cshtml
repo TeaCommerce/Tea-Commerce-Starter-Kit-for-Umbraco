@@ -47,7 +47,7 @@
 <div class="container">
   <div class="row">
     @foreach ( SearchResult product in searchResults ) {
-      var name = product[ "name" ];
+      var name = product.Fields[ "productName" ];
       var thisProduct = helper.TypedContent( product.Id );
       IPublishedContent firstVariant = thisProduct.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
