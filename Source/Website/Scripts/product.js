@@ -3,7 +3,7 @@
 ***********************************/
 jQuery(function () {
 
-  if (_products) {
+  if (window['_products']) {
 
     function variantChange(event) {
       var select = jQuery(this),
