@@ -49,7 +49,6 @@
     <div class="col-sm-4">
       <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm" data-product-id="@productPage.Id">
         <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-        
 
         <input name="storeId" value="@storeId" type="hidden" />
 
@@ -73,6 +72,7 @@
                   </div>
                 </div>
               }
+              <input name="productIdentifier" value="" type="hidden" />
             } else {
               <input name="productIdentifier" value="@productPage.Id" type="hidden" />
             }
