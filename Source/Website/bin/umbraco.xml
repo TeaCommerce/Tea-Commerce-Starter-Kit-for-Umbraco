@@ -1189,7 +1189,7 @@
             Gets the current request cache to persist the values between handlers
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Editors.RedirectUrlManagementController.IsEnabled">
+        <member name="M:Umbraco.Web.Editors.RedirectUrlManagementController.GetEnableState">
             <summary>
             Returns true/false of whether redirect tracking is enabled or not
             </summary>
@@ -20588,12 +20588,6 @@
             the response should use the specified code and description. The code and description will or will
             not be used, in due time.</remarks>
         </member>
-        <member name="F:Umbraco.Web.Routing.PublishedContentRequest._cacheability">
-            <summary>
-            Gets or sets the <c>System.Web.HttpCacheability</c>
-            </summary>
-            <remarks>Is set to <c>System.Web.HttpCacheability.Private</c>  by default, which is the ASP.NET default.</remarks>
-        </member>
         <member name="F:Umbraco.Web.Routing.PublishedContentRequest._cacheExtensions">
             <summary>
             Gets or sets a list of Extensions to append to the Response.Cache object
@@ -20750,6 +20744,11 @@
             </summary>
             <remarks>Does not actually set the http response status description, only registers that the response
             should use the specified description. The description will or will not be used, in due time.</remarks>
+        </member>
+        <member name="P:Umbraco.Web.Routing.PublishedContentRequest.Cacheability">
+            <summary>
+            Gets or sets the <c>System.Web.HttpCacheability</c>
+            </summary>
         </member>
         <member name="T:Umbraco.Web.Routing.RoutingContext">
             <summary>
@@ -29837,15 +29836,6 @@
         <member name="F:umbraco.cms.presentation.user.PermissionEditor.JsInclude1">
             <summary>
             JsInclude1 control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:umbraco.cms.presentation.user.PermissionEditor.JsInclude2">
-            <summary>
-            JsInclude2 control.
             </summary>
             <remarks>
             Auto-generated field.

@@ -13713,6 +13713,15 @@
             <param name="media"></param>
             <returns></returns>
         </member>
+        <member name="M:Umbraco.Core.Models.UserExtensions.IsAdmin(Umbraco.Core.Models.Membership.IUser)">
+            <summary>
+            Determines whether this user is an admin.
+            </summary>
+            <param name="user"></param>
+            <returns>
+            	<c>true</c> if this user is admin; otherwise, <c>false</c>.
+            </returns>
+        </member>
         <member name="T:Umbraco.Core.NetworkHelper">
             <summary>
             Currently just used to get the machine name in med trust and to format a machine name for use with file names
