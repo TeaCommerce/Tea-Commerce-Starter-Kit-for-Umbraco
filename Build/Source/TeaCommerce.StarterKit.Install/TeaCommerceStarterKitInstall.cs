@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
+using System.Web.Hosting;
 using System.Xml;
 using TeaCommerce.Api.Models;
 using TeaCommerce.Api.Services;
@@ -12,7 +12,6 @@ using Umbraco.Core;
 using Umbraco.Core.Models;
 using Umbraco.Core.Services;
 using Umbraco.Web;
-using ContentExtensions = umbraco.ContentExtensions;
 using File = System.IO.File;
 
 namespace TeaCommerce.StarterKit.Install {
@@ -29,7 +28,7 @@ namespace TeaCommerce.StarterKit.Install {
       //Create image files
       const string productImagesFolderName = "Product images";
       List<int> productImageIds = new List<int>();
-      string[] mediaInstallImages = Directory.GetFiles( HttpContext.Current.Server.MapPath( "~/installMedia" ) );
+      string[] mediaInstallImages = Directory.GetFiles( HostingEnvironment.MapPath( "~/installMedia" ) );
       IMedia productImagesFolder = mediaService.GetByLevel( 1 ).FirstOrDefault( m => m.Name == productImagesFolderName );
       if ( productImagesFolder == null ) {
         productImagesFolder = mediaService.CreateMedia( productImagesFolderName, -1, "Folder" );
@@ -52,12 +51,10 @@ namespace TeaCommerce.StarterKit.Install {
       } else {
         productImageIds = productImagesFolder.Children().Select( c => c.Id ).ToList();
       }
-      foreach ( string mediaInstallImage in mediaInstallImages ) {
-        File.Delete( mediaInstallImage );
-      }
-      Directory.Delete( HttpContext.Current.Server.MapPath( "~/installMedia" ) );
 
-      //Get store
+      Directory.Delete( HostingEnvironment.MapPath( "~/installMedia" ), true );
+
+      //Get store or create it
       IReadOnlyList<Store> stores = StoreService.Instance.GetAll().ToList();
       Store store = stores.FirstOrDefault();
       if ( store == null ) {
@@ -66,15 +63,16 @@ namespace TeaCommerce.StarterKit.Install {
       }
 
       //Update languages and products
-      IReadOnlyList<IContent> langContents = contentService.GetByLevel( 1 ).Where( c => c.ContentType.Alias == "Lang" && !c.Published && c.CreateDate > DateTime.Now.AddMinutes( -5 ) ).ToList();
-      if ( langContents.Any() ) {
-        foreach ( IContent langContent in langContents ) {
-          IReadOnlyList<IContent> products = langContent.Descendants().Where( c => c.ContentType.Alias == "Product" ).ToList();
-          langContent.SetValue( "featuredProducts", string.Join( ",", products.Take( 4 ).Select( c => c.Id ) ) );
-          langContent.SetValue( "slider", string.Join( ",", productImageIds ) );
-          langContent.SetValue( "store", store.Id );
-          contentService.Save( langContent );
+      IReadOnlyList<IContent> homeContents = contentService.GetByLevel( 1 ).Where( c => c.ContentType.Alias == "Home" && !c.Published && c.CreateDate > DateTime.Now.AddMinutes( -5 ) ).ToList();
+      if ( homeContents.Any() ) {
+        foreach ( IContent homeContent in homeContents ) {
+          IReadOnlyList<IContent> products = homeContent.Descendants().Where( c => c.ContentType.Alias == "Product" ).ToList();
+          homeContent.SetValue( "featuredProducts", string.Join( ",", products.Take( 4 ).Select( c => c.Id ) ) );
+          homeContent.SetValue( "slider", string.Join( ",", productImageIds ) );
+          homeContent.SetValue( "store", store.Id );
+          contentService.Save( homeContent );
 
+          //Set image on product
           int count = 0;
           foreach ( IContent productContent in products ) {
             int mediaId = productImageIds[ count ];
@@ -84,7 +82,7 @@ namespace TeaCommerce.StarterKit.Install {
           }
 
           //Fix Cart step templates
-          IReadOnlyList<IContent> cartSteps = langContent.Descendants().Where( c => c.ContentType.Alias == "CartStep" ).OrderBy( c => c.SortOrder ).ToList();
+          IReadOnlyList<IContent> cartSteps = homeContent.Descendants().Where( c => c.ContentType.Alias == "CartStep" ).OrderBy( c => c.SortOrder ).ToList();
           if ( cartSteps.Any() ) {
 
             IContentType contentType = contentTypeService.GetContentType( cartSteps.First().ContentTypeId );

@@ -1,62 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <umbPackage>
-  <files>
-    <file>
-      <guid>cart.js</guid>
-      <orgPath>/Scripts</orgPath>
-      <orgName>cart.js</orgName>
-    </file>
-    <file>
-      <guid>product.js</guid>
-      <orgPath>/Scripts</orgPath>
-      <orgName>product.js</orgName>
-    </file>
-    <file>
-      <guid>teaCommerceEvents.js</guid>
-      <orgPath>/Scripts</orgPath>
-      <orgName>teaCommerceEvents.js</orgName>
-    </file>
-    <file>
-      <guid>Minicart.cshtml</guid>
-      <orgPath>/Views/Partials/Cart</orgPath>
-      <orgName>Minicart.cshtml</orgName>
-    </file>
-    <file>
-      <guid>validation.js</guid>
-      <orgPath>/Scripts</orgPath>
-      <orgName>validation.js</orgName>
-    </file>
-    <file>
-      <guid>TopMenu.cshtml</guid>
-      <orgPath>/Views/Partials/Navigation</orgPath>
-      <orgName>TopMenu.cshtml</orgName>
-    </file>
-    <file>
-      <guid>productImage01.jpg</guid>
-      <orgPath>/installMedia</orgPath>
-      <orgName>productImage01.jpg</orgName>
-    </file>
-    <file>
-      <guid>productImage02.jpg</guid>
-      <orgPath>/installMedia</orgPath>
-      <orgName>productImage02.jpg</orgName>
-    </file>
-    <file>
-      <guid>productImage03.jpg</guid>
-      <orgPath>/installMedia</orgPath>
-      <orgName>productImage03.jpg</orgName>
-    </file>
-    <file>
-      <guid>productImage04.jpg</guid>
-      <orgPath>/installMedia</orgPath>
-      <orgName>productImage04.jpg</orgName>
-    </file>
-    <file>
-      <guid>TeaCommerce.StarterKit.Install.dll</guid>
-      <orgPath>/bin</orgPath>
-      <orgName>TeaCommerce.StarterKit.Install.dll</orgName>
-    </file>
-  </files>
+  <files />
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
