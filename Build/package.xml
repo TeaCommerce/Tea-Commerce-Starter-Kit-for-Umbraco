@@ -60,14 +60,14 @@
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
-      <version>4.1</version>
+      <version>4.2</version>
       <iconUrl />
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
       <requirements type="strict">
         <major>7</major>
-        <minor>5</minor>
-        <patch>2</patch>
+        <minor>1</minor>
+        <patch>0</patch>
       </requirements>
     </package>
     <author>
@@ -85,1448 +85,96 @@ http://teacommerce.net/ressources/support/
 Tea Commerce
 info@teacommerce.net
 +45 82 307 306]]></readme>
-  </info>  
+  </info> 
   <Documents>
     <DocumentSet importMode="root">
-      <Lang id="1070" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-03-13T13:00:42" updateDate="2015-03-13T13:02:33" nodeName="Home" urlName="home" path="-1,1070" isDoc="" nodeType="1066" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1061" nodeTypeAlias="Lang">
-        <slider><![CDATA[1084,1085,1086,1087]]></slider>
+      <Lang id="1068" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2015-03-12T08:16:19" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Lang">
+        <slider><![CDATA[1119,1117,1116,1118]]></slider>
         <store>1</store>
-        <featuredProducts><![CDATA[1082,1081,1079,1078]]></featuredProducts>
-        <Cart id="1071" parentID="1070" level="2" creatorID="0" sortOrder="0" createDate="2015-03-13T13:00:42" updateDate="2015-03-13T13:02:33" nodeName="Cart content" urlName="cart-content" path="-1,1070,1071" isDoc="" nodeType="1064" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="Cart">
-          <CartStep id="1072" parentID="1071" level="3" creatorID="0" sortOrder="0" createDate="2015-03-13T13:00:42" updateDate="2015-03-13T14:46:13" nodeName="Information" urlName="information" path="-1,1070,1071,1072" isDoc="" nodeType="1065" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1057" nodeTypeAlias="CartStep" />
-          <CartStep id="1073" parentID="1071" level="3" creatorID="0" sortOrder="1" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T14:46:45" nodeName="Shipping/Payment" urlName="shippingpayment" path="-1,1070,1071,1073" isDoc="" nodeType="1065" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1058" nodeTypeAlias="CartStep" />
-          <CartStep id="1074" parentID="1071" level="3" creatorID="0" sortOrder="2" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T14:46:51" nodeName="Accept" urlName="accept" path="-1,1070,1071,1074" isDoc="" nodeType="1065" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1059" nodeTypeAlias="CartStep" />
-          <CartStep id="1075" parentID="1071" level="3" creatorID="0" sortOrder="3" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T13:02:33" nodeName="Payment" urlName="payment" path="-1,1070,1071,1075" isDoc="" nodeType="1065" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="CartStep" />
-          <CartStep id="1076" parentID="1071" level="3" creatorID="0" sortOrder="4" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T14:46:55" nodeName="Confirmation" urlName="confirmation" path="-1,1070,1071,1076" isDoc="" nodeType="1065" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1060" nodeTypeAlias="CartStep" />
+        <featuredProducts><![CDATA[1071,1073,1072,1074]]></featuredProducts>
+        <Cart id="1081" parentID="1068" level="2" creatorID="0" sortOrder="0" createDate="2015-01-16T11:33:34" updateDate="2015-03-06T11:43:57" nodeName="Cart content" urlName="cart-content" path="-1,1068,1081" isDoc="" nodeType="1080" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="Cart">
+          <CartStep id="1083" parentID="1081" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:35:03" updateDate="2015-03-06T11:44:02" nodeName="Information" urlName="information" path="-1,1068,1081,1083" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1058" nodeTypeAlias="CartStep" />
+          <CartStep id="1084" parentID="1081" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:38:02" updateDate="2015-03-06T11:44:12" nodeName="Shipping/Payment" urlName="shippingpayment" path="-1,1068,1081,1084" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1060" nodeTypeAlias="CartStep" />
+          <CartStep id="1085" parentID="1081" level="3" creatorID="0" sortOrder="2" createDate="2015-01-16T11:38:14" updateDate="2015-03-06T11:44:18" nodeName="Accept" urlName="accept" path="-1,1068,1081,1085" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="CartStep" />
+          <CartStep id="1106" parentID="1081" level="3" creatorID="0" sortOrder="3" createDate="2015-03-06T11:43:19" updateDate="2015-03-06T11:43:31" nodeName="Payment" urlName="payment" path="-1,1068,1081,1106" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="CartStep" />
+          <CartStep id="1086" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2015-03-06T11:44:24" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
         </Cart>
-        <ProductList id="1077" parentID="1070" level="2" creatorID="0" sortOrder="1" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T13:02:33" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1070,1077" isDoc="" nodeType="1068" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1063" nodeTypeAlias="ProductList">
-          <Product id="1078" parentID="1077" level="3" creatorID="0" sortOrder="0" createDate="2015-03-13T13:00:43" updateDate="2016-02-26T14:13:44" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1070,1077,1078" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="Product">
+        <ProductList id="1069" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2015-03-13T11:28:45" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
+          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2016-02-29T16:06:16" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <productName><![CDATA[Summer Yacht]]></productName>
             <sku><![CDATA[p0001]]></sku>
-            <image>1087</image>
+            <image>1116</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[500]]></priceJMD>
             <variants><![CDATA[{
-  "variants": [
-    {
-      "id": "648b3875-c4bd-c6be-f55b-30f464580415",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "Black and Large and not so much",
-        "sku": "BLN",
-        "pricejmd": "400",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "b50a0aa2-0f6a-ca7d-e8c6-fd92dd8ffe62",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "1ca7221d-1bf8-06c0-9168-4a2b5a168845",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "Black and Large and Meh",
-        "sku": "BLM",
-        "pricejmd": "300",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "72d30559-d370-479d-5c06-d97a7621db35",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "Black and large and oh yes",
-        "sku": "BLO",
-        "pricejmd": "200",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "54dc7208-52cd-6a43-c8c4-5f0a69873f5e",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "Black and small and not so much",
-        "sku": "BSN",
-        "pricejmd": "100",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "85d5f42c-dd50-c9f1-4e07-315e717738b7",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "Black and small and ok",
-        "sku": "BSO",
-        "pricejmd": "600",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "cd706cec-451f-b9ae-be2c-51fd229e84db",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "Black and small and Meh",
-        "sku": "BSM",
-        "pricejmd": "700",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "2da5fc3c-b656-70bd-16f6-7b21eee8025d",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "aae29cf9-d801-d002-9c44-fc088f3bd847",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "171cbcb5-37c1-57a6-d714-91e71c0472a9",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "8e583ef2-b657-a64e-447c-d7042e8f7362",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "67543dd6-9b2f-b935-830e-3c8e777bfb1e",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "24909228-01a8-ce65-0b7b-94d0f4884b60",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "5db86436-9b61-7c72-8c84-922691657136",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "8b9d1369-4ab9-4870-6f18-0ea2b42ce88a",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "75a6f6e4-6e56-b340-fb0d-5baf09dae817",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "f29cf546-9937-28b3-d043-82ca84e096a4",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "e8a207d6-1926-77b3-47d5-b3a62380a0d1",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "92604e47-a32b-4e6c-d5b0-b8ce574e7e57",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "0299fc16-73cb-33c2-aece-b5f327b372f8",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "4d800fd8-fcf0-4517-9c41-25bd61ce3f4f",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "48da8cb2-3d54-ea68-1cc6-c7280b1a0f28",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "ab104842-c76c-baad-1b33-d20ee9844e19",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "e75c6704-3827-58b4-399d-30ab2421f3fb",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    }
-  ],
+  "variants": [],
   "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
     "1106": true,
     "1109": true,
-    "1113": true
+    "1113": true,
+    "1126": true,
+    "1127": true
   }
 }]]></variants>
           </Product>
-          <Product id="1079" parentID="1077" level="3" creatorID="0" sortOrder="1" createDate="2015-03-13T13:00:43" updateDate="2015-04-24T12:01:34" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1070,1077,1079" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="Product">
+          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2016-02-29T11:42:09" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <productName><![CDATA[Yacht with sails]]></productName>
             <sku><![CDATA[p0002]]></sku>
-            <image>1086</image>
+            <image>1117</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[60]]></priceJMD>
+            <variants><![CDATA[{
+  "variants": [],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
           </Product>
         </ProductList>
-        <ProductList id="1080" parentID="1070" level="2" creatorID="0" sortOrder="2" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T13:02:33" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1070,1080" isDoc="" nodeType="1068" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1063" nodeTypeAlias="ProductList">
-          <Product id="1081" parentID="1080" level="3" creatorID="0" sortOrder="0" createDate="2015-03-13T13:00:43" updateDate="2016-02-23T11:58:19" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1070,1080,1081" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="Product">
+        <ProductList id="1070" parentID="1068" level="2" creatorID="0" sortOrder="2" createDate="2015-01-16T11:16:17" updateDate="2015-03-13T11:28:55" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1068,1070" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
+          <Product id="1073" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2016-02-29T11:42:16" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <productName><![CDATA[Motor driven Yacht]]></productName>
             <sku><![CDATA[p0003]]></sku>
-            <image>1085</image>
+            <image>1118</image>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[80]]></priceJMD>
             <variants><![CDATA[{
+  "variants": [],
+  "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
+    "1106": true,
+    "1109": true,
+    "1113": true,
+    "1126": true,
+    "1127": true
+  }
+}]]></variants>
+          </Product>
+          <Product id="1074" key="584fd82a-7ff1-4019-b0d6-1e0e493ac139" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2016-08-29T15:59:11" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <image>1119</image>
+            <sku><![CDATA[p0004]]></sku>
+            <productName><![CDATA[One masted yacht]]></productName>
+            <description><![CDATA[<p>This is the product description.</p>]]></description>
+            <priceJMD><![CDATA[2342.2]]></priceJMD>
+            <variants><![CDATA[{
   "variants": [
     {
-      "id": "8abd68b4-2d1e-16e9-cc23-e0f3e68ed14b",
+      "id": "2001e6a4-594c-1f57-0012-40b238a0c2c6",
       "documentTypeAlias": "Variant",
       "validation": {
         "holesInVariants": false,
@@ -1534,57 +182,27 @@ info@teacommerce.net
       },
       "properties": {
         "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
         "productName": "",
         "sku": "",
-        "pricejmd": "",
-        "image": ""
+        "priceJMD": "1001"
       },
       "combination": [
         {
           "name": "Black",
-          "id": 1107,
+          "id": 1164,
           "groupName": "Color",
-          "groupId": 1106
+          "groupId": 1163
         },
         {
           "name": "Large",
-          "id": 1110,
+          "id": 1168,
           "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
+          "groupId": 1167
         }
       ]
     },
     {
-      "id": "3e0c7921-fa72-c181-0450-c3970ae41890",
+      "id": "85e8eb5e-b6d4-0674-730a-f288b11beeae",
       "documentTypeAlias": "Variant",
       "validation": {
         "holesInVariants": false,
@@ -1592,57 +210,27 @@ info@teacommerce.net
       },
       "properties": {
         "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
         "productName": "",
         "sku": "",
-        "pricejmd": "",
-        "image": ""
+        "priceJMD": "1002"
       },
       "combination": [
         {
           "name": "Black",
-          "id": 1107,
+          "id": 1164,
           "groupName": "Color",
-          "groupId": 1106
+          "groupId": 1163
         },
         {
-          "name": "Large",
-          "id": 1110,
+          "name": "Medium",
+          "id": 1169,
           "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
+          "groupId": 1167
         }
       ]
     },
     {
-      "id": "3416cc36-08ba-cb4c-d9e1-d965c020dd8a",
+      "id": "af0230bf-dae9-1f50-cb21-3468a054e597",
       "documentTypeAlias": "Variant",
       "validation": {
         "holesInVariants": false,
@@ -1650,57 +238,55 @@ info@teacommerce.net
       },
       "properties": {
         "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
         "productName": "",
         "sku": "",
-        "pricejmd": "",
-        "image": ""
+        "priceJMD": "1003"
       },
       "combination": [
         {
           "name": "Black",
-          "id": 1107,
+          "id": 1164,
           "groupName": "Color",
-          "groupId": 1106
+          "groupId": 1163
+        },
+        {
+          "name": "Small",
+          "id": 1170,
+          "groupName": "Size",
+          "groupId": 1167
+        }
+      ]
+    },
+    {
+      "id": "ad47777e-0e4f-7caf-18aa-ef69ce530a39",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "",
+        "sku": "",
+        "priceJMD": "1004"
+      },
+      "combination": [
+        {
+          "name": "White",
+          "id": 1165,
+          "groupName": "Color",
+          "groupId": 1163
         },
         {
           "name": "Large",
-          "id": 1110,
+          "id": 1168,
           "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
+          "groupId": 1167
         }
       ]
     },
     {
-      "id": "a7be4fc4-8390-fdd2-5d36-b70857e26a44",
+      "id": "5f714e67-f936-42a9-1a98-ee7f41c3e5b5",
       "documentTypeAlias": "Variant",
       "validation": {
         "holesInVariants": false,
@@ -1708,57 +294,83 @@ info@teacommerce.net
       },
       "properties": {
         "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
         "productName": "",
         "sku": "",
-        "pricejmd": "",
-        "image": ""
+        "priceJMD": "1005"
       },
       "combination": [
         {
-          "name": "Black",
-          "id": 1107,
+          "name": "White",
+          "id": 1165,
           "groupName": "Color",
-          "groupId": 1106
+          "groupId": 1163
+        },
+        {
+          "name": "Medium",
+          "id": 1169,
+          "groupName": "Size",
+          "groupId": 1167
+        }
+      ]
+    },
+    {
+      "id": "ee0c0882-d589-dbfd-3ccf-db1069268b88",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "",
+        "sku": "",
+        "priceJMD": "1006"
+      },
+      "combination": [
+        {
+          "name": "White",
+          "id": 1165,
+          "groupName": "Color",
+          "groupId": 1163
+        },
+        {
+          "name": "Small",
+          "id": 1170,
+          "groupName": "Size",
+          "groupId": 1167
+        }
+      ]
+    },
+    {
+      "id": "95bb6a66-a91f-7611-2edf-af117f375741",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "",
+        "sku": "",
+        "priceJMD": "1007"
+      },
+      "combination": [
+        {
+          "name": "Blue",
+          "id": 1166,
+          "groupName": "Color",
+          "groupId": 1163
         },
         {
           "name": "Large",
-          "id": 1110,
+          "id": 1168,
           "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
+          "groupId": 1167
         }
       ]
     },
     {
-      "id": "33cf3fc5-b2e6-6064-882b-5631114db4cc",
+      "id": "4378c465-0863-1893-6618-ff8579d5b575",
       "documentTypeAlias": "Variant",
       "validation": {
         "holesInVariants": false,
@@ -1766,1210 +378,91 @@ info@teacommerce.net
       },
       "properties": {
         "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
         "productName": "",
         "sku": "",
-        "pricejmd": "",
-        "image": ""
+        "priceJMD": "1008"
       },
       "combination": [
         {
-          "name": "Black",
-          "id": 1107,
+          "name": "Blue",
+          "id": 1166,
           "groupName": "Color",
-          "groupId": 1106
+          "groupId": 1163
+        },
+        {
+          "name": "Medium",
+          "id": 1169,
+          "groupName": "Size",
+          "groupId": 1167
+        }
+      ]
+    },
+    {
+      "id": "cc14960c-eb9d-0f19-2322-0b9073109af2",
+      "documentTypeAlias": "Variant",
+      "validation": {
+        "holesInVariants": false,
+        "duplicatesFound": false
+      },
+      "properties": {
+        "stock": "",
+        "productName": "",
+        "sku": "",
+        "priceJMD": "1009"
+      },
+      "combination": [
+        {
+          "name": "Blue",
+          "id": 1166,
+          "groupName": "Color",
+          "groupId": 1163
         },
         {
           "name": "Small",
-          "id": 1111,
+          "id": 1170,
           "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "f6d3db35-66a9-22e8-b185-0ec0f5bba536",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "333364f4-0a25-7b43-2b94-9381dc39dbdb",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "2de2e52f-299f-b828-8e3e-56e9de0ee451",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Black",
-          "id": 1107,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "35179e49-27f9-9420-bcc4-19c1220efaba",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "8a180813-d8f5-0e51-6547-ccdb9592777c",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "486ecb55-4adc-f8dd-518e-a044d4751d2b",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "81b6a2a3-e087-3f25-a8d8-2301c7af540a",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "9da0b1de-c72a-c9c9-3524-3360c1debb8b",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "010b96b7-f5b9-2359-ddd3-c6ccf0af2fde",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "b5ff86c2-0237-084b-47a8-5fafaae85d3a",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "8dec9d0d-6b0a-b71c-ede4-5f21ad37d1ce",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Yellow",
-          "id": 1108,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "1e26b20c-4bdc-7a51-c416-d57f321b4f84",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "c7b34dfc-0f9d-b8ea-f80e-7ce3c55f6260",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "4f88e5e5-2aab-96b9-96d6-af065c7c7e3c",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "c270e944-9cb1-089f-47d2-e50465152c07",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Large",
-          "id": 1110,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "426cd357-5d43-3eee-b255-7bdbff25b92b",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Not so much",
-          "id": 1114,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "cca720ae-0e43-b09a-73b4-dcb7860d5b81",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Ok",
-          "id": 1115,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "41e6bc65-fab9-53b7-a9fc-4082d836802a",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Meh",
-          "id": 1116,
-          "groupName": "Coolness",
-          "groupId": 1113
-        }
-      ]
-    },
-    {
-      "id": "a650d40b-fe17-5d65-9c7f-4cadd0fa0889",
-      "documentTypeAlias": "Variant",
-      "validation": {
-        "holesInVariants": false,
-        "duplicatesFound": false
-      },
-      "properties": {
-        "stock": "",
-        "archetype": {
-          "fieldsets": [
-            {
-              "alias": "archetype",
-              "collapse": false,
-              "isValid": true,
-              "properties": [
-                {
-                  "alias": "text",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                },
-                {
-                  "alias": "moreText",
-                  "value": "",
-                  "editorState": {},
-                  "isValid": true
-                }
-              ]
-            }
-          ]
-        },
-        "productName": "",
-        "sku": "",
-        "pricejmd": "",
-        "image": ""
-      },
-      "combination": [
-        {
-          "name": "Green",
-          "id": 1112,
-          "groupName": "Color",
-          "groupId": 1106
-        },
-        {
-          "name": "Small",
-          "id": 1111,
-          "groupName": "Size",
-          "groupId": 1109
-        },
-        {
-          "name": "Oh yes",
-          "id": 1117,
-          "groupName": "Coolness",
-          "groupId": 1113
+          "groupId": 1167
         }
       ]
     }
   ],
   "variantGroupsOpen": {
+    "1096": true,
+    "1097": true,
+    "1099": true,
+    "1102": true,
     "1106": true,
     "1109": true,
-    "1113": true
+    "1113": true,
+    "1126": true,
+    "1127": true,
+    "1163": true,
+    "1167": true
   }
 }]]></variants>
           </Product>
-          <Product id="1082" parentID="1080" level="3" creatorID="0" sortOrder="1" createDate="2015-03-13T13:00:43" updateDate="2015-03-13T13:02:33" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1070,1080,1082" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="Product">
-            <productName><![CDATA[One masted yacht]]></productName>
-            <sku><![CDATA[p0004]]></sku>
-            <image>1084</image>
-            <description><![CDATA[<p>This is the product description.</p>]]></description>
-            <priceJMD><![CDATA[2342.2]]></priceJMD>
-          </Product>
         </ProductList>
-        <ProductSearchPage id="1090" parentID="1070" level="2" creatorID="0" sortOrder="3" createDate="2015-05-27T14:34:21" updateDate="2015-05-27T14:39:18" nodeName="Search" urlName="search" path="-1,1070,1090" isDoc="" nodeType="1088" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1089" nodeTypeAlias="ProductSearchPage" />
-        <Attributes id="1105" parentID="1070" level="2" creatorID="0" sortOrder="4" createDate="2016-02-11T10:44:25" updateDate="2016-02-11T10:44:56" nodeName="Attributes" urlName="attributes" path="-1,1070,1105" isDoc="" nodeType="1095" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attributes">
-          <AttributeGroup id="1106" parentID="1105" level="3" creatorID="0" sortOrder="0" createDate="2016-02-11T10:44:25" updateDate="2016-02-11T10:44:56" nodeName="Color" urlName="color" path="-1,1070,1105,1106" isDoc="" nodeType="1096" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="AttributeGroup">
-            <Attribute id="1107" parentID="1106" level="4" creatorID="0" sortOrder="0" createDate="2016-02-11T10:44:25" updateDate="2016-02-11T10:44:56" nodeName="Black" urlName="black" path="-1,1070,1105,1106,1107" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-            <Attribute id="1108" parentID="1106" level="4" creatorID="0" sortOrder="1" createDate="2016-02-11T10:44:25" updateDate="2016-02-11T10:44:56" nodeName="Yellow" urlName="yellow" path="-1,1070,1105,1106,1108" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-            <Attribute id="1112" parentID="1106" level="4" creatorID="0" sortOrder="2" createDate="2016-02-11T16:06:47" updateDate="2016-02-11T16:06:47" nodeName="Green" urlName="green" path="-1,1070,1105,1106,1112" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-          </AttributeGroup>
-          <AttributeGroup id="1109" parentID="1105" level="3" creatorID="0" sortOrder="1" createDate="2016-02-11T10:44:25" updateDate="2016-02-11T10:44:56" nodeName="Size" urlName="size" path="-1,1070,1105,1109" isDoc="" nodeType="1096" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="AttributeGroup">
-            <Attribute id="1110" parentID="1109" level="4" creatorID="0" sortOrder="0" createDate="2016-02-11T10:44:25" updateDate="2016-02-11T10:44:56" nodeName="Large" urlName="large" path="-1,1070,1105,1109,1110" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-            <Attribute id="1111" parentID="1109" level="4" creatorID="0" sortOrder="1" createDate="2016-02-11T10:44:26" updateDate="2016-02-11T10:44:56" nodeName="Small" urlName="small" path="-1,1070,1105,1109,1111" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-          </AttributeGroup>
-          <AttributeGroup id="1113" parentID="1105" level="3" creatorID="0" sortOrder="2" createDate="2016-02-11T16:48:20" updateDate="2016-02-11T16:48:20" nodeName="Coolness" urlName="coolness" path="-1,1070,1105,1113" isDoc="" nodeType="1096" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="AttributeGroup">
-            <Attribute id="1114" parentID="1113" level="4" creatorID="0" sortOrder="0" createDate="2016-02-11T16:48:29" updateDate="2016-02-11T16:48:29" nodeName="Not so much" urlName="not-so-much" path="-1,1070,1105,1113,1114" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-            <Attribute id="1115" parentID="1113" level="4" creatorID="0" sortOrder="1" createDate="2016-02-11T16:48:36" updateDate="2016-02-11T16:48:36" nodeName="Ok" urlName="ok" path="-1,1070,1105,1113,1115" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-            <Attribute id="1116" parentID="1113" level="4" creatorID="0" sortOrder="2" createDate="2016-02-11T16:48:43" updateDate="2016-02-11T16:48:43" nodeName="Meh" urlName="meh" path="-1,1070,1105,1113,1116" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-            <Attribute id="1117" parentID="1113" level="4" creatorID="0" sortOrder="3" createDate="2016-02-11T16:48:50" updateDate="2016-02-11T16:48:50" nodeName="Oh yes" urlName="oh-yes" path="-1,1070,1105,1113,1117" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-          </AttributeGroup>
-        </Attributes>
+        <attributes id="1162" key="4aa261c3-8c00-448e-82e1-8b7b64fd687e" parentID="1068" level="2" creatorID="0" sortOrder="3" createDate="2016-08-29T15:44:12" updateDate="2016-08-29T15:44:12" nodeName="Variant attributes" urlName="variant-attributes" path="-1,1068,1162" isDoc="" nodeType="1159" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributes">
+          <attributeGroup id="1163" key="c6406c41-7f62-4b88-9200-fee86422ba44" parentID="1162" level="3" creatorID="0" sortOrder="0" createDate="2016-08-29T15:44:28" updateDate="2016-08-29T15:44:28" nodeName="Color" urlName="color" path="-1,1068,1162,1163" isDoc="" nodeType="1160" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributeGroup">
+            <attribute id="1164" key="db447a75-2845-4676-925e-477402f4e914" parentID="1163" level="4" creatorID="0" sortOrder="0" createDate="2016-08-29T15:44:37" updateDate="2016-08-29T15:44:37" nodeName="Black" urlName="black" path="-1,1068,1162,1163,1164" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1165" key="67272ed0-c5b9-4696-b762-8a7409f30670" parentID="1163" level="4" creatorID="0" sortOrder="1" createDate="2016-08-29T15:44:44" updateDate="2016-08-29T15:44:44" nodeName="White" urlName="white" path="-1,1068,1162,1163,1165" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1166" key="96396335-47b0-489e-9eb4-0578792e5690" parentID="1163" level="4" creatorID="0" sortOrder="2" createDate="2016-08-29T15:44:54" updateDate="2016-08-29T15:44:54" nodeName="Blue" urlName="blue" path="-1,1068,1162,1163,1166" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+          </attributeGroup>
+          <attributeGroup id="1167" key="5b6dd3ac-003c-41e6-8447-40ec7b707cd4" parentID="1162" level="3" creatorID="0" sortOrder="1" createDate="2016-08-29T15:45:05" updateDate="2016-08-29T15:45:05" nodeName="Size" urlName="size" path="-1,1068,1162,1167" isDoc="" nodeType="1160" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributeGroup">
+            <attribute id="1168" key="7a1f734a-ebf1-4366-a07f-ef34125b3b3d" parentID="1167" level="4" creatorID="0" sortOrder="0" createDate="2016-08-29T15:45:18" updateDate="2016-08-29T15:45:18" nodeName="Large" urlName="large" path="-1,1068,1162,1167,1168" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1169" key="94fe97f9-95d1-4e56-b061-3e3102835cf5" parentID="1167" level="4" creatorID="0" sortOrder="1" createDate="2016-08-29T15:45:26" updateDate="2016-08-29T15:45:26" nodeName="Medium" urlName="medium" path="-1,1068,1162,1167,1169" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1170" key="3a7c742c-3ef0-46b0-a8bc-bd6058469d08" parentID="1167" level="4" creatorID="0" sortOrder="2" createDate="2016-08-29T15:45:34" updateDate="2016-08-29T15:45:34" nodeName="Small" urlName="small" path="-1,1068,1162,1167,1170" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+          </attributeGroup>
+        </attributes>
       </Lang>
-      <Attributes id="1098" parentID="-1" level="1" creatorID="0" sortOrder="1" createDate="2016-02-11T10:22:17" updateDate="2016-02-11T10:22:17" nodeName="Attributes" urlName="attributes" path="-1,1098" isDoc="" nodeType="1095" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attributes">
-        <AttributeGroup id="1099" parentID="1098" level="2" creatorID="0" sortOrder="0" createDate="2016-02-11T10:22:42" updateDate="2016-02-11T10:22:42" nodeName="Color" urlName="color" path="-1,1098,1099" isDoc="" nodeType="1096" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="AttributeGroup">
-          <Attribute id="1100" parentID="1099" level="3" creatorID="0" sortOrder="0" createDate="2016-02-11T10:22:48" updateDate="2016-02-11T10:22:48" nodeName="Black" urlName="black" path="-1,1098,1099,1100" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-          <Attribute id="1101" parentID="1099" level="3" creatorID="0" sortOrder="1" createDate="2016-02-11T10:22:58" updateDate="2016-02-11T10:22:58" nodeName="Yellow" urlName="yellow" path="-1,1098,1099,1101" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-        </AttributeGroup>
-        <AttributeGroup id="1102" parentID="1098" level="2" creatorID="0" sortOrder="1" createDate="2016-02-11T10:23:04" updateDate="2016-02-11T10:23:04" nodeName="Size" urlName="size" path="-1,1098,1102" isDoc="" nodeType="1096" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="AttributeGroup">
-          <Attribute id="1103" parentID="1102" level="3" creatorID="0" sortOrder="0" createDate="2016-02-11T10:23:13" updateDate="2016-02-11T10:23:13" nodeName="Large" urlName="large" path="-1,1098,1102,1103" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-          <Attribute id="1104" parentID="1102" level="3" creatorID="0" sortOrder="1" createDate="2016-02-11T10:23:19" updateDate="2016-02-11T10:23:19" nodeName="Small" urlName="small" path="-1,1098,1102,1104" isDoc="" nodeType="1097" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="Attribute" />
-        </AttributeGroup>
-      </Attributes>
-	</DocumentSet>
+    </DocumentSet>
   </Documents>
   <DocumentTypes>
     <DocumentType>
       <Info>
         <Name>Attribute</Name>
-        <Alias>Attribute</Alias>
-        <Icon>.sprTreeFolder</Icon>
+        <Alias>attribute</Alias>
+        <Icon>icon-t-shirt</Icon>
         <Thumbnail>folder.png</Thumbnail>
         <Description />
         <AllowAtRoot>False</AllowAtRoot>
@@ -2985,8 +478,8 @@ info@teacommerce.net
     <DocumentType>
       <Info>
         <Name>Attribute group</Name>
-        <Alias>AttributeGroup</Alias>
-        <Icon>.sprTreeFolder</Icon>
+        <Alias>attributeGroup</Alias>
+        <Icon>icon-t-shirt color-orange</Icon>
         <Thumbnail>folder.png</Thumbnail>
         <Description />
         <AllowAtRoot>False</AllowAtRoot>
@@ -2996,7 +489,7 @@ info@teacommerce.net
         <DefaultTemplate />
       </Info>
       <Structure>
-        <DocumentType>Attribute</DocumentType>
+        <DocumentType>attribute</DocumentType>
       </Structure>
       <GenericProperties />
       <Tabs />
@@ -3004,18 +497,18 @@ info@teacommerce.net
     <DocumentType>
       <Info>
         <Name>Attributes</Name>
-        <Alias>Attributes</Alias>
-        <Icon>.sprTreeFolder</Icon>
+        <Alias>attributes</Alias>
+        <Icon>icon-t-shirt</Icon>
         <Thumbnail>folder.png</Thumbnail>
         <Description />
-        <AllowAtRoot>True</AllowAtRoot>
+        <AllowAtRoot>False</AllowAtRoot>
         <IsListView>False</IsListView>
         <Compositions />
         <AllowedTemplates />
         <DefaultTemplate />
       </Info>
       <Structure>
-        <DocumentType>AttributeGroup</DocumentType>
+        <DocumentType>attributeGroup</DocumentType>
       </Structure>
       <GenericProperties />
       <Tabs />
@@ -3066,23 +559,6 @@ info@teacommerce.net
     </DocumentType>
     <DocumentType>
       <Info>
-        <Name>Data</Name>
-        <Alias>Data</Alias>
-        <Icon>.sprTreeFolder</Icon>
-        <Thumbnail>folder.png</Thumbnail>
-        <Description />
-        <AllowAtRoot>False</AllowAtRoot>
-        <IsListView>False</IsListView>
-        <Compositions />
-        <AllowedTemplates />
-        <DefaultTemplate />
-      </Info>
-      <Structure />
-      <GenericProperties />
-      <Tabs />
-    </DocumentType>
-    <DocumentType>
-      <Info>
         <Name>Home</Name>
         <Alias>Lang</Alias>
         <Icon>icon-home</Icon>
@@ -3097,9 +573,9 @@ info@teacommerce.net
         <DefaultTemplate>Home</DefaultTemplate>
       </Info>
       <Structure>
-        <DocumentType>Cart</DocumentType>
         <DocumentType>ProductList</DocumentType>
-        <DocumentType>Attributes</DocumentType>
+        <DocumentType>Cart</DocumentType>
+        <DocumentType>attributes</DocumentType>
       </Structure>
       <GenericProperties>
         <GenericProperty>
@@ -3117,9 +593,9 @@ info@teacommerce.net
           <Name>Store</Name>
           <Alias>store</Alias>
           <Type>TeaCommerce.StorePicker</Type>
-          <Definition>f02ee7ac-6067-4d70-9e5f-4a5e26e9de20</Definition>
+          <Definition>93137cb1-4e25-442c-84ee-329121f4310e</Definition>
           <Tab>Content</Tab>
-          <SortOrder>1</SortOrder>
+          <SortOrder>2</SortOrder>
           <Mandatory>True</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3130,7 +606,7 @@ info@teacommerce.net
           <Type>Umbraco.MultiNodeTreePicker</Type>
           <Definition>122843b8-b613-4322-9dc4-05a707a629b1</Definition>
           <Tab>Content</Tab>
-          <SortOrder>2</SortOrder>
+          <SortOrder>3</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3138,7 +614,7 @@ info@teacommerce.net
       </GenericProperties>
       <Tabs>
         <Tab>
-          <Id>12</Id>
+          <Id>14</Id>
           <Caption>Content</Caption>
           <SortOrder>0</SortOrder>
         </Tab>
@@ -3167,7 +643,7 @@ info@teacommerce.net
           <Type>Umbraco.MediaPicker</Type>
           <Definition>93929b9a-93a2-4e2a-b239-d99334440a59</Definition>
           <Tab>Information</Tab>
-          <SortOrder>1</SortOrder>
+          <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3178,7 +654,7 @@ info@teacommerce.net
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Information</Tab>
-          <SortOrder>3</SortOrder>
+          <SortOrder>2</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3189,7 +665,7 @@ info@teacommerce.net
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Information</Tab>
-          <SortOrder>2</SortOrder>
+          <SortOrder>1</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3200,7 +676,7 @@ info@teacommerce.net
           <Type>Umbraco.TinyMCEv3</Type>
           <Definition>ca90c950-0aff-4e72-b976-a30b1ac57dad</Definition>
           <Tab>Information</Tab>
-          <SortOrder>6</SortOrder>
+          <SortOrder>5</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3209,9 +685,9 @@ info@teacommerce.net
           <Name>Stock</Name>
           <Alias>stock</Alias>
           <Type>TeaCommerce.StockManagement</Type>
-          <Definition>dc18f4eb-e6d4-43cf-a1c3-ad5def97f064</Definition>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
           <Tab>Information</Tab>
-          <SortOrder>5</SortOrder>
+          <SortOrder>4</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3222,7 +698,7 @@ info@teacommerce.net
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Information</Tab>
-          <SortOrder>4</SortOrder>
+          <SortOrder>3</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
           <Description><![CDATA[]]></Description>
@@ -3231,7 +707,7 @@ info@teacommerce.net
           <Name>Variants</Name>
           <Alias>variants</Alias>
           <Type>TeaCommerce.VariantEditor</Type>
-          <Definition>0f67be1f-9e8d-4745-83a4-8f09bbee243b</Definition>
+          <Definition>688144c0-2bfa-434e-9b75-0ee63316d39d</Definition>
           <Tab>Variants</Tab>
           <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
@@ -3241,7 +717,7 @@ info@teacommerce.net
       </GenericProperties>
       <Tabs>
         <Tab>
-          <Id>13</Id>
+          <Id>12</Id>
           <Caption>Information</Caption>
           <SortOrder>2</SortOrder>
         </Tab>
@@ -3270,43 +746,6 @@ info@teacommerce.net
       <Structure>
         <DocumentType>Product</DocumentType>
       </Structure>
-      <GenericProperties>
-        <GenericProperty>
-          <Name>Runes test</Name>
-          <Alias>runesTest</Alias>
-          <Type>TeaCommerce.RunesPlugin</Type>
-          <Definition>c24d3710-a887-4138-9af0-4cfe40fcff8b</Definition>
-          <Tab>Content</Tab>
-          <SortOrder>0</SortOrder>
-          <Mandatory>False</Mandatory>
-          <Validation />
-          <Description><![CDATA[]]></Description>
-        </GenericProperty>
-      </GenericProperties>
-      <Tabs>
-        <Tab>
-          <Id>14</Id>
-          <Caption>Content</Caption>
-          <SortOrder>0</SortOrder>
-        </Tab>
-      </Tabs>
-    </DocumentType>
-    <DocumentType>
-      <Info>
-        <Name>Product search page</Name>
-        <Alias>ProductSearchPage</Alias>
-        <Icon>icon-search</Icon>
-        <Thumbnail>folder.png</Thumbnail>
-        <Description />
-        <AllowAtRoot>False</AllowAtRoot>
-        <IsListView>False</IsListView>
-        <Compositions />
-        <AllowedTemplates>
-          <Template>ProductSearchPage</Template>
-        </AllowedTemplates>
-        <DefaultTemplate>ProductSearchPage</DefaultTemplate>
-      </Info>
-      <Structure />
       <GenericProperties />
       <Tabs />
     </DocumentType>
@@ -3319,36 +758,22 @@ info@teacommerce.net
         <Description />
         <AllowAtRoot>False</AllowAtRoot>
         <IsListView>False</IsListView>
-        <Master>Data</Master>
-        <Compositions>
-          <Composition>Data</Composition>
-        </Compositions>
+        <Compositions />
         <AllowedTemplates />
         <DefaultTemplate />
       </Info>
       <Structure />
       <GenericProperties>
         <GenericProperty>
-          <Name>Archetype</Name>
-          <Alias>archetype</Alias>
-          <Type>Imulus.Archetype</Type>
-          <Definition>e3156097-6c79-49ed-8ad5-317b0d9f4db9</Definition>
-          <Tab>Content</Tab>
-          <SortOrder>1</SortOrder>
-          <Mandatory>False</Mandatory>
-          <Validation />
-          <Description><![CDATA[]]></Description>
-        </GenericProperty>
-        <GenericProperty>
           <Name>Stock</Name>
           <Alias>stock</Alias>
           <Type>TeaCommerce.StockManagement</Type>
-          <Definition>dc18f4eb-e6d4-43cf-a1c3-ad5def97f064</Definition>
+          <Definition>f5ebe73b-2b26-4990-92a9-99e397c74bbf</Definition>
           <Tab>Content</Tab>
           <SortOrder>0</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
-          <Description><![CDATA[]]></Description>
+          <Description><![CDATA[Remember to add a sku for the product. Without a sku the variant cannot have it's own stock.]]></Description>
         </GenericProperty>
         <GenericProperty>
           <Name>Name</Name>
@@ -3356,31 +781,20 @@ info@teacommerce.net
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Content</Tab>
-          <SortOrder>2</SortOrder>
+          <SortOrder>1</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
         </GenericProperty>
         <GenericProperty>
-          <Name>image</Name>
-          <Alias>image</Alias>
-          <Type>Umbraco.MediaPicker</Type>
-          <Definition>93929b9a-93a2-4e2a-b239-d99334440a59</Definition>
-          <Tab>Content</Tab>
-          <SortOrder>5</SortOrder>
-          <Mandatory>False</Mandatory>
-          <Validation />
-          <Description><![CDATA[]]></Description>
-        </GenericProperty>
-        <GenericProperty>
-          <Name>priceJMD</Name>
-          <Alias>pricejmd</Alias>
+          <Name>Price</Name>
+          <Alias>priceJMD</Alias>
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Content</Tab>
-          <SortOrder>4</SortOrder>
+          <SortOrder>3</SortOrder>
           <Mandatory>False</Mandatory>
-          <Validation />
+          <Validation>^(\s*|\d+(?:[,|\.]\d+)?)$</Validation>
           <Description><![CDATA[]]></Description>
         </GenericProperty>
         <GenericProperty>
@@ -3389,7 +803,7 @@ info@teacommerce.net
           <Type>Umbraco.Textbox</Type>
           <Definition>0cc0eba1-9960-42c9-bf9b-60e150b429ae</Definition>
           <Tab>Content</Tab>
-          <SortOrder>3</SortOrder>
+          <SortOrder>2</SortOrder>
           <Mandatory>False</Mandatory>
           <Validation />
           <Description><![CDATA[]]></Description>
@@ -3833,8 +1247,6 @@ info@teacommerce.net
 @using TeaCommerce.Umbraco.Web
 @using Umbraco.Core.Models
 @using Umbraco.Web
-@using ZeroCostPayment.Models.Settings
-@using ZeroCostPayment.Services
 
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
@@ -3843,15 +1255,10 @@ info@teacommerce.net
   IPublishedContent currentPage = Model.Content;
   IPublishedContent nextStep = currentPage.FollowingSibling();
   IPublishedContent prevStep = currentPage.PrecedingSibling();
-  
+
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
   Order order = TC.GetCurrentOrder( storeId, false );
-
-  ZeroCostPaymentConfig config = ConfigReaderService.Instance.GenericDeSerialize<ZeroCostPaymentConfig>( "~/Config/ZeroCostPayment.config" );
-  ZeroCostPaymentSetting storeSetting = config.Settings.FirstOrDefault( setting => setting.StoreId == storeId );
-
-  long zeroCostPaymentId = storeSetting != null ? storeSetting.PaymentMethodId : 0;
 }
 @if ( order != null ) {
   <div class="container cartContainer">
@@ -3859,30 +1266,24 @@ info@teacommerce.net
     <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
       <input name="SetCurrentPaymentMethod" value="paymentMethodId" type="hidden" />
       <input name="SetCurrentShippingMethod" value="shippingMethodId" type="hidden" />
-      <input name="returnUrl" type="hidden" value="@nextStep.Url"/>
+      <input name="returnUrl" type="hidden" value="@nextStep.Url" />
       <input name="storeId" value="@storeId" type="hidden" />
 
       <div class="row">
-        @if ( order.PaymentInformation.PaymentMethodId != zeroCostPaymentId ) {
-          <div class="col-sm-6">
-            <div class="well">
-              <h3>Select payment method</h3>
-              @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ).Where( method => method.Id != zeroCostPaymentId ) ) {
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="paymentMethodId" value="@method.Id"
-                      @if ( method.Id == order.PaymentInformation.PaymentMethodId ) {
-                        @Html.Raw( "checked" )
-                      }>
-                    @method.Name
-                  </label>
-                </div>
-              }
-            </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Select payment method</h3>
+            @foreach ( PaymentMethod method in TC.GetPaymentMethods( storeId ) ) {
+              <div class="radio">
+                <label>
+                  <input type="radio" name="paymentMethodId" value="@method.Id"
+                         @if ( method.Id == order.PaymentInformation.PaymentMethodId ) { @Html.Raw( "checked" )  }>
+                  @method.Name
+                </label>
+              </div>
+            }
           </div>
-        } else {
-          <input type="hidden" name="paymentMethodId" value="@zeroCostPaymentId" />
-        }
+        </div>
         <div class="col-sm-6">
           <div class="well">
             <h3>Select shipping method</h3>
@@ -3890,9 +1291,7 @@ info@teacommerce.net
               <div class="radio">
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
-                    @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) {
-                      @Html.Raw( "checked" )
-                    }>
+                         @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) { @Html.Raw( "checked" )  }>
                   @method.Name
                 </label>
               </div>
@@ -4712,7 +2111,7 @@ info@teacommerce.net
 </head>
 <body>
   <div class="container backoffice-link">
-    <a href="/umbraco/" class="h4">Check out the backoffice <small>and get a closer look at the setup</small></a>
+    <a href="/umbraco/" class="h4">Check out the backoffice <small>and get a closer look at the setup. Use <strong>admin/1234</strong> to log in</small></a>
   </div>
   @Html.Partial( "Navigation/TopMenu" )
 
@@ -4801,14 +2200,13 @@ info@teacommerce.net
     <div class="col-sm-8">
       <div class="productImages">
         @if ( productImage != null ) {
-          <img class="img-responsive" src="@productImage.Url?width=750"/>
+          <img class="img-responsive" src="@productImage.Url?width=750" />
         }
       </div>
     </div>
     <div class="col-sm-4">
       <form method="post" action="/base/TC/FormPost.aspx" class="ajaxForm" data-product-id="@productPage.Id">
         <input name="AddOrUpdateOrderLine" value="productIdentifier, quantity" type="hidden" />
-        <input name="productIdentifier" value="" type="hidden" />
 
         <input name="storeId" value="@storeId" type="hidden" />
 
@@ -4818,18 +2216,23 @@ info@teacommerce.net
           @Html.Raw( productDescription )
 
           <div class="form-horizontal">
-            @foreach ( VariantGroup variantGroup in attributeGroups ) {
-              <div class="form-group">
-                <label class="col-sm-3 control-label">@variantGroup.Name</label>
-                <div class="col-sm-9">
-                  <select class="form-control" data-attribute-group="@variantGroup.Id">
-                    <option value="">Select @variantGroup.Name</option>
-                    @foreach ( VariantType variantType in variantGroup.Attributes ) {
-                      <option value="@variantType.Id">@variantType.Name</option>
-                    }
-                  </select>
+            @if ( attributeGroups.Any() ) {
+              foreach ( VariantGroup variantGroup in attributeGroups ) {
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">@variantGroup.Name</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" data-attribute-group="@variantGroup.Id">
+                      <option value="">Select @variantGroup.Name</option>
+                      @foreach ( VariantType variantType in variantGroup.Attributes ) {
+                        <option value="@variantType.Id">@variantType.Name</option>
+                      }
+                    </select>
+                  </div>
                 </div>
-              </div>   
+              }
+              <input name="productIdentifier" value="" type="hidden" />
+            } else {
+              <input name="productIdentifier" value="@productPage.Id" type="hidden" />
             }
             <div class="form-group">
               <label class="col-sm-3 control-label">Quantity</label>
@@ -4894,86 +2297,6 @@ info@teacommerce.net
   </div>
 </div>]]></Design>
     </Template>
-    <Template>
-      <Name>Product search page</Name>
-      <Alias>ProductSearchPage</Alias>
-      <Design><![CDATA[@using System
-@using System.Collections.Generic
-@using System.Globalization
-@using System.Linq
-@using System.Web
-@using Examine
-@using TeaCommerce.Api.Models
-@using TeaCommerce.Umbraco.Web
-@using umbraco.MacroEngines
-@using Umbraco.Core.Models
-@using Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@{
-  Layout = "Master.cshtml";
-
-  IPublishedContent currentPage = Model.Content;
-
-  //store id
-  long storeId = 1;
-
-  //Product
-  string ProductTypeName = "Product";
-
-  string searchUrl = currentPage.AncestorOrSelf( "Lang" ).Descendants( "ProductSearchPage" ).First().Url;
-
-  string searchString = HttpContext.Current.Request.QueryString[ "q" ] ?? "";
-
-  IEnumerable<SearchResult> searchResults = ExamineManager.Instance.SearchProviderCollection[ "ProductSearcher" ].Search( searchString, true ).OrderByDescending( s => s.Score );
-
-  UmbracoHelper helper = new UmbracoHelper( UmbracoContext.Current );
-}
-
-<div class="container">
-  <form action="@searchUrl" method="get" class="form-horizontal">
-    <div class="form-group">
-      <div class="col-sm-3">
-        <input class="form-control" name="q" type="text" value="@Request.QueryString[ "q" ]"/>
-      </div>
-      <div class="col-sm-1">
-        <input class="form-control" type="submit" value="Search" />
-      </div>
-    </div>
-  </form>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    @foreach ( SearchResult product in searchResults ) {
-      var name = product.Fields[ "productName" ];
-      var thisProduct = helper.TypedContent( product.Id );
-      IPublishedContent firstVariant = thisProduct.Children.FirstOrDefault();
-      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
-      IPublishedContent image = null;
-
-      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : thisProduct.GetPropertyValue<int>( "image" );
-      if ( imageId != 0 ) {
-        image = Umbraco.TypedMedia( imageId );
-      }
-
-      <div class="col-sm-4 col-md-3">
-        <div class="product well well-sm text-center">
-          @if ( image != null ) {
-            <a href="@thisProduct.Url">
-              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
-            </a>
-          }
-          <h3>@name</h3>
-          <p>@price.Formatted</p>
-          <a href="@thisProduct.Url" class="btn btn-primary btn-block">View more</a>
-        </div>
-      </div>
-    }
-  </div>
-</div>
-]]></Design>
-    </Template>
   </Templates>
   <Stylesheets>
     <Stylesheet>
@@ -4986,7 +2309,7 @@ info@teacommerce.net
   <Macros />
   <DictionaryItems />
   <Languages>
-    <Language Id="1" CultureAlias="en-US" FriendlyName="English (United States)" />
+    <Language Id="1" CultureAlias="en-US" FriendlyName="en-US" />
   </Languages>
   <DataTypes>
     <DataType Name="Product picker (Multiple, Language)" Id="Umbraco.MultiNodeTreePicker" Definition="122843b8-b613-4322-9dc4-05a707a629b1" DatabaseType="Nvarchar">
@@ -4996,17 +2319,6 @@ info@teacommerce.net
         <PreValue Id="8" Value="" Alias="minNumber" SortOrder="2" />
         <PreValue Id="9" Value="" Alias="maxNumber" SortOrder="3" />
         <PreValue Id="10" Value="0" Alias="showEditButton" SortOrder="4" />
-      </PreValues>
-    </DataType>
-    <DataType Name="Tea Commerce: Variant editor" Id="TeaCommerce.VariantEditor" Definition="0f67be1f-9e8d-4745-83a4-8f09bbee243b" DatabaseType="Ntext">
-      <PreValues>
-        <PreValue Id="117" Value="{&#xD;&#xA;  &quot;showXPath&quot;: true,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang/Attributes&quot;,&#xD;&#xA;  &quot;contentId&quot;: 1098,&#xD;&#xA;  &quot;selectedNode&quot;: {&#xD;&#xA;    &quot;name&quot;: &quot;Attributes&quot;,&#xD;&#xA;    &quot;id&quot;: 1098,&#xD;&#xA;    &quot;icon&quot;: &quot;.sprTreeFolder&quot;,&#xD;&#xA;    &quot;trashed&quot;: false,&#xD;&#xA;    &quot;key&quot;: &quot;275fa9bd-2c93-4aca-8971-cf1e5a4888ee&quot;,&#xD;&#xA;    &quot;parentId&quot;: -1,&#xD;&#xA;    &quot;alias&quot;: null,&#xD;&#xA;    &quot;path&quot;: &quot;-1,1098&quot;,&#xD;&#xA;    &quot;metaData&quot;: {&#xD;&#xA;      &quot;NodeObjectTypeId&quot;: &quot;c66ba18e-eaf3-4cff-8a22-41b16d66a972&quot;,&#xD;&#xA;      &quot;HasChildren&quot;: true,&#xD;&#xA;      &quot;ContentTypeAlias&quot;: &quot;Attributes&quot;,&#xD;&#xA;      &quot;ContentTypeIcon&quot;: &quot;.sprTreeFolder&quot;,&#xD;&#xA;      &quot;ContentTypeThumbnail&quot;: &quot;folder.png&quot;,&#xD;&#xA;      &quot;IsPublished&quot;: true,&#xD;&#xA;      &quot;IsDraft&quot;: false,&#xD;&#xA;      &quot;HasPendingChanges&quot;: false,&#xD;&#xA;      &quot;NodeUser&quot;: 0,&#xD;&#xA;      &quot;UniqueID&quot;: &quot;275fa9bd-2c93-4aca-8971-cf1e5a4888ee&quot;,&#xD;&#xA;      &quot;Text&quot;: &quot;Attributes&quot;,&#xD;&#xA;      &quot;NodeObjectType&quot;: &quot;c66ba18e-eaf3-4cff-8a22-41b16d66a972&quot;,&#xD;&#xA;      &quot;Children&quot;: 2,&#xD;&#xA;      &quot;PublishedVersion&quot;: &quot;0fd7ad6e-74cd-415e-95b9-155d9e7cbb0d&quot;,&#xD;&#xA;      &quot;NewestVersion&quot;: &quot;0fd7ad6e-74cd-415e-95b9-155d9e7cbb0d&quot;,&#xD;&#xA;      &quot;Alias&quot;: &quot;Attributes&quot;,&#xD;&#xA;      &quot;Icon&quot;: &quot;.sprTreeFolder&quot;,&#xD;&#xA;      &quot;Thumbnail&quot;: &quot;folder.png&quot;,&#xD;&#xA;      &quot;IsContainer&quot;: false&#xD;&#xA;    }&#xD;&#xA;  },&#xD;&#xA;  &quot;showChosenContent&quot;: true&#xD;&#xA;}" Alias="xpathOrNode" SortOrder="0" />
-        <PreValue Id="118" Value="Variant" Alias="variantDocumentType" SortOrder="1" />
-        <PreValue Id="119" Value="sku" Alias="extraListInformation" SortOrder="2" />
-        <PreValue Id="120" Value="" Alias="variantGroupDocumentTypes" SortOrder="3" />
-        <PreValue Id="121" Value="" Alias="variantGroupNodeName" SortOrder="4" />
-        <PreValue Id="122" Value="" Alias="forceEditorToChooseAllVariantGroups" SortOrder="5" />
-        <PreValue Id="123" Value="1" Alias="hideLabel" SortOrder="6" />
       </PreValues>
     </DataType>
   </DataTypes>

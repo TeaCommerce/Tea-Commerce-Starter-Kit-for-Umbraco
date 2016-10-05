@@ -88,12 +88,6 @@
     <Content Include="MacroScripts\tea-commerce\email-template-payment-inconsistency.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="TeaCommerce.StarterKit.Install, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Build\TeaCommerce.StarterKit.Install\bin\Release\TeaCommerce.StarterKit.Install.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
