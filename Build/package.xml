@@ -4,7 +4,7 @@
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
-      <version>4.2</version>
+      <version>4.1.1</version>
       <iconUrl />
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
@@ -29,7 +29,7 @@ http://teacommerce.net/ressources/support/
 Tea Commerce
 info@teacommerce.net
 +45 82 307 306]]></readme>
-  </info> 
+  </info>
   <Documents>
     <DocumentSet importMode="root">
       <Lang id="1068" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2015-03-12T08:16:19" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Lang">
