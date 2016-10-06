@@ -15,8 +15,6 @@
 	<PublishDir>Publish</PublishDir>
   </PropertyGroup>
   
-  
-  
   <!-- CLEAN -->
   <Target Name="Clean">
     <ItemGroup>
@@ -32,7 +30,7 @@
       <FilesToXml Include="$(PublishDir)\**\*.*" Exclude="@(ResourceFiles)" />
     </ItemGroup>
   
-    <Copy SourceFiles="$(PublishDir)\package.xml" DestinationFolder="$(PublishDir)" />
+    <Copy SourceFiles="package.xml" DestinationFolder="$(PublishDir)" />
 	<XmlFile TaskAction="AddElement" File="$(PublishDir)\package.xml" Element="file" InnerXml="&lt;guid&gt;%(FilesToXml.FileName)%(FilesToXml.Extension)&lt;/guid&gt;&lt;orgPath&gt;@(FilesToXml->'\%(RecursiveDir)')&lt;/orgPath&gt;&lt;orgName&gt;%(FilesToXml.FileName)%(FilesToXml.Extension)&lt;/orgName&gt;" XPath="/umbPackage/files"/>
   </Target>
   

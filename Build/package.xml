@@ -663,12 +663,12 @@ info@teacommerce.net
         <Tab>
           <Id>12</Id>
           <Caption>Information</Caption>
-          <SortOrder>2</SortOrder>
+          <SortOrder>1</SortOrder>
         </Tab>
         <Tab>
           <Id>16</Id>
           <Caption>Variants</Caption>
-          <SortOrder>1</SortOrder>
+          <SortOrder>2</SortOrder>
         </Tab>
       </Tabs>
     </DocumentType>

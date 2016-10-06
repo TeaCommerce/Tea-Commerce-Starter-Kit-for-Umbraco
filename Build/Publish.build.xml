@@ -40,14 +40,12 @@
 	  <Minicart Include="$(WebsiteDir)\Views\**\Minicart.cshtml" />
 	  <TopMenu Include="$(WebsiteDir)\Views\**\TopMenu.cshtml" />
 	  <Media Include="installMedia\**" />
-	  <Package Include="package.xml" />
     </ItemGroup>
 	
  	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\%(RecursiveDir)" />
 	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)\Scripts" />
 	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views\Partials\Cart" />
 	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views\Partials\Navigation" />
-	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
 	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\installMedia" /> 	
   </Target>
   
