@@ -32,22 +32,22 @@ info@teacommerce.net
   </info>
   <Documents>
     <DocumentSet importMode="root">
-      <Lang id="1068" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2015-03-12T08:16:19" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Lang">
+      <Frontpage id="1068" key="1d1aa3c1-be92-4b6a-b9d3-316989078df2" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2016-10-07T08:56:18" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Frontpage">
         <slider><![CDATA[1119,1117,1116,1118]]></slider>
         <store>1</store>
         <featuredProducts><![CDATA[1071,1073,1072,1074]]></featuredProducts>
-        <Cart id="1081" parentID="1068" level="2" creatorID="0" sortOrder="0" createDate="2015-01-16T11:33:34" updateDate="2015-03-06T11:43:57" nodeName="Cart content" urlName="cart-content" path="-1,1068,1081" isDoc="" nodeType="1080" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="Cart">
-          <CartStep id="1083" parentID="1081" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:35:03" updateDate="2015-03-06T11:44:02" nodeName="Information" urlName="information" path="-1,1068,1081,1083" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1058" nodeTypeAlias="CartStep" />
-          <CartStep id="1084" parentID="1081" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:38:02" updateDate="2015-03-06T11:44:12" nodeName="Shipping/Payment" urlName="shippingpayment" path="-1,1068,1081,1084" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1060" nodeTypeAlias="CartStep" />
-          <CartStep id="1085" parentID="1081" level="3" creatorID="0" sortOrder="2" createDate="2015-01-16T11:38:14" updateDate="2015-03-06T11:44:18" nodeName="Accept" urlName="accept" path="-1,1068,1081,1085" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="CartStep" />
-          <CartStep id="1106" parentID="1081" level="3" creatorID="0" sortOrder="3" createDate="2015-03-06T11:43:19" updateDate="2015-03-06T11:43:31" nodeName="Payment" urlName="payment" path="-1,1068,1081,1106" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="CartStep" />
-          <CartStep id="1086" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2015-03-06T11:44:24" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
+        <Cart id="1081" key="ac2538f3-12cc-4321-83cf-fb7553188138" parentID="1068" level="2" creatorID="0" sortOrder="0" createDate="2015-01-16T11:33:34" updateDate="2016-10-07T08:56:18" nodeName="Cart content" urlName="cart-content" path="-1,1068,1081" isDoc="" nodeType="1080" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="Cart">
+          <CartStep id="1083" key="465a5122-633d-4a43-a2c4-8a1ea7207ab4" parentID="1081" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:35:03" updateDate="2016-10-07T08:56:18" nodeName="Information" urlName="information" path="-1,1068,1081,1083" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1058" nodeTypeAlias="CartStep" />
+          <CartStep id="1084" key="f8e3371d-eea6-4094-8b92-d4d751262cc9" parentID="1081" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:38:02" updateDate="2016-10-07T08:56:18" nodeName="Shipping/Payment" urlName="shippingpayment" path="-1,1068,1081,1084" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1060" nodeTypeAlias="CartStep" />
+          <CartStep id="1085" key="b702cd44-655c-4ef8-9148-dff9d0d6e77b" parentID="1081" level="3" creatorID="0" sortOrder="2" createDate="2015-01-16T11:38:14" updateDate="2016-10-07T08:56:18" nodeName="Accept" urlName="accept" path="-1,1068,1081,1085" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1062" nodeTypeAlias="CartStep" />
+          <CartStep id="1106" key="d189ef2e-deee-4de7-a007-3c49ad5a23e1" parentID="1081" level="3" creatorID="0" sortOrder="3" createDate="2015-03-06T11:43:19" updateDate="2016-10-07T08:56:18" nodeName="Payment" urlName="payment" path="-1,1068,1081,1106" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="CartStep" />
+          <CartStep id="1086" key="011e905a-2676-4429-902a-ee64db3d53f9" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2016-10-07T08:56:18" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
         </Cart>
-        <ProductList id="1069" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2015-03-13T11:28:45" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1071" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2016-02-29T16:06:16" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <productName><![CDATA[Summer Yacht]]></productName>
-            <sku><![CDATA[p0001]]></sku>
+        <ProductList id="1069" key="c3f554d1-1a3f-4b20-8cb4-85ccf0c58e30" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2016-10-07T08:56:18" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
+          <Product id="1071" key="fc7ad11c-fcff-4962-9724-67a398bc63a6" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2016-10-07T08:56:18" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <image>1116</image>
+            <sku><![CDATA[p0001]]></sku>
+            <productName><![CDATA[Summer Yacht]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[500]]></priceJMD>
             <variants><![CDATA[{
@@ -65,10 +65,10 @@ info@teacommerce.net
   }
 }]]></variants>
           </Product>
-          <Product id="1072" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2016-02-29T11:42:09" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <productName><![CDATA[Yacht with sails]]></productName>
-            <sku><![CDATA[p0002]]></sku>
+          <Product id="1072" key="d39edfd1-3e6e-42f2-9e33-89a911442986" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2016-10-07T08:56:18" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <image>1117</image>
+            <sku><![CDATA[p0002]]></sku>
+            <productName><![CDATA[Yacht with sails]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[60]]></priceJMD>
             <variants><![CDATA[{
@@ -87,11 +87,11 @@ info@teacommerce.net
 }]]></variants>
           </Product>
         </ProductList>
-        <ProductList id="1070" parentID="1068" level="2" creatorID="0" sortOrder="2" createDate="2015-01-16T11:16:17" updateDate="2015-03-13T11:28:55" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1068,1070" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1073" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2016-02-29T11:42:16" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <productName><![CDATA[Motor driven Yacht]]></productName>
-            <sku><![CDATA[p0003]]></sku>
+        <ProductList id="1070" key="8ca08a3d-1aff-4545-833b-bc248c68df81" parentID="1068" level="2" creatorID="0" sortOrder="2" createDate="2015-01-16T11:16:17" updateDate="2016-10-07T08:56:18" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1068,1070" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
+          <Product id="1073" key="83584345-0a65-4755-b71e-208e8cfbf0ca" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2016-10-07T08:56:18" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <image>1118</image>
+            <sku><![CDATA[p0003]]></sku>
+            <productName><![CDATA[Motor driven Yacht]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
             <priceJMD><![CDATA[80]]></priceJMD>
             <variants><![CDATA[{
@@ -109,7 +109,7 @@ info@teacommerce.net
   }
 }]]></variants>
           </Product>
-          <Product id="1074" key="584fd82a-7ff1-4019-b0d6-1e0e493ac139" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2016-08-29T15:59:11" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+          <Product id="1074" key="584fd82a-7ff1-4019-b0d6-1e0e493ac139" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2016-10-07T08:56:18" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
             <image>1119</image>
             <sku><![CDATA[p0004]]></sku>
             <productName><![CDATA[One masted yacht]]></productName>
@@ -386,19 +386,19 @@ info@teacommerce.net
 }]]></variants>
           </Product>
         </ProductList>
-        <attributes id="1162" key="4aa261c3-8c00-448e-82e1-8b7b64fd687e" parentID="1068" level="2" creatorID="0" sortOrder="3" createDate="2016-08-29T15:44:12" updateDate="2016-08-29T15:44:12" nodeName="Variant attributes" urlName="variant-attributes" path="-1,1068,1162" isDoc="" nodeType="1159" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributes">
-          <attributeGroup id="1163" key="c6406c41-7f62-4b88-9200-fee86422ba44" parentID="1162" level="3" creatorID="0" sortOrder="0" createDate="2016-08-29T15:44:28" updateDate="2016-08-29T15:44:28" nodeName="Color" urlName="color" path="-1,1068,1162,1163" isDoc="" nodeType="1160" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributeGroup">
-            <attribute id="1164" key="db447a75-2845-4676-925e-477402f4e914" parentID="1163" level="4" creatorID="0" sortOrder="0" createDate="2016-08-29T15:44:37" updateDate="2016-08-29T15:44:37" nodeName="Black" urlName="black" path="-1,1068,1162,1163,1164" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
-            <attribute id="1165" key="67272ed0-c5b9-4696-b762-8a7409f30670" parentID="1163" level="4" creatorID="0" sortOrder="1" createDate="2016-08-29T15:44:44" updateDate="2016-08-29T15:44:44" nodeName="White" urlName="white" path="-1,1068,1162,1163,1165" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
-            <attribute id="1166" key="96396335-47b0-489e-9eb4-0578792e5690" parentID="1163" level="4" creatorID="0" sortOrder="2" createDate="2016-08-29T15:44:54" updateDate="2016-08-29T15:44:54" nodeName="Blue" urlName="blue" path="-1,1068,1162,1163,1166" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+        <attributes id="1162" key="4aa261c3-8c00-448e-82e1-8b7b64fd687e" parentID="1068" level="2" creatorID="0" sortOrder="3" createDate="2016-08-29T15:44:12" updateDate="2016-10-07T08:56:18" nodeName="Variant attributes" urlName="variant-attributes" path="-1,1068,1162" isDoc="" nodeType="1159" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributes">
+          <attributeGroup id="1163" key="c6406c41-7f62-4b88-9200-fee86422ba44" parentID="1162" level="3" creatorID="0" sortOrder="0" createDate="2016-08-29T15:44:28" updateDate="2016-10-07T08:56:18" nodeName="Color" urlName="color" path="-1,1068,1162,1163" isDoc="" nodeType="1160" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributeGroup">
+            <attribute id="1164" key="db447a75-2845-4676-925e-477402f4e914" parentID="1163" level="4" creatorID="0" sortOrder="0" createDate="2016-08-29T15:44:37" updateDate="2016-10-07T08:56:18" nodeName="Black" urlName="black" path="-1,1068,1162,1163,1164" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1165" key="67272ed0-c5b9-4696-b762-8a7409f30670" parentID="1163" level="4" creatorID="0" sortOrder="1" createDate="2016-08-29T15:44:44" updateDate="2016-10-07T08:56:18" nodeName="White" urlName="white" path="-1,1068,1162,1163,1165" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1166" key="96396335-47b0-489e-9eb4-0578792e5690" parentID="1163" level="4" creatorID="0" sortOrder="2" createDate="2016-08-29T15:44:54" updateDate="2016-10-07T08:56:18" nodeName="Blue" urlName="blue" path="-1,1068,1162,1163,1166" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
           </attributeGroup>
-          <attributeGroup id="1167" key="5b6dd3ac-003c-41e6-8447-40ec7b707cd4" parentID="1162" level="3" creatorID="0" sortOrder="1" createDate="2016-08-29T15:45:05" updateDate="2016-08-29T15:45:05" nodeName="Size" urlName="size" path="-1,1068,1162,1167" isDoc="" nodeType="1160" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributeGroup">
-            <attribute id="1168" key="7a1f734a-ebf1-4366-a07f-ef34125b3b3d" parentID="1167" level="4" creatorID="0" sortOrder="0" createDate="2016-08-29T15:45:18" updateDate="2016-08-29T15:45:18" nodeName="Large" urlName="large" path="-1,1068,1162,1167,1168" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
-            <attribute id="1169" key="94fe97f9-95d1-4e56-b061-3e3102835cf5" parentID="1167" level="4" creatorID="0" sortOrder="1" createDate="2016-08-29T15:45:26" updateDate="2016-08-29T15:45:26" nodeName="Medium" urlName="medium" path="-1,1068,1162,1167,1169" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
-            <attribute id="1170" key="3a7c742c-3ef0-46b0-a8bc-bd6058469d08" parentID="1167" level="4" creatorID="0" sortOrder="2" createDate="2016-08-29T15:45:34" updateDate="2016-08-29T15:45:34" nodeName="Small" urlName="small" path="-1,1068,1162,1167,1170" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+          <attributeGroup id="1167" key="5b6dd3ac-003c-41e6-8447-40ec7b707cd4" parentID="1162" level="3" creatorID="0" sortOrder="1" createDate="2016-08-29T15:45:05" updateDate="2016-10-07T08:56:18" nodeName="Size" urlName="size" path="-1,1068,1162,1167" isDoc="" nodeType="1160" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attributeGroup">
+            <attribute id="1168" key="7a1f734a-ebf1-4366-a07f-ef34125b3b3d" parentID="1167" level="4" creatorID="0" sortOrder="0" createDate="2016-08-29T15:45:18" updateDate="2016-10-07T08:56:18" nodeName="Large" urlName="large" path="-1,1068,1162,1167,1168" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1169" key="94fe97f9-95d1-4e56-b061-3e3102835cf5" parentID="1167" level="4" creatorID="0" sortOrder="1" createDate="2016-08-29T15:45:26" updateDate="2016-10-07T08:56:18" nodeName="Medium" urlName="medium" path="-1,1068,1162,1167,1169" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
+            <attribute id="1170" key="3a7c742c-3ef0-46b0-a8bc-bd6058469d08" parentID="1167" level="4" creatorID="0" sortOrder="2" createDate="2016-08-29T15:45:34" updateDate="2016-10-07T08:56:18" nodeName="Small" urlName="small" path="-1,1068,1162,1167,1170" isDoc="" nodeType="1161" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="0" nodeTypeAlias="attribute" />
           </attributeGroup>
         </attributes>
-      </Lang>
+      </Frontpage>
     </DocumentSet>
   </Documents>
   <DocumentTypes>
@@ -503,8 +503,8 @@ info@teacommerce.net
     </DocumentType>
     <DocumentType>
       <Info>
-        <Name>Home</Name>
-        <Alias>Lang</Alias>
+        <Name>Frontpage</Name>
+        <Alias>Frontpage</Alias>
         <Icon>icon-home</Icon>
         <Thumbnail>folder.png</Thumbnail>
         <Description />
@@ -512,9 +512,9 @@ info@teacommerce.net
         <IsListView>False</IsListView>
         <Compositions />
         <AllowedTemplates>
-          <Template>Home</Template>
+          <Template>Frontpage</Template>
         </AllowedTemplates>
-        <DefaultTemplate>Home</DefaultTemplate>
+        <DefaultTemplate>Frontpage</DefaultTemplate>
       </Info>
       <Structure>
         <DocumentType>ProductList</DocumentType>
@@ -1914,8 +1914,8 @@ info@teacommerce.net
 @RenderBody()]]></Design>
     </Template>
     <Template>
-      <Name>Home</Name>
-      <Alias>Home</Alias>
+      <Name>Frontpage</Name>
+      <Alias>Frontpage</Alias>
       <Design><![CDATA[@using System.Activities.Statements
 @using System.Globalization
 @using TeaCommerce.Api.Models
@@ -2256,6 +2256,17 @@ info@teacommerce.net
     <Language Id="1" CultureAlias="en-US" FriendlyName="en-US" />
   </Languages>
   <DataTypes>
+    <DataType Name="Tea Commerce: Variant Editor" Id="TeaCommerce.VariantEditor" Definition="688144c0-2bfa-434e-9b75-0ee63316d39d" DatabaseType="Ntext">
+      <PreValues>
+        <PreValue Id="46" Value="{&#xD;&#xA;  &quot;showXPath&quot;: true,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Frontpage/attributes&quot;&#xD;&#xA;}" Alias="xpathOrNode" SortOrder="0" />
+        <PreValue Id="47" Value="Variant" Alias="variantDocumentType" SortOrder="1" />
+        <PreValue Id="48" Value="sku,priceJMD" Alias="extraListInformation" SortOrder="2" />
+        <PreValue Id="49" Value="" Alias="variantGroupDocumentTypes" SortOrder="3" />
+        <PreValue Id="50" Value="" Alias="variantGroupNodeName" SortOrder="4" />
+        <PreValue Id="51" Value="" Alias="forceEditorToChooseAllVariantGroups" SortOrder="5" />
+        <PreValue Id="52" Value="1" Alias="hideLabel" SortOrder="6" />
+      </PreValues>
+    </DataType>
     <DataType Name="Product picker (Multiple, Language)" Id="Umbraco.MultiNodeTreePicker" Definition="122843b8-b613-4322-9dc4-05a707a629b1" DatabaseType="Nvarchar">
       <PreValues>
         <PreValue Id="6" Value="{&#xD;&#xA;  &quot;type&quot;: &quot;content&quot;,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang&quot;&#xD;&#xA;}" Alias="startNode" SortOrder="0" />
@@ -2267,6 +2278,5 @@ info@teacommerce.net
     </DataType>
   </DataTypes>
   <Actions>
-    <Action runat="install" alias="TeaCommerceStarterKitInstaller" />
-  </Actions>
+&lt;Action runat="install" alias="TeaCommerceStarterKitInstaller" /&gt;</Actions>
 </umbPackage>
