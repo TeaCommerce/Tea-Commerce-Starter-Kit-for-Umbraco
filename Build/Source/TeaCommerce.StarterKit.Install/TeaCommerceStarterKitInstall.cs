@@ -62,8 +62,8 @@ namespace TeaCommerce.StarterKit.Install {
         store.Save();
       }
 
-      //Update languages and products (Document type alias of Home is "Lang")
-      IReadOnlyList<IContent> homeContents = contentService.GetByLevel( 1 ).Where( c => c.ContentType.Alias == "Lang" && !c.Published && c.CreateDate > DateTime.Now.AddMinutes( -5 ) ).ToList();
+      //Update products and cart steps
+      IReadOnlyList<IContent> homeContents = contentService.GetByLevel( 1 ).Where( c => c.ContentType.Alias == "Frontpage" && !c.Published && c.CreateDate > DateTime.Now.AddMinutes( -5 ) ).ToList();
       if ( homeContents.Any() ) {
         foreach ( IContent homeContent in homeContents ) {
           IReadOnlyList<IContent> products = homeContent.Descendants().Where( c => c.ContentType.Alias == "Product" ).ToList();
