@@ -1,4 +1,4 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="JavaScriptMinify">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="CopyFiles">
 
   <!-- IMPORTS -->
   <PropertyGroup>
@@ -10,16 +10,14 @@
   <!-- PROPERTIES -->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<BuildDir>..\Build</BuildDir>
-	<BuildProjectDir>..\Build\Source\TeaCommerce.StarterKit.Install</BuildProjectDir>
-	<WebDir>..\Source\Website</WebDir>
+	<WebsiteDir>..\Source\Website</WebsiteDir>
 	<PublishDir>Publish</PublishDir>
   </PropertyGroup>
   
   <!-- COMPILE -->
   <Target Name="Compile">
     <ItemGroup>
-      <ProjectsToBuild Include="$(BuildProjectDir)\*proj" />
+      <ProjectsToBuild Include="Source\TeaCommerce*\*proj" />
     </ItemGroup>
     <MSBuild Targets="Rebuild" Projects="@(ProjectsToBuild)" Properties="Configuration=$(Configuration);" />
   </Target>
@@ -28,40 +26,27 @@
   <Target Name="Clean" DependsOnTargets="Compile">
     <ItemGroup>
       <FilesToRemove Include="$(PublishDir)\**\*.*" />
-	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views;$(PublishDir)\Media" />
+	  <DirectoriesToRemove Include="$(PublishDir)\bin;$(PublishDir)\Scripts;$(PublishDir)\Views;$(PublishDir)\installMedia" />
     </ItemGroup>
     <RemoveDir Directories="@(DirectoriesToRemove)" />
 	<Delete Files="@(FilesToRemove)" />
   </Target>
   
+  <!-- COPY FILES -->
   <Target Name="CopyFiles" DependsOnTargets="Clean">
     <ItemGroup>
-	  <BinFiles Include="$(BuildProjectDir)\bin\$(Configuration)\TeaCommerce.StarterKit.Install.dll" />	  
-	  <Scripts Include="$(WebDir)\Scripts\**" />
-	  <Media Include="$(BuildDir)\Media\**" />
-	  <Minicart Include="$(WebDir)\Views\**\Minicart.cshtml" />
-	  <TopMenu Include="$(WebDir)\Views\**\TopMenu.cshtml" />
-	  <Package Include="$(BuildDir)\package.xml" />
+	  <BinFiles Include="Source\TeaCommerce.StarterKit.Install\bin\$(Configuration)\TeaCommerce.StarterKit.Install.dll" />	  
+	  <Scripts Include="$(WebsiteDir)\Scripts\**" />
+	  <Minicart Include="$(WebsiteDir)\Views\**\Minicart.cshtml" />
+	  <TopMenu Include="$(WebsiteDir)\Views\**\TopMenu.cshtml" />
+	  <Media Include="installMedia\**" />
     </ItemGroup>
 	
- 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\da\%(RecursiveDir)" />
+ 	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\%(RecursiveDir)" />
 	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)\Scripts" />
 	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views\Partials\Cart" />
 	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views\Partials\Navigation" />
-	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\Media" /> 
-	
-<!-- 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Package)" DestinationFolder="$(PublishDir)" />
-	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)" /> -->
-	
-	
-  </Target>
-  
-  <Target Name="JavaScriptMinify" DependsOnTargets="CopyFiles">
+	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\installMedia" /> 	
   </Target>
   
 </Project>

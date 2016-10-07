@@ -1,23 +1,18 @@
 ﻿@using System.Globalization
 @using TeaCommerce.Api.Models
 @using TeaCommerce.Umbraco.Web
-@using Umbraco.Core.Models
-@using Umbraco.Web
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits UmbracoTemplatePage
 @{
   Layout = "Master.cshtml";
-  
-  IPublishedContent currentPage = CurrentPage;
+  IPublishedContent currentPage = Model.Content;
 
   //store id
-  long storeId = long.Parse( CurrentPage.GetPropertyValue<string>( "store", true ) );
-
-  var headline = CurrentPage.GetPropertyValue<string>( "umbHeadline" );
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
   List<IPublishedContent> products = currentPage.Children.ToList();
 }
 <div class="container">
-  <h1 class="page-header">@headline</h1>
+  <h1 class="page-header">@currentPage.Name</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
       var name = product.GetPropertyValue<string>( "productName", true );

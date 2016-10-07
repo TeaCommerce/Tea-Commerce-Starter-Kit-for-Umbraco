@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -67,7 +68,6 @@
     <Content Include="Views\CartStep3.cshtml" />
     <Content Include="Views\CartStep4.cshtml" />
     <Content Include="Views\CartStep6.cshtml" />
-    <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Product.cshtml" />
     <Content Include="Views\ProductList.cshtml" />
@@ -87,13 +87,13 @@
     <Content Include="MacroScripts\tea-commerce\email-template-payment-inconsistency.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="TeaCommerce.StarterKit.Install, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Build\TeaCommerce.StarterKit.Install\bin\Release\TeaCommerce.StarterKit.Install.dll</HintPath>
-    </Reference>
+    <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\ProductSearchPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Frontpage.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -34,25 +34,26 @@
     <Compile Include="TeaCommerceStarterKitInstall.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="cms">
+    <Reference Include="cms, Version=1.0.6092.24022, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Source\Website\bin\cms.dll</HintPath>
     </Reference>
-    <Reference Include="interfaces">
+    <Reference Include="interfaces, Version=1.0.6092.24017, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Source\Website\bin\interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\Website\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Source\Website\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="TeaCommerce.Api">
       <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="TeaCommerce.Api.Web">
-      <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Api.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="TeaCommerce.Umbraco.Web">
-      <HintPath>..\..\..\Source\Website\bin\TeaCommerce.Umbraco.Web.dll</HintPath>
     </Reference>
     <Reference Include="umbraco">
       <HintPath>..\..\..\Source\Website\bin\umbraco.dll</HintPath>

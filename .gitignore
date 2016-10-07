@@ -201,3 +201,4 @@ FakesAssemblies/
 *.zip
 # Include these files:
 !/Build/Tools/**
+Source/.vs/config/applicationhost.config
