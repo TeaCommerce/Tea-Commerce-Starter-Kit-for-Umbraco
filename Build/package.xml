@@ -1984,7 +1984,7 @@ info@teacommerce.net
 <div class="container">
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "name", true );
+      var name = product.GetPropertyValue<string>( "productName", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;
@@ -2118,7 +2118,7 @@ info@teacommerce.net
   long storeId = long.Parse( productPage.GetPropertyValue<string>( "store", true ) );
 
   //Main product data
-  var productName = productPage.GetPropertyValue<string>( "name" );
+  var productName = productPage.GetPropertyValue<string>( "productName" );
   var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
 
   IPublishedContent productImage = null;
@@ -2207,15 +2207,13 @@ info@teacommerce.net
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
-  var headline = currentPage.GetPropertyValue<string>( "umbHeadline" );
-
   List<IPublishedContent> products = currentPage.Children.ToList();
 }
 <div class="container">
-  <h1 class="page-header">@headline</h1>
+  <h1 class="page-header">@currentPage.Name</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "name", true );
+      var name = product.GetPropertyValue<string>( "productName", true );
       IPublishedContent firstVariant = product.Children.FirstOrDefault();
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
       IPublishedContent image = null;
@@ -2256,17 +2254,6 @@ info@teacommerce.net
     <Language Id="1" CultureAlias="en-US" FriendlyName="en-US" />
   </Languages>
   <DataTypes>
-    <DataType Name="Tea Commerce: Variant Editor" Id="TeaCommerce.VariantEditor" Definition="688144c0-2bfa-434e-9b75-0ee63316d39d" DatabaseType="Ntext">
-      <PreValues>
-        <PreValue Id="46" Value="{&#xD;&#xA;  &quot;showXPath&quot;: true,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Frontpage/attributes&quot;&#xD;&#xA;}" Alias="xpathOrNode" SortOrder="0" />
-        <PreValue Id="47" Value="Variant" Alias="variantDocumentType" SortOrder="1" />
-        <PreValue Id="48" Value="sku,priceJMD" Alias="extraListInformation" SortOrder="2" />
-        <PreValue Id="49" Value="" Alias="variantGroupDocumentTypes" SortOrder="3" />
-        <PreValue Id="50" Value="" Alias="variantGroupNodeName" SortOrder="4" />
-        <PreValue Id="51" Value="" Alias="forceEditorToChooseAllVariantGroups" SortOrder="5" />
-        <PreValue Id="52" Value="1" Alias="hideLabel" SortOrder="6" />
-      </PreValues>
-    </DataType>
     <DataType Name="Product picker (Multiple, Language)" Id="Umbraco.MultiNodeTreePicker" Definition="122843b8-b613-4322-9dc4-05a707a629b1" DatabaseType="Nvarchar">
       <PreValues>
         <PreValue Id="6" Value="{&#xD;&#xA;  &quot;type&quot;: &quot;content&quot;,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang&quot;&#xD;&#xA;}" Alias="startNode" SortOrder="0" />
@@ -2278,5 +2265,6 @@ info@teacommerce.net
     </DataType>
   </DataTypes>
   <Actions>
-&lt;Action runat="install" alias="TeaCommerceStarterKitInstaller" /&gt;</Actions>
+    <Action runat="install" alias="TeaCommerceStarterKitInstaller" />
+  </Actions>
 </umbPackage>

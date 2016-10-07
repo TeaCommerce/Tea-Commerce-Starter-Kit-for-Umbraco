@@ -16,7 +16,7 @@
   long storeId = long.Parse( productPage.GetPropertyValue<string>( "store", true ) );
 
   //Main product data
-  var productName = productPage.GetPropertyValue<string>( "name" );
+  var productName = productPage.GetPropertyValue<string>( "productName" );
   var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
 
   IPublishedContent productImage = null;

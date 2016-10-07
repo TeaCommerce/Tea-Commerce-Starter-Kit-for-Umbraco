@@ -32,6 +32,7 @@
   
     <Copy SourceFiles="package.xml" DestinationFolder="$(PublishDir)" />
 	<XmlFile TaskAction="AddElement" File="$(PublishDir)\package.xml" Element="file" InnerXml="&lt;guid&gt;%(FilesToXml.FileName)%(FilesToXml.Extension)&lt;/guid&gt;&lt;orgPath&gt;@(FilesToXml->'\%(RecursiveDir)')&lt;/orgPath&gt;&lt;orgName&gt;%(FilesToXml.FileName)%(FilesToXml.Extension)&lt;/orgName&gt;" XPath="/umbPackage/files"/>
+	<XmlFile TaskAction="UpdateElement" File="$(PublishDir)\package.xml" Element="file" InnerText="" XPath="//Product/variants"/>
   </Target>
   
   <!-- ZIP -->
