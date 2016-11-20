@@ -34,7 +34,7 @@
                 <label>
                   <input type="radio" name="paymentMethodId" value="@method.Id"
                          @if ( method.Id == order.PaymentInformation.PaymentMethodId ) { @Html.Raw( "checked" )  }>
-                  @method.Name
+                  @method.Name (@TC.GetPriceForPaymentMethod(method.StoreId, method.Id))
                 </label>
               </div>
             }
@@ -48,7 +48,7 @@
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
                          @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) { @Html.Raw( "checked" )  }>
-                  @method.Name
+                  @method.Name (@TC.GetPriceForShippingMethod(method.StoreId, method.Id))
                 </label>
               </div>
             }
