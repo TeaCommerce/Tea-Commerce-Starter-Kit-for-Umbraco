@@ -26,7 +26,7 @@
     productImage = Umbraco.TypedMedia( productimageId );
   }
 
-  List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, false ).ToList();
+  List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, true ).ToList();
 
   List<VariantGroup> attributeGroups = TC.GetVariantGroups( variants ).ToList();
 
