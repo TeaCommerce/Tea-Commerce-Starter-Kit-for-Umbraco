@@ -19,7 +19,7 @@
 
   string minicartCssClass = "pull-right", //Standard twitter bootstrap css class
          goToCartCssClass = "btn btn-primary" + ( cartEmpty ? " disabled" : "" ), //Standard twitter bootstrap css classes
-         totalPrice = !cartEmpty ? cart.SubtotalPrice.Value.WithVatFormatted : TC.FormatPrice( storeId, 0 ).Formatted, //Get total price
+         totalPrice = !cartEmpty ? cart.SubtotalPrice.Value.WithVatFormatted : TC.FormatPrice( storeId, 0 ).WithVatFormatted, //Get total price
          quantity = !cartEmpty ? cart.TotalQuantity.ToString( "####" ) : "0"; //Get Quantity
 
   //Set special minicart css classes
