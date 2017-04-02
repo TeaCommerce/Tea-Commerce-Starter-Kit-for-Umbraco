@@ -1,6 +1,6 @@
 /*! umbraco
  * https://github.com/umbraco/umbraco-cms/
- * Copyright (c) 2016 Umbraco HQ;
+ * Copyright (c) 2017 Umbraco HQ;
  * Licensed 
  */
 
@@ -4889,6 +4889,19 @@ function mediaTypeHelper(mediaTypeResource, $q) {
 
     var mediaTypeHelperService = {
 
+        isFolderType: function(mediaEntity) {
+            if (!mediaEntity) {
+                throw "mediaEntity is null";
+            }
+            if (!mediaEntity.contentTypeAlias) {
+                throw "mediaEntity.contentTypeAlias is null";
+            }
+
+            //if you create a media type, which has an alias that ends with ...Folder then its a folder: ex: "secureFolder", "bannerFolder", "Folder"
+            //this is the exact same logic that is performed in MediaController.GetChildFolders
+            return mediaEntity.contentTypeAlias.endsWith("Folder");
+        },
+
         getAllowedImagetypes: function (mediaId){
 				
             // Get All allowedTypes
@@ -8305,15 +8318,15 @@ function umbRequestHelper($http, $q, umbDataFormatter, angularHelper, dialogServ
          * @description
          * This returns a promise with an underlying http call, it is a helper method to reduce
          *  the amount of duplicate code needed to query http resources and automatically handle any 
-         *  Http errors. See /docs/source/using-promises-resources.md
+         *  500 Http server errors. 
          *
-         * @param {object} opts A mixed object which can either be a string representing the error message to be
-         *   returned OR an object containing either:
+         * @param {object} opts A mixed object which can either be a `string` representing the error message to be
+         *   returned OR an `object` containing either:
          *     { success: successCallback, errorMsg: errorMessage }
          *          OR
          *     { success: successCallback, error: errorCallback }
-         *   In both of the above, the successCallback must accept these parameters: data, status, headers, config
-         *   If using the errorCallback it must accept these parameters: data, status, headers, config
+         *   In both of the above, the successCallback must accept these parameters: `data`, `status`, `headers`, `config`
+         *   If using the errorCallback it must accept these parameters: `data`, `status`, `headers`, `config`
          *   The success callback must return the data which will be resolved by the deferred object.
          *   The error callback must return an object containing: {errorMsg: errorMessage, data: originalData, status: status }
          */
@@ -8744,7 +8757,7 @@ angular.module('umbraco.services')
                         //when it's successful, return the user data
                         setCurrentUser(data);
 
-                        var result = { user: data, authenticated: true, lastUserId: lastUserId };
+                        var result = { user: data, authenticated: true, lastUserId: lastUserId, loginType: "credentials" };
 
                         //broadcast a global event
                         eventsService.emit("app.authenticated", result);
@@ -8772,7 +8785,7 @@ angular.module('umbraco.services')
                     authResource.getCurrentUser()
                         .then(function (data) {
 
-                            var result = { user: data, authenticated: true, lastUserId: lastUserId };
+                            var result = { user: data, authenticated: true, lastUserId: lastUserId, loginType: "implicit" };
 
                             //TODO: This is a mega backwards compatibility hack... These variables SHOULD NOT exist in the server variables
                             // since they are not supposed to be dynamic but I accidentally added them there in 7.1.5 IIRC so some people might
