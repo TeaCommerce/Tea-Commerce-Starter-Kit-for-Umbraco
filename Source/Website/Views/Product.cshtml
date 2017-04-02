@@ -1,6 +1,4 @@
-﻿@using TeaCommerce.Api.Models
-@using TeaCommerce.Umbraco.Configuration.Variant
-@using TeaCommerce.Umbraco.Configuration.Variant.Product
+﻿@using TeaCommerce.Umbraco.Configuration.Variants.Models
 @using TeaCommerce.Umbraco.Web
 @using Umbraco.Core.Models
 @using Umbraco.Web
@@ -28,7 +26,7 @@
 
   List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, true ).ToList();
 
-  List<VariantGroup> attributeGroups = TC.GetVariantGroups( variants ).ToList();
+  List<VariantGroup> attributeGroups = TC.GetVariantGroups( productPage, variants ).ToList();
 
   string variantJson = TC.GetVariantJson( storeId, productPage, true );
 }
