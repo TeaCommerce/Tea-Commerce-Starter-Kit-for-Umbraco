@@ -1,6 +1,6 @@
 /*! umbraco
  * https://github.com/umbraco/umbraco-cms/
- * Copyright (c) 2016 Umbraco HQ;
+ * Copyright (c) 2017 Umbraco HQ;
  * Licensed 
  */
 
@@ -16,7 +16,7 @@
  * The main application controller
  * 
  */
-function MainController($scope, $rootScope, $location, $routeParams, $timeout, $http, $log, appState, treeService, notificationsService, userService, navigationService, historyService, updateChecker, assetsService, eventsService, umbRequestHelper, tmhDynamicLocale) {
+function MainController($scope, $rootScope, $location, $routeParams, $timeout, $http, $log, appState, treeService, notificationsService, userService, navigationService, historyService, updateChecker, assetsService, eventsService, umbRequestHelper, tmhDynamicLocale, localStorageService) {
 
     //the null is important because we do an explicit bool check on this in the view
     //the avatar is by default the umbraco logo    
@@ -89,6 +89,14 @@ function MainController($scope, $rootScope, $location, $routeParams, $timeout, $
             $location.path("/").search("");
             historyService.removeAll();
             treeService.clearCache();
+
+            //if the user changed, clearout local storage too - could contain sensitive data
+            localStorageService.clearAll();
+        }
+
+        //if this is a new login (i.e. the user entered credentials), then clear out local storage - could contain sensitive data
+        if (data.loginType === "credentials") {            
+            localStorageService.clearAll();
         }
 
         //Load locale file
@@ -3395,7 +3403,7 @@ angular.module("umbraco").controller("Umbraco.Overlays.MacroPickerController", M
 //used for the media picker dialog
 angular.module("umbraco")
     .controller("Umbraco.Overlays.MediaPickerController",
-        function($scope, mediaResource, umbRequestHelper, entityResource, $log, mediaHelper, mediaTypeHelper, eventsService, treeService, $element, $timeout, $cookies, $cookieStore, localizationService) {
+        function ($scope, mediaResource, umbRequestHelper, entityResource, $log, mediaHelper, mediaTypeHelper, eventsService, treeService, $element, $timeout, $cookies, localStorageService, localizationService) {
 
             if (!$scope.model.title) {
                 $scope.model.title = localizationService.localize("defaultdialogs_selectMedia");
@@ -3409,7 +3417,7 @@ angular.module("umbraco")
             $scope.multiPicker = (dialogOptions.multiPicker && dialogOptions.multiPicker !== "0") ? true : false;
             $scope.startNodeId = dialogOptions.startNodeId ? dialogOptions.startNodeId : -1;
             $scope.cropSize = dialogOptions.cropSize;
-            $scope.lastOpenedNode = $cookieStore.get("umbLastOpenedMediaNodeId");
+            $scope.lastOpenedNode = localStorageService.get("umbLastOpenedMediaNodeId");
             if ($scope.onlyImages) {
                 $scope.acceptedFileTypes = mediaHelper
                     .formatFileTypes(Umbraco.Sys.ServerVariables.umbracoSettings.imageFileTypes);
@@ -3527,8 +3535,7 @@ angular.module("umbraco")
                     });
                 $scope.currentFolder = folder;
 
-                // for some reason i cannot set cookies with cookieStore
-                document.cookie = "umbLastOpenedMediaNodeId=" + folder.id;
+                localStorageService.set("umbLastOpenedMediaNodeId", folder.id);
 
             };
 
@@ -6369,8 +6376,6 @@ function DataTypeEditController($scope, $routeParams, $location, appState, navig
 
                     //share state
                     editorState.set($scope.content);
-
-                    dataTypeHelper.rebindChangedProperties($scope.content, data);
                 });
         }
 
@@ -9086,18 +9091,24 @@ angular.module("umbraco").controller("Umbraco.Editors.Packages.DeleteController"
                 fields: {},
                 file: file
             }).progress(function (evt) {
+                
+                // hack: in some browsers the progress event is called after success
+                // this prevents the UI from going back to a uploading state
+                if(vm.zipFile.uploadStatus !== "done" && vm.zipFile.uploadStatus !== "error") {
 
-                // set view state to uploading
-                vm.state = 'uploading';
+                    // set view state to uploading
+                    vm.state = 'uploading';
 
-                // calculate progress in percentage
-                var progressPercentage = parseInt(100.0 * evt.loaded / evt.total, 10);
+                    // calculate progress in percentage
+                    var progressPercentage = parseInt(100.0 * evt.loaded / evt.total, 10);
 
-                // set percentage property on file
-                vm.zipFile.uploadProgress = progressPercentage;
+                    // set percentage property on file
+                    vm.zipFile.uploadProgress = progressPercentage;
 
-                // set uploading status on file
-                vm.zipFile.uploadStatus = "uploading";
+                    // set uploading status on file
+                    vm.zipFile.uploadStatus = "uploading";
+
+                }
 
             }).success(function (data, status, headers, config) {
 
@@ -11066,7 +11077,7 @@ angular.module("umbraco")
 .controller("Umbraco.PropertyEditors.GoogleMapsController",
     function ($element, $rootScope, $scope, notificationsService, dialogService, assetsService, $log, $timeout) {
 
-        assetsService.loadJs('http://www.google.com/jsapi')
+        assetsService.loadJs('https://www.google.com/jsapi')
             .then(function () {
                 google.load("maps", "3",
                             {
@@ -13276,7 +13287,8 @@ angular.module("umbraco").controller("Umbraco.PrevalueEditors.IncludePropertiesL
       function activate() {
           vm.itemsWithoutFolders = filterOutFolders($scope.items);
 
-          if($scope.entityType === 'media') {
+          //no need to make another REST/DB call if this data is not used when we are browsing the bin
+          if ($scope.entityType === 'media' && !vm.isRecycleBin) {
             mediaTypeHelper.getAllowedImagetypes(vm.nodeId).then(function (types) {
                 vm.acceptedMediatypes = types;
             });
@@ -13505,7 +13517,9 @@ function listViewController($rootScope, $scope, $routeParams, $injector, $cookie
    $scope.isNew = false;
    $scope.actionInProgress = false;
    $scope.selection = [];
-   $scope.folders = [];
+   $scope.folders = [];   
+   //tracks if we've already loaded the folders for the current node
+   var foldersLoaded = false;
    $scope.listViewResultSet = {
       totalPages: 0,
       items: []
@@ -13720,12 +13734,13 @@ function listViewController($rootScope, $scope, $routeParams, $injector, $cookie
             });
          }
 
-         if ($scope.entityType === 'media') {
-
+         if (!foldersLoaded && $scope.entityType === 'media') {
+            //The folders aren't loaded - we only need to do this once since we're never changing node ids
             mediaResource.getChildFolders($scope.contentId)
                     .then(function (folders) {
                        $scope.folders = folders;
                        $scope.viewLoaded = true;
+                       foldersLoaded = true;
                     });
 
          } else {
@@ -15823,7 +15838,7 @@ function sliderController($scope, $log, $element, assetsService, angularHelper) 
 angular.module("umbraco").controller("Umbraco.PropertyEditors.SliderController", sliderController);
 angular.module("umbraco")
 .controller("Umbraco.PropertyEditors.TagsController",
-    function ($rootScope, $scope, $log, assetsService, umbRequestHelper, angularHelper, $timeout, $element, $sanitize) {
+    function ($rootScope, $scope, $log, assetsService, umbRequestHelper, angularHelper, $timeout, $element) {
 
         var $typeahead;
 
@@ -15864,7 +15879,6 @@ angular.module("umbraco")
 
             //Helper method to add a tag on enter or on typeahead select
             function addTag(tagToAdd) {
-                tagToAdd = String(tagToAdd).htmlEncode();
                 if (tagToAdd != null && tagToAdd.length > 0) {
                     if ($scope.model.value.indexOf(tagToAdd) < 0) {
                         $scope.model.value.push(tagToAdd);
