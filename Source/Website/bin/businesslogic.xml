@@ -934,6 +934,11 @@
             	<c>true</c> if the specified URL is reserved; otherwise, <c>false</c>.
             </returns>
         </member>
+        <member name="P:umbraco.GlobalSettings.UmbracoMvcArea">
+            <summary>
+            This returns the string of the MVC Area route.
+            </summary>
+        </member>
         <member name="P:umbraco.GlobalSettings.ReservedUrls">
             <summary>
             Gets the reserved urls from web.config.
