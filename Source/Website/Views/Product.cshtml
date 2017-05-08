@@ -17,12 +17,7 @@
   var productName = productPage.GetPropertyValue<string>( "productName" );
   var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
 
-  IPublishedContent productImage = null;
-
-  var productimageId = productPage.GetPropertyValue<int>( "image" );
-  if ( productimageId != 0 ) {
-    productImage = Umbraco.TypedMedia( productimageId );
-  }
+  IPublishedContent productImage = productPage.GetPropertyValue<IPublishedContent>( "image" ); ;
 
   List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, true ).ToList();
 
