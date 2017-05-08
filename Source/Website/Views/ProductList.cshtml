@@ -15,15 +15,9 @@
   <h1 class="page-header">@currentPage.Name</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "productName", true );
-      IPublishedContent firstVariant = product.Children.FirstOrDefault();
+      string name = product.GetPropertyValue<string>( "productName", true );
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
-      IPublishedContent image = null;
-
-      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : product.GetPropertyValue<int>( "image" );
-      if ( imageId != 0 ) {
-        image = Umbraco.TypedMedia( imageId );
-      }
+      IPublishedContent image = product.GetPropertyValue<IPublishedContent>( "image" );
 
       <div class="col-sm-4 col-md-3">
         <div class="product well well-sm text-center">
