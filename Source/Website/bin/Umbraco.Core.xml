@@ -1687,6 +1687,13 @@
             in the data type editor you can enable this
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Configuration.UmbracoSettings.ContentSectionExtensions.IsFileAllowedForUpload(Umbraco.Core.Configuration.UmbracoSettings.IContentSection,System.String)">
+            <summary>
+            Determines if file extension is allowed for upload based on (optional) white list and black list
+            held in settings.
+            Allow upload if extension is whitelisted OR if there is no whitelist and extension is NOT blacklisted.
+            </summary>
+        </member>
         <member name="P:Umbraco.Core.Configuration.UmbracoSettings.IImagingAutoFillUploadField.Alias">
             <summary>
             Allow setting internally so we can create a default
@@ -11152,7 +11159,7 @@
         </member>
         <member name="M:Umbraco.Core.Services.ExternalLoginService.Find(Microsoft.AspNet.Identity.UserLoginInfo)">
             <summary>
-            Returns all logins matching the login info - generally there should only be one but in some cases 
+            Returns all logins matching the login info - generally there should only be one but in some cases
             there might be more than one depending on if an adminstrator has been editing/removing members
             </summary>
             <param name="login"></param>
@@ -26616,6 +26623,13 @@
             </summary>
             <param name="key"></param>
             <param name="umbracoObjectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Services.IEntityService.GetIdForUdi(Umbraco.Core.Udi)">
+            <summary>
+            Returns the integer id for a given Udi
+            </summary>
+            <param name="udi"></param>
             <returns></returns>
         </member>
         <member name="M:Umbraco.Core.Services.IEntityService.GetKeyForId(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes)">
