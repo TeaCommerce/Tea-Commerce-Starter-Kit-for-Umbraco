@@ -268,13 +268,6 @@
             <param name="createView"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Extensions.UdiExtensions.ToPublishedContent(Umbraco.Core.Udi)">
-            <summary>
-            An extension method to easily acquire a typed version of content, media or member item for a given Udi
-            </summary>
-            <param name="udi"></param>
-            <returns>An <see cref="T:Umbraco.Core.Models.IPublishedContent"/> item if the item is a Document, Media or Member</returns>
-        </member>
         <member name="T:Umbraco.Web.HealthCheck.HealthCheck">
             <summary>
             The abstract health check class
@@ -1547,7 +1540,7 @@
             The <see cref="T:System.Object"/>.
             </returns>
         </member>
-        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.MultiNodeTreePickerPropertyConverter.GetPublishedContent(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes@,Umbraco.Core.Models.UmbracoObjectTypes,System.Func{System.Int32,Umbraco.Core.Models.IPublishedContent})">
+        <member name="M:Umbraco.Web.PropertyEditors.ValueConverters.MultiNodeTreePickerPropertyConverter.GetPublishedContent``1(``0,Umbraco.Core.Models.UmbracoObjectTypes@,Umbraco.Core.Models.UmbracoObjectTypes,System.Func{``0,Umbraco.Core.Models.IPublishedContent})">
             <summary>
             Attempt to get an IPublishedContent instance based on ID and content type
             </summary>
@@ -1643,6 +1636,14 @@
             <returns>
             The <see cref="T:System.Boolean"/>.
             </returns>
+        </member>
+        <member name="M:Umbraco.Web.PublishedContentQueryExtensions.TypedContent(Umbraco.Web.ITypedPublishedContentQuery,Umbraco.Core.Udi)">
+            <summary>
+            Gets a content item from the cache
+            </summary>
+            <param name="contentQuery"></param>
+            <param name="id"></param>
+            <returns></returns>
         </member>
         <member name="T:Umbraco.Web.Routing.RedirectTrackingEventHandler">
             <summary>
@@ -2872,6 +2873,20 @@
             Query methods used for accessing strongly typed content in templates
             </summary>
         </member>
+        <member name="M:Umbraco.Web.ITypedPublishedContentQuery.TypedContent(System.Int32)">
+            <summary>
+            Gets a content item from the cache
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.ITypedPublishedContentQuery.TypedContent(System.Guid)">
+            <summary>
+            Gets a content item from the cache
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Umbraco.Web.ITypedPublishedContentQuery.TypedSearch(System.String,System.Boolean,System.String)">
             <summary>
             Searches content
@@ -3680,7 +3695,7 @@
             <remarks>
             If Load balancing is enabled (by default disabled, is set in umbracoSettings.config) PageCacheRefresher will be called
             everytime content is added/updated/removed to ensure that the content cache is identical on all load balanced servers
-            </remarks>    
+            </remarks>
         </member>
         <member name="M:Umbraco.Web.Cache.PageCacheRefresher.RefreshAll">
             <summary>
@@ -11682,6 +11697,14 @@
             <param name="umbracoContext">The context.</param>
         </member>
         <member name="M:Umbraco.Web.PublishedCache.ContextualPublishedCache.GetById(System.Int32)">
+            <summary>
+            Gets a content identified by its unique identifier.
+            </summary>
+            <param name="contentId">The content unique identifier.</param>
+            <returns>The content, or null.</returns>
+            <remarks>Considers published or unpublished content depending on context.</remarks>
+        </member>
+        <member name="M:Umbraco.Web.PublishedCache.ContextualPublishedCache.GetById(System.Guid)">
             <summary>
             Gets a content identified by its unique identifier.
             </summary>
@@ -20261,6 +20284,13 @@
             <param name="id">The key of the content item.</param>
             <returns>The content, or null of the content item is not in the cache.</returns>
         </member>
+        <member name="M:Umbraco.Web.UmbracoHelper.TypedContent(Umbraco.Core.Udi)">
+            <summary>
+            Gets a content item from the cache
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Umbraco.Web.UmbracoHelper.TypedContent(System.String)">
             <summary>
             Gets a content item from the cache.
@@ -20676,6 +20706,11 @@
         <member name="P:Umbraco.Web.UmbracoHelper.DataTypeService">
             <summary>
             Lazy instantiates the IDataTypeService if not specified in the constructor
+            </summary>
+        </member>
+        <member name="P:Umbraco.Web.UmbracoHelper.EntityService">
+            <summary>
+            Lazy instantiates the IEntityService
             </summary>
         </member>
         <member name="P:Umbraco.Web.UmbracoHelper.UmbracoComponentRenderer">
