@@ -52,7 +52,7 @@ jQuery(function () {
         //Find all potential variants with the given filters
         jQuery.each(filteredVariants, function(id, variant) {
           for (var i = 0; i < filters.length; i++) {
-            var filter = parseInt(filters[i]);
+            var filter = filters[i];
 
             if (jQuery.inArray(filter, variant.combinations) == -1) {
               delete filteredVariants[id];
@@ -73,7 +73,7 @@ jQuery(function () {
                 option.prop('disabled', true);
 
                 jQuery.each(filteredVariants, function(id, variant) {
-                  if (jQuery.inArray(parseInt(option.val()), variant.combinations) > -1) {
+                  if (jQuery.inArray(option.val(), variant.combinations) > -1) {
 
                     option.prop('disabled', false);
 
