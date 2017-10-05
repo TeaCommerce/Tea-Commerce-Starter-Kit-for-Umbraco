@@ -4,7 +4,7 @@
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
-      <version>4.1.1</version>
+      <version>4.1.2</version>
       <iconUrl />
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
@@ -32,10 +32,10 @@ info@teacommerce.net
   </info>
   <Documents>
     <DocumentSet importMode="root">
-      <Frontpage id="1068" key="1d1aa3c1-be92-4b6a-b9d3-316989078df2" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2016-10-07T08:56:18" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Frontpage">
-        <slider><![CDATA[1119,1117,1116,1118]]></slider>
+      <Frontpage id="1068" key="1d1aa3c1-be92-4b6a-b9d3-316989078df2" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2015-01-16T11:10:06" updateDate="2017-05-08T11:47:40" nodeName="Home" urlName="home" path="-1,1068" isDoc="" nodeType="1067" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1066" nodeTypeAlias="Frontpage">
+        <slider><![CDATA[umb://media/e09ab7a3940f473499f1ede840e226fd,umb://media/e294bb632b904a549aeddef01eacdbe3,umb://media/80c5ac4af617472eb199ad57929b8cf0,umb://media/5af76cc49ce34339a7f877ba5eb297dd]]></slider>
         <store>1</store>
-        <featuredProducts><![CDATA[1071,1073,1072,1074]]></featuredProducts>
+        <featuredProducts><![CDATA[umb://document/fc7ad11cfcff4962972467a398bc63a6,umb://document/835843450a654755b71e208e8cfbf0ca,umb://document/d39edfd13e6e42f29e3389a911442986,umb://document/584fd82a7ff14019b0d61e0e493ac139]]></featuredProducts>
         <Cart id="1081" key="ac2538f3-12cc-4321-83cf-fb7553188138" parentID="1068" level="2" creatorID="0" sortOrder="0" createDate="2015-01-16T11:33:34" updateDate="2016-10-07T08:56:18" nodeName="Cart content" urlName="cart-content" path="-1,1068,1081" isDoc="" nodeType="1080" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1056" nodeTypeAlias="Cart">
           <CartStep id="1083" key="465a5122-633d-4a43-a2c4-8a1ea7207ab4" parentID="1081" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:35:03" updateDate="2016-10-07T08:56:18" nodeName="Information" urlName="information" path="-1,1068,1081,1083" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1058" nodeTypeAlias="CartStep" />
           <CartStep id="1084" key="f8e3371d-eea6-4094-8b92-d4d751262cc9" parentID="1081" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:38:02" updateDate="2016-10-07T08:56:18" nodeName="Shipping/Payment" urlName="shippingpayment" path="-1,1068,1081,1084" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1060" nodeTypeAlias="CartStep" />
@@ -44,8 +44,8 @@ info@teacommerce.net
           <CartStep id="1086" key="011e905a-2676-4429-902a-ee64db3d53f9" parentID="1081" level="3" creatorID="0" sortOrder="4" createDate="2015-01-16T11:38:27" updateDate="2016-10-07T08:56:18" nodeName="Confirmation" urlName="confirmation" path="-1,1068,1081,1086" isDoc="" nodeType="1057" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1064" nodeTypeAlias="CartStep" />
         </Cart>
         <ProductList id="1069" key="c3f554d1-1a3f-4b20-8cb4-85ccf0c58e30" parentID="1068" level="2" creatorID="0" sortOrder="1" createDate="2015-01-16T11:16:08" updateDate="2016-10-07T08:56:18" nodeName="Expensive Yachts" urlName="expensive-yachts" path="-1,1068,1069" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1071" key="fc7ad11c-fcff-4962-9724-67a398bc63a6" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2016-10-07T08:56:18" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <image>1116</image>
+          <Product id="1071" key="fc7ad11c-fcff-4962-9724-67a398bc63a6" parentID="1069" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:10" updateDate="2017-05-08T11:50:36" nodeName="Summer Yacht" urlName="summer-yacht" path="-1,1068,1069,1071" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <image><![CDATA[umb://media/80c5ac4af617472eb199ad57929b8cf0]]></image>
             <sku><![CDATA[p0001]]></sku>
             <productName><![CDATA[Summer Yacht]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
@@ -65,8 +65,8 @@ info@teacommerce.net
   }
 }]]></variants>
           </Product>
-          <Product id="1072" key="d39edfd1-3e6e-42f2-9e33-89a911442986" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2016-10-07T08:56:18" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <image>1117</image>
+          <Product id="1072" key="d39edfd1-3e6e-42f2-9e33-89a911442986" parentID="1069" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:20" updateDate="2017-05-08T11:50:41" nodeName="Yacht with sails" urlName="yacht-with-sails" path="-1,1068,1069,1072" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <image><![CDATA[umb://media/e294bb632b904a549aeddef01eacdbe3]]></image>
             <sku><![CDATA[p0002]]></sku>
             <productName><![CDATA[Yacht with sails]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
@@ -88,8 +88,8 @@ info@teacommerce.net
           </Product>
         </ProductList>
         <ProductList id="1070" key="8ca08a3d-1aff-4545-833b-bc248c68df81" parentID="1068" level="2" creatorID="0" sortOrder="2" createDate="2015-01-16T11:16:17" updateDate="2016-10-07T08:56:18" nodeName="Very expensive Yachts" urlName="very-expensive-yachts" path="-1,1068,1070" isDoc="" nodeType="1055" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1054" nodeTypeAlias="ProductList">
-          <Product id="1073" key="83584345-0a65-4755-b71e-208e8cfbf0ca" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2016-10-07T08:56:18" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <image>1118</image>
+          <Product id="1073" key="83584345-0a65-4755-b71e-208e8cfbf0ca" parentID="1070" level="3" creatorID="0" sortOrder="0" createDate="2015-01-16T11:18:31" updateDate="2017-05-08T11:50:28" nodeName="Motor driven Yacht" urlName="motor-driven-yacht" path="-1,1068,1070,1073" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <image><![CDATA[umb://media/5af76cc49ce34339a7f877ba5eb297dd]]></image>
             <sku><![CDATA[p0003]]></sku>
             <productName><![CDATA[Motor driven Yacht]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
@@ -109,8 +109,8 @@ info@teacommerce.net
   }
 }]]></variants>
           </Product>
-          <Product id="1074" key="584fd82a-7ff1-4019-b0d6-1e0e493ac139" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2016-10-07T08:56:18" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
-            <image>1119</image>
+          <Product id="1074" key="584fd82a-7ff1-4019-b0d6-1e0e493ac139" parentID="1070" level="3" creatorID="0" sortOrder="1" createDate="2015-01-16T11:18:40" updateDate="2017-05-08T11:50:44" nodeName="One masted yacht" urlName="one-masted-yacht" path="-1,1068,1070,1074" isDoc="" nodeType="1051" creatorName="Tea Commerce" writerName="Tea Commerce" writerID="0" template="1050" nodeTypeAlias="Product">
+            <image><![CDATA[umb://media/e09ab7a3940f473499f1ede840e226fd]]></image>
             <sku><![CDATA[p0004]]></sku>
             <productName><![CDATA[One masted yacht]]></productName>
             <description><![CDATA[<p>This is the product description.</p>]]></description>
@@ -525,7 +525,7 @@ info@teacommerce.net
         <GenericProperty>
           <Name>Slider</Name>
           <Alias>slider</Alias>
-          <Type>Umbraco.MultipleMediaPicker</Type>
+          <Type>Umbraco.MediaPicker2</Type>
           <Definition>7e3962cc-ce20-4ffc-b661-5897a894ba7e</Definition>
           <Tab>Content</Tab>
           <SortOrder>0</SortOrder>
@@ -547,7 +547,7 @@ info@teacommerce.net
         <GenericProperty>
           <Name>Featured products</Name>
           <Alias>featuredProducts</Alias>
-          <Type>Umbraco.MultiNodeTreePicker</Type>
+          <Type>Umbraco.MultiNodeTreePicker2</Type>
           <Definition>122843b8-b613-4322-9dc4-05a707a629b1</Definition>
           <Tab>Content</Tab>
           <SortOrder>3</SortOrder>
@@ -584,7 +584,7 @@ info@teacommerce.net
         <GenericProperty>
           <Name>Image</Name>
           <Alias>image</Alias>
-          <Type>Umbraco.MediaPicker</Type>
+          <Type>Umbraco.MediaPicker2</Type>
           <Definition>93929b9a-93a2-4e2a-b239-d99334440a59</Definition>
           <Tab>Information</Tab>
           <SortOrder>0</SortOrder>
@@ -953,7 +953,7 @@ info@teacommerce.net
       <form method="post" action="/base/TC/FormPost.aspx" class="form-inline form-autoValidate">
         <input name="AddDiscountCode" value="code" type="hidden" />
         <input name="AddGiftCard" value="code" type="hidden" />
-        <input name="storeId" value="1" type="hidden" />
+        <input name="storeId" value="@storeId" type="hidden" />
         <div class="form-group">
           <input name="code" value="" type="text" placeholder="Enter your discount code" class="form-control" required="" />
         </div>
@@ -1222,7 +1222,7 @@ info@teacommerce.net
                 <label>
                   <input type="radio" name="paymentMethodId" value="@method.Id"
                          @if ( method.Id == order.PaymentInformation.PaymentMethodId ) { @Html.Raw( "checked" )  }>
-                  @method.Name
+                  @method.Name (@TC.GetPriceForPaymentMethod(method.StoreId, method.Id))
                 </label>
               </div>
             }
@@ -1236,7 +1236,7 @@ info@teacommerce.net
                 <label>
                   <input type="radio" name="shippingMethodId" value="@method.Id"
                          @if ( method.Id == order.ShipmentInformation.ShippingMethodId ) { @Html.Raw( "checked" )  }>
-                  @method.Name
+                  @method.Name (@TC.GetPriceForShippingMethod(method.StoreId, method.Id))
                 </label>
               </div>
             }
@@ -1925,12 +1925,7 @@ info@teacommerce.net
   Layout = "Master.cshtml";
   IPublishedContent currentPage = Model.Content;
 
-  IReadOnlyList<IPublishedContent> carouselImages = currentPage.GetPropertyValue<string>( "slider" )
-    .Split( new[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
-    .Select( int.Parse )
-    .Select( id => Umbraco.TypedMedia( id ) )
-    .Where( m => m != null )
-    .ToList();
+  List<IPublishedContent> carouselImages = currentPage.GetPropertyValue<List<IPublishedContent>>( "slider" );
 
   int count = 0;
   string carouselId = "homeCarousel";
@@ -1938,14 +1933,9 @@ info@teacommerce.net
   //store id
   long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
 
-  List<IPublishedContent> products = currentPage.GetPropertyValue<string>( "featuredProducts" )
-    .Split( new[] { ',' }, StringSplitOptions.RemoveEmptyEntries )
-    .Select( int.Parse )
-    .Select( id => Umbraco.TypedContent( id ) )
-    .Where( c => c != null )
-    .ToList();
+  List<IPublishedContent> products = currentPage.GetPropertyValue<List<IPublishedContent>>( "featuredProducts" );
 }
-@if ( carouselImages.Any() ) {
+@if ( carouselImages != null && carouselImages.Any() ) {
   <div id="@carouselId" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -1984,15 +1974,9 @@ info@teacommerce.net
 <div class="container">
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "productName", true );
-      IPublishedContent firstVariant = product.Children.FirstOrDefault();
+      string name = product.GetPropertyValue<string>( "productName", true );
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
-      IPublishedContent image = null;
-
-      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : product.GetPropertyValue<int>( "image" );
-      if ( imageId != 0 ) {
-        image = Umbraco.TypedMedia( imageId );
-      }
+      IPublishedContent image = product.GetPropertyValue<IPublishedContent>( "image" );
 
       <div class="col-sm-4 col-md-3">
         <div class="product well well-sm text-center">
@@ -2100,9 +2084,7 @@ info@teacommerce.net
     <Template>
       <Name>Product</Name>
       <Alias>Product</Alias>
-      <Design><![CDATA[@using TeaCommerce.Api.Models
-@using TeaCommerce.Umbraco.Configuration.Variant
-@using TeaCommerce.Umbraco.Configuration.Variant.Product
+      <Design><![CDATA[@using TeaCommerce.Umbraco.Configuration.Variants.Models
 @using TeaCommerce.Umbraco.Web
 @using Umbraco.Core.Models
 @using Umbraco.Web
@@ -2121,16 +2103,11 @@ info@teacommerce.net
   var productName = productPage.GetPropertyValue<string>( "productName" );
   var productDescription = new HtmlString( productPage.GetPropertyValue<string>( "description" ) );
 
-  IPublishedContent productImage = null;
+  IPublishedContent productImage = productPage.GetPropertyValue<IPublishedContent>( "image" ); ;
 
-  var productimageId = productPage.GetPropertyValue<int>( "image" );
-  if ( productimageId != 0 ) {
-    productImage = Umbraco.TypedMedia( productimageId );
-  }
+  List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, true ).ToList();
 
-  List<VariantPublishedContent> variants = TC.GetVariants( storeId, productPage, false ).ToList();
-
-  List<VariantGroup> attributeGroups = TC.GetVariantGroups( variants ).ToList();
+  List<VariantGroup> attributeGroups = TC.GetVariantGroups( productPage, variants ).ToList();
 
   string variantJson = TC.GetVariantJson( storeId, productPage, true );
 }
@@ -2213,15 +2190,9 @@ info@teacommerce.net
   <h1 class="page-header">@currentPage.Name</h1>
   <div class="row">
     @foreach ( IPublishedContent product in products ) {
-      var name = product.GetPropertyValue<string>( "productName", true );
-      IPublishedContent firstVariant = product.Children.FirstOrDefault();
+      string name = product.GetPropertyValue<string>( "productName", true );
       Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
-      IPublishedContent image = null;
-
-      int imageId = firstVariant != null ? firstVariant.GetPropertyValue<int>( "image", true ) : product.GetPropertyValue<int>( "image" );
-      if ( imageId != 0 ) {
-        image = Umbraco.TypedMedia( imageId );
-      }
+      IPublishedContent image = product.GetPropertyValue<IPublishedContent>( "image" );
 
       <div class="col-sm-4 col-md-3">
         <div class="product well well-sm text-center">
@@ -2231,7 +2202,7 @@ info@teacommerce.net
             </a>
           }
           <h3>@name</h3>
-          <p>@price.Formatted</p>
+          <p>@price.WithVatFormatted</p>
           <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
         </div>
       </div>
@@ -2254,13 +2225,13 @@ info@teacommerce.net
     <Language Id="1" CultureAlias="en-US" FriendlyName="en-US" />
   </Languages>
   <DataTypes>
-    <DataType Name="Product picker (Multiple, Language)" Id="Umbraco.MultiNodeTreePicker" Definition="122843b8-b613-4322-9dc4-05a707a629b1" DatabaseType="Nvarchar">
+    <DataType Name="Product picker (Multiple, Language)" Id="Umbraco.MultiNodeTreePicker2" Definition="122843b8-b613-4322-9dc4-05a707a629b1" DatabaseType="Ntext">
       <PreValues>
-        <PreValue Id="6" Value="{&#xD;&#xA;  &quot;type&quot;: &quot;content&quot;,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang&quot;&#xD;&#xA;}" Alias="startNode" SortOrder="0" />
-        <PreValue Id="7" Value="Product" Alias="filter" SortOrder="1" />
-        <PreValue Id="8" Value="" Alias="minNumber" SortOrder="2" />
-        <PreValue Id="9" Value="" Alias="maxNumber" SortOrder="3" />
-        <PreValue Id="10" Value="0" Alias="showEditButton" SortOrder="4" />
+        <PreValue Id="60" Value="{&#xD;&#xA;  &quot;type&quot;: &quot;content&quot;,&#xD;&#xA;  &quot;query&quot;: &quot;$current/ancestor-or-self::Lang&quot;&#xD;&#xA;}" Alias="startNode" SortOrder="0" />
+        <PreValue Id="61" Value="Product" Alias="filter" SortOrder="1" />
+        <PreValue Id="62" Value="" Alias="minNumber" SortOrder="2" />
+        <PreValue Id="63" Value="" Alias="maxNumber" SortOrder="3" />
+        <PreValue Id="64" Value="1" Alias="showOpenButton" SortOrder="4" />
       </PreValues>
     </DataType>
   </DataTypes>
