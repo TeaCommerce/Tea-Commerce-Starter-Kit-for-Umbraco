@@ -1,0 +1,9 @@
+How to update the starter kit package
+* Run the starter kit website from the Source\Website folder
+* Login to Umbraco with admin/1234
+* Go to developer -> Packages -> Created Packages -> Tea Commerce Starter Kit
+* Bump the version number
+* Save and Publish the package
+* Download the package
+* Unzip the package and open the package.xml file
+* Use winmerge to merge the package.xml file to the one we use in the package in the \Build folder
