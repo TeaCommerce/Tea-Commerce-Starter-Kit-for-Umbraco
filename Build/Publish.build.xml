@@ -37,16 +37,18 @@
     <ItemGroup>
 	  <BinFiles Include="Source\TeaCommerce.StarterKit.Install\bin\$(Configuration)\TeaCommerce.StarterKit.Install.dll" />	  
 	  <Scripts Include="$(WebsiteDir)\Scripts\**" />
-	  <Minicart Include="$(WebsiteDir)\Views\**\Minicart.cshtml" />
-	  <TopMenu Include="$(WebsiteDir)\Views\**\TopMenu.cshtml" />
+      <Css Include="$(WebsiteDir)\Css\**" />
+	  <Minicart Include="$(WebsiteDir)\Views\**\*.cshtml" />
+	  <Grid Include="$(PublishDir)\Views\Partials\Grid\**\*.*" />
 	  <Media Include="installMedia\**" />
     </ItemGroup>
 	
  	<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PublishDir)\bin\%(RecursiveDir)" />
 	<Copy SourceFiles="@(Scripts)" DestinationFolder="$(PublishDir)\Scripts" />
-	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views\Partials\Cart" />
-	<Copy SourceFiles="@(TopMenu)" DestinationFolder="$(PublishDir)\Views\Partials\Navigation" />
+	<Copy SourceFiles="@(Css)" DestinationFolder="$(PublishDir)\Css" />
+	<Copy SourceFiles="@(Minicart)" DestinationFolder="$(PublishDir)\Views\%(RecursiveDir)" />
 	<Copy SourceFiles="@(Media)" DestinationFolder="$(PublishDir)\installMedia" /> 	
+	<Delete Files="@(Grid)" />
   </Target>
   
 </Project>

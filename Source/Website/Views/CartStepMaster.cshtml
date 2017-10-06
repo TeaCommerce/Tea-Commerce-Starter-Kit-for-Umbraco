@@ -3,9 +3,9 @@
   Layout = "Master.cshtml";
 
   IPublishedContent currenContent = Model.Content,
-    cart = currenContent.AncestorOrSelf( "Cart" );
+    cart = currenContent.AncestorOrSelf( "cart" );
 
-  IReadOnlyList<IPublishedContent> cartSteps = cart.Children.Where( c => c.DocumentTypeAlias == "CartStep" ).ToList();
+  IReadOnlyList<IPublishedContent> cartSteps = cart.Children.Where( c => c.DocumentTypeAlias == "cartStep" ).ToList();
   int activeStep = cart.Id == currenContent.Id ? 1 : cart.Children.IndexOf( cartSteps.First( c => c.Id == currenContent.Id ) ) + 2;
 }
 

@@ -5,7 +5,7 @@
 
 @{
   IPublishedContent currentPage = Model.Content,
-                    cartPage = currentPage.AncestorOrSelf( 1 ).Children.FirstOrDefault( c => c.DocumentTypeAlias == "Cart" );
+                    cartPage = currentPage.AncestorOrSelf( 1 ).Children.FirstOrDefault( c => c.DocumentTypeAlias == "cart" );
 }
 @if ( cartPage != null ) {
   //store id
