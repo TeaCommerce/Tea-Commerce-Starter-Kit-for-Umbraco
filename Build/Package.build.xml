@@ -44,6 +44,7 @@
 	  <Output TaskParameter="Value" PropertyName="Version" />
 	</XmlRead>
 	<Zip Files="@(Files)" ZipFileName="$(PublishDir)\Tea Commerce - Starter kit $(Version).zip" WorkingDirectory="$(PublishDir)" />
+	<Zip Files="@(Files)" ZipFileName="$(PublishDir)\..\Tea Commerce - Starter kit $(Version).zip" WorkingDirectory="$(PublishDir)" />
   </Target>
   
 </Project>
