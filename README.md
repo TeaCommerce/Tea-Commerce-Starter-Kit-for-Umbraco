@@ -6,7 +6,7 @@ Just download the project, open in Visual Studio and hit F5.
 
 Log in to umbraco with username **admin** and password **1234**
 
-The starter kit can be used in different ways. It can be the starting point for your next Umbraco e-commerce project. You can use it as a [demo](http://demo.teacommerce.net) for your clients. Or you can [download the stand-alone package](http://teacommerce.net/ressources/packages/starter-kit/) and install into an existing Umbraco project.
+The starter kit can be used in different ways. It can be the starting point for your next Umbraco e-commerce project. You can use it as a [demo](http://demo.teacommerce.net) for your clients. Or you can [download the stand-alone package](https://github.com/TeaCommerce/Starter-kit-for-Umbraco/tree/master/Build) zip file and install into an existing Umbraco project.
 
 ## Technical details
 This project is using Umbraco 7, Tea Commerce 3 and SQL CE as the database technology.
