@@ -4,13 +4,13 @@
   <info>
     <package>
       <name>Tea Commerce Starter Kit</name>
-      <version>4.2.0</version>
+      <version>4.2.3</version>
       <iconUrl />
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>http://teacommerce.net/</url>
       <requirements type="strict">
         <major>7</major>
-        <minor>7</minor>
+        <minor>6</minor>
         <patch>0</patch>
       </requirements>
     </package>
