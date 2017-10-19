@@ -1188,12 +1188,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.Editors.ContentController.UpdatePreviewContext(System.Int32)">
-            <summary>
-            Checks if the user is currently in preview mode and if so will update the preview content for this item
-            </summary>
-            <param name="contentId"></param>
-        </member>
         <member name="M:Umbraco.Web.Editors.ContentController.MapPropertyValues(Umbraco.Web.Models.ContentEditing.ContentItemSave)">
             <summary>
             Maps the dto property values to the persisted model
@@ -2595,6 +2589,17 @@
             We cannot validate this request with attributes (nicely) due to the nature of the multi-part for data.
             </remarks>
         </member>
+        <member name="M:Umbraco.Web.Editors.MediaController.GetParentIdAsInt(System.String,System.Boolean)">
+            <summary>
+            Given a parent id which could be a GUID, UDI or an INT, this will resolve the INT
+            </summary>
+            <param name="parentId"></param>
+            <param name="validatePermissions">
+            If true, this will check if the current user has access to the resolved integer parent id
+            and if that check fails an unauthorized exception will occur
+            </param>
+            <returns></returns>
+        </member>
         <member name="M:Umbraco.Web.Editors.MediaController.ValidateMoveOrCopy(Umbraco.Web.Models.ContentEditing.MoveOrCopy)">
             <summary>
             Ensures the item can be moved/copied to the new location
@@ -3481,6 +3486,11 @@
             <summary>
             This is used for the response of PostAddFile so that we can analyze the response in a filter and remove the 
             temporary files that were created.
+            </summary>
+        </member>
+        <member name="T:Umbraco.Web.Models.ContentEditing.PostedFolder">
+            <summary>
+            Used to create a folder with the MediaController
             </summary>
         </member>
         <member name="F:Umbraco.Web.Models.ContentEditing.PropertyGroupBasic.GenericPropertiesGroupId">
@@ -12269,6 +12279,12 @@
         <member name="M:Umbraco.Web.UmbracoDefaultOwinStartup.ConfigureUmbracoUserManager(Owin.IAppBuilder)">
             <summary>
             Configure the Identity user manager for use with Umbraco Back office
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:Umbraco.Web.UmbracoDefaultOwinStartup.ConfigureUmbracoAuthentication(Owin.IAppBuilder)">
+            <summary>
+            Configure external/OAuth login providers
             </summary>
             <param name="app"></param>
         </member>

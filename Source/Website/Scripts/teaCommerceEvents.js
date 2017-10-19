@@ -9,7 +9,10 @@ var cartUpdateTimeout = null,
 //When an orderline is being updated
 TC.bind('beforeAddOrUpdateOrderLine', function (data, jQForm) {
   //Start loading the minicart
-  jQForm.add(jQuery('#minicart')).addClass('loading');
+  jQuery('#minicart').addClass('loading');
+  if (jQForm && jQForm[0]) {
+    jQForm.addClass('loading');
+  }
   //Set start time for the change event
   cartTimeoutStart = new Date().getTime();
   //Clear any old cart update timeouts

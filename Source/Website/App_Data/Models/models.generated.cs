@@ -19,17 +19,17 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "19e87f75d0390c63")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1d08a5e2c1e49297")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
 	/// <summary>Product</summary>
-	[PublishedContentModel("Product")]
+	[PublishedContentModel("product")]
 	public partial class Product : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "Product";
+		public new const string ModelTypeAlias = "product";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
@@ -114,11 +114,11 @@ namespace Umbraco.Web.PublishedContentModels
 	}
 
 	/// <summary>Product list</summary>
-	[PublishedContentModel("ProductList")]
+	[PublishedContentModel("productList")]
 	public partial class ProductList : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "ProductList";
+		public new const string ModelTypeAlias = "productList";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
@@ -140,11 +140,11 @@ namespace Umbraco.Web.PublishedContentModels
 	}
 
 	/// <summary>Cart step</summary>
-	[PublishedContentModel("CartStep")]
+	[PublishedContentModel("cartStep")]
 	public partial class CartStep : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "CartStep";
+		public new const string ModelTypeAlias = "cartStep";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
@@ -166,11 +166,11 @@ namespace Umbraco.Web.PublishedContentModels
 	}
 
 	/// <summary>Frontpage</summary>
-	[PublishedContentModel("Frontpage")]
+	[PublishedContentModel("frontpage")]
 	public partial class Frontpage : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "Frontpage";
+		public new const string ModelTypeAlias = "frontpage";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
@@ -219,11 +219,11 @@ namespace Umbraco.Web.PublishedContentModels
 	}
 
 	/// <summary>Cart</summary>
-	[PublishedContentModel("Cart")]
+	[PublishedContentModel("cart")]
 	public partial class Cart : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "Cart";
+		public new const string ModelTypeAlias = "cart";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
@@ -245,11 +245,11 @@ namespace Umbraco.Web.PublishedContentModels
 	}
 
 	/// <summary>Variant</summary>
-	[PublishedContentModel("Variant")]
+	[PublishedContentModel("variant")]
 	public partial class Variant : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "Variant";
+		public new const string ModelTypeAlias = "variant";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
