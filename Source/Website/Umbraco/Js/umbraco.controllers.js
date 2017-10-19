@@ -3120,6 +3120,40 @@
         if (dialogOptions.currentTarget) {
             $scope.target = dialogOptions.currentTarget;
         }
+        function onInit() {
+            if ($scope.startNodeId !== -1) {
+                entityResource.getById($scope.startNodeId, 'media').then(function (ent) {
+                    $scope.startNodeId = ent.id;
+                    run();
+                });
+            } else {
+                run();
+            }
+        }
+        function run() {
+            //default root item
+            if (!$scope.target) {
+                if ($scope.lastOpenedNode && $scope.lastOpenedNode !== -1) {
+                    entityResource.getById($scope.lastOpenedNode, 'media').then(ensureWithinStartNode, gotoStartNode);
+                } else {
+                    gotoStartNode();
+                }
+            } else {
+                //if a target is specified, go look it up - generally this target will just contain ids not the actual full
+                //media object so we need to look it up
+                var id = $scope.target.udi ? $scope.target.udi : $scope.target.id;
+                var altText = $scope.target.altText;
+                mediaResource.getById(id).then(function (node) {
+                    $scope.target = node;
+                    if (ensureWithinStartNode(node)) {
+                        selectImage(node);
+                        $scope.target.url = mediaHelper.resolveFile(node);
+                        $scope.target.altText = altText;
+                        $scope.openDetailsDialog();
+                    }
+                }, gotoStartNode);
+            }
+        }
         $scope.upload = function (v) {
             angular.element('.umb-file-dropzone-directive .file-select').click();
         };
@@ -3271,28 +3305,6 @@
                 icon: 'icon-folder'
             });
         }
-        //default root item
-        if (!$scope.target) {
-            if ($scope.lastOpenedNode && $scope.lastOpenedNode !== -1) {
-                entityResource.getById($scope.lastOpenedNode, 'media').then(ensureWithinStartNode, gotoStartNode);
-            } else {
-                gotoStartNode();
-            }
-        } else {
-            //if a target is specified, go look it up - generally this target will just contain ids not the actual full
-            //media object so we need to look it up
-            var id = $scope.target.udi ? $scope.target.udi : $scope.target.id;
-            var altText = $scope.target.altText;
-            mediaResource.getById(id).then(function (node) {
-                $scope.target = node;
-                if (ensureWithinStartNode(node)) {
-                    selectImage(node);
-                    $scope.target.url = mediaHelper.resolveFile(node);
-                    $scope.target.altText = altText;
-                    $scope.openDetailsDialog();
-                }
-            }, gotoStartNode);
-        }
         $scope.openDetailsDialog = function () {
             $scope.mediaPickerDetailsOverlay = {};
             $scope.mediaPickerDetailsOverlay.show = true;
@@ -3396,6 +3408,7 @@
                 }
             }
         }
+        onInit();
     });
     angular.module('umbraco').controller('Umbraco.Overlays.MediaTypePickerController', function ($scope) {
         $scope.select = function (mediatype) {
@@ -10299,7 +10312,7 @@
     });
     //this controller simply tells the dialogs service to open a mediaPicker window
     //with a specified callback, this callback will receive an object with a selection on it
-    function contentPickerController($scope, entityResource, editorState, iconHelper, $routeParams, angularHelper, navigationService, $location, miniEditorHelper) {
+    function contentPickerController($scope, entityResource, editorState, iconHelper, $routeParams, angularHelper, navigationService, $location, miniEditorHelper, localizationService) {
         var unsubscribe;
         function subscribe() {
             unsubscribe = $scope.$on('formSubmitting', function (ev, args) {
@@ -10535,7 +10548,11 @@
                     // update url                
                     angular.forEach($scope.renderModel, function (item) {
                         if (item.id === entity.id) {
-                            item.url = data;
+                            if (entity.trashed) {
+                                item.url = localizationService.dictionary.general_recycleBin;
+                            } else {
+                                item.url = data;
+                            }
                         }
                     });
                 });
@@ -10571,6 +10588,7 @@
                 'icon': item.icon,
                 'path': item.path,
                 'url': item.url,
+                'trashed': item.trashed,
                 'published': item.metaData && item.metaData.IsPublished === false && entityType === 'Document' ? false : true    // only content supports published/unpublished content so we set everything else to published so the UI looks correct 
             });
         }
@@ -13724,7 +13742,7 @@
     angular.module('umbraco').controller('Umbraco.PropertyEditors.MarkdownEditorController', MarkdownEditorController);
     //this controller simply tells the dialogs service to open a mediaPicker window
     //with a specified callback, this callback will receive an object with a selection on it
-    angular.module('umbraco').controller('Umbraco.PropertyEditors.MediaPickerController', function ($rootScope, $scope, dialogService, entityResource, mediaResource, mediaHelper, $timeout, userService, $location) {
+    angular.module('umbraco').controller('Umbraco.PropertyEditors.MediaPickerController', function ($rootScope, $scope, dialogService, entityResource, mediaResource, mediaHelper, $timeout, userService, $location, localizationService) {
         //check the pre-values for multi-picker
         var multiPicker = $scope.model.config.multiPicker && $scope.model.config.multiPicker !== '0' ? true : false;
         var onlyImages = $scope.model.config.onlyImages && $scope.model.config.onlyImages !== '0' ? true : false;
@@ -13744,21 +13762,44 @@
                 // the mediaResource has server side auth configured for which the user must have
                 // access to the media section, if they don't they'll get auth errors. The entityResource
                 // acts differently in that it allows access if the user has access to any of the apps that
-                // might require it's use. Therefore we need to use the metatData property to get at the thumbnail
+                // might require it's use. Therefore we need to use the metaData property to get at the thumbnail
                 // value.
                 entityResource.getByIds(ids, 'Media').then(function (medias) {
+                    // The service only returns item results for ids that exist (deleted items are silently ignored).
+                    // This results in the picked items value to be set to contain only ids of picked items that could actually be found.
+                    // Since a referenced item could potentially be restored later on, instead of changing the selected values here based
+                    // on whether the items exist during a save event - we should keep "placeholder" items for picked items that currently
+                    // could not be fetched. This will preserve references and ensure that the state of an item does not differ depending
+                    // on whether it is simply resaved or not.
+                    // This is done by remapping the int/guid ids into a new array of items, where we create "Deleted item" placeholders
+                    // when there is no match for a selected id. This will ensure that the values being set on save, are the same as before.
+                    medias = _.map(ids, function (id) {
+                        var found = _.find(medias, function (m) {
+                            return m.udi === id || m.id === id;
+                        });
+                        if (found) {
+                            return found;
+                        } else {
+                            return {
+                                name: localizationService.dictionary.mediaPicker_deletedItem,
+                                id: $scope.model.config.idType !== 'udi' ? id : null,
+                                udi: $scope.model.config.idType === 'udi' ? id : null,
+                                icon: 'icon-picture',
+                                thumbnail: null,
+                                trashed: true
+                            };
+                        }
+                    });
                     _.each(medias, function (media, i) {
-                        //only show non-trashed items
-                        if (media.parentId >= -1) {
-                            if (!media.thumbnail) {
-                                media.thumbnail = mediaHelper.resolveFileFromEntity(media, true);
-                            }
-                            $scope.images.push(media);
-                            if ($scope.model.config.idType === 'udi') {
-                                $scope.ids.push(media.udi);
-                            } else {
-                                $scope.ids.push(media.id);
-                            }
+                        // if there is no thumbnail, try getting one if the media is not a placeholder item
+                        if (!media.thumbnail && media.id && media.metaData) {
+                            media.thumbnail = mediaHelper.resolveFileFromEntity(media, true);
+                        }
+                        $scope.images.push(media);
+                        if ($scope.model.config.idType === 'udi') {
+                            $scope.ids.push(media.udi);
+                        } else {
+                            $scope.ids.push(media.id);
                         }
                     });
                     $scope.sync();
@@ -13786,7 +13827,8 @@
                 show: true,
                 submit: function (model) {
                     _.each(model.selectedImages, function (media, i) {
-                        if (!media.thumbnail) {
+                        // if there is no thumbnail, try getting one if the media is not a placeholder item
+                        if (!media.thumbnail && media.id && media.metaData) {
                             media.thumbnail = mediaHelper.resolveFileFromEntity(media, true);
                         }
                         $scope.images.push(media);
@@ -15144,6 +15186,7 @@
                 icon.isCustom = false;
                 break;
             case 'styleselect':
+            case 'fontsizeselect':
                 icon.name = 'icon-list';
                 icon.isCustom = true;
                 break;

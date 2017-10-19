@@ -1972,6 +1972,14 @@
             </summary>
             <value><c>"true"</c> if version xslt extensions are disabled, otherwise, <c>"false"</c></value>
         </member>
+        <member name="P:Umbraco.Core.Configuration.GlobalSettings.LocalTempStorageLocation">
+            <summary>
+            This is the location type to store temporary files such as cache files or other localized files for a given machine
+            </summary>
+            <remarks>
+            Currently used for the xml cache file and the plugin cache files
+            </remarks>
+        </member>
         <member name="P:Umbraco.Core.Configuration.GlobalSettings.EditXhtmlMode">
             <summary>
             Returns a string value to determine if umbraco should use Xhtml editing mode in the wysiwyg editor
@@ -35901,12 +35909,6 @@
             <para>Practically, all we really need is the guid, the other infos are here for information
             and debugging purposes.</para>
             </remarks>
-        </member>
-        <member name="P:Umbraco.Core.Sync.DatabaseServerMessenger.SyncFilePath">
-            <summary>
-            Gets the sync file path for the local server.
-            </summary>
-            <returns>The sync file path for the local server.</returns>
         </member>
         <member name="M:Umbraco.Core.Sync.DatabaseServerMessenger.GetAllInstructions(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JToken})">
             <summary>
