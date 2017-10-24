@@ -113,16 +113,9 @@ namespace TeaCommerce.StarterKit.Install {
         IDataTypeDefinition variantEditorDataTypeDefinition = allDataTypeDefinitions.FirstOrDefault( d => d.Name.ToLowerInvariant().Contains( "variant editor" ) );
         variantEditorDataTypeDefinition.DatabaseType = DataTypeDatabaseType.Ntext;
 
-        //dataTypeService.SavePreValues( variantEditorDataTypeDefinition, new Dictionary<string, PreValue> {
-        //  { "xpathOrNode", new PreValue("{\"showXPath\": true,\"query\": \"$current/ancestor-or-self::Frontpage/attributes\"}") },
-        //  { "variantDocumentType", new PreValue("Variant") },
-        //  { "extraListInformation", new PreValue("sku,priceJMD") },
-        //  { "hideLabel", new PreValue("1") },
-
-        //} );
         var preValDictionary = new Dictionary<string, object> {
-          { "xpathOrNode", "{\"showXPath\": true,\"query\": \"$current/ancestor-or-self::Frontpage/attributes\"}" },
-          { "variantDocumentType", "Variant" },
+          { "xpathOrNode", "{\"showXPath\": true,\"query\": \"$current/ancestor-or-self::frontpage/attributes\"}" },
+          { "variantDocumentType", "variant" },
           { "extraListInformation", "sku,priceJMD" },
           { "hideLabel", "1" },
 
