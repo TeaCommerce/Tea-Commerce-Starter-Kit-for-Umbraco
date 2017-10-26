@@ -77,8 +77,10 @@ namespace TeaCommerce.StarterKit.Install {
         store = stores.FirstOrDefault();
         if ( store == null ) {
           store = new Store( "Starter Kit Store" );
-          store.Save();
         }
+
+        store.ProductSettings.ProductVariantPropertyAlias = "variants";
+        store.Save();
 
         foreach ( PaymentMethod paymentMethod in PaymentMethodService.Instance.GetAll( store.Id ).Where( p => p.Alias == "invoicing" ) ) {
           PaymentMethodSetting setting = paymentMethod.Settings.FirstOrDefault( s => s.Key == "acceptUrl" );
