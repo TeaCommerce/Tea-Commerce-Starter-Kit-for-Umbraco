@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <createUI>
   <nodeType alias="initmacros">
     <header>Macro</header>
@@ -39,8 +39,8 @@
     <header>membergroup</header>
     <usercontrol>/create/simple.ascx</usercontrol>
     <tasks>
-        <delete assembly="umbraco" type="MemberGroupTasks" />
-    </tasks> 
+      <delete assembly="umbraco" type="MemberGroupTasks" />
+    </tasks>
   </nodeType>
   <nodeType alias="initstylesheets">
     <header>Stylesheet</header>
