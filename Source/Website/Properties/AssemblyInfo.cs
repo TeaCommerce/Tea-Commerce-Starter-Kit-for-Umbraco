@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "" )]
 [assembly: AssemblyProduct( "Tea_Commerce___Starter_kit_for_Umbraco" )]
-[assembly: AssemblyCopyright( "Copyright ©  2015" )]
+[assembly: AssemblyCopyright( "Copyright ©  2019" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
