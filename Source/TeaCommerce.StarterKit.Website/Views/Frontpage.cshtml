@@ -1,0 +1,77 @@
+﻿@using System.Activities.Statements
+@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+  IPublishedContent currentPage = Model.Content;
+
+  List<IPublishedContent> carouselImages = currentPage.GetPropertyValue<List<IPublishedContent>>( "slider" );
+
+  int count = 0;
+  string carouselId = "homeCarousel";
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  List<IPublishedContent> products = currentPage.GetPropertyValue<List<IPublishedContent>>( "featuredProducts" );
+}
+@if ( carouselImages != null && carouselImages.Any() ) {
+  <div id="@carouselId" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      @foreach ( IPublishedContent image in carouselImages ) {
+        <li data-target="#@carouselId" data-slide-to="@count" class="@(count == 0 ? "active" : "")"></li>
+        count++;
+      }
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      @{
+      count = 0;
+      foreach ( IPublishedContent image in carouselImages ) {
+        <div class="item @(count == 0 ? "active" : "")">
+          <img src="@image.Url?width=2000&heightratio=0.5&mode=crop" alt="@image.Name">
+        </div>
+        count++;
+      }
+      }
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#@carouselId" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#@carouselId" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+}
+
+<div class="container">
+  <div class="row">
+    @foreach ( IPublishedContent product in products ) {
+      string name = product.GetPropertyValue<string>( "productName", true );
+      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
+      IPublishedContent image = product.GetPropertyValue<IPublishedContent>( "image" );
+
+      <div class="col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <a href="@product.Url">
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
+            </a>
+          }
+          <h3>@name</h3>
+          <p>@price.Formatted</p>
+          <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
+        </div>
+      </div>
+    }
+  </div>
+</div>

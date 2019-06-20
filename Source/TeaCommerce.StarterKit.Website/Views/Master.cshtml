@@ -1,0 +1,81 @@
+﻿@inherits UmbracoTemplatePage
+@{
+  Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tea Commerce Starter Kit</title>
+
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/Css/styles.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    var _storeId = @Model.Content.GetPropertyValue( "store", true );
+  </script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-26006614-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+<body>
+  <div class="container backoffice-link">
+    <a href="/umbraco/" class="h4">Check out the backoffice <small>and get a closer look at the setup. Use <strong>admin/1234</strong> to log in</small></a>
+  </div>
+  @Html.Partial( "Navigation/TopMenu" )
+
+
+  @RenderBody()
+
+
+  <div class="container">
+    <hr>
+
+    <footer>
+      <p>
+        <a href="http://teacommerce.net/" target="_blank">Tea Commerce Aps</a>
+        <span>R&#248;mersvej 19c</span>
+        <span>DK-7430 / Ikast</span>
+        <span>Denmark</span>
+        <a href="tel:+45 82 307 306">+45 82 307 306</a>
+        <a href="mailto:info@teacommerce.net">info@teacommerce.net</a>
+      </p>
+    </footer>
+  </div>
+  <!-- /container -->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+  <script src="/App_Plugins/TeaCommerce/Assets/Scripts/tea-commerce.min.js"></script>
+  <script src="/Scripts/product.js"></script>
+  <script src="/Scripts/validation.js"></script>
+  <script src="/Scripts/cart.js"></script>
+  <script src="/Scripts/teaCommerceEvents.js"></script>
+
+</body>
+</html>

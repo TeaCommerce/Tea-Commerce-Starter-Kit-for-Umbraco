@@ -1,0 +1,74 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+    
+    <ItemGroup>
+        <!-- We only want to build the install project when prepairing to package -->
+        <ProjectFiles Include="$(SourceDir)\TeaCommerce.StarterKit.Install\*.csproj" />
+    </ItemGroup>
+
+	<!-- GET BUILD VERSION NUMBER FROM FILE -->
+	<Target Name="GetBuildVersionNumber">  
+        <ReadLinesFromFile File="$(RootDir)\version.txt" >  
+			<Output TaskParameter="Lines" ItemName="Version"/>  
+        </ReadLinesFromFile>  
+		<PropertyGroup>
+			<BuildVersion>@(Version)</BuildVersion>
+			<BuildVersionMajor>$(BuildVersion.Split('.')[0])</BuildVersionMajor>
+			<BuildVersionMinor>$(BuildVersion.Split('.')[1])</BuildVersionMinor>
+            <BuildInformationalVersion>$(BuildVersion)</BuildInformationalVersion>
+            <BuildInformationalVersion Condition="'$(BuildConfig)'=='Debug'">$(BuildVersion)-alpha+$(BuildTimestamp)</BuildInformationalVersion>
+		</PropertyGroup>
+    </Target> 
+
+	<!-- UPDATE PROJECT ASSEMBLEY VERSION -->
+	<Target Name="UpdateAssemblyInfo" DependsOnTargets="GetBuildVersionNumber" Inputs="@(ProjectFiles)" Outputs="%(Identity).Dummy">
+        <ItemGroup>
+            <ProjectDirs Include="$(SourceDir)\TeaCommerce.StarterKit.*\" />
+        </ItemGroup>
+		<ItemGroup>   
+			<AssemblyAttributes Include="AssemblyVersion">
+				<_Parameter1>$(BuildVersionMajor).$(BuildVersionMinor).*</_Parameter1>
+			</AssemblyAttributes>
+			<AssemblyAttributes Include="AssemblyInformationalVersion">
+				<_Parameter1>$(BuildInformationalVersion)</_Parameter1>
+			</AssemblyAttributes>
+		</ItemGroup>
+		<WriteCodeFragment Language="C#" 
+			OutputFile="@(ProjectFiles->'%(RootDir)%(Directory)\Properties\VersionInfo.cs')" 
+			AssemblyAttributes="@(AssemblyAttributes)" />
+	</Target>
+  
+    <!-- CLEAN -->
+    <Target Name="Clean" DependsOnTargets="UpdateAssemblyInfo">
+        <ItemGroup>
+            <DirectoriesToRemove Include="$(ArtifactsDir)" Condition="Exists('$(ArtifactsDir)')" />
+        </ItemGroup>
+        <RemoveDir Directories="@(DirectoriesToRemove)" />
+    </Target>
+  
+    <!-- COMPILE -->
+    <Target Name="Compile" DependsOnTargets="Clean">
+        <MSBuild Targets="Rebuild" Projects="@(ProjectFiles)" Properties="Configuration=$(BuildConfig);" />
+    </Target>
+  
+    <!-- COPY FILES -->
+    <Target Name="CopyFiles" DependsOnTargets="Compile">
+        <ItemGroup>
+            <BinFiles Include="$(SourceDir)\TeaCommerce.StarterKit.Install\bin\$(BuildConfig)\TeaCommerce.StarterKit.Install.dll" />
+            <Scripts Include="$(SourceDir)\TeaCommerce.StarterKit.Website\Scripts\**" />
+            <Css Include="$(SourceDir)\TeaCommerce.StarterKit.Website\Css\**" />
+            <Views Include="$(SourceDir)\TeaCommerce.StarterKit.Website\Views\**\*.cshtml" />
+            <Assets Include="$(AssetsDir)\**\*" />
+            <GridViews Include="$(ArtifactsFilesDir)\Views\Partials\Grid\**\*.*" />
+        </ItemGroup>
+        <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(ArtifactsFilesDir)\bin\" />
+        <Copy SourceFiles="@(Scripts)" DestinationFolder="$(ArtifactsFilesDir)\Scripts" />
+	    <Copy SourceFiles="@(Css)" DestinationFolder="$(ArtifactsFilesDir)\Css" />
+        <Copy SourceFiles="@(Views)" DestinationFolder="$(ArtifactsFilesDir)\Views\%(RecursiveDir)" />
+        <Copy SourceFiles="@(Assets)" DestinationFolder="$(ArtifactsFilesDir)\Assets\%(RecursiveDir)" /> 	
+	    <Delete Files="@(GridViews)" />
+    </Target>
+
+    <!-- Main -->
+	<Target Name="Prepare" DependsOnTargets="CopyFiles"></Target>
+  
+</Project>
