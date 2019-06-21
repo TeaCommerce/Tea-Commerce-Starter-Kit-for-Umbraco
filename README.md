@@ -1,4 +1,4 @@
-# Starter kit for Tea Commerce for Umbraco
+# Tea Commerce Starter kit for Umbraco
 This starter kit gives you a great starting point for your next [umbraco ecommerce](http://teacommerce.net) project. This project is an [Umbraco CMS](http://umbraco.com) website with [Tea Commerce](http://teacommerce.net) installed and implemented. The starter kit features the basics for an e-commerce solution e.g. product lists, products and a cart flow. This makes the If you need The implementation can easily be extended to include more advance features
 
 ## How to use
