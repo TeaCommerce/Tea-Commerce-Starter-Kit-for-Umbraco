@@ -753,7 +753,7 @@
             <param name="username">The username of the user having their password changed</param>
             <param name="passwordModel"></param>
             <param name="membershipProvider"></param>
-            <returns></returns>        
+            <returns></returns>
         </member>
         <member name="M:Umbraco.Web.Editors.TemplateController.GetByAlias(System.String)">
             <summary>
@@ -977,6 +977,14 @@
             <summary>
             Returns true/false of whether redirect tracking is enabled or not
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.Editors.RedirectUrlManagementController.RedirectUrlsForContentItem(System.String)">
+            <summary>
+            This lists the RedirectUrls for a particular content item
+            Do we need to consider paging here?
+            </summary>
+            <param name="contentUdi">Udi of content item to retrieve RedirectUrls for</param>
             <returns></returns>
         </member>
         <member name="T:Umbraco.Web.Editors.AuthenticationController">
@@ -2847,50 +2855,18 @@
             Gets the features.
             </summary>
         </member>
-        <member name="T:Umbraco.Web.HealthCheck.Checks.DataIntegrity.DatabaseSchemaValidationHealthCheck">
-            <summary>
-            U4-9544 Health check to detect if the database has any missing indexes or constraints
-            </summary>
-        </member>
-        <member name="T:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck">
-            <summary>
-            This moves the functionality from the XmlIntegrity check dashboard into a health check
-            </summary>
-        </member>
-        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.GetStatus">
+        <member name="M:Umbraco.Web.HealthCheck.Checks.Services.SmtpCheck.GetStatus">
             <summary>
             Get the status for this health check
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.ExecuteAction(Umbraco.Web.HealthCheck.HealthCheckAction)">
+        <member name="M:Umbraco.Web.HealthCheck.Checks.Services.SmtpCheck.ExecuteAction(Umbraco.Web.HealthCheck.HealthCheckAction)">
             <summary>
             Executes the action and returns it's status
             </summary>
             <param name="action"></param>
             <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.CheckMedia">
-            <summary>
-            Checks the cmsContentXml table to see if the number of entries for media matches the number of media entities
-            </summary>
-            <returns></returns>
-            <remarks>
-            Further to just counting the data integrity, this also checks if the XML stored in the cmsContentXml table contains the correct
-            GUID identifier. In older versions of Umbraco, the GUID is not persisted to the content cache, that will cause problems in newer
-            versions of Umbraco, so the xml table would need a rebuild.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.CheckContent">
-            <summary>
-            Checks the cmsContentXml table to see if the number of entries for content matches the number of published content entities
-            </summary>
-            <returns></returns>
-            <remarks>
-            Further to just counting the data integrity, this also checks if the XML stored in the cmsContentXml table contains the correct
-            GUID identifier. In older versions of Umbraco, the GUID is not persisted to the content cache, that will cause problems in newer
-            versions of Umbraco, so the xml table would need a rebuild.
-            </remarks>
         </member>
         <member name="M:Umbraco.Web.HealthCheck.Checks.Security.BaseHttpHeaderCheck.GetStatus">
             <summary>
@@ -3031,19 +3007,6 @@
             <param name="value"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Web.HealthCheck.Checks.Services.SmtpCheck.GetStatus">
-            <summary>
-            Get the status for this health check
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Umbraco.Web.HealthCheck.Checks.Services.SmtpCheck.ExecuteAction(Umbraco.Web.HealthCheck.HealthCheckAction)">
-            <summary>
-            Executes the action and returns it's status
-            </summary>
-            <param name="action"></param>
-            <returns></returns>
-        </member>
         <member name="M:Umbraco.Web.HealthCheck.Checks.Permissions.FolderAndFilePermissionsCheck.GetStatus">
             <summary>
             Get the status for this health check
@@ -3056,6 +3019,46 @@
             </summary>
             <param name="action"></param>
             <returns></returns>
+        </member>
+        <member name="T:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck">
+            <summary>
+            This moves the functionality from the XmlIntegrity check dashboard into a health check
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.GetStatus">
+            <summary>
+            Get the status for this health check
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.ExecuteAction(Umbraco.Web.HealthCheck.HealthCheckAction)">
+            <summary>
+            Executes the action and returns it's status
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.CheckMedia">
+            <summary>
+            Checks the cmsContentXml table to see if the number of entries for media matches the number of media entities
+            </summary>
+            <returns></returns>
+            <remarks>
+            Further to just counting the data integrity, this also checks if the XML stored in the cmsContentXml table contains the correct
+            GUID identifier. In older versions of Umbraco, the GUID is not persisted to the content cache, that will cause problems in newer
+            versions of Umbraco, so the xml table would need a rebuild.
+            </remarks>
+        </member>
+        <member name="M:Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck.CheckContent">
+            <summary>
+            Checks the cmsContentXml table to see if the number of entries for content matches the number of published content entities
+            </summary>
+            <returns></returns>
+            <remarks>
+            Further to just counting the data integrity, this also checks if the XML stored in the cmsContentXml table contains the correct
+            GUID identifier. In older versions of Umbraco, the GUID is not persisted to the content cache, that will cause problems in newer
+            versions of Umbraco, so the xml table would need a rebuild.
+            </remarks>
         </member>
         <member name="M:Umbraco.Web.HealthCheck.HealthCheckAction.#ctor">
             <summary>
@@ -4811,12 +4814,13 @@
             Configure's model mappings for Data types
             </summary>
         </member>
-        <member name="M:Umbraco.Web.Models.Mapping.PreValueDisplayResolver.MapPreValueValuesToPreValueFields(Umbraco.Web.Models.ContentEditing.PreValueFieldDisplay[],System.Collections.Generic.IDictionary{System.String,System.Object})">
+        <member name="M:Umbraco.Web.Models.Mapping.PreValueDisplayResolver.MapPreValueValuesToPreValueFields(Umbraco.Web.Models.ContentEditing.PreValueFieldDisplay[],System.Collections.Generic.IDictionary{System.String,System.Object},System.String)">
             <summary>
-            Maps pre-values in the dictionary to the values for the fields
+            Maps pre-values in the dictionary to the values for the fields.
             </summary>
-            <param name="fields"></param>
-            <param name="preValues"></param>        
+            <param name="fields">The fields.</param>
+            <param name="preValues">The pre-values.</param>
+            <param name="editorAlias">The editor alias.</param>
         </member>
         <member name="T:Umbraco.Web.Models.Mapping.ContentPropertyBasicConverter`1">
             <summary>
@@ -5247,7 +5251,7 @@
         </member>
         <member name="M:Umbraco.Web.Models.Trees.TreeNodeExtensions.SetContainerStyle(Umbraco.Web.Models.Trees.TreeNode)">
             <summary>
-            Sets the node style to show that it is currently protected publicly
+            Sets the node style to show that it is a container type
             </summary>
             <param name="treeNode"></param>
         </member>
@@ -5504,6 +5508,36 @@
             <returns>
             A hash code for the current object.
             </returns>
+        </member>
+        <member name="F:Umbraco.Web.Models.ImageCropMode.Crop">
+            <summary>
+            Resizes the image to the given dimensions. If the set dimensions do not match the aspect ratio of the original image then the output is cropped to match the new aspect ratio.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Web.Models.ImageCropMode.Max">
+            <summary>
+            Resizes the image to the given dimensions. If the set dimensions do not match the aspect ratio of the original image then the output is resized to the maximum possible value in each direction while aintaining the original aspect ratio.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Web.Models.ImageCropMode.Stretch">
+            <summary>
+            Resizes the image to the given dimensions. If the set dimensions do not match the aspect ratio of the original image then the output is stretched to match the new aspect ratio.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Web.Models.ImageCropMode.Pad">
+            <summary>
+            Passing a single dimension will automatically preserve the aspect ratio of the original image. If the requested aspect ratio is different then the image will be padded to fit.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Web.Models.ImageCropMode.BoxPad">
+            <summary>
+            When upscaling an image the image pixels themselves are not resized, rather the image is padded to fit the given dimensions.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Web.Models.ImageCropMode.Min">
+            <summary>
+            Resizes the image until the shortest side reaches the set given dimension. This will maintain the aspect ratio of the original image. Upscaling is disabled in this mode and the original image will be returned if attempted.
+            </summary>
         </member>
         <member name="M:Umbraco.Web.Models.ImageCropData.Equals(Umbraco.Web.Models.ImageCropData)">
             <summary>
@@ -12277,6 +12311,16 @@
             This ensures that umbraco will look in the umbraco folders for views for this tree
             </remarks>
         </member>
+        <member name="M:Umbraco.Web.Trees.DataTypeTreeController.GetNonDeletableSystemDataTypeIds">
+            <summary>
+            Get all integer identifiers for the non-deletable system datatypes.
+            </summary>
+        </member>
+        <member name="M:Umbraco.Web.Trees.DataTypeTreeController.GetNonDeletableSystemListViewDataTypeIds">
+            <summary>
+            Get all integer identifiers for the non-deletable system listviews.
+            </summary>
+        </member>
         <member name="M:Umbraco.Web.Trees.FileSystemTreeController.OnRenderFileNode(Umbraco.Web.Models.Trees.TreeNode@)">
             <summary>
             Inheritors can override this method to modify the file node that is created.
@@ -15761,6 +15805,11 @@
             Applying this attribute to any webapi controller will ensure that it only contains one json formatter compatible with the angular json vulnerability prevention.
             </summary>
         </member>
+        <member name="M:Umbraco.Web.WebApi.Binders.BlueprintItemBinder.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
         <member name="M:Umbraco.Web.WebApi.Binders.MemberBinder.#ctor">
             <summary>
             Constructor
@@ -15955,6 +16004,15 @@
             <summary>
             Quickly split filters into different types 
             </summary>
+        </member>
+        <member name="T:Umbraco.Web.WebApi.Filters.HttpQueryStringModelBinder">
+            <summary>
+            Allows an Action to execute with an arbitrary number of QueryStrings
+            </summary>
+            <remarks>
+            Just like you can POST an arbitrary number of parameters to an Action, you can't GET an arbitrary number
+            but this will allow you to do it
+            </remarks>
         </member>
         <member name="T:Umbraco.Web.WebApi.Filters.OutgoingEditorModelEventAttribute">
             <summary>
@@ -16154,15 +16212,6 @@
             <summary>
             Returns true so that other filters can execute along with this one
             </summary>
-        </member>
-        <member name="T:Umbraco.Web.WebApi.Filters.HttpQueryStringFilterAttribute">
-            <summary>
-            Allows an Action to execute with an arbitrary number of QueryStrings
-            </summary>
-            <remarks>
-            Just like you can POST an arbitrary number of parameters to an Action, you can't GET an arbitrary number
-            but this will allow you to do it
-            </remarks>
         </member>
         <member name="T:Umbraco.Web.WebApi.Filters.OutgoingDateTimeFormatAttribute">
             <summary>
@@ -16617,12 +16666,13 @@
             Extension methods for the HttpRequest and HttpRequestBase objects
             </summary>
         </member>
-        <member name="M:Umbraco.Web.HttpRequestExtensions.CleanForXss(System.Web.HttpRequest,System.String)">
+        <member name="M:Umbraco.Web.HttpRequestExtensions.CleanForXss(System.Web.HttpRequest,System.String,System.String)">
             <summary>
             Extracts the value from the query string and cleans it to prevent xss attacks.
             </summary>
             <param name="request"></param>
             <param name="key"></param>
+            <param name="valueIfNotFound"></param>
             <returns></returns>        
         </member>
         <member name="M:Umbraco.Web.HttpRequestExtensions.GetItemAsString(System.Web.HttpRequest,System.String,System.String)">
@@ -18290,6 +18340,25 @@
             This code is pretty much the same as the underlying MVC code that writes out the form
             </remarks>
         </member>
+        <member name="M:Umbraco.Web.HtmlHelperRenderExtensions.GetRelatedLinkHtml(System.Web.Mvc.HtmlHelper,Umbraco.Web.Models.RelatedLink)">
+            <summary>
+            Renders an anchor element for a RelatedLink instance.
+            Format: &lt;a href=&quot;relatedLink.Link&quot; target=&quot;_blank/_self&quot;&gt;relatedLink.Caption&lt;/a&gt;
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="relatedLink">The RelatedLink instance</param>
+            <returns>An anchor element </returns>
+        </member>
+        <member name="M:Umbraco.Web.HtmlHelperRenderExtensions.GetRelatedLinkHtml(System.Web.Mvc.HtmlHelper,Umbraco.Web.Models.RelatedLink,System.Object)">
+            <summary>
+            Renders an anchor element for a RelatedLink instance, accepting htmlAttributes.
+            Format: &lt;a href=&quot;relatedLink.Link&quot; target=&quot;_blank/_self&quot; htmlAttributes&gt;relatedLink.Caption&lt;/a&gt;
+            </summary>
+            <param name="htmlHelper">The HTML helper instance that this method extends.</param>
+            <param name="relatedLink">The RelatedLink instance</param>
+            <param name="htmlAttributes">An object that contains the HTML attributes to set for the element.</param>
+            <returns></returns>
+        </member>
         <member name="M:Umbraco.Web.ModelStateExtensions.Merge(System.Web.Mvc.ModelStateDictionary,System.Web.Mvc.ModelStateDictionary,System.String)">
             <summary>
             Merges ModelState that has names matching the prefix
@@ -18389,7 +18458,7 @@
             </param>
             <returns></returns>
             <remarks>
-            To acheive this we temporarily change the output text writer of the current HttpResponse, then
+            To achieve this we temporarily change the output text writer of the current HttpResponse, then
               execute the controller via the handler which innevitably writes the result to the text writer
               that has been assigned to the response. Then we change the response textwriter back to the original
               before continuing .
@@ -19027,7 +19096,7 @@
         </member>
         <member name="M:Umbraco.Web.UmbracoHelper.Concatenate(System.Object[])">
             <summary>
-            Will take the first non-null value in the collection and return the value of it.
+            Joins any number of int/string/objects into one string
             </summary>
         </member>
         <member name="M:Umbraco.Web.UmbracoHelper.Join(System.String,System.Object[])">
@@ -20571,9 +20640,9 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
-        <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.feedback">
+        <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.p_feedback">
             <summary>
-            feedback control.
+            p_feedback control.
             </summary>
             <remarks>
             Auto-generated field.
@@ -20583,6 +20652,15 @@
         <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.p_mode">
             <summary>
             p_mode control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.p_setup">
+            <summary>
+            p_setup control.
             </summary>
             <remarks>
             Auto-generated field.
@@ -20724,15 +20802,6 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
-        <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.p_buttons">
-            <summary>
-            p_buttons control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
         <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.pane_pages">
             <summary>
             pane_pages control.
@@ -20835,6 +20904,15 @@
         <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.js">
             <summary>
             js control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:umbraco.presentation.umbraco.dialogs.protectPage.feedback_text">
+            <summary>
+            feedback_text control.
             </summary>
             <remarks>
             Auto-generated field.
