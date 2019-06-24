@@ -1,0 +1,40 @@
+﻿@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+  IPublishedContent currentPage = Model.Content,
+                    cartPage = currentPage.AncestorOrSelf( 1 ).Children.FirstOrDefault( c => c.DocumentTypeAlias == "cart" );
+}
+@if ( cartPage != null ) {
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  //Current order if there is one
+  Order cart = TC.GetCurrentOrder( storeId, false );
+
+  //Is the cart empty
+  bool cartEmpty = cart == null || cart.OrderLines.Count == 0;
+
+  string minicartCssClass = "pull-right", //Standard twitter bootstrap css class
+         goToCartCssClass = "btn btn-primary" + ( cartEmpty ? " disabled" : "" ), //Standard twitter bootstrap css classes
+         totalPrice = !cartEmpty ? cart.SubtotalPrice.Value.WithVatFormatted : TC.FormatPrice( storeId, 0 ).WithVatFormatted, //Get total price
+         quantity = !cartEmpty ? cart.TotalQuantity.ToString( "####" ) : "0"; //Get Quantity
+
+  //Set special minicart css classes
+  if ( cartEmpty ) {
+    minicartCssClass += " empty";
+  } else {
+    if ( cart.OrderLines.Count == 1 ) {
+      minicartCssClass += " oneItem";
+    }
+
+  }
+
+  <div id="minicart" class="@minicartCssClass">
+    <a class="@goToCartCssClass" href="@cartPage.Url">Go to cart</a>
+    <span>Quantity: <span class="badge quantity">@quantity</span></span>
+    <span>Total: <span class="badge totalPrice">@totalPrice</span></span>
+  </div>
+}

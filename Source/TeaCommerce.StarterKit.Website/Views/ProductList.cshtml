@@ -1,0 +1,36 @@
+﻿@using System.Globalization
+@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+  IPublishedContent currentPage = Model.Content;
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  List<IPublishedContent> products = currentPage.Children.ToList();
+}
+<div class="container">
+  <h1 class="page-header">@currentPage.Name</h1>
+  <div class="row">
+    @foreach ( IPublishedContent product in products ) {
+      string name = product.GetPropertyValue<string>( "productName", true );
+      Price price = TC.GetPrice( storeId, product.Id.ToString( CultureInfo.InvariantCulture ) );
+      IPublishedContent image = product.GetPropertyValue<IPublishedContent>( "image" );
+
+      <div class="col-sm-4 col-md-3">
+        <div class="product well well-sm text-center">
+          @if ( image != null ) {
+            <a href="@product.Url">
+              <img class="img-responsive img-thumbnail" src="@image.Url?width=300&heightratio=0.75&mode=crop"/>
+            </a>
+          }
+          <h3>@name</h3>
+          <p>@price.WithVatFormatted</p>
+          <a href="@product.Url" class="btn btn-primary btn-block">View more</a>
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1235424246_13e3046db9e64793a5bd7fa282f5de5e.cdC" compression="gzip" version="1235424246">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco_client/tree/treeicons.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vZGV2ZWxvcGVyL1JlbGF0aW9uVHlwZXMvVHJlZU1lbnUvQWN0aW9uRGVsZXRlUmVsYXRpb25UeXBlLmpzOy91bWJyYWNvL2RldmVsb3Blci9SZWxhdGlvblR5cGVzL1RyZWVNZW51L0FjdGlvbk5ld1JlbGF0aW9uVHlwZS5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1235424246_c4dd1db45f034f1ebda978971b31445c.cdJ" compression="gzip" version="1235424246">
+    <files>
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionDeleteRelationType.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionNewRelationType.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLzEuMS41L2FuZ3VsYXIubWluLmpzOy91bWJyYWNvL2xpYi91bmRlcnNjb3JlL3VuZGVyc2NvcmUtbWluLmpzOy91bWJyYWNvL2xpYi9tb21lbnQvbW9tZW50Lm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanM7L3VtYnJhY28vbGliL2pxdWVyeS11aS10b3VjaC1wdW5jaC9qcXVlcnkudWkudG91Y2gtcHVuY2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvMS4xLjUvYW5ndWxhci1jb29raWVzLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLW1vYmlsZS5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLXNhbml0aXplLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci9hbmd1bGFyLXVpLXNvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXRhYmRyb3AvYm9vdHN0cmFwLXRhYmRyb3AuanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVVtYkNsaWVudE1nci5qczsvdW1icmFjby9saWIvdW1icmFjby9MZWdhY3lTcGVlY2hCdWJibGUuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLnNlY3VyaXR5LmpzOy91bWJyYWNvL2pzL3VtYnJhY28uY29udHJvbGxlcnMuanM7L3VtYnJhY28vanMvcm91dGVzLmpzOy91bWJyYWNvL2pzL2luaXQuanM7L0FwcF9QbHVnaW5zL01vZGVsc0J1aWxkZXIvbW9kZWxzYnVpbGRlci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9Nb2RlbHNCdWlsZGVyL21vZGVsc2J1aWxkZXIucmVzb3VyY2UuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9zdG9yZS1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3ZhdC1ncm91cC1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3N0b2NrLW1hbmFnZW1lbnQuY29udHJvbGxlci5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1235424246_977d866896e246f3b6e23d9beacc28de.cdJ" compression="gzip" version="1235424246">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular.min.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-cookies.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-mobile.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-sanitize.min.js" />
+      <file name="/umbraco/lib/angular/angular-ui-sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/bootstrap-tabdrop/bootstrap-tabdrop.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacyUmbClientMgr.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.security.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.resource.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/store-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/vat-group-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/stock-management.controller.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9qcy5jb29raWUuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UZWFDb21tZXJjZS9Qcm9wZXJ0eUVkaXRvcnMvdmFyaWFudC1lZGl0b3Itbm9kZS10eXBlLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1235424246_aebe78c116a44541ba85baa1d9e84395.cdJ" compression="gzip" version="1235424246">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/js.cookie.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor-node-type.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jc3M7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1235424246_a04b6af96807494a94f49c2647650d3a.cdC" compression="gzip" version="1235424246">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\511514192_d891a88facec4f52b55509ce1dedcd47.cdC" compression="gzip" version="511514192">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco_client/tree/treeicons.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vZGV2ZWxvcGVyL1JlbGF0aW9uVHlwZXMvVHJlZU1lbnUvQWN0aW9uRGVsZXRlUmVsYXRpb25UeXBlLmpzOy91bWJyYWNvL2RldmVsb3Blci9SZWxhdGlvblR5cGVzL1RyZWVNZW51L0FjdGlvbk5ld1JlbGF0aW9uVHlwZS5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\511514192_acf09d50416a464dbaf8c9ada5f0b7d1.cdJ" compression="gzip" version="511514192">
+    <files>
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionDeleteRelationType.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionNewRelationType.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLzEuMS41L2FuZ3VsYXIubWluLmpzOy91bWJyYWNvL2xpYi91bmRlcnNjb3JlL3VuZGVyc2NvcmUtbWluLmpzOy91bWJyYWNvL2xpYi9tb21lbnQvbW9tZW50Lm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanM7L3VtYnJhY28vbGliL2pxdWVyeS11aS10b3VjaC1wdW5jaC9qcXVlcnkudWkudG91Y2gtcHVuY2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvMS4xLjUvYW5ndWxhci1jb29raWVzLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLW1vYmlsZS5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLXNhbml0aXplLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci9hbmd1bGFyLXVpLXNvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXRhYmRyb3AvYm9vdHN0cmFwLXRhYmRyb3AuanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVVtYkNsaWVudE1nci5qczsvdW1icmFjby9saWIvdW1icmFjby9MZWdhY3lTcGVlY2hCdWJibGUuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLnNlY3VyaXR5LmpzOy91bWJyYWNvL2pzL3VtYnJhY28uY29udHJvbGxlcnMuanM7L3VtYnJhY28vanMvcm91dGVzLmpzOy91bWJyYWNvL2pzL2luaXQuanM7L0FwcF9QbHVnaW5zL01vZGVsc0J1aWxkZXIvbW9kZWxzYnVpbGRlci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9Nb2RlbHNCdWlsZGVyL21vZGVsc2J1aWxkZXIucmVzb3VyY2UuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9zdG9yZS1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3ZhdC1ncm91cC1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3N0b2NrLW1hbmFnZW1lbnQuY29udHJvbGxlci5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\511514192_6f29cc2c881042b09fe6dc14017d59b7.cdJ" compression="gzip" version="511514192">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular.min.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-cookies.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-mobile.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-sanitize.min.js" />
+      <file name="/umbraco/lib/angular/angular-ui-sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/bootstrap-tabdrop/bootstrap-tabdrop.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacyUmbClientMgr.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.security.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.resource.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/store-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/vat-group-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/stock-management.controller.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9qcy5jb29raWUuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UZWFDb21tZXJjZS9Qcm9wZXJ0eUVkaXRvcnMvdmFyaWFudC1lZGl0b3Itbm9kZS10eXBlLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\511514192_4f0f2b56bb034cd7847c28ea37582fcd.cdJ" compression="gzip" version="511514192">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/js.cookie.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor-node-type.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jc3M7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\511514192_6c9d8fa15c1b4e639e0b4e50777574aa.cdC" compression="gzip" version="511514192">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL2pRdWVyeS9qcXVlcnkuYmEtYmJxLm1pbi5qczsvdW1icmFjb19jbGllbnQvdWkvalF1ZXJ5V3Jlc2l6ZS5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvanF1ZXJ5LnNpbXBsZW1vZGFsLjEuNC4xLmN1c3RvbS5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS5jb29raWUuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0pRdWVyeS9qcXVlcnkubWV0YWRhdGEubWluLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9qUXVlcnkvanF1ZXJ5LmhvdGtleXMuanM7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_9ee99327f3a842ed9726e438979449cc.cdJ" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco_client/Application/jQuery/jquery.ba-bbq.min.js" />
+      <file name="/umbraco_client/ui/jQueryWresize.js" />
+      <file name="/umbraco_client/modal/jquery.simplemodal.1.4.1.custom.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.cookie.js" />
+      <file name="/umbraco_client/Application/JQuery/jquery.metadata.min.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.hotkeys.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29DbGllbnRNYW5hZ2VyLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_ed486c04b2a0495594a683efd81f55d9.cdJ" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco_client/Application/UmbracoClientManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeS5qczsvdW1icmFjb19jbGllbnQvdWkvanF1ZXJ5dWkuanM7L3VtYnJhY28vbGliL2pxdWVyeS1taWdyYXRlL2pxdWVyeS1taWdyYXRlLm1pbi5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_6d2caffaa24545aa951f8f968992c27f.cdJ" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco_client/ui/jquery.js" />
+      <file name="/umbraco_client/ui/jqueryui.js" />
+      <file name="/umbraco/lib/jquery-migrate/jquery-migrate.min.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL05hbWVzcGFjZU1hbmFnZXIuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29VdGlscy5qczsvdW1icmFjb19jbGllbnQvdWkvanNvbjIuanM7L3VtYnJhY29fY2xpZW50L3VpL2Jhc2UyLmpzOy91bWJyYWNvX2NsaWVudC9VSS9rbm9ja291dC5qczsvdW1icmFjb19jbGllbnQvVUkva25vY2tvdXQubWFwcGluZy5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_19e0134126304bc788b397fcf9116779.cdJ" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco_client/Application/NamespaceManager.js" />
+      <file name="/umbraco_client/Application/UmbracoUtils.js" />
+      <file name="/umbraco_client/ui/json2.js" />
+      <file name="/umbraco_client/ui/base2.js" />
+      <file name="/umbraco_client/UI/knockout.js" />
+      <file name="/umbraco_client/UI/knockout.mapping.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0V4dGVuc2lvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29BcHBsaWNhdGlvbkFjdGlvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0hpc3RvcnlNYW5hZ2VyLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_627f85992e1b48ff89be6d22ce685a8d.cdJ" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco_client/Application/Extensions.js" />
+      <file name="/umbraco_client/Application/UmbracoApplicationActions.js" />
+      <file name="/umbraco_client/Application/HistoryManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZGlhbG9nL2RpYWxvZy5jc3M7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuY3NzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9zdHlsZXMuY3NzOy91bWJyYWNvL2Fzc2V0cy9jc3MvdW1icmFjby5jc3M7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_c81045d0d6074192881da718f901afdd.cdC" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.css" />
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.css" />
+      <file name="/umbraco_client/CodeArea/styles.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZWRpdC9tYXRjaGJyYWNrZXRzLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL21vZGUvaHRtbC9odG1sLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL2FkZG9uL3NlYXJjaC9zZWFyY2guanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vc2VhcmNoL3NlYXJjaGN1cnNvci5qczsvdW1icmFjby9saWIvQ29kZU1pcnJvci9hZGRvbi9kaWFsb2cvZGlhbG9nLmpzOy91bWJyYWNvX2NsaWVudC9tb2RhbC9tb2RhbC5qczsvdW1icmFjb19jbGllbnQvdWkvZGVmYXVsdC5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwL2pzL2Jvb3RzdHJhcC4yLjMuMi5taW4uanM7L3VtYnJhY28vbGliL3VtYnJhY28vY29tcGF0LmpzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9qYXZhc2NyaXB0LmpzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9VbWJyYWNvRWRpdG9yLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9qUXVlcnkvanF1ZXJ5LWZpZWxkc2VsZWN0aW9uLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\368141329_a4da45a32b0e412e95217396843992c2.cdJ" compression="gzip" version="368141329">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/edit/matchbrackets.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/search.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/searchcursor.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.js" />
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+      <file name="/umbraco_client/CodeArea/javascript.js" />
+      <file name="/umbraco_client/CodeArea/UmbracoEditor.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery-fieldselection.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1239161221_64d66f86b65940b18094472b5c8b7f15.cdC" compression="gzip" version="1239161221">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco_client/tree/treeicons.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLzEuMS41L2FuZ3VsYXIubWluLmpzOy91bWJyYWNvL2xpYi91bmRlcnNjb3JlL3VuZGVyc2NvcmUtbWluLmpzOy91bWJyYWNvL2xpYi9tb21lbnQvbW9tZW50Lm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanM7L3VtYnJhY28vbGliL2pxdWVyeS11aS10b3VjaC1wdW5jaC9qcXVlcnkudWkudG91Y2gtcHVuY2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvMS4xLjUvYW5ndWxhci1jb29raWVzLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLW1vYmlsZS5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLXNhbml0aXplLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci9hbmd1bGFyLXVpLXNvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXRhYmRyb3AvYm9vdHN0cmFwLXRhYmRyb3AuanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVVtYkNsaWVudE1nci5qczsvdW1icmFjby9saWIvdW1icmFjby9MZWdhY3lTcGVlY2hCdWJibGUuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLnNlY3VyaXR5LmpzOy91bWJyYWNvL2pzL3VtYnJhY28uY29udHJvbGxlcnMuanM7L3VtYnJhY28vanMvcm91dGVzLmpzOy91bWJyYWNvL2pzL2luaXQuanM7L0FwcF9QbHVnaW5zL01vZGVsc0J1aWxkZXIvbW9kZWxzYnVpbGRlci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9Nb2RlbHNCdWlsZGVyL21vZGVsc2J1aWxkZXIucmVzb3VyY2UuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9zdG9yZS1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3ZhdC1ncm91cC1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3N0b2NrLW1hbmFnZW1lbnQuY29udHJvbGxlci5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1239161221_71e70ceb522345af83321c34d87c5358.cdJ" compression="gzip" version="1239161221">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular.min.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-cookies.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-mobile.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-sanitize.min.js" />
+      <file name="/umbraco/lib/angular/angular-ui-sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/bootstrap-tabdrop/bootstrap-tabdrop.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacyUmbClientMgr.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.security.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.resource.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/store-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/vat-group-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/stock-management.controller.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vZGV2ZWxvcGVyL1JlbGF0aW9uVHlwZXMvVHJlZU1lbnUvQWN0aW9uRGVsZXRlUmVsYXRpb25UeXBlLmpzOy91bWJyYWNvL2RldmVsb3Blci9SZWxhdGlvblR5cGVzL1RyZWVNZW51L0FjdGlvbk5ld1JlbGF0aW9uVHlwZS5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1239161221_077ae2fca1bf41059f71f7e486a88f88.cdJ" compression="gzip" version="1239161221">
+    <files>
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionDeleteRelationType.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionNewRelationType.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9qcy5jb29raWUuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UZWFDb21tZXJjZS9Qcm9wZXJ0eUVkaXRvcnMvdmFyaWFudC1lZGl0b3Itbm9kZS10eXBlLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1239161221_6e00f67d88ee44f19fda9b49606a7664.cdJ" compression="gzip" version="1239161221">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/js.cookie.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor-node-type.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jc3M7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\1239161221_5fc4954cd66142af917b21e5eaaf7937.cdC" compression="gzip" version="1239161221">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeS5qczsvdW1icmFjb19jbGllbnQvdWkvanF1ZXJ5dWkuanM7L3VtYnJhY28vbGliL2pxdWVyeS1taWdyYXRlL2pxdWVyeS1taWdyYXRlLm1pbi5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_888df09115c74ac08e96ad6b6d864170.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco_client/ui/jquery.js" />
+      <file name="/umbraco_client/ui/jqueryui.js" />
+      <file name="/umbraco/lib/jquery-migrate/jquery-migrate.min.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL05hbWVzcGFjZU1hbmFnZXIuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29VdGlscy5qczsvdW1icmFjb19jbGllbnQvdWkvanNvbjIuanM7L3VtYnJhY29fY2xpZW50L3VpL2Jhc2UyLmpzOy91bWJyYWNvX2NsaWVudC9VSS9rbm9ja291dC5qczsvdW1icmFjb19jbGllbnQvVUkva25vY2tvdXQubWFwcGluZy5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_fc51dccb6e8143f0a93e821ce34baad9.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco_client/Application/NamespaceManager.js" />
+      <file name="/umbraco_client/Application/UmbracoUtils.js" />
+      <file name="/umbraco_client/ui/json2.js" />
+      <file name="/umbraco_client/ui/base2.js" />
+      <file name="/umbraco_client/UI/knockout.js" />
+      <file name="/umbraco_client/UI/knockout.mapping.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0V4dGVuc2lvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29BcHBsaWNhdGlvbkFjdGlvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0hpc3RvcnlNYW5hZ2VyLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_c4673fbc792f4dcd83508dc5e90cf6d0.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco_client/Application/Extensions.js" />
+      <file name="/umbraco_client/Application/UmbracoApplicationActions.js" />
+      <file name="/umbraco_client/Application/HistoryManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29DbGllbnRNYW5hZ2VyLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_ba80a45d2999424fabfae77446bc0515.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco_client/Application/UmbracoClientManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL2pRdWVyeS9qcXVlcnkuYmEtYmJxLm1pbi5qczsvdW1icmFjb19jbGllbnQvdWkvalF1ZXJ5V3Jlc2l6ZS5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvanF1ZXJ5LnNpbXBsZW1vZGFsLjEuNC4xLmN1c3RvbS5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS5jb29raWUuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0pRdWVyeS9qcXVlcnkubWV0YWRhdGEubWluLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9qUXVlcnkvanF1ZXJ5LmhvdGtleXMuanM7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_548bb00a019e453e90e1c9945ac9a25b.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco_client/Application/jQuery/jquery.ba-bbq.min.js" />
+      <file name="/umbraco_client/ui/jQueryWresize.js" />
+      <file name="/umbraco_client/modal/jquery.simplemodal.1.4.1.custom.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.cookie.js" />
+      <file name="/umbraco_client/Application/JQuery/jquery.metadata.min.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.hotkeys.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZGlhbG9nL2RpYWxvZy5jc3M7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuY3NzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9zdHlsZXMuY3NzOy91bWJyYWNvL2Fzc2V0cy9jc3MvdW1icmFjby5jc3M7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_83449e0fc09c447fba1f3066c3868fd3.cdC" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.css" />
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.css" />
+      <file name="/umbraco_client/CodeArea/styles.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZWRpdC9tYXRjaGJyYWNrZXRzLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL21vZGUvaHRtbC9odG1sLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL2FkZG9uL3NlYXJjaC9zZWFyY2guanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vc2VhcmNoL3NlYXJjaGN1cnNvci5qczsvdW1icmFjby9saWIvQ29kZU1pcnJvci9hZGRvbi9kaWFsb2cvZGlhbG9nLmpzOy91bWJyYWNvX2NsaWVudC9tb2RhbC9tb2RhbC5qczsvdW1icmFjb19jbGllbnQvdWkvZGVmYXVsdC5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwL2pzL2Jvb3RzdHJhcC4yLjMuMi5taW4uanM7L3VtYnJhY28vbGliL3VtYnJhY28vY29tcGF0LmpzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9qYXZhc2NyaXB0LmpzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9VbWJyYWNvRWRpdG9yLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9qUXVlcnkvanF1ZXJ5LWZpZWxkc2VsZWN0aW9uLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_edb4eccea5a84ceeb6649f16b8e61382.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/edit/matchbrackets.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/search.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/searchcursor.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.js" />
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+      <file name="/umbraco_client/CodeArea/javascript.js" />
+      <file name="/umbraco_client/CodeArea/UmbracoEditor.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery-fieldselection.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_d555cd0879b447888f86474f9a71b88c.cdC" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L21vZGFsL21vZGFsLmpzOy91bWJyYWNvX2NsaWVudC91aS9kZWZhdWx0LmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvdW1icmFjby9jb21wYXQuanM7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_c790e9945da1464b99b5b265b1b66be3.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_f4d18074593b4939a7dc8ca9b6675d28.cdC" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco_client/tree/treeicons.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vZGV2ZWxvcGVyL1JlbGF0aW9uVHlwZXMvVHJlZU1lbnUvQWN0aW9uRGVsZXRlUmVsYXRpb25UeXBlLmpzOy91bWJyYWNvL2RldmVsb3Blci9SZWxhdGlvblR5cGVzL1RyZWVNZW51L0FjdGlvbk5ld1JlbGF0aW9uVHlwZS5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_19efed971f8e4ca5bb3d32c09f6aaeba.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionDeleteRelationType.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionNewRelationType.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9qcy5jb29raWUuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UZWFDb21tZXJjZS9Qcm9wZXJ0eUVkaXRvcnMvdmFyaWFudC1lZGl0b3Itbm9kZS10eXBlLmpzOw" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_add3d1e7f892403fa670aee7b3022489.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/js.cookie.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor-node-type.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLzEuMS41L2FuZ3VsYXIubWluLmpzOy91bWJyYWNvL2xpYi91bmRlcnNjb3JlL3VuZGVyc2NvcmUtbWluLmpzOy91bWJyYWNvL2xpYi9tb21lbnQvbW9tZW50Lm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanM7L3VtYnJhY28vbGliL2pxdWVyeS11aS10b3VjaC1wdW5jaC9qcXVlcnkudWkudG91Y2gtcHVuY2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvMS4xLjUvYW5ndWxhci1jb29raWVzLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLW1vYmlsZS5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLXNhbml0aXplLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci9hbmd1bGFyLXVpLXNvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXRhYmRyb3AvYm9vdHN0cmFwLXRhYmRyb3AuanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVVtYkNsaWVudE1nci5qczsvdW1icmFjby9saWIvdW1icmFjby9MZWdhY3lTcGVlY2hCdWJibGUuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLnNlY3VyaXR5LmpzOy91bWJyYWNvL2pzL3VtYnJhY28uY29udHJvbGxlcnMuanM7L3VtYnJhY28vanMvcm91dGVzLmpzOy91bWJyYWNvL2pzL2luaXQuanM7L0FwcF9QbHVnaW5zL01vZGVsc0J1aWxkZXIvbW9kZWxzYnVpbGRlci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9Nb2RlbHNCdWlsZGVyL21vZGVsc2J1aWxkZXIucmVzb3VyY2UuanM7L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy9zdG9yZS1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3ZhdC1ncm91cC1waWNrZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVGVhQ29tbWVyY2UvUHJvcGVydHlFZGl0b3JzL3N0b2NrLW1hbmFnZW1lbnQuY29udHJvbGxlci5qczs" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_e9dd6a3acc964a2ebef683c815594048.cdJ" compression="gzip" version="868646437">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular.min.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-cookies.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-mobile.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-sanitize.min.js" />
+      <file name="/umbraco/lib/angular/angular-ui-sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/bootstrap-tabdrop/bootstrap-tabdrop.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacyUmbClientMgr.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.security.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.resource.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/store-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/vat-group-picker.controller.js" />
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/stock-management.controller.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RlYUNvbW1lcmNlL1Byb3BlcnR5RWRpdG9ycy92YXJpYW50LWVkaXRvci5jc3M7" file="C:\Users\Matt\Storage\OutfieldDigital\OutfieldDigital\TeaCommerce\StarterKit\Source\TeaCommerce.StarterKit.Website\App_Data\TEMP\ClientDependency\868646437_c8f6f5d0f68748eba62b766ae81a7868.cdC" compression="gzip" version="868646437">
+    <files>
+      <file name="/App_Plugins/TeaCommerce/PropertyEditors/variant-editor.css" />
+    </files>
+  </item>
+</map>

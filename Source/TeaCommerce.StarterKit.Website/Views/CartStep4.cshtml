@@ -1,0 +1,318 @@
+﻿@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = Model.Content;
+  IPublishedContent prevStep = currentPage.PrecedingSibling();
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer accept">
+    <h1>Accept your order</h1>
+    <div class="form-horizontal">
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Payment information</h3>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "company" ]</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">First name</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "firstName" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Last name</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "lastName" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Address</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "streetAddress" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "zipCode" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">City</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "city" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">E-mail</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "email" ]</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Telephone</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@order.Properties[ "phone" ]</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <p class="form-control-static">@TC.GetCountry( storeId, order.PaymentInformation.CountryId ).Name</p>
+              </div>
+            </div>
+
+            @if ( order.PaymentInformation.CountryRegionId != null ) {
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Region</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@TC.GetCountryRegion( storeId, order.PaymentInformation.CountryRegionId.Value ).Name</p>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="col-sm-6">
+          @if ( !string.IsNullOrEmpty( order.Properties[ "shipping_company" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "attentionShipping" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_streetAddress" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_zipCode" ] )
+                || !string.IsNullOrEmpty( order.Properties[ "shipping_city" ] ) ) {
+            <div class="well">
+              <h3>Shipping information</h3>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Company</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_company" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">First name</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_firstName" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Last name</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_lastName" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Address</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_streetAddress" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">Zip code</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_zipCode" ]</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-md-3 control-label">City</label>
+                <div class="col-sm-8 col-md-9">
+                  <p class="form-control-static">@order.Properties[ "shipping_city" ]</p>
+                </div>
+              </div>
+
+              @if ( order.ShipmentInformation.CountryId != null ) {
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 control-label">Country</label>
+                  <div class="col-sm-8 col-md-9">
+                    <p class="form-control-static">@TC.GetCountry( storeId, order.ShipmentInformation.CountryId.Value ).Name</p>
+                  </div>
+                </div>
+              }
+
+              @if ( order.ShipmentInformation.CountryRegionId != null ) {
+                <div class="form-group">
+                  <label class="col-sm-4 col-md-3 control-label">Region</label>
+                  <div class="col-sm-8 col-md-9">
+                    <p class="form-control-static">@TC.GetCountryRegion( storeId, order.ShipmentInformation.CountryRegionId.Value ).Name</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="col-xs-12">Comments</label>
+            <div class="col-xs-12">
+              <p class="form-control-static">@order.Properties[ "comments" ]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orderContent">
+      <div class="row hidden-xs">
+
+        <div class="col col-lg-6 col-md-5 col-sm-4">
+          Product
+        </div>
+        <div class="col col-sm-2">
+          Unit price
+        </div>
+        <div class="col col-lg-2 col-md-3 col-sm-4 text-center">
+          Quantity
+        </div>
+        <div class="col col-sm-2 text-right">
+          Total
+        </div>
+      </div>
+      <div class="orderlines">
+        @foreach ( OrderLine orderLine in order.OrderLines ) {
+          IPublishedContent productContent = Umbraco.TypedContent( orderLine.ProductIdentifier );
+          <div class="row orderline">
+            <div class="col col-lg-6 col-md-5 col-sm-4">
+              <span class="hidden-sm hidden-md hidden-lg">Product: </span>@orderLine.Name
+            </div>
+            <div class="col col-sm-2">
+              <span class="xs-right">
+                @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.UnitPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
+            </div>
+            <div class="col col-lg-2 col-md-3 col-sm-4 quantity text-center">
+              <span class="xs-right">
+                @orderLine.Quantity.ToString( "0.####" )
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Quantity: </span>
+            </div>
+            <div class="col col-sm-2 text-right">
+              <span class="xs-right">
+                @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.TotalPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Subtotal
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.SubtotalPrice.Discount.Value > 0M ) {
+            <text>(</text>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.SubtotalPrice.Value
+        </div>
+      </div>
+      @if ( order.ShipmentInformation.ShippingMethodId != null ) {
+        ShippingMethod shippingMethod = TC.GetShippingMethod( storeId, order.ShipmentInformation.ShippingMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Shipping (@shippingMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.ShipmentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.PaymentInformation.PaymentMethodId != null ) {
+        PaymentMethod paymentMethod = TC.GetPaymentMethod( storeId, order.PaymentInformation.PaymentMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Payment (@paymentMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.PaymentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            @(order.GiftCards.Count > 1 ? "Gift cards" : "Gift card")
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @order.TotalPrice.GiftCardsAmount
+          </div>
+        </div>
+      }
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Total incl. VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.TotalPrice.WithPreviousDiscounts.Value != order.TotalPrice.Value.Value ) {
+            <text>(</text>
+            <s>@order.TotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
+    </div>
+
+    @if ( order.DiscountCodes.Any() ) {
+      <div class="discountCodes">
+        <p>Your discount codes: Discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
+      </div>
+    }
+    <div class="">
+      <label class="">
+        <input type="checkbox" name="options" id="acceptConditions" autocomplete="off">
+        Please accept our terms and conditions
+      </label>
+    </div>
+    <nav class="navbar">
+      @Html.Raw( TC.GeneratePaymentForm( storeId, "<button type=\"submit\" class=\"btn btn-success\">Accept and pay</button>" ) )
+      <a href="@prevStep.Url" class="btn btn-default">Back</a>
+    </nav>
+  </div>
+}

@@ -1,0 +1,37 @@
+﻿@inherits UmbracoTemplatePage
+@{
+  Layout = "Master.cshtml";
+
+  IPublishedContent currenContent = Model.Content,
+    cart = currenContent.AncestorOrSelf( "cart" );
+
+  IReadOnlyList<IPublishedContent> cartSteps = cart.Children.Where( c => c.DocumentTypeAlias == "cartStep" ).ToList();
+  int activeStep = cart.Id == currenContent.Id ? 1 : cart.Children.IndexOf( cartSteps.First( c => c.Id == currenContent.Id ) ) + 2;
+}
+
+<div class="container cartTop">
+  <div class="input-group">
+    @if ( activeStep > 1 ) {
+      <a href="@cart.Url" class="input-group-addon">@cart.Name</a>
+    } else {
+      <span class="input-group-addon">@cart.Name</span>
+    }
+    @{
+      int cartStepCount = 2;
+      foreach ( IPublishedContent cartStep in cartSteps ) {
+        string cartStepCssClass = "input-group-addon";
+        cartStepCssClass += cartStepCount < activeStep ? " inpath" : "";
+        cartStepCssClass += cartStepCount == activeStep ? " active" : "";
+        if ( cartStepCount < activeStep ) {
+          <a href="@cartStep.Url" class="@cartStepCssClass">@cartStep.Name</a>
+        } else {
+          <span class="@cartStepCssClass">@cartStep.Name</span>
+        }
+        cartStepCount++;
+      }
+    }
+  </div>
+
+</div>
+
+@RenderBody()

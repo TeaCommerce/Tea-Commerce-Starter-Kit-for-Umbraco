@@ -1,0 +1,200 @@
+﻿@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = Model.Content;
+  IPublishedContent nextStep = currentPage.Children.FirstOrDefault();
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer content">
+    <h1>Your cart</h1>
+    <div class="orderContent">
+      <div class="row hidden-xs">
+
+        <div class="col col-lg-6 col-md-5 col-sm-4">
+          Product
+        </div>
+        <div class="col col-sm-2">
+          Unit price
+        </div>
+        <div class="col col-lg-2 col-md-3 col-sm-4 text-center">
+          Quantity
+        </div>
+        <div class="col col-sm-2 text-right">
+          Total
+        </div>
+      </div>
+      <div class="orderlines">
+        @foreach ( OrderLine orderLine in order.OrderLines ) {
+          IPublishedContent productContent = Umbraco.TypedContent( orderLine.ProductIdentifier );
+          <div class="row orderline">
+            <div class="col col-lg-6 col-md-5 col-sm-4">
+              <span class="hidden-sm hidden-md hidden-lg">Product: </span>@orderLine.Name
+            </div>
+            <div class="col col-sm-2">
+              <span class="xs-right">
+                @if ( orderLine.UnitPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.UnitPrice.WithoutDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.UnitPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Unit price: </span>
+            </div>
+            <div class="col col-lg-2 col-md-3 col-sm-4 quantity text-center">
+              <span class="hidden-sm hidden-md hidden-lg">Quantity: </span>
+              <div class="input-group">
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity, overwriteQuantity : overwriteQuantity" />
+                  <input name="overwriteQuantity" type="hidden" value="true" />
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <input type="number" name="quantity" class="form-control" value="@orderLine.Quantity.ToString( "0.####" )" pattern="[0-9]*" min="1" />
+                </form>
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity" />
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <input name="quantity" type="hidden" value="-1" />
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>
+                </form>
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="AddOrUpdateOrderLine" type="hidden" value="orderLineId : orderLineId, quantity : quantity" />
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <input name="quantity" type="hidden" value="1" />
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+                </form>
+                <form action="/base/TC/FormPost.aspx" method="post">
+                  <input name="RemoveOrderLine" type="hidden" value="orderLineId : orderLineId" />
+                  <input name="storeId" type="hidden" value="@storeId"/>
+                  <input name="orderLineId" type="hidden" value="@orderLine.Id"/>
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
+                </form>
+
+              </div>
+            </div>
+            <div class="col col-sm-2 text-right">
+              <span class="xs-right">
+                @if ( orderLine.TotalPrice.Discount.Value > 0M ) {
+                  <text>(</text>
+                  <s>@orderLine.TotalPrice.WithPreviousDiscounts</s>
+                  <text>)</text>
+                }
+                @orderLine.TotalPrice.Value
+              </span>
+              <span class="hidden-sm hidden-md hidden-lg xs-left">Total price: </span>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Subtotal
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.SubtotalPrice.Discount.Value > 0M ) {
+            <text>(</text>
+            <s>@order.SubtotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.SubtotalPrice.Value
+        </div>
+      </div>
+      @if ( order.ShipmentInformation.ShippingMethodId != null ) {
+        ShippingMethod shippingMethod = TC.GetShippingMethod( storeId, order.ShipmentInformation.ShippingMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Shipping (@shippingMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.ShipmentInformation.TotalPrice.WithoutDiscounts.Value != order.ShipmentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.ShipmentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.ShipmentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.PaymentInformation.PaymentMethodId != null ) {
+        PaymentMethod paymentMethod = TC.GetPaymentMethod( storeId, order.PaymentInformation.PaymentMethodId.Value );
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            Payment (@paymentMethod.Name)
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            @if ( order.PaymentInformation.TotalPrice.WithoutDiscounts.Value != order.PaymentInformation.TotalPrice.Value.Value ) {
+              <text>(</text>
+              <s>@order.PaymentInformation.TotalPrice.WithoutDiscounts</s>
+              <text>)</text>
+            }
+            @order.PaymentInformation.TotalPrice.Value
+          </div>
+        </div>
+      }
+      @if ( order.TotalPrice.GiftCardsAmount.Value > 0M ) {
+        <div class="row">
+          <div class="col col-sm-10 col-xs-8 text-right">
+            @(order.GiftCards.Count > 1 ? "Gift cards" : "Gift card")
+          </div>
+          <div class="col col-sm-2 col-xs-4 text-right">
+            -@order.TotalPrice.GiftCardsAmount
+          </div>
+        </div>
+      }
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          Total incl. VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @if ( order.TotalPrice.WithPreviousDiscounts.Value != order.TotalPrice.Value.Value ) {
+            <text>(</text>
+            <s>@order.TotalPrice.WithPreviousDiscounts</s>
+            <text>)</text>
+          }
+          @order.TotalPrice
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-10 col-xs-8 text-right">
+          VAT
+        </div>
+        <div class="col col-sm-2 col-xs-4 text-right">
+          @order.TotalPrice.Value.VatFormatted
+        </div>
+      </div>
+    </div>
+
+    <div class="discountCodes">
+      @if ( order.DiscountCodes.Any() ) {
+        <p>Your discount codes: @string.Join( ", ", order.DiscountCodes.Select( d => "\"" + d.Code + "\"" ) )</p>
+      }
+
+      <h3>Have a discount code?</h3>
+
+      <form method="post" action="/base/TC/FormPost.aspx" class="form-inline form-autoValidate">
+        <input name="AddDiscountCode" value="code" type="hidden" />
+        <input name="AddGiftCard" value="code" type="hidden" />
+        <input name="storeId" value="@storeId" type="hidden" />
+        <div class="form-group">
+          <input name="code" value="" type="text" placeholder="Enter your discount code" class="form-control" required="" />
+        </div>
+        <input value="Add discount code" class="btn btn-default" type="submit" />
+      </form>
+    </div>
+    <nav class="navbar">
+      <a href="@nextStep.Url" class="btn btn-success">Continue</a>
+      <a disabled="disabled" class="btn btn-default">Back</a>
+    </nav>
+  </div>
+}

@@ -1,0 +1,212 @@
+﻿@using TeaCommerce.Api.Models
+@using TeaCommerce.Umbraco.Web
+@inherits UmbracoTemplatePage
+@{
+  Layout = "CartStepMaster.cshtml";
+
+  IPublishedContent currentPage = Model.Content;
+  IPublishedContent nextStep = currentPage.FollowingSibling();
+  IPublishedContent prevStep = currentPage.Parent;
+
+  //store id
+  long storeId = long.Parse( currentPage.GetPropertyValue<string>( "store", true ) );
+
+  IEnumerable<Country> countries = TC.GetCountries( storeId );
+
+  Order order = TC.GetCurrentOrder( storeId, false );
+}
+@if ( order != null ) {
+  <div class="container cartContainer information">
+    <h1>Your information</h1>
+
+    <form action="/base/TC/FormPost.aspx" method="post" class="form-horizontal form-autoValidate">
+      <input name="storeId" type="hidden" value="@storeId"/>
+      <input name="returnUrl" type="hidden" value="@nextStep.Url"/>
+      <input name="AddOrUpdateOrderProperties" type="hidden" value="properties" />
+      <input name="SetCurrentPaymentCountry" value="countryId" type="hidden" />
+      <input name="SetCurrentShippingCountry" value="countryId : countryIdShipping" type="hidden" />
+      <input name="SetCurrentPaymentCountryRegion" type="hidden" value="countryRegionId : countryRegionId" />
+      <input name="SetCurrentShippingCountryRegion" type="hidden" value="countryRegionId : countryRegionIdShipping" />
+      <input name="properties" type="hidden" value="company, firstName, lastName, streetAddress, zipCode, city, phone, email, shipping_company, shipping_firstName, shipping_lastName, shipping_streetAddress, shipping_zipCode, shipping_city, comments" />
+      <div class="row">
+
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Payment information</h3>
+            <div class="form-group">
+              <label for="inputCompany" class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" value="@order.Properties[ "company" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputFirstName" class="col-sm-4 col-md-3 control-label">First name *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputFirstName" name="firstName" placeholder="First name" required="" value="@order.Properties[ "firstName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputLastName" class="col-sm-4 col-md-3 control-label">Last name *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Last name" required="" value="@order.Properties[ "lastName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress" class="col-sm-4 col-md-3 control-label">Address *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAddress" name="streetAddress" placeholder="Address" required="" value="@order.Properties[ "streetAddress" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputZipCode" class="col-sm-4 col-md-3 control-label">Zip code *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputZipCode" name="zipCode" placeholder="Zip code" required="" value="@order.Properties[ "zipCode" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputCity" class="col-sm-4 col-md-3 control-label">City *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputCity" name="city" placeholder="City" required="" value="@order.Properties[ "city" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-4 col-md-3 control-label">E-mail *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="E-mail" required="" value="@order.Properties[ "email" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputTelephone" class="col-sm-4 col-md-3 control-label">Telephone *</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputTelephone" name="phone" placeholder="Telephone" required="" value="@order.Properties[ "phone" ]" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputCountry" class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <select class="form-control countrySelect" id="inputCountry" name="countryId">
+                  @foreach ( Country country in countries ) {
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionPayment" + country.Id)" @*label="@country.Name"*@
+                      @if ( country.Id == order.PaymentInformation.CountryId ) {
+                        @Html.Raw( "selected=true" )
+                      }>@country.Name</option>
+                  }
+                </select>
+              </div>
+            </div>
+            @foreach ( Country country in countries ) {
+              IEnumerable<CountryRegion> countryRegions = TC.GetCountryRegions( storeId, country.Id );
+              if ( countryRegions.Any() ) {
+                string regionCssId = "countryRegionPayment" + country.Id;
+                <div class="form-group countryRegionWrapper">
+                  <label for="@regionCssId" class="col-sm-4 col-md-3 control-label">Region</label>
+                  <div class="col-sm-8 col-md-9">
+                    <select class="form-control" id="@regionCssId" name="countryRegionId">
+                      @foreach ( CountryRegion countryRegion in countryRegions ) {
+                        <option class="countryOption" value="@countryRegion.Id" data-regioncode="@countryRegion.RegionCode" label="@countryRegion.Name"
+                          @if ( countryRegion.Id == order.PaymentInformation.CountryRegionId ) {
+                            @Html.Raw( "selected=true" )
+                          }></option>
+                      }
+                    </select>
+                  </div>
+                </div>
+              }
+            }
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>Shipping information</h3>
+            <div class="form-group">
+              <label for="inputshipping_company" class="col-sm-4 col-md-3 control-label">Company</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputshipping_company" name="shipping_company" placeholder="Company" value="@order.Properties[ "shipping_company" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">First name</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAttention" name="shipping_firstName" placeholder="Attention" value="@order.Properties[ "shipping_firstName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAttention" class="col-sm-4 col-md-3 control-label">Last name</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAttention" name="shipping_lastName" placeholder="Attention" value="@order.Properties[ "shipping_lastName" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddressShipping" class="col-sm-4 col-md-3 control-label">Address</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputAddressShipping" name="shipping_streetAddress" placeholder="Address" value="@order.Properties[ "shipping_streetAddress" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputshipping_zipCode" class="col-sm-4 col-md-3 control-label">Zip code</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputshipping_zipCode" name="shipping_zipCode" placeholder="Zip code" value="@order.Properties[ "shipping_zipCode" ]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputshipping_city" class="col-sm-4 col-md-3 control-label">City</label>
+              <div class="col-sm-8 col-md-9">
+                <input type="text" class="form-control" id="inputshipping_city" name="shipping_city" placeholder="City" value="@order.Properties[ "shipping_city" ]" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputCountryShipping" class="col-sm-4 col-md-3 control-label">Country</label>
+              <div class="col-sm-8 col-md-9">
+                <select class="form-control countrySelect" id="inputCountryShipping" name="countryIdShipping">
+                  @foreach ( Country country in countries ) {
+                    <option class="countryOption" value="@country.Id" data-regioncode="@country.RegionCode" data-country-region-selector="@("#countryRegionShipping" + country.Id)" @*label="@country.Name"*@
+                      @if ( country.Id == order.ShipmentInformation.CountryId ) {
+                        @Html.Raw( "selected=true" )
+                      }>@country.Name</option>
+                  }
+                </select>
+              </div>
+            </div>
+            @foreach ( Country country in countries ) {
+              IEnumerable<CountryRegion> countryRegions = TC.GetCountryRegions( storeId, country.Id );
+              if ( countryRegions.Any() ) {
+                string regionCssId = "countryRegionShipping" + country.Id;
+                <div class="form-group countryRegionWrapper">
+                  <label for="@regionCssId" class="col-sm-4 col-md-3 control-label">Region</label>
+                  <div class="col-sm-8 col-md-9">
+                    <select class="form-control" id="@regionCssId" name="countryRegionIdShipping">
+                      @foreach ( CountryRegion countryRegion in countryRegions ) {
+                        <option class="countryOption" value="@countryRegion.Id" data-regioncode="@countryRegion.RegionCode" label="@countryRegion.Name"
+                          @if ( countryRegion.Id == order.ShipmentInformation.CountryRegionId ) {
+                            @Html.Raw( "selected=true" )
+                          }></option>
+                      }
+                    </select>
+                  </div>
+                </div>
+              }
+            }
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="inputComments" class="col-xs-12">Comments</label>
+            <div class="col-sm-12">
+              <textarea class="form-control" id="inputComments" name="comments" placeholder="Comments">@order.Properties[ "comments" ]</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <button type="submit" class="btn btn-success">Continue</button>
+        <a href="@prevStep.Url" class="btn btn-default">Back</a>
+      </nav>
+    </form>
+  </div>
+}
