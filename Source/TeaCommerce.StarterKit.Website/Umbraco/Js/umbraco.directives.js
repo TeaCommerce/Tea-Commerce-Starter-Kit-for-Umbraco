@@ -2316,12 +2316,19 @@ Use this directive to render a button with a dropdown of alternative actions.
                 createButtons(content);
                 editorState.set($scope.content);
                 //We fetch all ancestors of the node to generate the footer breadcrumb navigation
-                if (!$scope.page.isNew) {
-                    if (content.parentId && content.parentId !== -1) {
-                        entityResource.getAncestors(content.id, 'document').then(function (anc) {
-                            $scope.ancestors = anc;
-                        });
+                if (content.parentId && content.parentId !== -1) {
+                    var ancestorIds = content.path.split(',');
+                    ancestorIds.shift();
+                    // Remove -1   
+                    if ($scope.page.isNew) {
+                        ancestorIds.pop();    // Remove 0
                     }
+                    entityResource.getByIds(ancestorIds, 'document').then(function (anc) {
+                        $scope.ancestors = anc;
+                        if ($scope.page.isNew) {
+                            $scope.ancestors.push({ name: 'Untitled' });
+                        }
+                    });
                 }
                 evts.push(eventsService.on('editors.content.changePublishDate', function (event, args) {
                     createButtons(args.node);
@@ -2438,6 +2445,9 @@ Use this directive to render a button with a dropdown of alternative actions.
                 //we are creating so get an empty content item
                 $scope.getScaffoldMethod()().then(function (data) {
                     $scope.content = data;
+                    if (data.isChildOfListView && data.trashed === false) {
+                        $scope.page.listViewPath = $routeParams.page ? '/content/content/edit/' + data.parentId + '?page=' + $routeParams.page : '/content/content/edit/' + data.parentId;
+                    }
                     init($scope.content);
                     resetLastListPageNumber($scope.content);
                     $scope.page.loading = false;
@@ -2662,6 +2672,11 @@ Use this directive to render a button with a dropdown of alternative actions.
                     }
                     // only allow configuring scheduled publishing if the user has publish ("U") and unpublish ("Z") permissions on this node
                     scope.allowScheduledPublishing = _.contains(scope.node.allowedActions, 'U') && _.contains(scope.node.allowedActions, 'Z');
+                    ensureUniqueUrls();
+                }
+                // make sure we don't show duplicate URLs in case multiple URL providers assign the same URLs to the content (see issue 3842 for details)
+                function ensureUniqueUrls() {
+                    scope.node.urls = _.uniq(scope.node.urls);
                 }
                 scope.auditTrailPageChange = function (pageNumber) {
                     scope.auditTrailOptions.pageNumber = pageNumber;
@@ -2863,6 +2878,7 @@ Use this directive to render a button with a dropdown of alternative actions.
                         loadRedirectUrls();
                         formatDatesToLocal();
                         setNodePublishStatus(scope.node);
+                        ensureUniqueUrls();
                     }
                 });
                 //ensure to unregister from all events!
@@ -7016,7 +7032,15 @@ Opens an overlay to show a custom YSOD. </br>
                         treeService.syncTree({
                             node: treeNode,
                             path: path,
-                            forceReload: forceReload
+                            forceReload: forceReload,
+                            //when the tree node is expanding during sync tree, handle it and raise appropriate events
+                            treeNodeExpanded: function (args) {
+                                emitEvent('treeNodeExpanded', {
+                                    tree: scope.tree,
+                                    node: args.node,
+                                    children: args.children
+                                });
+                            }
                         }).then(function (data) {
                             if (activate === undefined || activate === true) {
                                 scope.currentNode = data;
@@ -7427,6 +7451,7 @@ Opens an overlay to show a custom YSOD. </br>
                 searchFromName: '@',
                 showSearch: '@',
                 section: '@',
+                datatypeId: '@',
                 hideSearchCallback: '=',
                 searchCallback: '='
             },
@@ -7466,6 +7491,10 @@ Opens an overlay to show a custom YSOD. </br>
                         //append a start node context if there is one
                         if (scope.searchFromId) {
                             searchArgs['searchFrom'] = scope.searchFromId;
+                        }
+                        //append dataTypeId value if there is one
+                        if (scope.datatypeId) {
+                            searchArgs['dataTypeId'] = scope.datatypeId;
                         }
                         searcher(searchArgs).then(function (data) {
                             scope.searchCallback(data);
