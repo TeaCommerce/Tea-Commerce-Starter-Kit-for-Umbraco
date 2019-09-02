@@ -2259,6 +2259,261 @@
             Constants all the identifiers within the Umbraco core.
             </summary>
         </member>
+        <member name="T:Umbraco.Core.Constants.DataTypes">
+            <summary>
+                Defines the identifiers for Umbraco data types as constants for easy centralized access/management.
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ContentPicker">
+            <summary>
+            Guid for Content Picker as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ContentPickerGuid">
+            <summary>
+            Guid for Content Picker
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MemberPicker">
+            <summary>
+            Guid for Member Picker as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MemberPickerGuid">
+            <summary>
+            Guid for Member Picker
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MediaPicker">
+            <summary>
+            Guid for Media Picker as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MediaPickerGuid">
+            <summary>
+            Guid for Media Picker
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MultipleMediaPicker">
+            <summary>
+            Guid for Multiple Media Picker as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MultipleMediaPickerGuid">
+            <summary>
+            Guid for Multiple Media Picker
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.RelatedLinks">
+            <summary>
+            Guid for Related Links as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.RelatedLinksGuid">
+            <summary>
+            Guid for Related Links
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Member">
+            <summary>
+            Guid for Member as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.MemberGuid">
+            <summary>
+            Guid for Member
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ImageCropper">
+            <summary>
+            Guid for Image Cropper as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ImageCropperGuid">
+            <summary>
+            Guid for Image Cropper
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Tags">
+            <summary>
+            Guid for Tags as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.TagsGuid">
+            <summary>
+            Guid for Tags
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ListViewContent">
+            <summary>
+            Guid for List View - Content as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ListViewContentGuid">
+            <summary>
+            Guid for List View - Content
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ListViewMedia">
+            <summary>
+            Guid for List View - Media as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ListViewMediaGuid">
+            <summary>
+            Guid for List View - Media
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ListViewMembers">
+            <summary>
+            Guid for List View - Members as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ListViewMembersGuid">
+            <summary>
+            Guid for List View - Members
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DatePickerWithTime">
+            <summary>
+            Guid for Date Picker with time as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DatePickerWithTimeGuid">
+            <summary>
+            Guid for Date Picker with time
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ApprovedColor">
+            <summary>
+            Guid for Approved Color as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.ApprovedColorGuid">
+            <summary>
+            Guid for Approved Color
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DropdownMultiple">
+            <summary>
+            Guid for Dropdown multiple as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DropdownMultipleGuid">
+            <summary>
+            Guid for Dropdown multiple
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Radiobox">
+            <summary>
+            Guid for Radiobox as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.RadioboxGuid">
+            <summary>
+            Guid for Radiobox
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DatePicker">
+            <summary>
+            Guid for Date Picker as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DatePickerGuid">
+            <summary>
+            Guid for Date Picker
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Dropdown">
+            <summary>
+            Guid for Dropdown as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.DropdownGuid">
+            <summary>
+            Guid for Dropdown
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.CheckboxList">
+            <summary>
+            Guid for Checkbox list as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.CheckboxListGuid">
+            <summary>
+            Guid for Checkbox list
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Checkbox">
+            <summary>
+            Guid for Checkbox as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.CheckboxGuid">
+            <summary>
+            Guid for Checkbox
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Numeric">
+            <summary>
+            Guid for Numeric as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.NumericGuid">
+            <summary>
+            Guid for Dropdown
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.RichtextEditor">
+            <summary>
+            Guid for Richtext editor as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.RichtextEditorGuid">
+            <summary>
+            Guid for Richtext editor
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Textstring">
+            <summary>
+            Guid for Textstring as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.TextstringGuid">
+            <summary>
+            Guid for Textstring
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Textarea">
+            <summary>
+            Guid for Textarea as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.TextareaGuid">
+            <summary>
+            Guid for Dropdown
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Upload">
+            <summary>
+            Guid for Upload as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.UploadGuid">
+            <summary>
+            Guid for Upload
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.Label">
+            <summary>
+            Guid for Label as string
+            </summary>
+        </member>
+        <member name="F:Umbraco.Core.Constants.DataTypes.LabelGuid">
+            <summary>
+            Guid for Label
+            </summary>
+        </member>
         <member name="T:Umbraco.Core.Constants.DeploySelector">
             <summary>
             Contains the valid selector values.
@@ -7770,6 +8025,18 @@
             Consent has been revoked.
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Models.DataTypeExtensions.IsBuildInDataType(Umbraco.Core.Models.IDataTypeDefinition)">
+            <summary>
+            Returns true if this date type is build-in/default.
+            </summary>
+            <param name="dataType">The data type definition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Umbraco.Core.Models.DataTypeExtensions.IsBuildInDataType(System.Guid)">
+            <summary>
+            Returns true if this date type is build-in/default.
+            </summary>
+        </member>
         <member name="T:Umbraco.Core.Models.EntityBase.IRememberBeingDirty">
             <summary>
             An interface that defines if the object is tracking property changes and that is is also
@@ -12306,12 +12573,6 @@
             Implementation of the <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> for internal use.
             </summary>
         </member>
-        <member name="T:Umbraco.Core.Models.UmbracoEntity.EntityProperty">
-            <summary>
-            A struction that can be contained in the additional data of an UmbracoEntity representing 
-            a user defined property
-            </summary>
-        </member>
         <member name="T:Umbraco.Core.Models.UmbracoObjectTypes">
             <summary>
             Enum used to represent the Umbraco Object Types and thier associated GUIDs
@@ -12779,7 +13040,7 @@
             Definition of a DataType/PropertyEditor
             </summary>
             <remarks>
-            The definition exists as a database reference between an actual DataType/PropertyEditor 
+            The definition exists as a database reference between an actual DataType/PropertyEditor
             (identified by its control id), its prevalues (configuration) and the named DataType in the backoffice UI.
             </remarks>
         </member>
@@ -15913,6 +16174,13 @@
             Creates the model mappings for Tasks
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Persistence.Factories.UmbracoEntityFactory.AddAdditionalData(Umbraco.Core.Models.UmbracoEntity,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Figure out what extra properties we have that are not on the IUmbracoEntity and add them to additional data
+            </summary>
+            <param name="entity"></param>
+            <param name="originalEntityProperties"></param>
+        </member>
         <member name="M:Umbraco.Core.Persistence.Factories.ContentFactory.BuildEntity(Umbraco.Core.Models.Rdbms.DocumentDto,Umbraco.Core.Models.IContentType,Umbraco.Core.Models.Rdbms.DocumentPublishedReadOnlyDto)">
             <summary>
             Builds a IContent item from the dto(s) and content type
@@ -17665,7 +17933,7 @@
             </summary>
             <param name="entity"></param>
             <param name="permission"></param>
-            <param name="groupIds"></param>        
+            <param name="groupIds"></param>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.ContentRepository.GetPermissionsForEntity(System.Int32)">
             <summary>
@@ -17929,22 +18197,6 @@
             <param name="query"></param>
             <param name="objectTypeId"></param>
             <returns></returns>
-            <remarks>
-            Note that this will also fetch all property data for media items, which can cause performance problems
-            when used without paging, in sites with large amounts of data in cmsPropertyData.
-            </remarks>
-        </member>
-        <member name="M:Umbraco.Core.Persistence.Repositories.EntityRepository.GetMediaByQueryWithoutPropertyData(Umbraco.Core.Persistence.Querying.IQuery{Umbraco.Core.Models.EntityBase.IUmbracoEntity})">
-            <summary>
-            Gets entities by query without fetching property data.
-            </summary>
-            <param name="query"></param>
-            <param name="objectTypeId"></param>
-            <returns></returns>
-            <remarks>
-            This is supposed to be internal and can be used when getting all entities without paging, without causing
-            performance issues.
-            </remarks>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.EntityRepository.DisposeResources">
             <summary>
@@ -17952,16 +18204,6 @@
             </summary>
             <remarks>
             Ensure the unit of work is disposed
-            </remarks>
-        </member>
-        <member name="T:Umbraco.Core.Persistence.Repositories.EntityRepository.UmbracoEntityRelator">
-            <summary>
-            This is a special relator in that it is not returning a DTO but a real resolved entity and that it accepts
-            a dynamic instance.
-            </summary>
-            <remarks>
-            We're doing this because when we query the db, we want to use dynamic so that it returns all available fields not just the ones
-                defined on the entity so we can them to additional data
             </remarks>
         </member>
         <member name="M:Umbraco.Core.Persistence.Repositories.EntityRepository.EntityDefinitionCollection.AddOrUpdate(Umbraco.Core.Persistence.Repositories.EntityRepository.EntityDefinition)">
@@ -25929,6 +26171,12 @@
             Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IContent"/> that resides in the bin
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Services.ContentService.EmptyRecycleBin(System.Int32)">
+            <summary>
+            Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IContent"/> that resides in the bin
+            </summary>
+            <param name="userId">Optional Id of the User emptying the Recycle Bin</param>
+        </member>
         <member name="M:Umbraco.Core.Services.ContentService.Copy(Umbraco.Core.Models.IContent,System.Int32,System.Boolean,System.Int32)">
             <summary>
             Copies an <see cref="T:Umbraco.Core.Models.IContent"/> object by creating a new Content object of the same type and copies all data from the current
@@ -26832,7 +27080,7 @@
             <param name="umbracoObjectType"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.EntityService.Get(System.Int32,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.EntityService.Get(System.Int32)">
             <summary>
             Gets an UmbracoEntity by its Id, and optionally loads the complete object graph.
             </summary>
@@ -26840,10 +27088,9 @@
             By default this will load the base type <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> with a minimum set of properties.
             </returns>
             <param name="id">Id of the object to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.EntityService.Get(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.EntityService.Get(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes)">
             <summary>
             Gets an UmbracoEntity by its Id and UmbracoObjectType, and optionally loads the complete object graph.
             </summary>
@@ -26852,10 +27099,8 @@
             </returns>
             <param name="id">Id of the object to retrieve</param>
             <param name="umbracoObjectType">UmbracoObjectType of the entity to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
-            <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.EntityService.Get``1(System.Int32,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.EntityService.Get``1(System.Int32)">
             <summary>
             Gets an UmbracoEntity by its Id and specified Type. Optionally loads the complete object graph.
             </summary>
@@ -26864,7 +27109,6 @@
             </returns>
             <typeparam name="T">Type of the model to retrieve. Must be based on an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></typeparam>
             <param name="id">Id of the object to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
         <member name="M:Umbraco.Core.Services.EntityService.GetParent(System.Int32)">
@@ -26895,13 +27139,6 @@
             </summary>
             <param name="parentId">Id of the parent to retrieve children for</param>
             <param name="umbracoObjectType">UmbracoObjectType of the children to retrieve</param>
-            <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects</returns>
-        </member>
-        <member name="M:Umbraco.Core.Services.EntityService.GetMediaChildrenWithoutPropertyData(System.Int32)">
-            <summary>
-            Gets a collection of children by the parent's Id and UmbracoObjectType without adding property data
-            </summary>
-            <param name="parentId">Id of the parent to retrieve children for</param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects</returns>
         </member>
         <member name="M:Umbraco.Core.Services.EntityService.GetPagedChildren(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes,System.Int64,System.Int32,System.Int64@,System.String,Umbraco.Core.Persistence.DatabaseModelDefinitions.Direction,System.String)">
@@ -27493,10 +27730,10 @@
         <member name="M:Umbraco.Core.Services.IContentServiceOperations.Save(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IContent},System.Int32,System.Boolean)">
             <summary>
             Saves a collection of <see cref="T:Umbraco.Core.Models.IContent"/> objects.
-            </summary>        
+            </summary>
             <param name="contents">Collection of <see cref="T:Umbraco.Core.Models.IContent"/> to save</param>
             <param name="userId">Optional Id of the User saving the Content</param>
-            <param name="raiseEvents">Optional boolean indicating whether or not to raise events.</param>        
+            <param name="raiseEvents">Optional boolean indicating whether or not to raise events.</param>
         </member>
         <member name="M:Umbraco.Core.Services.IContentServiceOperations.Delete(Umbraco.Core.Models.IContent,System.Int32)">
             <summary>
@@ -27801,7 +28038,7 @@
         <member name="M:Umbraco.Core.Services.IContentService.Save(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IContent},System.Int32,System.Boolean)">
             <summary>
             Saves a collection of <see cref="T:Umbraco.Core.Models.IContent"/> objects.
-            </summary>        
+            </summary>
             <param name="contents">Collection of <see cref="T:Umbraco.Core.Models.IContent"/> to save</param>
             <param name="userId">Optional Id of the User saving the Content</param>
             <param name="raiseEvents">Optional boolean indicating whether or not to raise events.</param>
@@ -27859,6 +28096,12 @@
             <summary>
             Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IContent"/> that resides in the bin
             </summary>
+        </member>
+        <member name="M:Umbraco.Core.Services.IContentService.EmptyRecycleBin(System.Int32)">
+            <summary>
+            Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IContent"/> that resides in the bin
+            </summary>
+            <param name="userId">Optional Id of the User emptying the Recycle Bin</param>
         </member>
         <member name="M:Umbraco.Core.Services.IContentService.Rollback(System.Int32,System.Guid,System.Int32)">
             <summary>
@@ -28002,11 +28245,11 @@
             </remarks>
             <remarks>Please note that this method will completely remove the Content from the database</remarks>
             <param name="content">The <see cref="T:Umbraco.Core.Models.IContent"/> to delete</param>
-            <param name="userId">Optional Id of the User deleting the Content</param>        
+            <param name="userId">Optional Id of the User deleting the Content</param>
         </member>
         <member name="M:Umbraco.Core.Services.IContentService.Copy(Umbraco.Core.Models.IContent,System.Int32,System.Boolean,System.Int32)">
             <summary>
-            Copies an <see cref="T:Umbraco.Core.Models.IContent"/> object by creating a new Content object of the same type and copies all data from the current 
+            Copies an <see cref="T:Umbraco.Core.Models.IContent"/> object by creating a new Content object of the same type and copies all data from the current
             to the new copy, which is returned. Recursively copies all children.
             </summary>
             <param name="content">The <see cref="T:Umbraco.Core.Models.IContent"/> to copy</param>
@@ -28017,7 +28260,7 @@
         </member>
         <member name="M:Umbraco.Core.Services.IContentService.Copy(Umbraco.Core.Models.IContent,System.Int32,System.Boolean,System.Boolean,System.Int32)">
             <summary>
-            Copies an <see cref="T:Umbraco.Core.Models.IContent"/> object by creating a new Content object of the same type and copies all data from the current 
+            Copies an <see cref="T:Umbraco.Core.Models.IContent"/> object by creating a new Content object of the same type and copies all data from the current
             to the new copy which is returned.
             </summary>
             <param name="content">The <see cref="T:Umbraco.Core.Models.IContent"/> to copy</param>
@@ -28398,7 +28641,7 @@
         </member>
         <member name="T:Umbraco.Core.Services.IDataTypeService">
             <summary>
-            Defines the DataType Service, which is an easy access to operations involving <see cref="T:Umbraco.Core.Models.IDataTypeDefinition"/> 
+            Defines the DataType Service, which is an easy access to operations involving <see cref="T:Umbraco.Core.Models.IDataTypeDefinition"/>
             </summary>
         </member>
         <member name="M:Umbraco.Core.Services.IDataTypeService.GetDataTypeDefinitionByName(System.String)">
@@ -28576,7 +28819,7 @@
             <param name="umbracoObjectType"></param>
             <returns></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IEntityService.GetByKey(System.Guid,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IEntityService.GetByKey(System.Guid)">
             <summary>
             Gets an UmbracoEntity by its Id, and optionally loads the complete object graph.
             </summary>
@@ -28584,10 +28827,9 @@
             By default this will load the base type <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> with a minimum set of properties.
             </returns>
             <param name="key">Unique Id of the object to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IEntityService.Get(System.Int32,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IEntityService.Get(System.Int32)">
             <summary>
             Gets an UmbracoEntity by its Id, and optionally loads the complete object graph.
             </summary>
@@ -28595,10 +28837,9 @@
             By default this will load the base type <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> with a minimum set of properties.
             </returns>
             <param name="id">Id of the object to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IEntityService.GetByKey(System.Guid,Umbraco.Core.Models.UmbracoObjectTypes,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IEntityService.GetByKey(System.Guid,Umbraco.Core.Models.UmbracoObjectTypes)">
             <summary>
             Gets an UmbracoEntity by its Id and UmbracoObjectType, and optionally loads the complete object graph.
             </summary>
@@ -28607,10 +28848,9 @@
             </returns>
             <param name="key">Unique Id of the object to retrieve</param>
             <param name="umbracoObjectType">UmbracoObjectType of the entity to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IEntityService.Get(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IEntityService.Get(System.Int32,Umbraco.Core.Models.UmbracoObjectTypes)">
             <summary>
             Gets an UmbracoEntity by its Id and UmbracoObjectType, and optionally loads the complete object graph.
             </summary>
@@ -28619,22 +28859,9 @@
             </returns>
             <param name="id">Id of the object to retrieve</param>
             <param name="umbracoObjectType">UmbracoObjectType of the entity to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IEntityService.GetByKey``1(System.Guid,System.Boolean)">
-            <summary>
-            Gets an UmbracoEntity by its Id and specified Type. Optionally loads the complete object graph.
-            </summary>
-            <returns>
-            By default this will load the base type <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> with a minimum set of properties.
-            </returns>
-            <typeparam name="T">Type of the model to retrieve. Must be based on an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></typeparam>
-            <param name="key">Unique Id of the object to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
-            <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
-        </member>
-        <member name="M:Umbraco.Core.Services.IEntityService.Get``1(System.Int32,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IEntityService.Get``1(System.Int32)">
             <summary>
             Gets an UmbracoEntity by its Id and specified Type. Optionally loads the complete object graph.
             </summary>
@@ -28643,7 +28870,6 @@
             </returns>
             <typeparam name="T">Type of the model to retrieve. Must be based on an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></typeparam>
             <param name="id">Id of the object to retrieve</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c>.</param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
         <member name="M:Umbraco.Core.Services.IEntityService.GetParent(System.Int32)">
@@ -29632,6 +29858,12 @@
             Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IMedia"/> that resides in the bin
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Services.IMediaService.EmptyRecycleBin(System.Int32)">
+            <summary>
+            Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IMedia"/> that resides in the bin
+            </summary>
+            <param name="userId">Optional Id of the User emptying the Recycle Bin</param>        
+        </member>
         <member name="M:Umbraco.Core.Services.IMediaService.DeleteMediaOfType(System.Int32,System.Int32)">
             <summary>
             Deletes all media of specified type. All children of deleted media is moved to Recycle Bin.
@@ -30508,53 +30740,47 @@
             <param name="relationTypeId">Id of the <see cref="T:Umbraco.Core.Models.RelationType"/> to retrieve Relations for</param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.Relation"/> objects</returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IRelationService.GetChildEntityFromRelation(Umbraco.Core.Models.IRelation,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IRelationService.GetChildEntityFromRelation(Umbraco.Core.Models.IRelation)">
             <summary>
             Gets the Child object from a Relation as an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/>
             </summary>
             <param name="relation">Relation to retrieve child object from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IRelationService.GetParentEntityFromRelation(Umbraco.Core.Models.IRelation,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IRelationService.GetParentEntityFromRelation(Umbraco.Core.Models.IRelation)">
             <summary>
             Gets the Parent object from a Relation as an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/>
             </summary>
             <param name="relation">Relation to retrieve parent object from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IRelationService.GetEntitiesFromRelation(Umbraco.Core.Models.IRelation,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IRelationService.GetEntitiesFromRelation(Umbraco.Core.Models.IRelation)">
             <summary>
             Gets the Parent and Child objects from a Relation as a <see cref="T:System.Tuple"/>"/> with <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/>.
             </summary>
             <param name="relation">Relation to retrieve parent and child object from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>Returns a Tuple with Parent (item1) and Child (item2)</returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IRelationService.GetChildEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation},System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IRelationService.GetChildEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
             Gets the Child objects from a list of Relations as a list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects.
             </summary>
             <param name="relations">List of relations to retrieve child objects from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IRelationService.GetParentEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation},System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IRelationService.GetParentEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
             Gets the Parent objects from a list of Relations as a list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects.
             </summary>
             <param name="relations">List of relations to retrieve parent objects from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.IRelationService.GetEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation},System.Boolean)">
+        <member name="M:Umbraco.Core.Services.IRelationService.GetEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
             Gets the Parent and Child objects from a list of Relations as a list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects.
             </summary>
             <param name="relations">List of relations to retrieve parent and child objects from</param>
             <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
-            <returns>An enumerable list of <see cref="T:System.Tuple"/> with <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
         <member name="M:Umbraco.Core.Services.IRelationService.Relate(System.Int32,System.Int32,Umbraco.Core.Models.IRelationType)">
             <summary>
@@ -31932,6 +32158,12 @@
             Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IMedia"/> that resides in the bin
             </summary>
         </member>
+        <member name="M:Umbraco.Core.Services.MediaService.EmptyRecycleBin(System.Int32)">
+            <summary>
+            Empties the Recycle Bin by deleting all <see cref="T:Umbraco.Core.Models.IMedia"/> that resides in the bin
+            </summary>
+            <param name="userId">Optional Id of the User emptying the Recycle Bin</param>        
+        </member>
         <member name="M:Umbraco.Core.Services.MediaService.DeleteMediaOfTypes(System.Collections.Generic.IEnumerable{System.Int32},System.Int32)">
             <summary>
             Deletes all content of the specified types. All Descendants of deleted content that is not of these types is moved to Recycle Bin.
@@ -32854,52 +33086,46 @@
             <param name="relationTypeId">Id of the <see cref="T:Umbraco.Core.Models.RelationType"/> to retrieve Relations for</param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.Relation"/> objects</returns>
         </member>
-        <member name="M:Umbraco.Core.Services.RelationService.GetChildEntityFromRelation(Umbraco.Core.Models.IRelation,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.RelationService.GetChildEntityFromRelation(Umbraco.Core.Models.IRelation)">
             <summary>
             Gets the Child object from a Relation as an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/>
             </summary>
             <param name="relation">Relation to retrieve child object from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.RelationService.GetParentEntityFromRelation(Umbraco.Core.Models.IRelation,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.RelationService.GetParentEntityFromRelation(Umbraco.Core.Models.IRelation)">
             <summary>
             Gets the Parent object from a Relation as an <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/>
             </summary>
             <param name="relation">Relation to retrieve parent object from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.RelationService.GetEntitiesFromRelation(Umbraco.Core.Models.IRelation,System.Boolean)">
+        <member name="M:Umbraco.Core.Services.RelationService.GetEntitiesFromRelation(Umbraco.Core.Models.IRelation)">
             <summary>
             Gets the Parent and Child objects from a Relation as a <see cref="T:System.Tuple"/>"/> with <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/>.
             </summary>
             <param name="relation">Relation to retrieve parent and child object from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>Returns a Tuple with Parent (item1) and Child (item2)</returns>
         </member>
-        <member name="M:Umbraco.Core.Services.RelationService.GetChildEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation},System.Boolean)">
+        <member name="M:Umbraco.Core.Services.RelationService.GetChildEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
             Gets the Child objects from a list of Relations as a list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects.
             </summary>
             <param name="relations">List of relations to retrieve child objects from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.RelationService.GetParentEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation},System.Boolean)">
+        <member name="M:Umbraco.Core.Services.RelationService.GetParentEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
             Gets the Parent objects from a list of Relations as a list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects.
             </summary>
             <param name="relations">List of relations to retrieve parent objects from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An enumerable list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
-        <member name="M:Umbraco.Core.Services.RelationService.GetEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation},System.Boolean)">
+        <member name="M:Umbraco.Core.Services.RelationService.GetEntitiesFromRelations(System.Collections.Generic.IEnumerable{Umbraco.Core.Models.IRelation})">
             <summary>
             Gets the Parent and Child objects from a list of Relations as a list of <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/> objects.
             </summary>
             <param name="relations">List of relations to retrieve parent and child objects from</param>
-            <param name="loadBaseType">Optional bool to load the complete object graph when set to <c>False</c></param>
             <returns>An enumerable list of <see cref="T:System.Tuple"/> with <see cref="T:Umbraco.Core.Models.EntityBase.IUmbracoEntity"/></returns>
         </member>
         <member name="M:Umbraco.Core.Services.RelationService.Relate(System.Int32,System.Int32,Umbraco.Core.Models.IRelationType)">
@@ -33028,7 +33254,7 @@
         <member name="E:Umbraco.Core.Services.RelationService.DeletingRelation">
             <summary>
             Occurs before Deleting a Relation
-            </summary>		
+            </summary>
         </member>
         <member name="E:Umbraco.Core.Services.RelationService.DeletedRelation">
             <summary>
@@ -33048,7 +33274,7 @@
         <member name="E:Umbraco.Core.Services.RelationService.DeletingRelationType">
             <summary>
             Occurs before Deleting a RelationType
-            </summary>		
+            </summary>
         </member>
         <member name="E:Umbraco.Core.Services.RelationService.DeletedRelationType">
             <summary>

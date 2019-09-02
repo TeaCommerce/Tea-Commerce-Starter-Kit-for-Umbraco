@@ -6,18 +6,9 @@
     <members>
         <member name="T:ImageProcessor.Common.Exceptions.DefaultLogger">
             <summary>
-            The default logger which logs messages to the debugger.
+            The default logger which logs messages to the trace listeners.
             </summary>
-        </member>
-        <member name="F:ImageProcessor.Common.Exceptions.DefaultLogger.debugWriteLine">
-            <summary>
-            The writeline delegate.
-            </summary>
-        </member>
-        <member name="M:ImageProcessor.Common.Exceptions.DefaultLogger.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.DefaultLogger"/> class.
-            </summary>
+            <seealso cref="T:ImageProcessor.Common.Exceptions.ILogger" />
         </member>
         <member name="M:ImageProcessor.Common.Exceptions.DefaultLogger.Log``1(System.String,System.String,System.Int32)">
             <summary>
@@ -29,6 +20,15 @@
             <param name="lineNumber">The line number where the method is called.</param>
         </member>
         <member name="M:ImageProcessor.Common.Exceptions.DefaultLogger.Log(System.Type,System.String,System.String,System.Int32)">
+            <summary>
+            Logs the specified message.
+            </summary>
+            <param name="type">The type calling the logger.</param>
+            <param name="text">The message to log.</param>
+            <param name="callerName">The property or method name calling the log.</param>
+            <param name="lineNumber">The line number where the method is called.</param>
+        </member>
+        <member name="M:ImageProcessor.Common.Exceptions.DefaultLogger.LogInternal(System.Type,System.String,System.String,System.Int32)">
             <summary>
             Logs the specified message.
             </summary>
@@ -78,6 +78,20 @@
             <param name="message">The error message that explains the reason for the exception.</param>
             <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
         </member>
+        <member name="M:ImageProcessor.Common.Exceptions.ImageProcessingException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.ImageProcessingException" /> class.
+            </summary>
+        </member>
+        <member name="M:ImageProcessor.Common.Exceptions.ImageProcessingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.ImageProcessingException" /> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown. </param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination. </param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
         <member name="T:ImageProcessor.Common.Exceptions.ImageFormatException">
             <summary>
             The exception that is thrown when loading the supported image format types has failed.
@@ -95,6 +109,20 @@
             </summary>
             <param name="message">The error message that explains the reason for the exception.</param>
             <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:ImageProcessor.Common.Exceptions.ImageFormatException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.ImageFormatException" /> class.
+            </summary>
+        </member>
+        <member name="M:ImageProcessor.Common.Exceptions.ImageFormatException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.ImageFormatException" /> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown. </param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination. </param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
         </member>
         <member name="T:ImageProcessor.Common.Exceptions.QuantizationException">
             <summary>
@@ -115,6 +143,20 @@
             </summary>
             <param name="message">The error message that explains the reason for the exception.</param>
             <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:ImageProcessor.Common.Exceptions.QuantizationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.QuantizationException" /> class.
+            </summary>
+        </member>
+        <member name="M:ImageProcessor.Common.Exceptions.QuantizationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Common.Exceptions.QuantizationException" /> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown. </param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination. </param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
         </member>
         <member name="T:ImageProcessor.Common.Extensions.AssemblyExtensions">
             <summary>
@@ -334,15 +376,6 @@
             <returns>
             The <see cref="T:System.Byte"/>.
             </returns>
-        </member>
-        <member name="M:ImageProcessor.Common.Extensions.IntegerExtensions.ParseInvariant(System.Int32,System.String)">
-            <summary>
-            Converts the string representation of a number in a specified culture-specific format to its 
-            32-bit signed integer equivalent using invariant culture.
-            </summary>
-            <param name="value">The integer.</param>
-            <param name="toParse">A string containing a number to convert.</param>
-            <returns>A 32-bit signed integer equivalent to the number specified in toParse.</returns>
         </member>
         <member name="T:ImageProcessor.Common.Helpers.WriteLock">
             <summary>
@@ -927,6 +960,12 @@
             Gets the <see cref="P:ImageProcessor.Imaging.Formats.BitmapFormat.ImageFormat" />.
             </summary>
         </member>
+        <member name="M:ImageProcessor.Imaging.Formats.BitmapFormat.Save(System.IO.Stream,System.Drawing.Image,System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ImageProcessor.Imaging.Formats.BitmapFormat.Save(System.String,System.Drawing.Image,System.Int64)">
+            <inheritdoc/>
+        </member>
         <member name="T:ImageProcessor.Imaging.Formats.TiffFormat">
             <summary>
             Provides the necessary information to support tiff images.
@@ -1022,36 +1061,10 @@
             </summary>
         </member>
         <member name="M:ImageProcessor.Imaging.Formats.PngFormat.Save(System.IO.Stream,System.Drawing.Image,System.Int64)">
-            <summary>
-            Saves the current image to the specified output stream.
-            </summary>
-            <param name="stream">
-            The <see cref="T:System.IO.Stream"/> to save the image information to.
-            </param>
-            <param name="image">
-            The <see cref="T:System.Drawing.Image"/> to save.
-            </param>
-            <param name="bitDepth">
-            The color depth in number of bits per pixel to save the image with.
-            </param>
-            <returns>
-            The <see cref="T:System.Drawing.Image"/>.
-            </returns>
+            <inheritdoc/>
         </member>
         <member name="M:ImageProcessor.Imaging.Formats.PngFormat.Save(System.String,System.Drawing.Image,System.Int64)">
-            <summary>
-            Saves the current image to the specified file path.
-            </summary>
-            <param name="path">The path to save the image to.</param>
-            <param name="image">
-            The <see cref="T:System.Drawing.Image"/> to save.
-            </param>
-            <param name="bitDepth">
-            The color depth in number of bits per pixel to save the image with.
-            </param>
-            <returns>
-            The <see cref="T:System.Drawing.Image"/>.
-            </returns>
+            <inheritdoc/>
         </member>
         <member name="T:ImageProcessor.Imaging.Formats.GifFormat">
             <summary>
@@ -1719,7 +1732,7 @@
             Returns a value built from the specified number of bytes from the given buffer,
             starting at index.
             </summary>
-            <param name="buffer">The data in byte array format</param>
+            <param name="value">The data in byte array format</param>
             <param name="startIndex">The first index to use</param>
             <param name="bytesToConvert">The number of bytes to use</param>
             <returns>The value built from the given bytes</returns>
@@ -1780,7 +1793,7 @@
             Returns a value built from the specified number of bytes from the given buffer,
             starting at index.
             </summary>
-            <param name="buffer">The data in byte array format</param>
+            <param name="value">The data in byte array format</param>
             <param name="startIndex">The first index to use</param>
             <param name="bytesToConvert">The number of bytes to use</param>
             <returns>The value built from the given bytes</returns>
@@ -2886,26 +2899,6 @@
             Represents a <see cref="T:ImageProcessor.Imaging.Colors.CmykColor"/> that is null.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.Colors.CmykColor.c">
-            <summary>
-            The cyan color component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.CmykColor.m">
-            <summary>
-            The magenta color component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.CmykColor.y">
-            <summary>
-            The yellow color component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.CmykColor.k">
-            <summary>
-            The keyline black color component.
-            </summary>
-        </member>
         <member name="M:ImageProcessor.Imaging.Colors.CmykColor.#ctor(System.Single,System.Single,System.Single,System.Single)">
             <summary>
             Initializes a new instance of the <see cref="T:ImageProcessor.Imaging.Colors.CmykColor"/> struct.
@@ -2960,18 +2953,10 @@
             Creates a <see cref="T:ImageProcessor.Imaging.Colors.CmykColor"/> structure from the four 32-bit CMYK 
             components (cyan, magenta, yellow, and keyline) values.
             </summary>
-            <param name="cyan">
-            The cyan component.
-            </param>
-            <param name="magenta">
-            The magenta component.
-            </param>
-            <param name="yellow">
-            The yellow component.
-            </param>
-            <param name="keyline">
-            The keyline black component.
-            </param>
+            <param name="cyan">The cyan component.</param>
+            <param name="magenta">The magenta component.</param>
+            <param name="yellow">The yellow component.</param>
+            <param name="keyline">The keyline black component.</param>
             <returns>
             The <see cref="T:ImageProcessor.Imaging.Colors.CmykColor"/>.
             </returns>
@@ -3223,12 +3208,8 @@
             <summary>
             Adds colors together using the RGBA color format.
             </summary>
-            <param name="color">
-            The color to add to.
-            </param>
-            <param name="colors">
-            The colors to add to the initial one.
-            </param>
+            <param name="color">The color to add to.</param>
+            <param name="colors">The colors to add to the initial one.</param>
             <returns>
             The combined <see cref="T:System.Drawing.Color"/>.
             </returns>
@@ -3256,26 +3237,6 @@
         <member name="F:ImageProcessor.Imaging.Colors.HslaColor.Empty">
             <summary>
             Represents a <see cref="T:ImageProcessor.Imaging.Colors.HslaColor"/> that is null.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.HslaColor.h">
-            <summary>
-            The hue component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.HslaColor.l">
-            <summary>
-            The luminosity component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.HslaColor.s">
-            <summary>
-            The saturation component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.HslaColor.a">
-            <summary>
-            The alpha component.
             </summary>
         </member>
         <member name="M:ImageProcessor.Imaging.Colors.HslaColor.#ctor(System.Single,System.Single,System.Single,System.Single)">
@@ -3476,7 +3437,7 @@
             The <see cref="T:System.Single"/>.
             </returns>
         </member>
-        <member name="M:ImageProcessor.Imaging.Colors.HslaColor.GetTemp2(ImageProcessor.Imaging.Colors.HslaColor)">
+        <member name="M:ImageProcessor.Imaging.Colors.HslaColor.GetTemp2(ImageProcessor.Imaging.Colors.HslaColor@)">
             <summary>
             The get temp 2.
             </summary>
@@ -3525,26 +3486,6 @@
         <member name="F:ImageProcessor.Imaging.Colors.RgbaColor.Empty">
             <summary>
             Represents a <see cref="T:ImageProcessor.Imaging.Colors.RgbaColor"/> that is null.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.RgbaColor.r">
-            <summary>
-            The red component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.RgbaColor.g">
-            <summary>
-            The green component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.RgbaColor.b">
-            <summary>
-            The blue component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.RgbaColor.a">
-            <summary>
-            The alpha component.
             </summary>
         </member>
         <member name="M:ImageProcessor.Imaging.Colors.RgbaColor.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
@@ -3756,21 +3697,6 @@
             Represents a <see cref="T:ImageProcessor.Imaging.Colors.YCbCrColor"/> that is null.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.Colors.YCbCrColor.y">
-            <summary>
-            The y luminance component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.YCbCrColor.cb">
-            <summary>
-            The u chroma component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Colors.YCbCrColor.cr">
-            <summary>
-            The v chroma component.
-            </summary>
-        </member>
         <member name="M:ImageProcessor.Imaging.Colors.YCbCrColor.#ctor(System.Single,System.Single,System.Single)">
             <summary>
             Initializes a new instance of the <see cref="T:ImageProcessor.Imaging.Colors.YCbCrColor"/> struct.
@@ -3911,31 +3837,6 @@
         <member name="T:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter">
             <summary>
             The halftone filter applies a classical CMYK filter to the given image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter.cyanAngle">
-            <summary>
-            The angle of the cyan component in degrees.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter.magentaAngle">
-            <summary>
-            The angle of the magenta component in degrees.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter.yellowAngle">
-            <summary>
-            The angle of the yellow component in degrees.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter.keylineAngle">
-            <summary>
-            The angle of the keyline component in degrees.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter.distance">
-            <summary>
-            The distance between component points.
             </summary>
         </member>
         <member name="M:ImageProcessor.Imaging.Filters.Artistic.HalftoneFilter.#ctor">
@@ -4251,8 +4152,8 @@
             <summary>
             Processes the image.
             </summary>
-            <param name="image">The current image to process</param>
-            <param name="newImage">The new Image to return</param>
+            <param name="source">The current image to process</param>
+            <param name="destination">The new image to return</param>
             <returns>
             The processed <see cref="T:System.Drawing.Bitmap"/>.
             </returns>
@@ -4472,8 +4373,8 @@
             <summary>
             Processes the image.
             </summary>
-            <param name="image">The current image to process</param>
-            <param name="newImage">The new Image to return</param>
+            <param name="source">The current image to process</param>
+            <param name="destination">The new Image to return</param>
             <returns>
             The processed <see cref="T:System.Drawing.Bitmap"/>.
             </returns>
@@ -4653,7 +4554,7 @@
             Processes the image.
             </summary>
             <param name="source">The current image to process</param>
-            <param name="destination">The new Image to return</param>
+            <param name="destination">The new image to return</param>
             <returns>
             The processed <see cref="T:System.Drawing.Bitmap"/>.
             </returns>
@@ -4661,11 +4562,6 @@
         <member name="T:ImageProcessor.Imaging.Filters.Binarization.BinaryThreshold">
             <summary>
             Performs binary threshold filtering against a given greyscale image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Filters.Binarization.BinaryThreshold.threshold">
-            <summary>
-            The threshold value.
             </summary>
         </member>
         <member name="M:ImageProcessor.Imaging.Filters.Binarization.BinaryThreshold.#ctor(System.Byte)">
@@ -4720,16 +4616,6 @@
         <member name="F:ImageProcessor.Imaging.FastBitmap.bitmap">
             <summary>
             The bitmap.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.FastBitmap.width">
-            <summary>
-            The width of the bitmap.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.FastBitmap.height">
-            <summary>
-            The height of the bitmap.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.FastBitmap.channel">
@@ -5146,6 +5032,36 @@
             Disposes the object and frees resources for the Garbage Collector.
             </summary>
             <param name="disposing">If true, the object gets disposed.</param>
+        </member>
+        <member name="T:ImageProcessor.Imaging.MetaData.ExifPropertyTagConstants">
+            <summary>
+            Contains constants grouping together common property items.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagConstants.RequiredPropertyItems">
+            <summary>
+            Gets all required property items. The Gif format specifically requires these properties.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagConstants.GeolocationPropertyItems">
+            <summary>
+            Gets all required property items plus geolocation specific property items. 
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagConstants.CopyrightPropertyItems">
+            <summary>
+            Gets all required property items plus copyright specific property items. 
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagConstants.CopyrightAndGeolocationPropertyItems">
+            <summary>
+            Gets all required property items plus copyright and geolocation specific property items. 
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagConstants.All">
+            <summary>
+            Gets all known property items
+            </summary>
         </member>
         <member name="T:ImageProcessor.Imaging.MetaData.Rational`1">
             <summary>
@@ -6073,9 +5989,173 @@
             <see href="http://msdn.microsoft.com/en-us/library/ms534417%28VS.85%29.aspx"/>
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Artist">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsVer">
             <summary>
-            Null-terminated character string that specifies the name of the person who created the image.
+            Version of the Global Positioning Systems (GPS) IFD, given as 2.0.0.0. This tag is mandatory when 
+            the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsIFD"/> tag is present. When the version is 2.0.0.0, the tag value is 0x02000000.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLatitudeRef">
+            <summary>
+            Null-terminated character string that specifies whether the longitude is east or west longitude. 
+            E specifies east longitude, and W specifies west longitude.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLatitude">
+            <summary>
+            Latitude. Latitude is expressed as three rational values giving the degrees, minutes, and seconds respectively. When degrees, minutes, and seconds are expressed, the format is dd/1, mm/1, ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is dd/1, mmmm/100, 0/1.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLongitudeRef">
+            <summary>
+            Null-terminated character string that specifies whether the longitude is east or west longitude. 
+            E specifies east longitude, and W specifies west longitude.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLongitude">
+            <summary>
+            Longitude. Longitude is expressed as three rational values giving the degrees, minutes, and seconds 
+            respectively. When degrees, minutes and seconds are expressed, the format is ddd/1, mm/1, ss/1. 
+            When degrees and minutes are used and, for example, fractions of minutes are given up to two 
+            decimal places, the format is ddd/1, mmmm/100, 0/1.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsAltitudeRef">
+            <summary>
+            Reference altitude, in meters.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsAltitude">
+            <summary>
+            Altitude, in meters, based on the reference altitude specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsAltitudeRef"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsTime">
+            <summary>
+            Time as coordinated universal time (UTC). The value is expressed as three rational numbers that give the hour, minute, and second.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsSatellites">
+            <summary>
+            Null-terminated character string that specifies the GPS satellites used for measurements. This tag can be used to specify the ID number, angle of elevation, azimuth, SNR, and other information about each satellite. The format is not specified. If the GPS receiver is incapable of taking measurements, the value of the tag must be set to NULL.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsStatus">
+            <summary>
+            Null-terminated character string that specifies the status of the GPS receiver when the image is recorded. A means measurement is in progress, and V means the measurement is Interoperability.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsMeasureMode">
+            <summary>
+            Null-terminated character string that specifies the GPS measurement mode. 2 specifies 2-D measurement, and 3 specifies 3-D measurement.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsDop">
+            <summary>
+            GPS DOP (data degree of precision). An HDOP value is written during 2-D measurement, and a PDOP value is written during 3-D measurement.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsSpeedRef">
+            <summary>
+            Null-terminated character string that specifies the unit used to express the GPS receiver speed of movement. 
+            K, M, and N represent kilometers per hour, miles per hour, and knots respectively.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsSpeed">
+            <summary>
+            Speed of the GPS receiver movement.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsTrackRef">
+            <summary>
+            Null-terminated character string that specifies the reference for giving the direction of 
+            GPS receiver movement. T specifies true direction, and M specifies magnetic direction.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsTrack">
+            <summary>
+            Direction of GPS receiver movement. The range of values is from 0.00 to 359.99.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsImgDirRef">
+            <summary>
+            Null-terminated character string that specifies the reference for the direction of the image when it is captured. T specifies true direction, and M specifies magnetic direction.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsImgDir">
+            <summary>
+            Direction of the image when it was captured. The range of values is from 0.00 to 359.99.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsMapDatum">
+            <summary>
+            Null-terminated character string that specifies geodetic survey data used by the GPS receiver. 
+            If the survey data is restricted to Japan, the value of this tag is TOKYO or WGS-84.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLatRef">
+            <summary>
+            Null-terminated character string that specifies whether the latitude of the destination point is north or south 
+            latitude. N specifies north latitude, and S specifies south latitude.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLat">
+            <summary>
+            Latitude of the destination point. The latitude is expressed as three rational values giving the degrees, 
+            minutes, and seconds respectively. When degrees, minutes, and seconds are expressed, the format is 
+            dd/1, mm/1, ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to 
+            two decimal places, the format is dd/1, mmmm/100, 0/1.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLongRef">
+            <summary>
+            Null-terminated character string that specifies whether the longitude of the destination point is east or west longitude. E specifies east longitude, and W specifies west longitude.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLong">
+            <summary>
+            Longitude of the destination point. The longitude is expressed as three rational values giving the degrees, minutes, and seconds respectively. When degrees, minutes, and seconds are expressed, the format is ddd/1, mm/1, ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is ddd/1, mmmm/100, 0/1.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestBearRef">
+            <summary>
+            Null-terminated character string that specifies the reference used for giving the bearing to the destination point. T specifies true direction, and M specifies magnetic direction.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestBear">
+            <summary>
+            Bearing to the destination point. The range of values is from 0.00 to 359.99.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestDistRef">
+            <summary>
+            Null-terminated character string that specifies the unit used to express the distance to the destination point. 
+            K, M, and N represent kilometers, miles, and knots respectively.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestDist">
+            <summary>
+            Distance to the destination point.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.NewSubfileType">
+            <summary>
+            Type of data in a subfile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SubfileType">
+            <summary>
+            The type of data in a subfile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageWidth">
+            <summary>
+            Number of pixels per row.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageHeight">
+            <summary>
+            Number of pixel rows.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.BitsPerSample">
@@ -6083,9 +6163,19 @@
             Number of bits per color component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.CellHeight">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Compression">
             <summary>
-            Height of the dithering or halftoning matrix.
+            Compression scheme used for the image data.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PhotometricInterp">
+            <summary>
+            How pixel data will be interpreted.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThreshHolding">
+            <summary>
+            Technique used to convert from gray pixels to black and white pixels.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.CellWidth">
@@ -6093,36 +6183,14 @@
             Width of the dithering or halftoning matrix.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ChrominanceTable">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.CellHeight">
             <summary>
-            Chrominance table. The luminance table and the chrominance table are used to control JPEG quality. 
-            A valid luminance or chrominance table has 64 entries. 
-            If an image has either a luminance table or a chrominance table, then it must have both tables.
+            Height of the dithering or halftoning matrix.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ColorMap">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FillOrder">
             <summary>
-            Color palette (lookup table) for a palette-indexed image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ColorTransferFunction">
-            <summary>
-            Table of values that specify color transfer functions.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Compression">
-            <summary>
-            Compression scheme used for the image data.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Copyright">
-            <summary>
-            Null-terminated character string that contains copyright information.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DateTime">
-            <summary>
-            Date and time the image was created.
+            Logical order of bits in a byte.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DocumentName">
@@ -6131,9 +6199,9 @@
             which the image was scanned.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DotRange">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageDescription">
             <summary>
-            Color component values that correspond to a 0 percent dot and a 100 percent dot.
+            Null-terminated character string that specifies the title of the image.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.EquipMake">
@@ -6148,35 +6216,758 @@
             of the equipment used to record the image.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifAperture">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripOffsets">
             <summary>
-            Lens aperture. The unit is the APEX value.
+            For each strip, the byte offset of that strip. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.RowsPerStrip"/> 
+            and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripBytesCount"/>.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifBrightness">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Orientation">
             <summary>
-            Brightness value. The unit is the APEX value. Ordinarily it is given 
-            in the range of -99.99 to 99.99.
+            Image orientation viewed in terms of rows and columns.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifCfaPattern">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel">
             <summary>
-            The color filter array (CFA) geometric pattern of the image sensor when a one-chip color 
-            area sensor is used. It does not apply to all sensing methods.
+            Number of color components per pixel.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifColorSpace">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.RowsPerStrip">
             <summary>
-            Color space specifier. Normally sRGB (=1) is used to define the color space 
-            based on the PC monitor conditions and environment. If a color space other 
-            than sRGB is used, Uncalibrated (=0xFFFF) is set. Image data recorded as 
-            Uncalibrated can be treated as sRGB when it is converted to FlashPix.
+            Number of rows per strip. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripBytesCount"/> and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripOffsets"/>.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifCompBPP">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripBytesCount">
             <summary>
-            Information specific to compressed data. The compression mode used for a 
-            compressed image is indicated in unit BPP.
+            For each strip, the total number of bytes in that strip.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.MinSampleValue">
+            <summary>
+            For each color component, the minimum value assigned to that component. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.MaxSampleValue">
+            <summary>
+            For each color component, the maximum value assigned to that component. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.XResolution">
+            <summary>
+            Number of pixels per unit in the image width (x) direction. 
+            The unit is specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YResolution">
+            <summary>
+            Number of pixels per unit in the image height (y) direction. The unit is specified 
+            by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PlanarConfig">
+            <summary>
+            Whether pixel components are recorded in chunky or planar format.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PageName">
+            <summary>
+            Null-terminated character string that specifies the name of the page from which the image was scanned.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.XPosition">
+            <summary>
+            Offset from the left side of the page to the left side of the image. 
+            The unit of measure is specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YPosition">
+            <summary>
+            Offset from the top of the page to the top of the image. The unit of measure 
+            is specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FreeOffset">
+            <summary>
+            For each string of contiguous unused bytes, the byte offset of that string.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FreeByteCounts">
+            <summary>
+            For each string of contiguous unused bytes, the number of bytes in that string.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GrayResponseUnit">
+            <summary>
+            Precision of the number specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GrayResponseCurve"/>. 1 specifies tenths, 
+            2 specifies hundredths, 3 specifies thousandths, and so on.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GrayResponseCurve">
+            <summary>
+            For each possible pixel value in a grayscale image, the optical density of that pixel value.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.T4Option">
+            <summary>
+            Set of flags that relate to T4 encoding.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.T6Option">
+            <summary>
+            Set of flags that relate to T6 encoding.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit">
+            <summary>
+            Unit of measure for the horizontal resolution and the vertical resolution.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PageNumber">
+            <summary>
+            Page number of the page from which the image was scanned.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TransferFunction">
+            <summary>
+            Tables that specify transfer functions for the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SoftwareUsed">
+            <summary>
+            Null-terminated character string that specifies the name and version of the software or 
+            firmware of the device used to generate the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DateTime">
+            <summary>
+            Date and time the image was created.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Artist">
+            <summary>
+            Null-terminated character string that specifies the name of the person who created the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HostComputer">
+            <summary>
+            Null-terminated character string that specifies the computer and/or operating system used to create the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Predictor">
+            <summary>
+            TType of prediction scheme that was applied to the image data before the encoding scheme was applied.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.WhitePoint">
+            <summary>
+            Chromaticity of the white point of the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrimaryChromaticities">
+            <summary>
+            For each of the three primary colors in the image, the chromaticity of that color.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ColorMap">
+            <summary>
+            Color palette (lookup table) for a palette-indexed image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneHints">
+            <summary>
+            Information used by the halftone function.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileWidth">
+            <summary>
+            Number of pixel columns in each tile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileLength">
+            <summary>
+            Number of pixel rows in each tile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileOffset">
+            <summary>
+            For each tile, the byte offset of that tile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileByteCounts">
+            <summary>
+            For each tile, the number of bytes in that tile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.InkSet">
+            <summary>
+            Set of inks used in a separated image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.InkNames">
+            <summary>
+            Sequence of concatenated, null-terminated, character strings that specify the names of the 
+            inks used in a separated image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.NumberOfInks">
+            <summary>
+            The number of inks.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DotRange">
+            <summary>
+            Color component values that correspond to a 0 percent dot and a 100 percent dot.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TargetPrinter">
+            <summary>
+            Null-terminated character string that describes the intended printing environment.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExtraSamples">
+            <summary>
+            Number of extra color components. For example, one extra component might hold an alpha value.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SampleFormat">
+            <summary>
+            For each color component, the numerical format (unsigned, signed, floating point) of that component. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SMinSampleValue">
+            <summary>
+            For each color component, the minimum value of that component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SMaxSampleValue">
+            <summary>
+            For each color component, the maximum value of that component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TransferRange">
+            <summary>
+            Table of values that extends the range of the transfer function.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGProc">
+            <summary>
+            JPEG compression process.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGInterFormat">
+            <summary>
+            Offset to the start of a JPEG bitstream.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGInterLength">
+            <summary>
+            Length, in bytes, of the JPEG bitstream.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGRestartInterval">
+            <summary>
+            Length of the restart interval.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGLosslessPredictors">
+            <summary>
+            For each color component, a lossless predictor-selection value for that component. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGPointTransforms">
+            <summary>
+            For each color component, a point transformation value for that component. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGQTables">
+            <summary>
+            For each color component, the offset to the quantization table for that 
+            component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGDCTables">
+            <summary>
+            For each color component, the offset to the DC Huffman table (or lossless Huffman table) for that 
+            component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGACTables">
+            <summary>
+            For each color component, the offset to the AC Huffman table for that component. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrCoefficients">
+            <summary>
+            Coefficients for transformation from RGB to YCbCr image data.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrSubsampling">
+            <summary>
+            Sampling ratio of chrominance components in relation to the luminance component.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrPositioning">
+            <summary>
+            Position of chrominance components in relation to the luminance component.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.REFBlackWhite">
+            <summary>
+            Reference black point value and reference white point value.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Gamma">
+            <summary>
+            Gamma value attached to the image. The gamma value is stored as a rational number (pair of long) with a numerator of 100000. For example, a gamma value of 2.2 is stored as the pair (100000, 45455).
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ICCProfileDescriptor">
+            <summary>
+            Null-terminated character string that identifies an ICC profile.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SRGBRenderingIntent">
+            <summary>
+            How the image should be displayed as defined by the International Color Consortium (ICC). If a GDI+ Image object
+            is constructed with the useEmbeddedColorManagement parameter set to TRUE, then GDI+ renders the image 
+            according to the specified rendering intent. The intent can be set to perceptual, relative colorimetric, 
+            saturation, or absolute colorimetric.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageTitle">
+            <summary>
+            Null-terminated character string that specifies the title of the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionXUnit">
+            <summary>
+            Units in which to display horizontal resolution.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionYUnit">
+            <summary>
+            Units in which to display vertical resolution.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionXLengthUnit">
+            <summary>
+            Units in which to display the image width.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionYLengthUnit">
+            <summary>
+            Units in which to display the image height.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlags">
+            <summary>
+            Sequence of one-byte Boolean values that specify printing options.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsVersion">
+            <summary>
+            The print flags version.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsCrop">
+            <summary>
+            The print flags crop marks.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsBleedWidth">
+            <summary>
+            The print flags bleed width.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsBleedWidthScale">
+            <summary>
+            The print flags bleed width scale.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneLPI">
+            <summary>
+            Ink's screen frequency, in lines per inch.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneLPIUnit">
+            <summary>
+            Units for the screen frequency.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneDegree">
+            <summary>
+            Angle for screen.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneShape">
+            <summary>
+            Shape of the halftone dots.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneMisc">
+            <summary>
+            Miscellaneous halftone information.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneScreen">
+            <summary>
+            Boolean value that specifies whether to use the printer's default screens.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGQuality">
+            <summary>
+            Private tag used by the Adobe Photoshop format. Not for public use.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GridSize">
+            <summary>
+            Block of information about grids and guides.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailFormat">
+            <summary>
+            Format of the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailWidth">
+            <summary>
+            Width, in pixels, of the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailHeight">
+            <summary>
+            Height, in pixels, of the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailColorDepth">
+            <summary>
+            Bits per pixel (BPP) for the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPlanes">
+            <summary>
+            Number of color planes for the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRawBytes">
+            <summary>
+            Byte offset between rows of pixel data.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSize">
+            <summary>
+            Total size, in bytes, of the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailCompressedSize">
+            <summary>
+            Compressed size, in bytes, of the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ColorTransferFunction">
+            <summary>
+            Table of values that specify color transfer functions.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailData">
+            <summary>
+            Raw thumbnail bits in JPEG or RGB format. Depends on <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailFormat"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailImageWidth">
+            <summary>
+            Number of pixels per row in the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailImageHeight">
+            <summary>
+            Number of pixel rows in the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailBitsPerSample">
+            <summary>
+            Number of bits per color component in the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSamplesPerPixel"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailCompression">
+            <summary>
+            Compression scheme used for thumbnail image data.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPhotometricInterp">
+            <summary>
+            How thumbnail pixel data will be interpreted.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailImageDescription">
+            <summary>
+            Null-terminated character string that specifies the title of the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailEquipMake">
+            <summary>
+            Null-terminated character string that specifies the manufacturer of the equipment used to 
+            record the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailEquipModel">
+            <summary>
+            Null-terminated character string that specifies the model name or model number of the 
+            equipment used to record the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripOffsets">
+            <summary>
+            For each strip in the thumbnail image, the byte offset of that strip. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRowsPerStrip"/> 
+            and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripBytesCount"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailOrientation">
+            <summary>
+            Thumbnail image orientation in terms of rows and columns. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Orientation"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSamplesPerPixel">
+            <summary>
+            Number of color components per pixel in the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRowsPerStrip">
+            <summary>
+            Number of rows per strip in the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripBytesCount"/> 
+            and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripOffsets"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripBytesCount">
+            <summary>
+            For each thumbnail image strip, the total number of bytes in that strip.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionX">
+            <summary>
+            Thumbnail resolution in the width direction. 
+            The resolution unit is given in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionY">
+            <summary>
+            Thumbnail resolution in the height direction. The resolution unit is given 
+            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPlanarConfig">
+            <summary>
+            Whether pixel components in the thumbnail image are recorded in chunky or planar format. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PlanarConfig"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionUnit">
+            <summary>
+            Unit of measure for the horizontal resolution and the vertical resolution of 
+            the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailTransferFunction">
+            <summary>
+            Tables that specify transfer functions for the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TransferFunction"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSoftwareUsed">
+            <summary>
+            Null-terminated character string that specifies the name and version of the software 
+            or firmware of the device used to generate the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailDateTime">
+            <summary>
+            Date and time the thumbnail image was created. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DateTime"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailArtist">
+            <summary>
+            Null-terminated character string that specifies the name of the person who created the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailWhitePoint">
+            <summary>
+            Chromaticity of the white point of the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.WhitePoint"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPrimaryChromaticities">
+            <summary>
+            For each of the three primary colors in the thumbnail image, the chromaticity 
+            of that color. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrimaryChromaticities"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailYCbCrCoefficients">
+            <summary>
+            Coefficients for transformation from RGB to YCbCr data for the thumbnail image. 
+            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrCoefficients"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailYCbCrSubsampling">
+            <summary>
+            Sampling ratio of chrominance components in relation to the luminance component for 
+            the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrSubsampling"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailYCbCrPositioning">
+            <summary>
+            Position of chrominance components in relation to the luminance component for 
+            the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrPositioning"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRefBlackWhite">
+            <summary>
+            Reference black point value and reference white point value 
+            for the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.REFBlackWhite"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailCopyRight">
+            <summary>
+            Null-terminated character string that contains copyright information for the thumbnail image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.LuminanceTable">
+            <summary>
+            Luminance table. The luminance table and the chrominance table are used to control JPEG quality. 
+            A valid luminance or chrominance table has 64 entries of type <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagType.UShort"/>. 
+            If an image has either a luminance table or a chrominance table, then it must have both tables.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ChrominanceTable">
+            <summary>
+            Chrominance table. The luminance table and the chrominance table are used to control JPEG quality. 
+            A valid luminance or chrominance table has 64 entries. 
+            If an image has either a luminance table or a chrominance table, then it must have both tables.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FrameDelay">
+            <summary>
+            Time delay, in hundredths of a second, between two frames in an animated GIF image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.LoopCount">
+            <summary>
+            For an animated GIF image, the number of times to display the animation. 
+            A value of 0 specifies that the animation should be displayed infinitely.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GlobalPalette">
+            <summary>
+            Color palette for an indexed bitmap in a GIF image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.IndexBackground">
+            <summary>
+            Index of the background color in the palette of a GIF image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.IndexTransparent">
+            <summary>
+            Index of the transparent color in the palette of a GIF image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelUnit">
+            <summary>
+            Unit for <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitX"/> and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitY"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitX">
+            <summary>
+            Pixels per unit in the x direction.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitY">
+            <summary>
+            Pixels per unit in the y direction.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PaletteHistogram">
+            <summary>
+            The palette histogram.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Copyright">
+            <summary>
+            Null-terminated character string that contains copyright information.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureTime">
+            <summary>
+            Exposure time, measured in seconds.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFNumber">
+            <summary>
+            F number.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifIFD">
+            <summary>
+            Private tag used by GDI+. Not for public use. GDI+ uses this tag to locate Exif specific information.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ICCProfile">
+            <summary>
+            ICC profile embedded in the image.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureProg">
+            <summary>
+            Class of the program used by the camera to set exposure when the picture is taken.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSpectralSense">
+            <summary>
+            Null-terminated character string that specifies the spectral sensitivity of each channel of the camera used. The string is compatible with the standard developed by the ASTM Technical Committee.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsIFD">
+            <summary>
+            Offset to a block of GPS property items. Property items whose tags have the prefix Gps are stored in the GPS block. 
+            The GPS property items are defined in the EXIF specification. GDI+ uses this tag to locate GPS information, 
+            but GDI+ does not expose this tag for public use.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifISOSpeed">
+            <summary>
+            ISO speed and ISO latitude of the camera or input device as specified in ISO 12232.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifOECF">
+            <summary>
+            Optoelectronic conversion function (OECF) specified in ISO 14524. The OECF is the relationship between the camera optical input and the image values.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifVer">
+            <summary>
+            Version of the EXIF standard supported. Nonexistence of this field is taken to mean non-conformance to the 
+            standard. Conformance to the standard is indicated by recording 0210 as a 4-byte ASCII string. 
+            Because the type is <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagType.Undefined"/>, there is no NULL terminator.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTOrig">
+            <summary>
+            Date and time when the original image data was generated. For a DSC, the date and time when the picture was taken. The format is YYYY:MM:DD HH:MM:SS with time shown in 24-hour format and the date and time separated by one blank character (0x2000). The character string length is 20 bytes including the NULL terminator. When the field is empty, it is treated as unknown.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTDigitized">
+            <summary>
+            Date and time when the image was stored as digital data. If, for example, an image 
+            was captured by DSC and at the same time the file was recorded, then DateTimeOriginal 
+            and DateTimeDigitized will have the same contents.
+            <para>
+            The format is YYYY:MM:DD HH:MM:SS with time shown in 24-hour format and the date and 
+            time separated by one blank character (0x2000). The character string length is 20 bytes 
+            including the NULL terminator. When the field is empty, it is treated as unknown.
+            </para>
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifCompConfig">
@@ -6192,36 +6983,26 @@
             </para>
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTDigitized">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifCompBPP">
             <summary>
-            Date and time when the image was stored as digital data. If, for example, an image 
-            was captured by DSC and at the same time the file was recorded, then DateTimeOriginal 
-            and DateTimeDigitized will have the same contents.
-            <para>
-            The format is YYYY:MM:DD HH:MM:SS with time shown in 24-hour format and the date and 
-            time separated by one blank character (0x2000). The character string length is 20 bytes 
-            including the NULL terminator. When the field is empty, it is treated as unknown.
-            </para>
+            Information specific to compressed data. The compression mode used for a 
+            compressed image is indicated in unit BPP.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTDigSS">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifShutterSpeed">
             <summary>
-            Null-terminated character string that specifies a fraction of a second for the ExifDTDigitized tag.
+            Shutter speed. The unit is the Additive System of Photographic Exposure (APEX) value.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTOrig">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifAperture">
             <summary>
-            Date and time when the original image data was generated. For a DSC, the date and time when the picture was taken. The format is YYYY:MM:DD HH:MM:SS with time shown in 24-hour format and the date and time separated by one blank character (0x2000). The character string length is 20 bytes including the NULL terminator. When the field is empty, it is treated as unknown.
+            Lens aperture. The unit is the APEX value.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTOrigSS">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifBrightness">
             <summary>
-            Null-terminated character string that specifies a fraction of a second for the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTOrig"/> tag.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTSubsec">
-            <summary>
-            Null-terminated character string that specifies a fraction of a second for the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DateTime"/> tag.
+            Brightness value. The unit is the APEX value. Ordinarily it is given 
+            in the range of -99.99 to 99.99.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureBias">
@@ -6229,24 +7010,24 @@
             Exposure bias. The unit is the APEX value. Ordinarily it is given in the range -99.99 to 99.99.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureIndex">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifMaxAperture">
             <summary>
-            Exposure index selected on the camera or input device at the time the image was captured.
+            Smallest F number of the lens. The unit is the APEX value. Ordinarily it is given in the range of 00.00 to 99.99, but it is not limited to this range.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureProg">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSubjectDist">
             <summary>
-            Class of the program used by the camera to set exposure when the picture is taken.
+            Distance to the subject, measured in meters.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureTime">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifMeteringMode">
             <summary>
-            Exposure time, measured in seconds.
+            Metering mode.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFileSource">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifLightSource">
             <summary>
-            The image source. If a DSC recorded the image, the value of this tag is 3.
+            Type of light source.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFlash">
@@ -6254,36 +7035,36 @@
             Flash status. This tag is recorded when an image is taken using a strobe light (flash). Bit 0 indicates the flash firing status, and bits 1 and 2 indicate the flash return status.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFlashEnergy">
-            <summary>
-            Strobe energy, in Beam Candle Power Seconds (BCPS), at the time the image was captured.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFNumber">
-            <summary>
-            F number.
-            </summary>
-        </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalLength">
             <summary>
             Actual focal length, in millimeters, of the lens. Conversion is not made to the focal length of a 35 millimeter film camera.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalResUnit">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifMakerNote">
             <summary>
-            Unit of measure for <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalXRes"/> and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalYRes"/>.
+            Note tag. A tag used by manufacturers of EXIF writers to record information. The contents are up to the manufacturer.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalXRes">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifUserComment">
             <summary>
-            Number of pixels in the image width (x) direction per unit on the camera focal plane. The unit is specified 
-            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalResUnit"/>.
+            Comment tag. A tag used by EXIF users to write keywords or comments about the image besides those 
+            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageDescription"/> and without the character-code limitations of 
+            the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageDescription"/> tag.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalYRes">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTSubsec">
             <summary>
-            Number of pixels in the image height (y) direction per unit on the camera focal plane. The unit is specified 
-            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalResUnit"/>.
+            Null-terminated character string that specifies a fraction of a second for the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DateTime"/> tag.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTOrigSS">
+            <summary>
+            Null-terminated character string that specifies a fraction of a second for the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTOrig"/> tag.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifDTDigSS">
+            <summary>
+            Null-terminated character string that specifies a fraction of a second for the ExifDTDigitized tag.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFPXVer">
@@ -6293,44 +7074,12 @@
             Because the type is <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagType.Undefined"/>, there is no NULL terminator.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifIFD">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifColorSpace">
             <summary>
-            Private tag used by GDI+. Not for public use. GDI+ uses this tag to locate Exif specific information.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifInterop">
-            <summary>
-            Offset to a block of property items that contain interoperability information.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifISOSpeed">
-            <summary>
-            ISO speed and ISO latitude of the camera or input device as specified in ISO 12232.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifLightSource">
-            <summary>
-            Type of light source.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifMakerNote">
-            <summary>
-            Note tag. A tag used by manufacturers of EXIF writers to record information. The contents are up to the manufacturer.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifMaxAperture">
-            <summary>
-            Smallest F number of the lens. The unit is the APEX value. Ordinarily it is given in the range of 00.00 to 99.99, but it is not limited to this range.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifMeteringMode">
-            <summary>
-            Metering mode.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifOECF">
-            <summary>
-            Optoelectronic conversion function (OECF) specified in ISO 14524. The OECF is the relationship between the camera optical input and the image values.
+            Color space specifier. Normally sRGB (=1) is used to define the color space 
+            based on the PC monitor conditions and environment. If a color space other 
+            than sRGB is used, Uncalibrated (=0xFFFF) is set. Image data recorded as 
+            Uncalibrated can be treated as sRGB when it is converted to FlashPix.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifPixXDim">
@@ -6348,19 +7097,14 @@
             The name of an audio file related to the image data. The only relational information recorded is the EXIF audio file name and extension (an ASCII string that consists of 8 characters plus a period (.), plus 3 characters). The path is not recorded. When you use this tag, audio files must be recorded in conformance with the EXIF audio format. Writers can also store audio data within APP2 as FlashPix extension stream data.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSceneType">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifInterop">
             <summary>
-            The type of scene. If a DSC recorded the image, the value of this tag must be set to 1, indicating that the image was directly photographed.
+            Offset to a block of property items that contain interoperability information.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSensingMethod">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFlashEnergy">
             <summary>
-            Image sensor type on the camera or input device.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifShutterSpeed">
-            <summary>
-            Shutter speed. The unit is the Additive System of Photographic Exposure (APEX) value.
+            Strobe energy, in Beam Candle Power Seconds (BCPS), at the time the image was captured.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSpatialFR">
@@ -6368,14 +7112,21 @@
             Camera or input device spatial frequency table and SFR values in the image width, image height, and diagonal direction, as specified in ISO 12233.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSpectralSense">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalXRes">
             <summary>
-            Null-terminated character string that specifies the spectral sensitivity of each channel of the camera used. The string is compatible with the standard developed by the ASTM Technical Committee.
+            Number of pixels in the image width (x) direction per unit on the camera focal plane. The unit is specified 
+            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalResUnit"/>.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSubjectDist">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalYRes">
             <summary>
-            Distance to the subject, measured in meters.
+            Number of pixels in the image height (y) direction per unit on the camera focal plane. The unit is specified 
+            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalResUnit"/>.
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalResUnit">
+            <summary>
+            Unit of measure for <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalXRes"/> and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFocalYRes"/>.
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSubjectLoc">
@@ -6385,865 +7136,30 @@
             the second value indicates the row number.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifUserComment">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifExposureIndex">
             <summary>
-            Comment tag. A tag used by EXIF users to write keywords or comments about the image besides those 
-            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageDescription"/> and without the character-code limitations of 
-            the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageDescription"/> tag.
+            Exposure index selected on the camera or input device at the time the image was captured.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifVer">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSensingMethod">
             <summary>
-            Version of the EXIF standard supported. Nonexistence of this field is taken to mean non-conformance to the 
-            standard. Conformance to the standard is indicated by recording 0210 as a 4-byte ASCII string. 
-            Because the type is <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagType.Undefined"/>, there is no NULL terminator.
+            Image sensor type on the camera or input device.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExtraSamples">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifFileSource">
             <summary>
-            Number of extra color components. For example, one extra component might hold an alpha value.
+            The image source. If a DSC recorded the image, the value of this tag is 3.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FillOrder">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifSceneType">
             <summary>
-            Logical order of bits in a byte.
+            The type of scene. If a DSC recorded the image, the value of this tag must be set to 1, indicating that the image was directly photographed.
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FrameDelay">
+        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ExifCfaPattern">
             <summary>
-            Time delay, in hundredths of a second, between two frames in an animated GIF image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FreeByteCounts">
-            <summary>
-            For each string of contiguous unused bytes, the number of bytes in that string.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.FreeOffset">
-            <summary>
-            For each string of contiguous unused bytes, the byte offset of that string.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Gamma">
-            <summary>
-            Gamma value attached to the image. The gamma value is stored as a rational number (pair of long) with a numerator of 100000. For example, a gamma value of 2.2 is stored as the pair (100000, 45455).
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GlobalPalette">
-            <summary>
-            Color palette for an indexed bitmap in a GIF image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsAltitude">
-            <summary>
-            Altitude, in meters, based on the reference altitude specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsAltitudeRef"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsAltitudeRef">
-            <summary>
-            Reference altitude, in meters.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestBear">
-            <summary>
-            Bearing to the destination point. The range of values is from 0.00 to 359.99.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestBearRef">
-            <summary>
-            Null-terminated character string that specifies the reference used for giving the bearing to the destination point. T specifies true direction, and M specifies magnetic direction.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestDist">
-            <summary>
-            Distance to the destination point.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestDistRef">
-            <summary>
-            Null-terminated character string that specifies the unit used to express the distance to the destination point. 
-            K, M, and N represent kilometers, miles, and knots respectively.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLat">
-            <summary>
-            Latitude of the destination point. The latitude is expressed as three rational values giving the degrees, 
-            minutes, and seconds respectively. When degrees, minutes, and seconds are expressed, the format is 
-            dd/1, mm/1, ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to 
-            two decimal places, the format is dd/1, mmmm/100, 0/1.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLatRef">
-            <summary>
-            Null-terminated character string that specifies whether the latitude of the destination point is north or south 
-            latitude. N specifies north latitude, and S specifies south latitude.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLong">
-            <summary>
-            Longitude of the destination point. The longitude is expressed as three rational values giving the degrees, minutes, and seconds respectively. When degrees, minutes, and seconds are expressed, the format is ddd/1, mm/1, ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is ddd/1, mmmm/100, 0/1.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsDestLongRef">
-            <summary>
-            Null-terminated character string that specifies whether the longitude of the destination point is east or west longitude. E specifies east longitude, and W specifies west longitude.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsDop">
-            <summary>
-            GPS DOP (data degree of precision). An HDOP value is written during 2-D measurement, and a PDOP value is written during 3-D measurement.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsMeasureMode">
-            <summary>
-            Null-terminated character string that specifies the GPS measurement mode. 2 specifies 2-D measurement, and 3 specifies 3-D measurement.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsSatellites">
-            <summary>
-            Null-terminated character string that specifies the GPS satellites used for measurements. This tag can be used to specify the ID number, angle of elevation, azimuth, SNR, and other information about each satellite. The format is not specified. If the GPS receiver is incapable of taking measurements, the value of the tag must be set to NULL.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsStatus">
-            <summary>
-            Null-terminated character string that specifies the status of the GPS receiver when the image is recorded. A means measurement is in progress, and V means the measurement is Interoperability.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsGpsTime">
-            <summary>
-            Time as coordinated universal time (UTC). The value is expressed as three rational numbers that give the hour, minute, and second.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsIFD">
-            <summary>
-            Offset to a block of GPS property items. Property items whose tags have the prefix Gps are stored in the GPS block. 
-            The GPS property items are defined in the EXIF specification. GDI+ uses this tag to locate GPS information, 
-            but GDI+ does not expose this tag for public use.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsImgDir">
-            <summary>
-            Direction of the image when it was captured. The range of values is from 0.00 to 359.99.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsImgDirRef">
-            <summary>
-            Null-terminated character string that specifies the reference for the direction of the image when it is captured. T specifies true direction, and M specifies magnetic direction.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLatitude">
-            <summary>
-            Latitude. Latitude is expressed as three rational values giving the degrees, minutes, and seconds respectively. When degrees, minutes, and seconds are expressed, the format is dd/1, mm/1, ss/1. When degrees and minutes are used and, for example, fractions of minutes are given up to two decimal places, the format is dd/1, mmmm/100, 0/1.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLatitudeRef">
-            <summary>
-            Null-terminated character string that specifies whether the longitude is east or west longitude. 
-            E specifies east longitude, and W specifies west longitude.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLongitude">
-            <summary>
-            Longitude. Longitude is expressed as three rational values giving the degrees, minutes, and seconds 
-            respectively. When degrees, minutes and seconds are expressed, the format is ddd/1, mm/1, ss/1. 
-            When degrees and minutes are used and, for example, fractions of minutes are given up to two 
-            decimal places, the format is ddd/1, mmmm/100, 0/1.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsLongitudeRef">
-            <summary>
-            Null-terminated character string that specifies whether the longitude is east or west longitude. 
-            E specifies east longitude, and W specifies west longitude.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsMapDatum">
-            <summary>
-            Null-terminated character string that specifies geodetic survey data used by the GPS receiver. 
-            If the survey data is restricted to Japan, the value of this tag is TOKYO or WGS-84.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsSpeed">
-            <summary>
-            Speed of the GPS receiver movement.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsSpeedRef">
-            <summary>
-            Null-terminated character string that specifies the unit used to express the GPS receiver speed of movement. 
-            K, M, and N represent kilometers per hour, miles per hour, and knots respectively.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsTrack">
-            <summary>
-            Direction of GPS receiver movement. The range of values is from 0.00 to 359.99.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsTrackRef">
-            <summary>
-            Null-terminated character string that specifies the reference for giving the direction of 
-            GPS receiver movement. T specifies true direction, and M specifies magnetic direction.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsVer">
-            <summary>
-            Version of the Global Positioning Systems (GPS) IFD, given as 2.0.0.0. This tag is mandatory when 
-            the <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GpsIFD"/> tag is present. When the version is 2.0.0.0, the tag value is 0x02000000.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GrayResponseCurve">
-            <summary>
-            For each possible pixel value in a grayscale image, the optical density of that pixel value.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GrayResponseUnit">
-            <summary>
-            Precision of the number specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GrayResponseCurve"/>. 1 specifies tenths, 
-            2 specifies hundredths, 3 specifies thousandths, and so on.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.GridSize">
-            <summary>
-            Block of information about grids and guides.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneDegree">
-            <summary>
-            Angle for screen.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneHints">
-            <summary>
-            Information used by the halftone function.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneLPI">
-            <summary>
-            Ink's screen frequency, in lines per inch.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneLPIUnit">
-            <summary>
-            Units for the screen frequency.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneMisc">
-            <summary>
-            Miscellaneous halftone information.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneScreen">
-            <summary>
-            Boolean value that specifies whether to use the printer's default screens.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HalftoneShape">
-            <summary>
-            Shape of the halftone dots.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.HostComputer">
-            <summary>
-            Null-terminated character string that specifies the computer and/or operating system used to create the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ICCProfile">
-            <summary>
-            ICC profile embedded in the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ICCProfileDescriptor">
-            <summary>
-            Null-terminated character string that identifies an ICC profile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageDescription">
-            <summary>
-            Null-terminated character string that specifies the title of the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageHeight">
-            <summary>
-            Number of pixel rows.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageTitle">
-            <summary>
-            Null-terminated character string that specifies the title of the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ImageWidth">
-            <summary>
-            Number of pixels per row.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.IndexBackground">
-            <summary>
-            Index of the background color in the palette of a GIF image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.IndexTransparent">
-            <summary>
-            Index of the transparent color in the palette of a GIF image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.InkNames">
-            <summary>
-            Sequence of concatenated, null-terminated, character strings that specify the names of the 
-            inks used in a separated image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.InkSet">
-            <summary>
-            Set of inks used in a separated image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGACTables">
-            <summary>
-            For each color component, the offset to the AC Huffman table for that component. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGDCTables">
-            <summary>
-            For each color component, the offset to the DC Huffman table (or lossless Huffman table) for that 
-            component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGInterFormat">
-            <summary>
-            Offset to the start of a JPEG bitstream.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGInterLength">
-            <summary>
-            Length, in bytes, of the JPEG bitstream.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGLosslessPredictors">
-            <summary>
-            For each color component, a lossless predictor-selection value for that component. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGPointTransforms">
-            <summary>
-            For each color component, a point transformation value for that component. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGProc">
-            <summary>
-            JPEG compression process.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGQTables">
-            <summary>
-            For each color component, the offset to the quantization table for that 
-            component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGQuality">
-            <summary>
-            Private tag used by the Adobe Photoshop format. Not for public use.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.JPEGRestartInterval">
-            <summary>
-            Length of the restart interval.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.LoopCount">
-            <summary>
-            For an animated GIF image, the number of times to display the animation. 
-            A value of 0 specifies that the animation should be displayed infinitely.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.LuminanceTable">
-            <summary>
-            Luminance table. The luminance table and the chrominance table are used to control JPEG quality. 
-            A valid luminance or chrominance table has 64 entries of type <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTagType.UShort"/>. 
-            If an image has either a luminance table or a chrominance table, then it must have both tables.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.MaxSampleValue">
-            <summary>
-            For each color component, the maximum value assigned to that component. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.MinSampleValue">
-            <summary>
-            For each color component, the minimum value assigned to that component. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.NewSubfileType">
-            <summary>
-            Type of data in a subfile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.NumberOfInks">
-            <summary>
-            The number of inks.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Orientation">
-            <summary>
-            Image orientation viewed in terms of rows and columns.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PageName">
-            <summary>
-            Null-terminated character string that specifies the name of the page from which the image was scanned.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PageNumber">
-            <summary>
-            Page number of the page from which the image was scanned.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PaletteHistogram">
-            <summary>
-            The palette histogram.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PhotometricInterp">
-            <summary>
-            How pixel data will be interpreted.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitX">
-            <summary>
-            Pixels per unit in the x direction.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitY">
-            <summary>
-            Pixels per unit in the y direction.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelUnit">
-            <summary>
-            Unit for <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitX"/> and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PixelPerUnitY"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PlanarConfig">
-            <summary>
-            Whether pixel components are recorded in chunky or planar format.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Predictor">
-            <summary>
-            TType of prediction scheme that was applied to the image data before the encoding scheme was applied.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrimaryChromaticities">
-            <summary>
-            For each of the three primary colors in the image, the chromaticity of that color.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlags">
-            <summary>
-            Sequence of one-byte Boolean values that specify printing options.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsBleedWidth">
-            <summary>
-            The print flags bleed width.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsBleedWidthScale">
-            <summary>
-            The print flags bleed width scale.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsCrop">
-            <summary>
-            The print flags crop marks.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrintFlagsVersion">
-            <summary>
-            The print flags version.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.REFBlackWhite">
-            <summary>
-            Reference black point value and reference white point value.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit">
-            <summary>
-            Unit of measure for the horizontal resolution and the vertical resolution.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionXLengthUnit">
-            <summary>
-            Units in which to display the image width.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionXUnit">
-            <summary>
-            Units in which to display horizontal resolution.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionYLengthUnit">
-            <summary>
-            Units in which to display the image height.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionYUnit">
-            <summary>
-            Units in which to display vertical resolution.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.RowsPerStrip">
-            <summary>
-            Number of rows per strip. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripBytesCount"/> and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripOffsets"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SampleFormat">
-            <summary>
-            For each color component, the numerical format (unsigned, signed, floating point) of that component. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel">
-            <summary>
-            Number of color components per pixel.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SMaxSampleValue">
-            <summary>
-            For each color component, the maximum value of that component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SMinSampleValue">
-            <summary>
-            For each color component, the minimum value of that component. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SoftwareUsed">
-            <summary>
-            Null-terminated character string that specifies the name and version of the software or 
-            firmware of the device used to generate the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SRGBRenderingIntent">
-            <summary>
-            How the image should be displayed as defined by the International Color Consortium (ICC). If a GDI+ Image object
-            is constructed with the useEmbeddedColorManagement parameter set to TRUE, then GDI+ renders the image 
-            according to the specified rendering intent. The intent can be set to perceptual, relative colorimetric, 
-            saturation, or absolute colorimetric.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripBytesCount">
-            <summary>
-            For each strip, the total number of bytes in that strip.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripOffsets">
-            <summary>
-            For each strip, the byte offset of that strip. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.RowsPerStrip"/> 
-            and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.StripBytesCount"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.SubfileType">
-            <summary>
-            The type of data in a subfile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.T4Option">
-            <summary>
-            Set of flags that relate to T4 encoding.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.T6Option">
-            <summary>
-            Set of flags that relate to T6 encoding.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TargetPrinter">
-            <summary>
-            Null-terminated character string that describes the intended printing environment.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThreshHolding">
-            <summary>
-            Technique used to convert from gray pixels to black and white pixels.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailArtist">
-            <summary>
-            Null-terminated character string that specifies the name of the person who created the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailBitsPerSample">
-            <summary>
-            Number of bits per color component in the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSamplesPerPixel"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailColorDepth">
-            <summary>
-            Bits per pixel (BPP) for the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailCompressedSize">
-            <summary>
-            Compressed size, in bytes, of the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailCompression">
-            <summary>
-            Compression scheme used for thumbnail image data.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailCopyRight">
-            <summary>
-            Null-terminated character string that contains copyright information for the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailData">
-            <summary>
-            Raw thumbnail bits in JPEG or RGB format. Depends on <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailFormat"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailDateTime">
-            <summary>
-            Date and time the thumbnail image was created. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.DateTime"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailEquipMake">
-            <summary>
-            Null-terminated character string that specifies the manufacturer of the equipment used to 
-            record the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailEquipModel">
-            <summary>
-            Null-terminated character string that specifies the model name or model number of the 
-            equipment used to record the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailFormat">
-            <summary>
-            Format of the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailHeight">
-            <summary>
-            Height, in pixels, of the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailImageDescription">
-            <summary>
-            Null-terminated character string that specifies the title of the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailImageHeight">
-            <summary>
-            Number of pixel rows in the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailImageWidth">
-            <summary>
-            Number of pixels per row in the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailOrientation">
-            <summary>
-            Thumbnail image orientation in terms of rows and columns. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.Orientation"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPhotometricInterp">
-            <summary>
-            How thumbnail pixel data will be interpreted.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPlanarConfig">
-            <summary>
-            Whether pixel components in the thumbnail image are recorded in chunky or planar format. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PlanarConfig"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPlanes">
-            <summary>
-            Number of color planes for the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailPrimaryChromaticities">
-            <summary>
-            For each of the three primary colors in the thumbnail image, the chromaticity 
-            of that color. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.PrimaryChromaticities"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRawBytes">
-            <summary>
-            Byte offset between rows of pixel data.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRefBlackWhite">
-            <summary>
-            Reference black point value and reference white point value 
-            for the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.REFBlackWhite"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionUnit">
-            <summary>
-            Unit of measure for the horizontal resolution and the vertical resolution of 
-            the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionX">
-            <summary>
-            Thumbnail resolution in the width direction. 
-            The resolution unit is given in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionUnit"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionY">
-            <summary>
-            Thumbnail resolution in the height direction. The resolution unit is given 
-            in <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailResolutionUnit"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRowsPerStrip">
-            <summary>
-            Number of rows per strip in the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripBytesCount"/> 
-            and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripOffsets"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSamplesPerPixel">
-            <summary>
-            Number of color components per pixel in the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSize">
-            <summary>
-            Total size, in bytes, of the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailSoftwareUsed">
-            <summary>
-            Null-terminated character string that specifies the name and version of the software 
-            or firmware of the device used to generate the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripBytesCount">
-            <summary>
-            For each thumbnail image strip, the total number of bytes in that strip.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripOffsets">
-            <summary>
-            For each strip in the thumbnail image, the byte offset of that strip. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailRowsPerStrip"/> 
-            and <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailStripBytesCount"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailTransferFunction">
-            <summary>
-            Tables that specify transfer functions for the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TransferFunction"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailWhitePoint">
-            <summary>
-            Chromaticity of the white point of the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.WhitePoint"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailWidth">
-            <summary>
-            Width, in pixels, of the thumbnail image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailYCbCrCoefficients">
-            <summary>
-            Coefficients for transformation from RGB to YCbCr data for the thumbnail image. 
-            See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrCoefficients"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailYCbCrPositioning">
-            <summary>
-            Position of chrominance components in relation to the luminance component for 
-            the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrPositioning"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ThumbnailYCbCrSubsampling">
-            <summary>
-            Sampling ratio of chrominance components in relation to the luminance component for 
-            the thumbnail image. See also <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrSubsampling"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileByteCounts">
-            <summary>
-            For each tile, the number of bytes in that tile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileLength">
-            <summary>
-            Number of pixel rows in each tile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileOffset">
-            <summary>
-            For each tile, the byte offset of that tile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TileWidth">
-            <summary>
-            Number of pixel columns in each tile.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TransferFunction">
-            <summary>
-            Tables that specify transfer functions for the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.TransferRange">
-            <summary>
-            Table of values that extends the range of the transfer function.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.WhitePoint">
-            <summary>
-            Chromaticity of the white point of the image.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.XPosition">
-            <summary>
-            Offset from the left side of the page to the left side of the image. 
-            The unit of measure is specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.XResolution">
-            <summary>
-            Number of pixels per unit in the image width (x) direction. 
-            The unit is specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrCoefficients">
-            <summary>
-            Coefficients for transformation from RGB to YCbCr image data.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrPositioning">
-            <summary>
-            Position of chrominance components in relation to the luminance component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YCbCrSubsampling">
-            <summary>
-            Sampling ratio of chrominance components in relation to the luminance component.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YPosition">
-            <summary>
-            Offset from the top of the page to the top of the image. The unit of measure 
-            is specified by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.YResolution">
-            <summary>
-            Number of pixels per unit in the image height (y) direction. The unit is specified 
-            by <see cref="F:ImageProcessor.Imaging.MetaData.ExifPropertyTag.ResolutionUnit"/>.
+            The color filter array (CFA) geometric pattern of the image sensor when a one-chip color 
+            area sensor is used. It does not apply to all sensing methods.
             </summary>
         </member>
         <member name="T:ImageProcessor.Imaging.Convolution">
@@ -7576,11 +7492,6 @@
             Stores the tree
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.Quantizers.OctreeQuantizer.threshold">
-            <summary>
-            The transparency threshold.
-            </summary>
-        </member>
         <member name="M:ImageProcessor.Imaging.Quantizers.OctreeQuantizer.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:ImageProcessor.Imaging.Quantizers.OctreeQuantizer"/> class.
@@ -7670,19 +7581,9 @@
             The root of the Octree
             </summary>
         </member>
-        <member name="F:ImageProcessor.Imaging.Quantizers.OctreeQuantizer.Octree.reducibleNodes">
-            <summary>
-            Array of reducible nodes
-            </summary>
-        </member>
         <member name="F:ImageProcessor.Imaging.Quantizers.OctreeQuantizer.Octree.maxColorBits">
             <summary>
             Maximum number of significant bits in the image
-            </summary>
-        </member>
-        <member name="F:ImageProcessor.Imaging.Quantizers.OctreeQuantizer.Octree.leafCount">
-            <summary>
-            Number of leaves in the tree
             </summary>
         </member>
         <member name="F:ImageProcessor.Imaging.Quantizers.OctreeQuantizer.Octree.previousNode">
@@ -8501,6 +8402,16 @@
             The maximum index within a color cube side
             </summary>
         </member>
+        <member name="P:ImageProcessor.Imaging.Quantizers.WuQuantizer.WuQuantizerBase.Threshold">
+            <summary>
+            Gets or sets the transparency threshold (0 - 255)
+            </summary>
+        </member>
+        <member name="P:ImageProcessor.Imaging.Quantizers.WuQuantizer.WuQuantizerBase.Fade">
+            <summary>
+            Gets or sets the alpha fade (0 - 255)
+            </summary>
+        </member>
         <member name="M:ImageProcessor.Imaging.Quantizers.WuQuantizer.WuQuantizerBase.Quantize(System.Drawing.Image)">
             <summary>
             Quantize an image and return the resulting output bitmap
@@ -8516,7 +8427,7 @@
             <summary>
             Quantize an image and return the resulting output bitmap
             </summary>
-            <param name="source">
+            <param name="image">
             The 32 bit per pixel image to quantize.
             </param>
             <param name="alphaThreshold">
@@ -9174,6 +9085,11 @@
             The default quality for image files.
             </summary>
         </member>
+        <member name="F:ImageProcessor.ImageFactory.preserveExifData">
+            <summary>
+            Whether to preserve exif metadata
+            </summary>
+        </member>
         <member name="F:ImageProcessor.ImageFactory.backupFormat">
             <summary>
             The backup supported image format.
@@ -9213,8 +9129,21 @@
             Whether to preserve exif metadata. Defaults to false.
             </param>
             <param name="fixGamma">
-            Whether to fix the gamma component of the image. Defaults to true.
+            Whether to fix the gamma component of the image.
             </param>
+        </member>
+        <member name="M:ImageProcessor.ImageFactory.#ctor(ImageProcessor.MetaDataMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.ImageFactory"/> class.
+            </summary>
+            <param name="metaDataMode">The metadata mode to use</param>
+        </member>
+        <member name="M:ImageProcessor.ImageFactory.#ctor(ImageProcessor.MetaDataMode,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.ImageFactory"/> class.
+            </summary>
+            <param name="metaDataMode">The metadata mode to use</param>
+            <param name="fixGamma">Whether to fix the gamma component of the image.</param>
         </member>
         <member name="M:ImageProcessor.ImageFactory.Finalize">
             <summary>
@@ -9250,9 +9179,15 @@
             Gets the supported image format.
             </summary>
         </member>
+        <member name="P:ImageProcessor.ImageFactory.MetaDataMode">
+            <summary>
+            Gets the metadata mode.
+            </summary>
+        </member>
         <member name="P:ImageProcessor.ImageFactory.PreserveExifData">
             <summary>
             Gets or sets a value indicating whether to preserve exif metadata.
+            This property is only settable for backwards compatibility. Set <see cref="P:ImageProcessor.ImageFactory.MetaDataMode"/> via the constructor instead.
             </summary>
         </member>
         <member name="P:ImageProcessor.ImageFactory.FixGamma">
@@ -9834,11 +9769,74 @@
             </summary>
             <param name="disposing">If true, the object gets disposed.</param>
         </member>
-        <member name="M:ImageProcessor.ImageFactory.ClearExif(System.Drawing.Image)">
+        <member name="M:ImageProcessor.ImageFactory.SetMetaData">
             <summary>
-            Clears any EXIF metadata from the image
+            Sets the metadata based on the the current <see cref="P:ImageProcessor.ImageFactory.MetaDataMode"/>
+            The image 
             </summary>
-            <param name="image">The current image.</param>
+        </member>
+        <member name="T:ImageProcessor.MetaDataMode">
+            <summary>
+            Enumerates the various metadata modes that control how much metadata information is stored on processing
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.MetaDataMode.None">
+            <summary>
+            Store no metadata on processing
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.MetaDataMode.Copyright">
+            <summary>
+            Store copyright specific metadata on processing
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.MetaDataMode.Geolocation">
+            <summary>
+            Store geolocation specific metadata on processing
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.MetaDataMode.CopyrightAndGeolocation">
+            <summary>
+            Store copyright and geolocation specific metadata on processing
+            </summary>
+        </member>
+        <member name="F:ImageProcessor.MetaDataMode.All">
+            <summary>
+            Store all metadata on processing
+            </summary>
+        </member>
+        <member name="T:ImageProcessor.Processors.Background">
+            <summary>
+            Adds an image background to the current image.
+            If the background is larger than the image it will be scaled to match the image.
+            </summary>
+        </member>
+        <member name="M:ImageProcessor.Processors.Background.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ImageProcessor.Processors.Background"/> class.
+            </summary>
+        </member>
+        <member name="P:ImageProcessor.Processors.Background.DynamicParameter">
+            <summary>
+            Gets or sets the dynamic parameter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessor.Processors.Background.Settings">
+            <summary>
+            Gets or sets any additional settings required by the processor.
+            </summary>
+        </member>
+        <member name="M:ImageProcessor.Processors.Background.ProcessImage(ImageProcessor.ImageFactory)">
+            <summary>
+            Processes the image.
+            </summary>
+            <param name="factory">
+            The current instance of the <see cref="T:ImageProcessor.ImageFactory"/> class containing
+            the image to process.
+            </param>
+            <returns>
+            The processed image from the current instance of the <see cref="T:ImageProcessor.ImageFactory"/> class.
+            </returns>
         </member>
         <member name="T:ImageProcessor.Processors.Resolution">
             <summary>
